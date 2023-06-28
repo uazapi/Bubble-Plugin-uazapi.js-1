@@ -11,6 +11,10 @@
         "ABM": {
             "caption": "Server URL",
             "type": "client_safe"
+        },
+        "AJv": {
+            "caption": "Instancia",
+            "type": "client_safe"
         }
     }
 }

@@ -28,8 +28,8 @@
         "ABH": {
             "caption": "Instancia",
             "editor": "DynamicValue",
-	    "optional": true,
             "name": "instancia",
+            "optional": true,
             "rank": 2,
             "value": "text"
         },

@@ -21,8 +21,8 @@
         "ABH": {
             "caption": "Instancia",
             "editor": "DynamicValue",
-	    "optional": true,
             "name": "instanceName",
+            "optional": true,
             "rank": 4,
             "value": "text"
         },
