@@ -1,0 +1,73 @@
+{
+    "caption": "🔓 Enviar enquete",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABE": {
+            "caption": "Mensagem",
+            "editor": "DynamicValue",
+            "name": "name",
+            "rank": 6,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Destinatário",
+            "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "URL OPICIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "Cuidado, sua apikey estará exposta para o cliente, evite usar sua Global APIKEY.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "ADt": {
+            "caption": "Quantidade de respostas possíveis",
+            "default_val": 1,
+            "editor": "DynamicValue",
+            "name": "selectableCount",
+            "rank": 8,
+            "value": "number"
+        },
+        "ADu": {
+            "caption": "Opções",
+            "doc": "separados por virgula.",
+            "editor": "DynamicValue",
+            "name": "values",
+            "rank": 7,
+            "value": "text"
+        }
+    }
+}

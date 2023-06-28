@@ -1,0 +1,83 @@
+{
+    "category": "plugins",
+    "display": "▶️ Grupo - Modificar membros",
+    "fields": {
+        "AJQ": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "AJR": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AJS": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "AJT": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "AJU": {
+            "caption": "Cuidado, sua apikey estará exposta para o cliente, evite usar sua Global APIKEY.",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "AJV": {
+            "caption": "id do grupo",
+            "editor": "DynamicValue",
+            "name": "groupid",
+            "rank": 5,
+            "value": "text"
+        },
+        "AJW": {
+            "caption": "Ação",
+            "doc": "add = adiciona participantes | remove = remove participantes | promote = Adiciona na lista de administradores | demote = Remove da lista de administradores",
+            "editor": "DynamicValue",
+            "name": "action",
+            "rank": 6,
+            "value": "text"
+        },
+        "AJX": {
+            "caption": "Membros",
+            "doc": "Separados por |",
+            "editor": "DynamicValue",
+            "name": "participants",
+            "rank": 7,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AJd": {
+            "caption": "error",
+            "name": "error",
+            "rank": 0,
+            "value": "boolean"
+        },
+        "AJe": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 1,
+            "value": "text"
+        },
+        "AJf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

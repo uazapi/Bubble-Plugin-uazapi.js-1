@@ -1,0 +1,82 @@
+{
+    "category": "plugins",
+    "display": "▶️ Checar se número existe",
+    "fields": {
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AGi": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "AGm": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
+            "caption": "Caso deixe vazio, a API Key será a Global API Key definida no plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 4
+        },
+        "AIg": {
+            "caption": "Números",
+            "doc": "Separados por |",
+            "editor": "DynamicValue",
+            "name": "numbers",
+            "rank": 5,
+            "value": "text"
+        },
+        "AJm": {
+            "caption": "numeros",
+            "editor": "custom_type",
+            "name": "numeros",
+            "rank": 6
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        },
+        "AJl": {
+            "caption": "numeros",
+            "is_list": true,
+            "name": "numeros",
+            "rank": 3,
+            "value": "custom_data_AJm"
+        }
+    },
+    "type": "server_side"
+}

@@ -1,0 +1,67 @@
+{
+    "caption": "🔓 Grupo - Criar",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Nome do Grupo",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "subject",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABI": {
+            "caption": "Descrição do grupo",
+            "default_val": "",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "description",
+            "rank": 6,
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "URL OPCIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "Cuidado, sua apikey estará exposta para o cliente, evite usar sua Global APIKEY.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "AEv": {
+            "caption": "Membros do grupo",
+            "doc": "Separe os números com |",
+            "editor": "DynamicValue",
+            "name": "participants",
+            "rank": 7,
+            "value": "text"
+        }
+    }
+}

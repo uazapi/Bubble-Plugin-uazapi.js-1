@@ -1,0 +1,93 @@
+{
+    "caption": "🔓 Enviar arquivo",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABE": {
+            "caption": "Mensagem",
+            "doc": "opcional",
+            "editor": "DynamicValue",
+            "name": "caption",
+            "optional": true,
+            "rank": 6,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Destinatário",
+            "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABI": {
+            "caption": "delay",
+            "default_val": 1000,
+            "doc": "delay em milisegundos, 1000 = 1 segundo",
+            "editor": "DynamicValue",
+            "name": "delay",
+            "rank": 10,
+            "value": "number"
+        },
+        "ABO": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "URL OPICIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "Cuidado, sua apikey estará exposta para o cliente, evite usar sua Global APIKEY.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "ADn": {
+            "caption": "Tipo de arquivo",
+            "doc": "opções: image, document, video ou audio",
+            "editor": "DynamicValue",
+            "name": "mediatype",
+            "options": "image,document,video,audio",
+            "rank": 7,
+            "value": "text"
+        },
+        "ADo": {
+            "caption": "Nome do arquivo",
+            "doc": "opcional",
+            "editor": "DynamicValue",
+            "name": "filename",
+            "optional": true,
+            "rank": 8,
+            "value": "text"
+        },
+        "ADp": {
+            "caption": "Url do arquivo",
+            "editor": "DynamicValue",
+            "name": "media",
+            "rank": 9,
+            "value": "text"
+        }
+    }
+}

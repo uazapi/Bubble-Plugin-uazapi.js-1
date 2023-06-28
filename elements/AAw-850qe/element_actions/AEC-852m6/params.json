@@ -1,0 +1,67 @@
+{
+    "caption": "🔓 Mensagem - Marcar como lida",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "id da mensagem",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 7,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABI": {
+            "caption": "remoteJid da mensagem",
+            "default_val": "",
+            "doc": "remotejid é o id do chat",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "URL OPCIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "Cuidado, sua apikey estará exposta para o cliente, evite usar sua Global APIKEY.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "AEz": {
+            "caption": "fromMe da mensagem",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "fromMe",
+            "rank": 6,
+            "value": "boolean"
+        }
+    }
+}

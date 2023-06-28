@@ -1,0 +1,11 @@
+{
+    "categories": {
+        "0": "data (things)",
+        "1": "technical"
+    },
+    "description": "Primeira versão - testando no modo produção",
+    "image": "//meta-l.cdn.bubble.io/f1687877424297x152106290190667800/uazap%20i%20%2815%29round.png",
+    "license": "open_source",
+    "name": "uazapi.js",
+    "sa_node_version": 14
+}

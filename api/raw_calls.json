@@ -1,0 +1,650 @@
+{
+    "auth": "none",
+    "calls": {
+        "AGC": {
+            "0": "A",
+            "1": "G",
+            "2": "B",
+            "body": "{\n  \"enabled\": <true/false>,\n  \"url\": \"<webhook_url>\"\n}",
+            "body_params": {
+                "AUk": {
+                    "key": "true/false",
+                    "value": "true"
+                },
+                "AUl": {
+                    "key": "webhook_url",
+                    "value": "https://webhook.site/347884fb-5f40-4758-80f1-1b80855dd4f0"
+                }
+            },
+            "headers": {
+                "AUh": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AdL": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "📄 Instância - Detalhes",
+            "publish_as": "data",
+            "rank": 1,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AGC",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AGC\":{\"caption\":\"📄 Instância - Detalhes\",\"fields\":{\"_p_connectionStatus.state\":{\"ret_value\":\"text\",\"caption\":\"connectionStatus state\",\"sample_value\":\"open\",\"path\":[\"connectionStatus\",\"state\"]},\"_p_connectionStatus.statusReason\":{\"ret_value\":\"number\",\"caption\":\"connectionStatus statusReason\",\"sample_value\":200,\"path\":[\"connectionStatus\",\"statusReason\"]},\"_p_instanceInfo.instance.instanceName\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance instanceName\",\"sample_value\":\"uazapi_interno1\",\"path\":[\"instanceInfo\",\"instance\",\"instanceName\"]},\"_p_instanceInfo.instance.owner\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance owner\",\"sample_value\":\"5521959032485\",\"path\":[\"instanceInfo\",\"instance\",\"owner\"]},\"_p_instanceInfo.instance.profileName\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance profileName\",\"sample_value\":\"Uazapi\",\"path\":[\"instanceInfo\",\"instance\",\"profileName\"]},\"_p_instanceInfo.instance.profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/323858507_477627697899218_4525467378833366703_n.jpg?ccb=11-4&oh=01_AdSJL3deseCE60uxMypgRla7YhcqFhS3WwRZ-saE86RXgg&oe=649AB2D2\",\"path\":[\"instanceInfo\",\"instance\",\"profilePictureUrl\"]}}}}",
+            "url": "[url]/instance/connectionState/[instance]",
+            "url_params": {
+                "AUi": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                },
+                "AZI": {
+                    "key": "instance",
+                    "private": true,
+                    "value": "uazapi_interno1"
+                }
+            },
+            "wrap_error": false
+        },
+        "AGE": {
+            "0": "A",
+            "1": "G",
+            "2": "D",
+            "body": "{\n  \"key\": {\n    \"id\": \"<message_id>\"\n  }\n}",
+            "body_params": {
+                "AGF": {
+                    "key": "message_id",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "headers": {
+                "AUh": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AdL": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "📄 Download mensagem",
+            "publish_as": "data",
+            "rank": 6,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AGE",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AGE\":{\"caption\":\"📄 Download mensagem\",\"fields\":{\"_p_mediaType\":{\"ret_value\":\"text\",\"caption\":\"mediaType\",\"sample_value\":\"imageMessage\",\"path\":[\"mediaType\"]},\"_p_caption\":{\"ret_value\":\"text\",\"caption\":\"caption\",\"sample_value\":\"test\",\"path\":[\"caption\"]},\"_p_fileName\":{\"ret_value\":\"text\",\"caption\":\"fileName\",\"sample_value\":\"TutorialPDF\",\"path\":[\"fileName\"]},\"_p_size.fileLength\":{\"ret_value\":\"text\",\"caption\":\"size fileLength\",\"sample_value\":287546,\"path\":[\"size\",\"fileLength\"]},\"_p_mimetype\":{\"ret_value\":\"text\",\"caption\":\"mimetype\",\"sample_value\":\"image/jpeg\",\"path\":[\"mimetype\"]},\"_p_base64\":{\"ret_value\":\"text\",\"caption\":\"base64\",\"sample_value\":\"(value too large to save 42564 bytes)\",\"path\":[\"base64\"]}}}}",
+            "url": "[url]/chat/getBase64FromMediaMessage/[instance]",
+            "url_params": {
+                "AUi": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                },
+                "AZI": {
+                    "key": "instance",
+                    "private": true,
+                    "value": "uazapi_interno1"
+                }
+            },
+            "wrap_error": false
+        },
+        "AGH": {
+            "0": "A",
+            "1": "G",
+            "2": "G",
+            "body": "{\n  \"numbers\": [\n    <numbers>\n   \n  ]\n}",
+            "body_params": {
+                "AGI": {
+                    "key": "numbers",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "headers": {
+                "AWj": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYb": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "post",
+            "name": "📄 Verificar números",
+            "publish_as": "data",
+            "rank": 11,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AGH",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AGG\":{\"caption\":\"📄 Verificar números\",\"fields\":{\"_p_jid\":{\"ret_value\":\"text\",\"caption\":\"jid\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"jid\"]},\"_p_exists\":{\"ret_value\":\"boolean\",\"caption\":\"exists\",\"sample_value\":true,\"path\":[\"exists\"]}}}}",
+            "url": "[url]/chat/whatsappNumbers/[instance]",
+            "url_params": {
+                "AWk": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                },
+                "AWl": {
+                    "key": "instance",
+                    "value": "uazapi_interno1"
+                }
+            },
+            "wrap_error": false
+        },
+        "AGL": {
+            "0": "A",
+            "1": "G",
+            "2": "K",
+            "body": "{\n  \"number\": \"<number>\",\n  \"textMessage\": {\n    \"text\": \"<message>\"\n  },\n  \"options\": {\n    \"delay\": <delay>\n  }\n}",
+            "body_params": {
+                "AGN": {
+                    "key": "number",
+                    "private": true,
+                    "value": "120363153742561022@g.us"
+                },
+                "AGO": {
+                    "key": "message",
+                    "private": true,
+                    "value": "teste"
+                },
+                "AGP": {
+                    "key": "delay",
+                    "private": true,
+                    "value": "0"
+                }
+            },
+            "headers": {
+                "AUM": {
+                    "doc": "⚠️ chamada só funciona com apikey global.\n\nPara ter uma apikey global você precisa estar no plano ilimitado, hospedando a API no seu servidor.",
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AdI": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "📄 Mensagem enviada",
+            "publish_as": "data",
+            "rank": 5,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AGL",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AGL\":{\"caption\":\"📄 Mensagem enviada\",\"fields\":{\"_p_key.remoteJid\":{\"ret_value\":\"text\",\"caption\":\"key remoteJid\",\"sample_value\":\"120363153742561022@g.us\",\"path\":[\"key\",\"remoteJid\"]},\"_p_key.fromMe\":{\"ret_value\":\"boolean\",\"caption\":\"key fromMe\",\"sample_value\":true,\"path\":[\"key\",\"fromMe\"]},\"_p_key.id\":{\"ret_value\":\"text\",\"caption\":\"key id\",\"sample_value\":\"BAE5237029696495\",\"path\":[\"key\",\"id\"]},\"_p_messageTimestamp\":{\"ret_value\":\"number\",\"caption\":\"messageTimestamp\",\"sample_value\":\"1687279502\",\"path\":[\"messageTimestamp\"]},\"_p_participant\":{\"ret_value\":\"text\",\"caption\":\"participant\",\"sample_value\":\"5521959032485:10@s.whatsapp.net\",\"path\":[\"participant\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"PENDING\",\"path\":[\"status\"]}}}}",
+            "url": "[url]/message/sendText/[instance]",
+            "url_params": {
+                "AGM": {
+                    "key": "instance",
+                    "private": true,
+                    "value": "uazapi_interno1"
+                },
+                "AUN": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                }
+            },
+            "wrap_error": false
+        },
+        "ATo": {
+            "body": "{\n\n}\n",
+            "headers": {
+                "ATp": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYY": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "post",
+            "name": "📄 Mensagens ",
+            "publish_as": "data",
+            "rank": 4,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.ATo",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ATo\":{\"caption\":\"📄 Mensagens \",\"fields\":{\"_p_key.id\":{\"ret_value\":\"text\",\"caption\":\"key id\",\"sample_value\":\"FEB57BF813DAE27E55381C7BB3D57450\",\"path\":[\"key\",\"id\"]},\"_p_key.remoteJid\":{\"ret_value\":\"text\",\"caption\":\"key remoteJid\",\"sample_value\":\"5521996015792-1531678991@g.us\",\"path\":[\"key\",\"remoteJid\"]},\"_p_key.fromMe\":{\"ret_value\":\"boolean\",\"caption\":\"key fromMe\",\"sample_value\":false,\"path\":[\"key\",\"fromMe\"]},\"_p_key.participant\":{\"ret_value\":\"text\",\"caption\":\"key participant\",\"sample_value\":\"5521981193121@s.whatsapp.net\",\"path\":[\"key\",\"participant\"]},\"_p_pushName\":{\"ret_value\":\"text\",\"caption\":\"pushName\",\"sample_value\":\"Andrey\",\"path\":[\"pushName\"]},\"_p_message\":{\"ret_value\":\"text\",\"caption\":\"message\",\"sample_value\":\"teste\",\"path\":[\"message\"]},\"_p_message_normalized.text\":{\"ret_value\":\"text\",\"caption\":\"message_normalized text\",\"sample_value\":\"David chamou pra carona nem lembrei, foi mal\",\"path\":[\"message_normalized\",\"text\"]},\"_p_message_normalized.type\":{\"ret_value\":\"text\",\"caption\":\"message_normalized type\",\"sample_value\":\"conversation\",\"path\":[\"message_normalized\",\"type\"]},\"_p_message_normalized.description\":{\"ret_value\":\"text\",\"caption\":\"message_normalized description\",\"sample_value\":\"Hospedagem de Sites 30 dias grátis com antivação imediata. Abra a conta em 1 minuto! Planos de Hospedagem Ilimitada, Econômica e barata. 3 construtores de sites, Aplicativos Instaláveis e PHP em diversas versões!\",\"path\":[\"message_normalized\",\"description\"]},\"_p_message_normalized.title\":{\"ret_value\":\"text\",\"caption\":\"message_normalized title\",\"sample_value\":\"Hospedagem de Sites 30 dias Grátis | Myway\",\"path\":[\"message_normalized\",\"title\"]},\"_p_message_normalized.quoted\":{\"ret_value\":\"text\",\"caption\":\"message_normalized quoted\",\"sample_value\":\"3EB0DA7B1735C61FD9D8A9\",\"path\":[\"message_normalized\",\"quoted\"]},\"_p_message_normalized.mimetype\":{\"ret_value\":\"text\",\"caption\":\"message_normalized mimetype\",\"sample_value\":\"audio/ogg; codecs=opus\",\"path\":[\"message_normalized\",\"mimetype\"]},\"_p_message_normalized.fileLength\":{\"ret_value\":\"number\",\"caption\":\"message_normalized fileLength\",\"sample_value\":109997,\"path\":[\"message_normalized\",\"fileLength\"]},\"_p_message_normalized.seconds\":{\"ret_value\":\"number\",\"caption\":\"message_normalized seconds\",\"sample_value\":46,\"path\":[\"message_normalized\",\"seconds\"]},\"_p_message_normalized.ptt\":{\"ret_value\":\"boolean\",\"caption\":\"message_normalized ptt\",\"sample_value\":true,\"path\":[\"message_normalized\",\"ptt\"]},\"_p_message_normalized.caption\":{\"ret_value\":\"text\",\"caption\":\"message_normalized caption\",\"sample_value\":\"Teria que editar por exemplo esse texto\",\"path\":[\"message_normalized\",\"caption\"]},\"_p_message_normalized.vote\":{\"ret_value\":\"text\",\"caption\":\"message_normalized vote\",\"sample_value\":null,\"path\":[\"message_normalized\",\"vote\"]},\"_p_message_normalized.edited\":{\"ret_value\":\"text\",\"caption\":\"message_normalized edited\",\"sample_value\":\"3EB034794069104BEAE454\",\"path\":[\"message_normalized\",\"edited\"]},\"_p_source\":{\"ret_value\":\"text\",\"caption\":\"source\",\"sample_value\":\"android\",\"path\":[\"source\"]},\"_p_messageTimestamp\":{\"ret_value\":\"number\",\"caption\":\"messageTimestamp\",\"sample_value\":1687481806,\"path\":[\"messageTimestamp\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792\",\"path\":[\"owner\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"DELIVERY_ACK\",\"path\":[\"status\"]}}}}",
+            "url": "[url]/chat/findMessages/[instance]",
+            "url_params": {
+                "ATq": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": ""
+                },
+                "AcP": {
+                    "key": "instance",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
+        "ATu": {
+            "body": "{\n  \"where\": {\n        \"id\": \"<id>\"\n  },\n  \"limit\": <limit>\n}",
+            "body_params": {
+                "ATy": {
+                    "doc": "id da mensagem",
+                    "key": "id",
+                    "value": ""
+                },
+                "AcX": {
+                    "key": "limit",
+                    "private": true,
+                    "value": "10"
+                }
+            },
+            "headers": {
+                "ATv": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYa": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "post",
+            "name": "📄 Status de recebimento ",
+            "publish_as": "data",
+            "rank": 8,
+            "ret_value": "api.1674157317439x684864161158529000.plugin_api.ATu",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ATu\":{\"caption\":\"📄  Status de recebimento\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"63f600d53a2c6f9fd872bbfd\",\"path\":[\"_id\"]},\"_p_remoteJid\":{\"ret_value\":\"text\",\"caption\":\"remoteJid\",\"sample_value\":\"5511976165769@s.whatsapp.net\",\"path\":[\"remoteJid\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"67276FAA09420DC76D\",\"path\":[\"id\"]},\"_p_fromMe\":{\"ret_value\":\"boolean\",\"caption\":\"fromMe\",\"sample_value\":false,\"path\":[\"fromMe\"]},\"_p_datetime\":{\"ret_value\":\"number\",\"caption\":\"datetime\",\"sample_value\":1677066453644,\"path\":[\"datetime\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"READ\",\"path\":[\"status\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]},\"_p___v\":{\"ret_value\":\"number\",\"caption\":\"__v\",\"sample_value\":0,\"path\":[\"__v\"]}}}}",
+            "url": "[url]/chat/findStatusMessage/[instance]",
+            "url_params": {
+                "ATw": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server02.uazapi.dev"
+                },
+                "AcU": {
+                    "key": "instance",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
+        "AUK": {
+            "body": "{\n  \"instanceName\": \"<instanceName>\"\n}",
+            "body_params": {
+                "AUO": {
+                    "key": "instanceName",
+                    "value": "codechat2"
+                }
+            },
+            "headers": {
+                "AUM": {
+                    "doc": "⚠️ chamada só funciona com apikey global.\n\nPara ter uma apikey global você precisa estar no plano ilimitado, hospedando a API no seu servidor.",
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AdI": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "get",
+            "name": "📄 Instancias ⚠️",
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AUK",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AUK\":{\"caption\":\"📄 Instancias ⚠️\",\"fields\":{\"_p_instance.instanceName\":{\"ret_value\":\"text\",\"caption\":\"instance instanceName\",\"sample_value\":\"uazapi_interno1\",\"path\":[\"instance\",\"instanceName\"]},\"_p_instance.owner\":{\"ret_value\":\"text\",\"caption\":\"instance owner\",\"sample_value\":\"5521959032485\",\"path\":[\"instance\",\"owner\"]},\"_p_instance.profileName\":{\"ret_value\":\"text\",\"caption\":\"instance profileName\",\"sample_value\":\"Uazapi\",\"path\":[\"instance\",\"profileName\"]},\"_p_instance.profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"instance profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/323858507_477627697899218_4525467378833366703_n.jpg?ccb=11-4&oh=01_AdSJL3deseCE60uxMypgRla7YhcqFhS3WwRZ-saE86RXgg&oe=649AB2D2\",\"path\":[\"instance\",\"profilePictureUrl\"]}}}}",
+            "url": "[url]/instance/fetchInstances",
+            "url_params": {
+                "AUN": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                }
+            },
+            "wrap_error": false
+        },
+        "AUf": {
+            "body": "{\n  \"enabled\": <true/false>,\n  \"url\": \"<webhook_url>\"\n}",
+            "body_params": {
+                "AUk": {
+                    "key": "true/false",
+                    "value": "true"
+                },
+                "AUl": {
+                    "key": "webhook_url",
+                    "value": "https://webhook.site/347884fb-5f40-4758-80f1-1b80855dd4f0"
+                }
+            },
+            "headers": {
+                "AUh": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AdL": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "📄 Webhook Status",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AUf",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AUf\":{\"caption\":\"📄 Webhook Statu\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"back\",\"path\":[\"_id\"]},\"_p_url\":{\"ret_value\":\"text\",\"caption\":\"url\",\"sample_value\":\"https://webhook.site/fc29x57-32e7-48e5-b61c-cbcca231d586\",\"path\":[\"url\"]},\"_p_enabled\":{\"ret_value\":\"boolean\",\"caption\":\"enabled\",\"sample_value\":false,\"path\":[\"enabled\"]},\"_p_local_map\":{\"ret_value\":\"boolean\",\"caption\":\"local_map\",\"sample_value\":true,\"path\":[\"local_map\"]},\"_p_STATUS_INSTANCE\":{\"ret_value\":\"boolean\",\"caption\":\"STATUS_INSTANCE\",\"sample_value\":true,\"path\":[\"STATUS_INSTANCE\"]},\"_p_QRCODE_UPDATED\":{\"ret_value\":\"boolean\",\"caption\":\"QRCODE_UPDATED\",\"sample_value\":true,\"path\":[\"QRCODE_UPDATED\"]},\"_p_MESSAGES_SET\":{\"ret_value\":\"boolean\",\"caption\":\"MESSAGES_SET\",\"sample_value\":true,\"path\":[\"MESSAGES_SET\"]},\"_p_MESSAGES_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"MESSAGES_UPDATE\",\"sample_value\":true,\"path\":[\"MESSAGES_UPDATE\"]},\"_p_MESSAGES_UPSERT\":{\"ret_value\":\"boolean\",\"caption\":\"MESSAGES_UPSERT\",\"sample_value\":true,\"path\":[\"MESSAGES_UPSERT\"]},\"_p_SEND_MESSAGE\":{\"ret_value\":\"boolean\",\"caption\":\"SEND_MESSAGE\",\"sample_value\":true,\"path\":[\"SEND_MESSAGE\"]},\"_p_CONTACTS_SET\":{\"ret_value\":\"boolean\",\"caption\":\"CONTACTS_SET\",\"sample_value\":true,\"path\":[\"CONTACTS_SET\"]},\"_p_CONTACTS_UPSERT\":{\"ret_value\":\"boolean\",\"caption\":\"CONTACTS_UPSERT\",\"sample_value\":true,\"path\":[\"CONTACTS_UPSERT\"]},\"_p_CONTACTS_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"CONTACTS_UPDATE\",\"sample_value\":true,\"path\":[\"CONTACTS_UPDATE\"]},\"_p_PRESENCE_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"PRESENCE_UPDATE\",\"sample_value\":true,\"path\":[\"PRESENCE_UPDATE\"]},\"_p_CHATS_SET\":{\"ret_value\":\"boolean\",\"caption\":\"CHATS_SET\",\"sample_value\":true,\"path\":[\"CHATS_SET\"]},\"_p_CHATS_UPSERT\":{\"ret_value\":\"boolean\",\"caption\":\"CHATS_UPSERT\",\"sample_value\":true,\"path\":[\"CHATS_UPSERT\"]},\"_p_CHATS_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"CHATS_UPDATE\",\"sample_value\":true,\"path\":[\"CHATS_UPDATE\"]},\"_p_CHATS_DELETE\":{\"ret_value\":\"boolean\",\"caption\":\"CHATS_DELETE\",\"sample_value\":true,\"path\":[\"CHATS_DELETE\"]},\"_p_CONNECTION_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"CONNECTION_UPDATE\",\"sample_value\":true,\"path\":[\"CONNECTION_UPDATE\"]},\"_p_GROUPS_UPSERT\":{\"ret_value\":\"boolean\",\"caption\":\"GROUPS_UPSERT\",\"sample_value\":true,\"path\":[\"GROUPS_UPSERT\"]},\"_p_GROUPS_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"GROUPS_UPDATE\",\"sample_value\":true,\"path\":[\"GROUPS_UPDATE\"]},\"_p_GROUP_PARTICIPANTS_UPDATE\":{\"ret_value\":\"boolean\",\"caption\":\"GROUP_PARTICIPANTS_UPDATE\",\"sample_value\":true,\"path\":[\"GROUP_PARTICIPANTS_UPDATE\"]},\"_p___v\":{\"ret_value\":\"_ignore\"}}}}",
+            "url": "[url]/webhook/find/[instance]",
+            "url_params": {
+                "AUi": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://testes.uazapi.dev"
+                },
+                "AZI": {
+                    "key": "instance",
+                    "private": true,
+                    "value": "back"
+                }
+            },
+            "wrap_error": false
+        },
+        "AWI": {
+            "body": "{\n  \"where\": {\n}\n}",
+            "headers": {
+                "AWJ": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYX": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "post",
+            "name": "📄 Contatos ",
+            "publish_as": "data",
+            "rank": 7,
+            "ret_value": "api.1674157317439x684864161158529000.plugin_api.AWI",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AWI\":{\"caption\":\"📄 Contatos\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"63f36bd73a2c6f9fd872ab63\",\"path\":[\"_id\"]},\"_p_pushName\":{\"ret_value\":\"text\",\"caption\":\"pushName\",\"sample_value\":\"Caiado\",\"path\":[\"pushName\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5521985966284@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/312292755_1246014562926686_4855926860625131677_n.jpg?ccb=11-4&oh=01_AdQFF3pINnQCcjorj4xY9TdraGxloc1hc4J1r7eMDgKTUQ&oe=64006360\",\"path\":[\"profilePictureUrl\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]},\"_p___v\":{\"ret_value\":\"_ignore\"}}}}",
+            "url": "[url]/chat/findContacts/[instance]",
+            "url_params": {
+                "AWK": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server02.uazapi.dev"
+                },
+                "AcN": {
+                    "key": "instance",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
+        "AWi": {
+            "body": "{\n  \"subject\": \"<nome_grupo>\",\n  \"participants\": [<participantes>],\n  \"profilePicture\": \"<imagem_grupo>\",\n  \"description\": \"<descricao>\"\n}",
+            "body_params": {
+                "AWn": {
+                    "key": "nome_grupo",
+                    "value": "grupo criado2"
+                },
+                "AWo": {
+                    "key": "participantes",
+                    "value": "\"5521996015792\", \"5521987153448\""
+                },
+                "AWp": {
+                    "key": "descricao",
+                    "value": "descrição"
+                },
+                "AWq": {
+                    "key": "imagem_grupo",
+                    "value": "https://cdn.pixabay.com/photo/2012/11/21/17/02/lion-66898_960_720.jpg"
+                }
+            },
+            "headers": {
+                "AWj": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYb": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "📄 Grupo - Detalhes",
+            "publish_as": "data",
+            "rank": 10,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AWi",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AWi\":{\"caption\":\"📄 Grupo - Detalhes\",\"fields\":{\"_p_metadata.id\":{\"ret_value\":\"text\",\"caption\":\"metadata id\",\"sample_value\":\"120363148122601519@g.us\",\"path\":[\"metadata\",\"id\"]},\"_p_metadata.subject\":{\"ret_value\":\"text\",\"caption\":\"metadata subject\",\"sample_value\":\"teste menção\",\"path\":[\"metadata\",\"subject\"]},\"_p_metadata.subjectOwner\":{\"ret_value\":\"text\",\"caption\":\"metadata subjectOwner\",\"sample_value\":\"5521959032485@s.whatsapp.net\",\"path\":[\"metadata\",\"subjectOwner\"]},\"_p_metadata.subjectTime\":{\"ret_value\":\"number\",\"caption\":\"metadata subjectTime\",\"sample_value\":1682509236,\"path\":[\"metadata\",\"subjectTime\"]},\"_p_metadata.size\":{\"ret_value\":\"number\",\"caption\":\"metadata size\",\"sample_value\":2,\"path\":[\"metadata\",\"size\"]},\"_p_metadata.creation\":{\"ret_value\":\"number\",\"caption\":\"metadata creation\",\"sample_value\":1682509236,\"path\":[\"metadata\",\"creation\"]},\"_p_metadata.owner\":{\"ret_value\":\"text\",\"caption\":\"metadata owner\",\"sample_value\":\"5521959032485@s.whatsapp.net\",\"path\":[\"metadata\",\"owner\"]},\"_p_metadata.desc\":{\"ret_value\":\"text\",\"caption\":\"metadata desc\",\"sample_value\":\"null\",\"path\":[\"metadata\",\"desc\"]},\"_p_metadata.descId\":{\"ret_value\":\"text\",\"caption\":\"metadata descId\",\"sample_value\":\"BAE582508DADB034\",\"path\":[\"metadata\",\"descId\"]},\"_p_metadata.restrict\":{\"ret_value\":\"boolean\",\"caption\":\"metadata restrict\",\"sample_value\":false,\"path\":[\"metadata\",\"restrict\"]},\"_p_metadata.announce\":{\"ret_value\":\"boolean\",\"caption\":\"metadata announce\",\"sample_value\":false,\"path\":[\"metadata\",\"announce\"]},\"_p_metadata.participants\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.AWi.metadata.participants\",\"caption\":\"metadata participants\",\"path\":[\"metadata\",\"participants\"]},\"_p_imageLowRes\":{\"ret_value\":\"text\",\"caption\":\"imageLowRes\",\"sample_value\":null,\"path\":[\"imageLowRes\"]},\"_p_imageHiRes\":{\"ret_value\":\"text\",\"caption\":\"imageHiRes\",\"sample_value\":null,\"path\":[\"imageHiRes\"]}}},\"plugin_api.AWi.metadata.participants\":{\"caption\":\"📄 Grupo - Detalhes de um grupo  metadata participant\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5521959032485@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_admin\":{\"ret_value\":\"text\",\"caption\":\"admin\",\"sample_value\":\"superadmin\",\"path\":[\"admin\"]}}}}",
+            "url": "[url]/group/findGroupInfos/[instance]?groupJid=[groupJid]",
+            "url_params": {
+                "AWk": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server02.uazapi.dev"
+                },
+                "AWl": {
+                    "key": "instance",
+                    "value": ""
+                },
+                "AWm": {
+                    "key": "groupJid",
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
+        "AXp": {
+            "headers": {
+                "AXq": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYZ": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "get",
+            "name": "📄 Chats ",
+            "publish_as": "data",
+            "rank": 3,
+            "ret_value": "api.1674157317439x684864161158529000.plugin_api.AXp",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AXp\":{\"caption\":\"📄 Chats\",\"fields\":{\"_p__id\":{\"ret_value\":\"_ignore\"},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5521996346909@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_owner\":{\"ret_value\":\"_ignore\"},\"_p___v\":{\"ret_value\":\"_ignore\"},\"_p_lastcache\":{\"ret_value\":\"number\",\"caption\":\"lastcache\",\"sample_value\":1685632007,\"path\":[\"lastcache\"]},\"_p_lastmsg\":{\"ret_value\":\"number\",\"caption\":\"lastmsg\",\"sample_value\":1685632007,\"path\":[\"lastmsg\"]},\"_p_unreadcount\":{\"ret_value\":\"number\",\"caption\":\"unreadcount\",\"sample_value\":0,\"path\":[\"unreadcount\"]},\"_p_group\":{\"ret_value\":\"boolean\",\"caption\":\"group\",\"sample_value\":false,\"path\":[\"group\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":null,\"path\":[\"name\"]},\"_p_contactname\":{\"ret_value\":\"text\",\"caption\":\"contactname\",\"sample_value\":null,\"path\":[\"contactname\"]},\"_p_imagechat\":{\"ret_value\":\"text\",\"caption\":\"imagechat\",\"sample_value\":null,\"path\":[\"imagechat\"]}}}}",
+            "url": "[url]/chat/findChats/[instance]",
+            "url_params": {
+                "AXr": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server02.uazapi.dev"
+                },
+                "AcT": {
+                    "key": "instance",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
+        "AfM": {
+            "0": "A",
+            "1": "f",
+            "2": "L",
+            "body": "{\n  \"subject\": \"<nome_grupo>\",\n  \"participants\": [<participantes>],\n  \"profilePicture\": \"<imagem_grupo>\",\n  \"description\": \"<descricao>\"\n}",
+            "body_params": {
+                "AWn": {
+                    "key": "nome_grupo",
+                    "value": "grupo criado2"
+                },
+                "AWo": {
+                    "key": "participantes",
+                    "value": "\"5521996015792\", \"5521987153448\""
+                },
+                "AWp": {
+                    "key": "descricao",
+                    "value": "descrição"
+                },
+                "AWq": {
+                    "key": "imagem_grupo",
+                    "value": "https://cdn.pixabay.com/photo/2012/11/21/17/02/lion-66898_960_720.jpg"
+                }
+            },
+            "headers": {
+                "AWj": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYb": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "is_list": true,
+            "method": "get",
+            "name": "📄 Grupos",
+            "publish_as": "data",
+            "rank": 9,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AfM",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AfM\":{\"caption\":\"📄 Grupos \",\"fields\":{\"_p_groupJid\":{\"ret_value\":\"text\",\"caption\":\"groupJid\",\"sample_value\":\"120363075797374359@g.us\",\"path\":[\"groupJid\"]},\"_p_subject\":{\"ret_value\":\"text\",\"caption\":\"subject\",\"sample_value\":\"TYPEBOT.io | BRASIL 🇧🇷\",\"path\":[\"subject\"]},\"_p_subjectOwner\":{\"ret_value\":\"text\",\"caption\":\"subjectOwner\",\"sample_value\":\"554591111217\",\"path\":[\"subjectOwner\"]},\"_p_subjectTime\":{\"ret_value\":\"number\",\"caption\":\"subjectTime\",\"sample_value\":1678280850,\"path\":[\"subjectTime\"]},\"_p_size\":{\"ret_value\":\"number\",\"caption\":\"size\",\"sample_value\":193,\"path\":[\"size\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"554591111217\",\"path\":[\"owner\"]},\"_p_creation\":{\"ret_value\":\"number\",\"caption\":\"creation\",\"sample_value\":1678280850,\"path\":[\"creation\"]},\"_p_desc\":{\"ret_value\":\"text\",\"caption\":\"desc\",\"sample_value\":\"SITE OFICIAL\\nhttps://typebot.io\\n\\nDOCUMENTAÇÃO\\nhttps://docs.typebot.io\\n\\nGITHUB\\nhttps://github.com/baptisteArno/typebot.io\",\"path\":[\"desc\"]},\"_p_restrict\":{\"ret_value\":\"boolean\",\"caption\":\"restrict\",\"sample_value\":true,\"path\":[\"restrict\"]},\"_p_announce\":{\"ret_value\":\"boolean\",\"caption\":\"announce\",\"sample_value\":false,\"path\":[\"announce\"]},\"_p_imageLowRes\":{\"ret_value\":\"text\",\"caption\":\"imageLowRes\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/328773692_562554978986916_518033681872893807_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSYUk7Zl2KDROMGCW_rW-9edzsIFtLxCCj3M9XbPzC6wg&oe=649DD53C\",\"path\":[\"imageLowRes\"]}}}}",
+            "url": "[url]/group/findGroups/[instance]",
+            "url_params": {
+                "AWk": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                },
+                "AWl": {
+                    "key": "instance",
+                    "value": "wvpwew1k"
+                }
+            },
+            "wrap_error": false
+        },
+        "AhE": {
+            "data_type": "JSON",
+            "get_headers": true,
+            "initialized": true,
+            "method": "post",
+            "name": "✅ Fazer upload de um arquivo para o bubble ▶️",
+            "params": {
+                "AhJ": {
+                    "doc": "coloque o arquivo base64 aqui",
+                    "key": "contents",
+                    "long_text": true,
+                    "private": true,
+                    "value": ""
+                },
+                "AhK": {
+                    "doc": "nomedoarquivo.txt\n\ncoloque o nome do arquivo e sua extensão",
+                    "key": "name",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 12,
+            "ret_value": "api.1674157317439x684864161158529000.plugin_api.AhE",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AhE\":{\"caption\":\"✅ Upload to Bubble - Base64\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"//s3.amazonaws.com/appforest_uf/f1677647589133x644077376946096400/test.json\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"text\",\"caption\":\"headers date\",\"sample_value\":\"Wed, 01 Mar 2023 05:13:09 GMT\",\"path\":[\"headers\",\"date\"]},\"_p_headers.content-type\":{\"ret_value\":\"_ignore\"},\"_p_headers.transfer-encoding\":{\"ret_value\":\"_ignore\"},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-powered-by\":{\"ret_value\":\"_ignore\"},\"_p_headers.cache-control\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-appname\":{\"ret_value\":\"text\",\"caption\":\"headers x-bubble-appname\",\"sample_value\":\"uazapi-exemplo\",\"path\":[\"headers\",\"x-bubble-appname\"]},\"_p_headers.x-bubble-request-took\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-perf\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-used\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-limit\":{\"ret_value\":\"_ignore\"},\"_p_headers.vary\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.content-encoding\":{\"ret_value\":\"_ignore\"}}}}",
+            "url": "https://[appname].bubbleapps.io/[version-test/]fileupload",
+            "url_params": {
+                "AhG": {
+                    "doc": "Coloque o nome/id do seu aplicativo no bubble, o que está entre colchetes\n\nse seu aplicativo for free ou não tiver domínio ainda, pegue esse dado\nhttps://[appname].bubbleapps.io/\n\nse você já tem domínio no seu aplicativo, e vc não lembra o nome/id, você pode pegar no link do editor, vai estar assim\n\nhttps://bubble.io/page?name=index&id=[appname]&tab=tabs-1",
+                    "key": "appname",
+                    "private": true,
+                    "value": "uazapi-exemplo"
+                },
+                "AhN": {
+                    "allow_blank": true,
+                    "doc": "se for version-test coloque version-test/, se for version live, deixe em branco",
+                    "key": "version-test/",
+                    "private": true,
+                    "value": "version-test/"
+                }
+            }
+        }
+    },
+    "human": "🤖 uazapi",
+    "said": "dWF6YXBp",
+    "shared_headers": {
+        "bTIKX": {
+            "key": "Accept",
+            "private": true,
+            "value": "*/*",
+            "visibility": "hidden"
+        },
+        "bTIKZ": {
+            "key": "Connection",
+            "private": true,
+            "value": "keep-alive",
+            "visibility": "hidden"
+        },
+        "cnsgD0": {
+            "key": "Content-Type",
+            "private": true,
+            "value": "application/json",
+            "visibility": "hidden"
+        }
+    }
+}

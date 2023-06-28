@@ -1,0 +1,132 @@
+{
+    "category": "plugins",
+    "display": "▶️ Enviar arquivo",
+    "fields": {
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AGi": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "AGm": {
+            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
+            "caption": "Caso deixe vazio, a API Key será a Global API Key definida no plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AHw": {
+            "caption": "Destinatário",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 5,
+            "value": "text"
+        },
+        "AHy": {
+            "caption": "delay",
+            "default_val": 0,
+            "editor": "DynamicValue",
+            "name": "delay",
+            "rank": 10,
+            "value": "number"
+        },
+        "AIC": {
+            "caption": "Mensagem",
+            "editor": "DynamicValue",
+            "name": "caption",
+            "optional": true,
+            "rank": 6,
+            "value": "text"
+        },
+        "AID": {
+            "caption": "Nome do arquivo",
+            "editor": "DynamicValue",
+            "name": "filename",
+            "optional": true,
+            "rank": 8,
+            "value": "text"
+        },
+        "AIE": {
+            "caption": "Url do arquivo",
+            "editor": "DynamicValue",
+            "name": "media",
+            "rank": 9,
+            "value": "text"
+        },
+        "AIF": {
+            "caption": "Mediatype",
+            "doc": "opções: image, document, video ou audio",
+            "editor": "DynamicValue",
+            "name": "mediatype",
+            "rank": 7,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGj": {
+            "caption": "remoteJid",
+            "is_list": false,
+            "name": "remoteJid",
+            "rank": 3,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        },
+        "AHz": {
+            "caption": "fromMe",
+            "name": "fromMe",
+            "rank": 4,
+            "value": "boolean"
+        },
+        "AIA": {
+            "caption": "id",
+            "name": "id",
+            "rank": 5,
+            "value": "text"
+        },
+        "AIB": {
+            "caption": "status",
+            "name": "status",
+            "rank": 6,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
