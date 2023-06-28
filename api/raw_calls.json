@@ -172,7 +172,7 @@
             },
             "headers": {
                 "AUM": {
-                    "doc": "⚠️ chamada só funciona com apikey global.\n\nPara ter uma apikey global você precisa estar no plano ilimitado, hospedando a API no seu servidor.",
+                    "doc": "Chamada só funciona com apikey global.\n\nPara ter uma apikey global você precisa estar no plano ilimitado, hospedando a API no seu servidor.",
                     "key": "apikey",
                     "value": ""
                 },
@@ -302,12 +302,12 @@
             "body_params": {
                 "AUO": {
                     "key": "instanceName",
-                    "value": "codechat2"
+                    "value": "uazapi"
                 }
             },
             "headers": {
                 "AUM": {
-                    "doc": "⚠️ chamada só funciona com apikey global.\n\nPara ter uma apikey global você precisa estar no plano ilimitado, hospedando a API no seu servidor.",
+                    "doc": "Chamada só funciona com apikey global.\n\nPara ter uma apikey global você precisa estar no plano ilimitado, hospedando a API no seu servidor.",
                     "key": "apikey",
                     "value": ""
                 },
@@ -322,12 +322,12 @@
             "initialized": true,
             "is_list": true,
             "method": "get",
-            "name": "📄 Instancias ⚠️",
+            "name": "📄 Instancias",
             "publish_as": "data",
             "rank": 0,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AUK",
             "should_reinitialize": true,
-            "types": "{\"plugin_api.AUK\":{\"caption\":\"📄 Instancias ⚠️\",\"fields\":{\"_p_instance.instanceName\":{\"ret_value\":\"text\",\"caption\":\"instance instanceName\",\"sample_value\":\"uazapi_interno1\",\"path\":[\"instance\",\"instanceName\"]},\"_p_instance.owner\":{\"ret_value\":\"text\",\"caption\":\"instance owner\",\"sample_value\":\"5521959032485\",\"path\":[\"instance\",\"owner\"]},\"_p_instance.profileName\":{\"ret_value\":\"text\",\"caption\":\"instance profileName\",\"sample_value\":\"Uazapi\",\"path\":[\"instance\",\"profileName\"]},\"_p_instance.profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"instance profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/323858507_477627697899218_4525467378833366703_n.jpg?ccb=11-4&oh=01_AdSJL3deseCE60uxMypgRla7YhcqFhS3WwRZ-saE86RXgg&oe=649AB2D2\",\"path\":[\"instance\",\"profilePictureUrl\"]}}}}",
+            "types": "{\"plugin_api.AUK\":{\"caption\":\"📄 Instancias\",\"fields\":{\"_p_instance.instanceName\":{\"ret_value\":\"text\",\"caption\":\"instance instanceName\",\"sample_value\":\"uazapi_interno1\",\"path\":[\"instance\",\"instanceName\"]},\"_p_instance.owner\":{\"ret_value\":\"text\",\"caption\":\"instance owner\",\"sample_value\":\"5521959032485\",\"path\":[\"instance\",\"owner\"]},\"_p_instance.profileName\":{\"ret_value\":\"text\",\"caption\":\"instance profileName\",\"sample_value\":\"Uazapi\",\"path\":[\"instance\",\"profileName\"]},\"_p_instance.profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"instance profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/323858507_477627697899218_4525467378833366703_n.jpg?ccb=11-4&oh=01_AdSJL3deseCE60uxMypgRla7YhcqFhS3WwRZ-saE86RXgg&oe=649AB2D2\",\"path\":[\"instance\",\"profilePictureUrl\"]}}}}",
             "url": "[url]/instance/fetchInstances",
             "url_params": {
                 "AUN": {
