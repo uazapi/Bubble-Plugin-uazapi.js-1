@@ -5,7 +5,12 @@ function(instance, properties, context) {
         baseUrl = context.keys["Server URL"];
     }
 
-    var url = baseUrl + "/chat/findContacts/" + properties.instancia + "?convert=true";
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/chat/findContacts/" + instancia + "?convert=true";
     
     
     

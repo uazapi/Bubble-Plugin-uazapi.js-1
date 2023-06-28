@@ -19,7 +19,7 @@
             "value": "text"
         },
         "ABO": {
-            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "caption": "",
             "editor": "Label",
             "name": "URL OPCIONAL",
             "rank": 1

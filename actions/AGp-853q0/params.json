@@ -6,6 +6,7 @@
             "caption": "Servidor URL",
             "editor": "DynamicValue",
             "name": "url",
+            "optional": true,
             "rank": 0,
             "value": "text"
         },
@@ -24,13 +25,13 @@
             "rank": 5
         },
         "AGm": {
-            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "caption": "",
             "editor": "Label",
             "name": "url_opcional",
             "rank": 2
         },
         "AGn": {
-            "caption": "Caso deixe vazio, a API Key será a Global API Key definida no plugin.",
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
             "editor": "Label",
             "name": "apikey_opcional",
             "rank": 4
@@ -38,6 +39,7 @@
         "AHX": {
             "caption": "Instancia",
             "editor": "DynamicValue",
+	    "optional": true,
             "name": "instancia",
             "rank": 1,
             "value": "text"

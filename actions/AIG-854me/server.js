@@ -9,7 +9,12 @@ function(properties, context) {
             apikey = context.keys["Global APIKEY"];
         }
         
-         var url = baseUrl + "/message/sendWhatsAppAudio/" + properties.instancia;
+        let instancia = properties.instancia;
+        if (!apikey || apikey.trim() === "") {
+            apikey = context.keys["Instancia"];
+        }
+
+        var url = baseUrl + "/message/sendWhatsAppAudio/" + instancia;
         
         let headers = {
             "Accept": "*/*",

@@ -5,7 +5,12 @@ function(instance, properties, context) {
       baseUrl = context.keys["Server URL"];
   }
 
-  var url = baseUrl + "/group/findGroupInfos/" + properties.instancia + "?groupJid=" + properties.groupid;
+  let instancia = properties.instancia;
+  if (!apikey || apikey.trim() === "") {
+      apikey = context.keys["Instancia"];
+  }
+
+  var url = baseUrl + "/group/findGroupInfos/" + instancia + "?groupJid=" + properties.groupid;
   
   
   

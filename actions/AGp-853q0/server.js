@@ -9,8 +9,15 @@ let baseUrl = properties.url;
         apikey = context.keys["Global APIKEY"];
     }
     
-    var url = baseUrl + "/instance/connectionState/" + properties.instancia + "?convert=true";
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/instance/connectionState/" + instancia + "?convert=true";
     
+
+
     let headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",

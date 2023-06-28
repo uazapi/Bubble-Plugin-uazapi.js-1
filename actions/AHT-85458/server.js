@@ -9,7 +9,12 @@ let baseUrl = properties.url;
         apikey = context.keys["Global APIKEY"];
     }
     
-    var url = baseUrl + "/group/groupSetting/" + properties.instancia + "?groupJid=" + properties.groupid;
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/group/groupSetting/" + instancia + "?groupJid=" + properties.groupid;
     
     let headers = {
         "Accept": "*/*",

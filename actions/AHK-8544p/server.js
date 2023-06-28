@@ -8,8 +8,13 @@ let baseUrl = properties.url;
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
+
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
     
-    var url = baseUrl + "/group/findGroups/" + properties.instancia  + "?convert=true";
+    var url = baseUrl + "/group/findGroups/" + pinstancia  + "?convert=true";
     
     let headers = {
         "Accept": "*/*",

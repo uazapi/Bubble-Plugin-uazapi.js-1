@@ -1,5 +1,5 @@
 function(properties, context) {
-    let baseUrl = properties.url;
+        let baseUrl = properties.url;
         if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
             baseUrl = context.keys["Server URL"];
         }
@@ -8,8 +8,13 @@ function(properties, context) {
         if (!apikey || apikey.trim() === "") {
             apikey = context.keys["Global APIKEY"];
         }
+
+        let instancia = properties.instancia;
+        if (!apikey || apikey.trim() === "") {
+            apikey = context.keys["Instancia"];
+        }
         
-   var url = baseUrl + "/message/sendContact/" + properties.instancia;
+   var url = baseUrl + "/message/sendContact/" + instancia;
         
         let headers = {
             "Accept": "*/*",

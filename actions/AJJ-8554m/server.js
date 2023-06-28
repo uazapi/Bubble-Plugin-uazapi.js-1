@@ -9,8 +9,13 @@ function(properties, context) {
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
+
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
     
-    var url = baseUrl + "/chat/findStatusMessage/" + properties.instancia + "?convert=true";
+    var url = baseUrl + "/chat/findStatusMessage/" + instancia + "?convert=true";
     
     let headers = {
         "Accept": "*/*",

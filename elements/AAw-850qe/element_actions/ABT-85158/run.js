@@ -5,7 +5,12 @@ function(instance, properties, context) {
       baseUrl = context.keys["Server URL"];
   }
 
-  var url = baseUrl + "/message/sendMedia/" + properties.instancia + "?convert=true";
+  let instancia = properties.instancia;
+  if (!apikey || apikey.trim() === "") {
+      apikey = context.keys["Instancia"];
+  }
+
+  var url = baseUrl + "/message/sendMedia/" + instancia + "?convert=true";
   
 // campos opcionais
 let caption = properties.caption ? { "caption": properties.caption } : {};

@@ -9,7 +9,12 @@ let baseUrl = properties.url;
         apikey = context.keys["Global APIKEY"];
     }
     
-        var url = baseUrl + "/webhook/set/" + properties.instancia + "?convert=true";
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/webhook/set/" + instancia + "?convert=true";
     
     let headers = {
         "Accept": "*/*",

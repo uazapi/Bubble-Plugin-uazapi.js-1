@@ -9,7 +9,12 @@ let baseUrl = properties.url;
         apikey = context.keys["Global APIKEY"];
     }
     
-    var url = baseUrl + "/chat/whatsappNumbers/" + properties.instancia  + "?convert=true";
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/chat/whatsappNumbers/" + instancia  + "?convert=true";
     
     let headers = {
         "Accept": "*/*",

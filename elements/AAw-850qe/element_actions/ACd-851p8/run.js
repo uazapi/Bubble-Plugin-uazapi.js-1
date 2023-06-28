@@ -5,7 +5,12 @@ function(instance, properties, context) {
       baseUrl = context.keys["Server URL"];
   }
 
-  var url = baseUrl + "/group/sendMention/" + properties.instancia + "?groupJid=" + properties.group;
+  let instancia = properties.instancia;
+  if (!apikey || apikey.trim() === "") {
+      apikey = context.keys["Instancia"];
+  }
+
+  var url = baseUrl + "/group/sendMention/" + instancia + "?groupJid=" + properties.group;
   
   
   

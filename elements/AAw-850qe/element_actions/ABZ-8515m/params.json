@@ -31,18 +31,19 @@
         "ABH": {
             "caption": "Instancia",
             "editor": "DynamicValue",
+	    "optional": true,
             "name": "instancia",
             "rank": 2,
             "value": "text"
         },
         "ABO": {
-            "caption": "Caso deixe vazio, o Servidor URL será aquele definido no plugin.",
+            "caption": "",
             "editor": "Label",
             "name": "URL OPICIONAL",
             "rank": 1
         },
         "ABP": {
-            "caption": "Cuidado, sua apikey estará exposta para o cliente, evite usar sua Global APIKEY.",
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key..",
             "doc": "",
             "editor": "Label",
             "name": "apikey_doc",

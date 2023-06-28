@@ -9,7 +9,12 @@ let baseUrl = properties.url;
         apikey = context.keys["Global APIKEY"];
     }
     
-    var url = baseUrl + "/chat/markMessageAsRead/" + properties.instancia;
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/chat/markMessageAsRead/" + instancia;
     
     let headers = {
         "Accept": "*/*",

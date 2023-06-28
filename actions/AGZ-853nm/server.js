@@ -9,6 +9,7 @@ function(properties, context) {
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
+
     
     var url = baseUrl + "/instance/fetchInstances?convert=true";
     

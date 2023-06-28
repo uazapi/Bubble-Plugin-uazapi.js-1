@@ -5,7 +5,12 @@ function(instance, properties, context) {
         baseUrl = context.keys["Server URL"];
     }
 
-    var url = baseUrl + "/group/create/" + properties.instancia + "?convert=true";
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
+
+    var url = baseUrl + "/group/create/" + instancia + "?convert=true";
 
     var myHeaders = new Headers();
     myHeaders.append("Accept", "*/*");

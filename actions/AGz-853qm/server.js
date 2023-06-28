@@ -8,8 +8,13 @@ let baseUrl = properties.url;
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
+
+    let instancia = properties.instancia;
+    if (!apikey || apikey.trim() === "") {
+        apikey = context.keys["Instancia"];
+    }
     
-    var url = baseUrl + "/message/sendReaction/" + properties.instancia;
+    var url = baseUrl + "/message/sendReaction/" + instancia;
     
     let headers = {
         "Accept": "*/*",

@@ -5,7 +5,12 @@ function(instance, properties, context) {
       baseUrl = context.keys["Server URL"];
   }
 
-  var url = baseUrl + "/webhook/find/" + properties.instancia + "?convert=true";
+  let instancia = properties.instancia;
+  if (!apikey || apikey.trim() === "") {
+      apikey = context.keys["Instancia"];
+  }
+
+  var url = baseUrl + "/webhook/find/" + instancia + "?convert=true";
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
