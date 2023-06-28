@@ -613,7 +613,7 @@
                     "doc": "Coloque o nome/id do seu aplicativo no bubble, o que está entre colchetes\n\nse seu aplicativo for free ou não tiver domínio ainda, pegue esse dado\nhttps://[appname].bubbleapps.io/\n\nse você já tem domínio no seu aplicativo, e vc não lembra o nome/id, você pode pegar no link do editor, vai estar assim\n\nhttps://bubble.io/page?name=index&id=[appname]&tab=tabs-1",
                     "key": "appname",
                     "private": true,
-                    "value": "uazapi-exemplo"
+                    "value": "VEJA A DOCUMENTAÇÃO ABAIXO"
                 },
                 "AhN": {
                     "allow_blank": true,
