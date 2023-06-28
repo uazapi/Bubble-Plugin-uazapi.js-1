@@ -255,14 +255,6 @@
             "name": "downloadmsg",
             "value": "custom_data_AFq"
         },
-        "AGS": {
-            "caption": "blobUrl",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "blobUrl",
-            "value": "file"
-        },
         "AGT": {
             "caption": "id do grupo que entrou",
             "initialization_code": {
@@ -270,6 +262,14 @@
             },
             "name": "idgrupo",
             "value": "text"
+        },
+        "AKE": {
+            "caption": "arquivo blob",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "blobUrl",
+            "value": "file"
         }
     }
 }

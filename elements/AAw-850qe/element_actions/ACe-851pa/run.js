@@ -65,7 +65,18 @@ fetch(url, requestOptions)
       instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
       instance.publishState('downloadmsg', resultObj);
 			
-    
+    // Convertendo base64 em blob
+        const byteCharacters = atob(resultObj._p_base64);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray], {type: resultObj._p_mimetype});
+
+        // Criando URL do blob
+        const blobUrl = URL.createObjectURL(blob);
+        instance.publishState('blobUrl', blobUrl);
 		    }
 
   })
