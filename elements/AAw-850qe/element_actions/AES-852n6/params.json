@@ -19,7 +19,7 @@
             "value": "text"
         },
         "ABO": {
-            "caption": "",
+            "caption": "-",
             "editor": "Label",
             "name": "URL OPCIONAL",
             "rank": 1

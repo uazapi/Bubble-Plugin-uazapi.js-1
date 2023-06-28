@@ -35,7 +35,7 @@
             "value": "text"
         },
         "ACP": {
-            "caption": "",
+            "caption": "-",
             "editor": "Label",
             "name": "URL OPICIONAL",
             "rank": 1

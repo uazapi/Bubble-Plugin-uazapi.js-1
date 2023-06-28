@@ -19,7 +19,7 @@
             "value": "text"
         },
         "AGm": {
-            "caption": "",
+            "caption": "-",
             "editor": "Label",
             "name": "url_opcional",
             "rank": 1

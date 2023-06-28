@@ -53,7 +53,7 @@
             "value": "number"
         },
         "ABO": {
-            "caption": "",
+            "caption": "-",
             "editor": "Label",
             "name": "URL OPICIONAL",
             "rank": 1
