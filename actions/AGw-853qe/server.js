@@ -9,10 +9,10 @@ function(properties, context) {
             apikey = context.keys["Global APIKEY"];
         }
 
-        let instancia = properties.instancia;
-        if (!apikey || apikey.trim() === "") {
-            apikey = context.keys["Instancia"];
-        }
+    let instancia = properties.instancia;
+    if (!instancia || instancia.trim() === "") {
+        instancia = context.keys["Instancia"];
+    }
         
           var url = baseUrl + "/message/sendLocation/" + instancia;
         

@@ -5,10 +5,10 @@ function(instance, properties, context) {
       baseUrl = context.keys["Server URL"];
   }
 
-  let instancia = properties.instancia;
-  if (!apikey || apikey.trim() === "") {
-      apikey = context.keys["Instancia"];
-  }
+    let instancia = properties.instancia;
+    if (!instancia || instancia.trim() === "") {
+        instancia = context.keys["Instancia"];
+    }
 
   var url = baseUrl + "/message/sendPoll/" + instancia + "?convert=true";
   

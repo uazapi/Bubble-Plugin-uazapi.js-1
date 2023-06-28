@@ -11,8 +11,8 @@ function(properties, context) {
     }
 
     let instancia = properties.instancia;
-    if (!apikey || apikey.trim() === "") {
-        apikey = context.keys["Instancia"];
+    if (!instancia || instancia.trim() === "") {
+        instancia = context.keys["Instancia"];
     }
     
     var url = baseUrl + "/chat/findStatusMessage/" + instancia + "?convert=true";

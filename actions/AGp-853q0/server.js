@@ -10,8 +10,8 @@ let baseUrl = properties.url;
     }
     
     let instancia = properties.instancia;
-    if (!apikey || apikey.trim() === "") {
-        apikey = context.keys["Instancia"];
+    if (!instancia || instancia.trim() === "") {
+        instancia = context.keys["Instancia"];
     }
 
     var url = baseUrl + "/instance/connectionState/" + instancia + "?convert=true";
