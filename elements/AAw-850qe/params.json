@@ -269,7 +269,7 @@
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
             "name": "blobUrl",
-            "value": "file"
+            "value": "text"
         }
     }
 }

@@ -13,6 +13,7 @@
         "ABE": {
             "caption": "Mensagem",
             "editor": "DynamicValue",
+            "long_text": true,
             "name": "text",
             "rank": 6,
             "value": "text"

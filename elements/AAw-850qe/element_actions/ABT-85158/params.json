@@ -14,6 +14,7 @@
             "caption": "Mensagem",
             "doc": "opcional",
             "editor": "DynamicValue",
+            "long_text": true,
             "name": "caption",
             "optional": true,
             "rank": 6,

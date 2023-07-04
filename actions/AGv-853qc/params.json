@@ -36,7 +36,7 @@
             "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
             "editor": "Label",
             "name": "apikey_opcional",
-            "rank": 3
+            "rank": 4
         },
         "AHw": {
             "caption": "Destinatário",
@@ -56,6 +56,7 @@
         "AIC": {
             "caption": "Mensagem",
             "editor": "DynamicValue",
+            "long_text": true,
             "name": "caption",
             "optional": true,
             "rank": 6,

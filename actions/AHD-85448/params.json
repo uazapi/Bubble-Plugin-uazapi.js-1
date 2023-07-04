@@ -41,6 +41,7 @@
         "AIe": {
             "caption": "Mensagem",
             "editor": "DynamicValue",
+            "long_text": true,
             "name": "mention",
             "rank": 6,
             "value": "text"

@@ -48,6 +48,7 @@
         "AHx": {
             "caption": "Mensagem",
             "editor": "DynamicValue",
+            "is_list": true,
             "name": "text",
             "rank": 6,
             "value": "text"
