@@ -1,9 +1,14 @@
 function(instance, properties, context) {
     //🔓 Grupo - Buscar todos
-  let baseUrl = properties.url;
-  if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
-      baseUrl = context.keys["Server URL"];
-  }
+    let baseUrl = properties.url;
+    if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
+        baseUrl = context.keys["Server URL"];
+    }
+
+    baseUrl = baseUrl.trim();
+    if (baseUrl.endsWith("/")) {
+        baseUrl = baseUrl.slice(0, -1);
+    }
 
     let instancia = properties.instancia;
     if (!instancia || instancia.trim() === "") {

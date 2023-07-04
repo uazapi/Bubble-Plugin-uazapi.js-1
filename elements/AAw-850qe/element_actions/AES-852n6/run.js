@@ -1,9 +1,14 @@
 function(instance, properties, context) {
     
-  let baseUrl = properties.url;
-  if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
-      baseUrl = context.keys["Server URL"];
-  }
+    let baseUrl = properties.url;
+    if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
+        baseUrl = context.keys["Server URL"];
+    }
+
+    baseUrl = baseUrl.trim();
+    if (baseUrl.endsWith("/")) {
+        baseUrl = baseUrl.slice(0, -1);
+    }
 
   var url = baseUrl + "/instance/fetchInstances?convert=true";
   

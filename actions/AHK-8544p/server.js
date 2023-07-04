@@ -1,13 +1,20 @@
 function(properties, context) {
-let baseUrl = properties.url;
+    let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
+    }
+
+    baseUrl = baseUrl.trim();
+    if (baseUrl.endsWith("/")) {
+        baseUrl = baseUrl.slice(0, -1);
     }
 
     let apikey = properties.apikey;
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
+    
+    apikey = apikey.trim();
 
     let instancia = properties.instancia;
     if (!instancia || instancia.trim() === "") {

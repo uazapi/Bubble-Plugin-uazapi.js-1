@@ -5,10 +5,17 @@ function(properties, context) {
         baseUrl = context.keys["Server URL"];
     }
 
+    baseUrl = baseUrl.trim();
+    if (baseUrl.endsWith("/")) {
+        baseUrl = baseUrl.slice(0, -1);
+    }
+
     let apikey = properties.apikey;
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
+    
+    apikey = apikey.trim();
 
     
     var url = baseUrl + "/instance/fetchInstances?convert=true";
