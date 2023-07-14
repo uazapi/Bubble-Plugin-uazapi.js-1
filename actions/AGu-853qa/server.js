@@ -82,7 +82,7 @@ function(properties, context) {
             remoteJid: resultObj?.key?.remoteJid,
             fromMe: resultObj?.key?.fromMe,
             id: resultObj?.key?.id,
-            status: resultObj?.status,
+            status: resultObj?.status ? resultObj?.status.toString() : undefined,
             error: error,
             log: JSON.stringify(resultObj, null, 2),
             error_log: error_log,
