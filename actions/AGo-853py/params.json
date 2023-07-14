@@ -76,6 +76,12 @@
             "name": "error",
             "rank": 4,
             "value": "text"
+        },
+        "AKG": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 5,
+            "value": "text"
         }
     },
     "type": "server_side"

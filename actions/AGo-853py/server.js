@@ -62,9 +62,13 @@ function(properties, context) {
     return {
         log: JSON.stringify(resultObj, null, 2),
         instancia: resultObj.instance?.instanceName,
-        status: resultObj.instance?.status,
+        status: (resultObj.instance?.status || resultObj.status) ? (resultObj.instance?.status || resultObj.status).toString() : undefined,
         apikey: resultObj.hash?.apikey,
-        error: resultObj.error,
+    	//error: error,
+        //error_log: error_log,         
+        error: resultObj.error ? JSON.stringify(resultObj.error).replace(/\"/g, "") : undefined,
+    	error_log: Array.isArray(resultObj.message) ? resultObj.message.join(' ').replace(/\"/g, "") : resultObj.message
+
     
     };
 }
