@@ -1,0 +1,78 @@
+{
+    "category": "plugins",
+    "display": "▶️ Grupo - Mudar descrição",
+    "fields": {
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AGi": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AGm": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 4
+        },
+        "AIy": {
+            "caption": "ID do Grupo",
+            "editor": "DynamicValue",
+            "name": "groupid",
+            "rank": 5,
+            "value": "text"
+        },
+        "AIz": {
+            "caption": "Descrição",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "description",
+            "rank": 6,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}

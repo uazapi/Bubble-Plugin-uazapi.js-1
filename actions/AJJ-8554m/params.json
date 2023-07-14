@@ -1,0 +1,83 @@
+{
+    "category": "plugins",
+    "display": "▶️ Buscar status de recebimento",
+    "fields": {
+        "AJK": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AJL": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AJM": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AJN": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AJO": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "AJP": {
+            "caption": "id da mensagem",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 5,
+            "value": "text"
+        },
+        "AJc": {
+            "caption": "Status de recebimento",
+            "editor": "custom_type",
+            "name": "mensagens_status",
+            "rank": 6
+        }
+    },
+    "return_value": {
+        "AJY": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AJZ": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AJa": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        },
+        "AJb": {
+            "caption": "mensagens_status",
+            "is_list": true,
+            "name": "mensagens_status",
+            "rank": 3,
+            "value": "custom_data_AJc"
+        }
+    },
+    "type": "server_side"
+}

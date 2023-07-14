@@ -1,0 +1,75 @@
+{
+    "caption": "🔓 Enviar reação",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABE": {
+            "caption": "Reação",
+            "default_val": "",
+            "doc": "envio vazio para retirar a reação, ou envie um emoticon, altalho: windows + . ",
+            "editor": "DynamicValue",
+            "name": "reaction",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "URL OPICIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "ADw": {
+            "caption": "Mensagem remotejid",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 6,
+            "value": "text"
+        },
+        "ADx": {
+            "caption": "Mensagem fromMe",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "fromMe",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "ADy": {
+            "caption": "Mensagem id",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 8,
+            "value": "text"
+        }
+    }
+}

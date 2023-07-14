@@ -1,0 +1,51 @@
+{
+    "caption": "🔓 Checar se número existe",
+    "doc": "",
+    "fields": {
+        "ACJ": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ACK": {
+            "caption": "Numeros",
+            "doc": "se quiser verificar mais de um, coloque separado por |",
+            "editor": "DynamicValue",
+            "name": "numbers",
+            "rank": 5,
+            "value": "text"
+        },
+        "ACL": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ACN": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ACP": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "URL OPICIONAL",
+            "rank": 1
+        },
+        "ACQ": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        }
+    }
+}

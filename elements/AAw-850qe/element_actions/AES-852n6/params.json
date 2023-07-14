@@ -1,0 +1,35 @@
+{
+    "caption": "🔓 Instancia - Buscar todas",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key Global",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "URL OPCIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "❗ Cuidado, aqui é obrigatório você usar sua Global API Key, ela estará exposta para o cliente. ❗",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        }
+    }
+}

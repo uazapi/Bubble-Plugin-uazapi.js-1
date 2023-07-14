@@ -1,0 +1,68 @@
+{
+    "caption": "🔓 Enviar texto",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABE": {
+            "caption": "Mensagem",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "text",
+            "rank": 6,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Destinatário",
+            "doc": "Se for telefone nacional, pode colocar apenas o número em formato internacional, exemplo: 5511912345678, caso esteja enviando mensagem para telefone internacional usar telefone@s.whatsapp.net, se for enviar mensagem para grupos de whatsapp, coloque o id do grupo.",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABI": {
+            "caption": "delay",
+            "default_val": 1000,
+            "doc": "delay em milisegundos, 1000 = 1 segundo",
+            "editor": "DynamicValue",
+            "name": "delay",
+            "rank": 7,
+            "value": "number"
+        },
+        "ABO": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "URL OPCIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        }
+    }
+}

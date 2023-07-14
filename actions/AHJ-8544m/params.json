@@ -1,0 +1,96 @@
+{
+    "category": "plugins",
+    "display": "▶️ Grupo - Criar",
+    "fields": {
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AGi": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AGm": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 4
+        },
+        "AIm": {
+            "caption": "Nome do Grupo",
+            "editor": "DynamicValue",
+            "name": "subject",
+            "rank": 5,
+            "value": "text"
+        },
+        "AIn": {
+            "caption": "Descrição do Grupo",
+            "editor": "DynamicValue",
+            "name": "description",
+            "rank": 6,
+            "value": "text"
+        },
+        "AIo": {
+            "caption": "Membros do Grupo",
+            "editor": "DynamicValue",
+            "name": "participants",
+            "rank": 7,
+            "value": "text"
+        },
+        "AJF": {
+            "caption": "grupo",
+            "editor": "custom_type",
+            "name": "grupo",
+            "rank": 8
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        },
+        "AJE": {
+            "caption": "grupo",
+            "name": "grupo",
+            "rank": 3,
+            "value": "custom_data_AJF"
+        }
+    },
+    "type": "server_side"
+}

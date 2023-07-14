@@ -1,0 +1,100 @@
+{
+    "category": "plugins",
+    "display": "▶️ Mensagem - Apagar para todos",
+    "fields": {
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AGi": {
+            "caption": "id da Mensagem",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 5,
+            "value": "text"
+        },
+        "AGm": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 4
+        },
+        "AIW": {
+            "caption": "remoteJid da Mensagem",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 6,
+            "value": "text"
+        },
+        "AIX": {
+            "caption": "fromMe da Mensagem",
+            "editor": "DynamicValue",
+            "name": "fromMe",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "AIY": {
+            "caption": "Membro do Grupo",
+            "doc": "Caso a mensagem seja de um grupo, coloque o id do membro do grupo (telefone@s.whatsapp.net)",
+            "editor": "DynamicValue",
+            "name": "participant",
+            "optional": true,
+            "rank": 8,
+            "value": "text"
+        },
+        "AIZ": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 1,
+            "value": "text"
+        },
+        "AGj": {
+            "caption": "resultado",
+            "is_list": false,
+            "name": "type",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 3,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
