@@ -5,17 +5,24 @@ function(properties, context) {
         baseUrl = context.keys["Server URL"];
     }
 
+    if (baseUrl) {
     baseUrl = baseUrl.trim();
-    if (baseUrl.endsWith("/")) {
-        baseUrl = baseUrl.slice(0, -1);
+    	if (baseUrl.endsWith("/")) {
+        	baseUrl = baseUrl.slice(0, -1);
+    	}
     }
+    
+
 
     let apikey = properties.apikey;
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
     
+    if (apikey) {
     apikey = apikey.trim();
+    }
+
 
     var url = baseUrl + "/instance/create";
     
@@ -49,19 +56,15 @@ function(properties, context) {
         error_log = e.toString();
     }
 
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
-        error = true;
-        error_log = JSON.stringify(sentRequest.body);
-    } 
 
     let resultObj = sentRequest.body;
 
     return {
         log: JSON.stringify(resultObj, null, 2),
-        instancia: resultObj.instance.instanceName,
-        apikey: resultObj.hash.apikey,
-        error: error,    
- 		error_log: error_log,
+        instancia: resultObj.instance?.instanceName,
+        status: resultObj.instance?.status,
+        apikey: resultObj.hash?.apikey,
+        error: resultObj.error,
     
     };
 }

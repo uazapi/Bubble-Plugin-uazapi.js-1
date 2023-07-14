@@ -79,9 +79,24 @@ fetch(url, requestOptions)
         const byteArray = new Uint8Array(byteNumbers);
         const blob = new Blob([byteArray], {type: resultObj._p_mimetype});
 
-        // Criando URL do blob
-        const blobUrl = URL.createObjectURL(blob);
-        instance.publishState('blobUrl', blobUrl);
+        // Pega a extensão baseada no mimeType
+        const splitMimeType = resultObj._p_mimetype.split('/');
+        const extension = splitMimeType[splitMimeType.length - 1].split(';')[0];
+
+        // Pega o nome do arquivo ou gera um com base no mimeType
+        let fileName = "";
+        if(resultObj._p_mediaType === "documentMessage") {
+            fileName = resultObj._p_fileName;
+        } else {
+            fileName = `file.${extension}`;
+        }
+
+        // Cria um novo objeto File com a extensão do arquivo
+        const file = new File([blob], fileName, {type: resultObj._p_mimetype});
+
+        // Criando URL do File
+        const fileUrl = URL.createObjectURL(file);
+        instance.publishState('blobUrl', fileUrl);
 		    }
 
   })

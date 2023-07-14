@@ -70,6 +70,12 @@
             "name": "apikey",
             "rank": 3,
             "value": "text"
+        },
+        "AKF": {
+            "caption": "error",
+            "name": "error",
+            "rank": 4,
+            "value": "text"
         }
     },
     "type": "server_side"
