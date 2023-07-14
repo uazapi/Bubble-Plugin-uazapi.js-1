@@ -8,7 +8,7 @@ function(instance, properties, context) {
       if (baseUrl) {
     baseUrl = baseUrl.trim();
     }
-  if (baseUrl || baseUrl.endsWith("/")) {
+  if (baseUrl && baseUrl.endsWith("/")) {
       baseUrl = baseUrl.slice(0, -1);
   }
 
