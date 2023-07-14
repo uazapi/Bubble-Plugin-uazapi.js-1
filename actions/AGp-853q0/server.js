@@ -11,7 +11,7 @@ function(properties, context) {
     }
     
 
-    if (baseUrl.endsWith("/")) {
+    if (baseUrl || baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
     }
 
