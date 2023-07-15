@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-  var url = baseUrl + "/message/sendMedia/" + instancia + "?convert=true";
+  var url = baseUrl + "/message/sendMedia/" + instancia;
   
 // campos opcionais
 let caption = properties.caption ? { "caption": properties.caption } : {};
@@ -26,7 +26,8 @@ let fileName = properties.filename ? { "fileName": properties.filename } : {};
 var myHeaders = new Headers();
 myHeaders.append("Accept", "*/*");
 myHeaders.append("Connection", "keep-alive");
-myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
 myHeaders.append("apikey", properties.apikey);
   
 

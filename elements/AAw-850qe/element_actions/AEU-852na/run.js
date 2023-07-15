@@ -17,14 +17,14 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-  var url = baseUrl + "/instance/connect/" + instancia;;
+  var url = baseUrl + "/instance/connect/" + instancia;
   
   
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Content-Type", "application/json");
   myHeaders.append("apikey", properties.apikey);
   
 

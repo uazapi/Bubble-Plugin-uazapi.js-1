@@ -12,12 +12,13 @@ function(instance, properties, context) {
         baseUrl = baseUrl.slice(0, -1);
     }
 
-  var url = baseUrl + "/instance/fetchInstances?convert=true";
+  var url = baseUrl + "/instance/fetchInstances";
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
 
   var requestOptions = {

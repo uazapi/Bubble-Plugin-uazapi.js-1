@@ -31,6 +31,7 @@ function(properties, context) {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
 
@@ -42,8 +43,8 @@ function(properties, context) {
     };
 
     let sentRequest;
-            let error;
-        error = false;
+    let error;
+    error = false;
     let error_log;
     try {
         sentRequest = context.request(requestOptions);
@@ -69,56 +70,9 @@ function(properties, context) {
         error_log = `Error getting response body: ${e.toString()}`;
     }
 
-    let convert = (obj, param_prefix) => {
-
-        if (typeof obj !== 'object' || Array.isArray(obj)) return {};
-
-        if (!['_p_', '_api_c2_'].includes(param_prefix)) param_prefix = '_p_';
-
-        let addPrefix = (obj, key_parent, is_array) => {
-
-            let result = {};
-
-            Object.keys(obj).forEach(key => {
-
-                let cell = obj[key];
-                let key_new = `${param_prefix}${key}`;
-
-                if (key_parent && !is_array) key_new = `${key_parent}.${key}`;
-
-                if ((!cell && cell !== 0 && cell !== false) || typeof cell === 'undefined') {
-                    result[key_new] = null
-                } else if (typeof cell !== 'object' && !Array.isArray(cell)) {
-                    result[key_new] = cell
-                } else if (typeof cell === 'object' && !Array.isArray(cell)) {
-                    result = Object.assign(result, addPrefix(cell, key_new))
-                } else if (Array.isArray(cell)) {
-                    if (typeof cell[0] === 'object') {
-                        result[key_new] = [];
-                        cell.forEach(value => {
-                            result[key_new].push(addPrefix(value, key_new, true))
-                        });
-                    } else {
-                        result[key_new] = cell;
-                    }
-                }
-            });
-
-            return result;
-        };
-
-        return addPrefix(obj);
-    };
-
-    let transformedResult;
-    if (Array.isArray(resultObj)) {
-        transformedResult = resultObj.map(item => convert(item));
-    } else if (typeof resultObj === "object" && resultObj !== null) {
-        transformedResult = convert(resultObj);
-    } 
 
     return {
-        grupo: transformedResult,
+        grupo: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2),
         error_log: error_log,

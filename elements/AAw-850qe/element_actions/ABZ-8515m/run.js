@@ -24,7 +24,7 @@ function(instance, properties, context) {
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Content-Type", "application/json");
   myHeaders.append("apikey", properties.apikey);
   
 

@@ -18,14 +18,15 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/message/sendText/" + instancia + "?convert=true";
+    var url = baseUrl + "/message/sendText/" + instancia;
     
     
     
     var myHeaders = new Headers();
     myHeaders.append("Accept", "*/*");
     myHeaders.append("Connection", "keep-alive");
-    myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
     myHeaders.append("apikey", properties.apikey);
     
 
