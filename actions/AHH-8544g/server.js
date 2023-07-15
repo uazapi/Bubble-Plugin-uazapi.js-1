@@ -25,12 +25,13 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/findMessages/" + instancia  + "?convert=true";
+    var url = baseUrl + "/chat/findMessages/" + instancia;
     
     let headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
 

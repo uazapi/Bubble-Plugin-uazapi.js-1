@@ -25,7 +25,7 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/group/updateGroupPicture/" + instancia + "?groupJid=" + properties.groupid + "?convert=true";
+    var url = baseUrl + "/group/updateGroupPicture/" + instancia + "?groupJid=" + properties.groupid;
     
     let headers = {
         "Accept": "*/*",

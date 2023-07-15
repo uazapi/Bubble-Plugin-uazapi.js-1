@@ -25,12 +25,13 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/findContacts/" + instancia  + "?convert=true";
+    var url = baseUrl + "/chat/findContacts/" + instancia;
     
     let headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
 

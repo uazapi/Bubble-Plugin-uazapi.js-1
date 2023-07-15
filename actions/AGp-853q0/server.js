@@ -29,7 +29,7 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/instance/connectionState/" + instancia + "?convert=true";
+    var url = baseUrl + "/instance/connectionState/" + instancia;
     
 
 
@@ -37,6 +37,7 @@ function(properties, context) {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
 
