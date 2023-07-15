@@ -70,7 +70,6 @@ function(properties, context) {
            
             return {
                 error: error,
-                status: sentRequest.statusCode.toString(),
                 error_log: JSON.stringify(sentRequest.body),
             }
         } 
