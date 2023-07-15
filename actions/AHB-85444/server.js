@@ -56,6 +56,7 @@ function(properties, context) {
     let error;
     error = false;
     let error_log;
+
     try {
         sentRequest = context.request(requestOptions);
     } catch(e) {

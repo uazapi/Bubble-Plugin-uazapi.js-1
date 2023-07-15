@@ -57,8 +57,9 @@ function(properties, context) {
     
         let sentRequest;
         let error;
-    error = false;
+        error = false;
         let error_log;
+
         try {
             sentRequest = context.request(requestOptions);
         } catch(e) {
