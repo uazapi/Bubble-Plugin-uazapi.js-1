@@ -67,7 +67,7 @@ var raw = JSON.stringify(
         
  
                
-        instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
+        instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
         instance.publishState('mensagens_status', resultObj);
 
     })

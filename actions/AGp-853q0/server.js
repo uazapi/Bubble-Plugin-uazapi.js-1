@@ -64,7 +64,7 @@ function(properties, context) {
        
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2),
+            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/_p_/g, ""),
         }
     } 
 
@@ -82,13 +82,9 @@ function(properties, context) {
     return {
         instancia: resultObj,
         error: error,
-        log: JSON.stringify(resultObj, null, 2),
+        log: JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""),
         error_log: error_log,
     };
-
-
-
-
 
 
 }

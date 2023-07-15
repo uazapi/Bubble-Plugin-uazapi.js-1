@@ -79,11 +79,11 @@ fetch(url, requestOptions)
        
         
         if (Object.keys(resultObj).length > 0) {
-          instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
+          instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
             
              if (resultObj._p_status !== "PENDING") {
                 instance.publishState('error', true);
-                instance.publishState('error_log', JSON.stringify(resultObj, null, 2));
+                instance.publishState('error_log', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
             }
             
             instance.publishState('lastmsg', resultObj);

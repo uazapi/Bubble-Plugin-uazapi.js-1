@@ -56,7 +56,7 @@ fetch(url, requestOptions)
     
    // var resultObj = JSON.parse(result);
     
-    instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
+    instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
     instance.publishState('instanceinfo', resultObj);
 
   })

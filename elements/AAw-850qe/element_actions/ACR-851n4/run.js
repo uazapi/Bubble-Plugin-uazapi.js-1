@@ -64,7 +64,7 @@ fetch(url, requestOptions)
     
     if (Object.keys(resultObj).length > 0) {
      
-      instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
+      instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
             if ('wuid' in resultObj) {
               instance.publishState('error', false);
                 instance.publishState('fotoperfil', resultObj.profilePictureUrl);

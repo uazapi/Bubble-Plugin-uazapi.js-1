@@ -46,7 +46,7 @@ function(instance, properties, context) {
       //var resultObj = JSON.parse(result);
       
     if (Object.keys(resultObj).length > 0) {
-      instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
+      instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
       instance.publishState('inviteUrl', resultObj.inviteUrl);
         console.log(resultObj.inviteUrl);
     }

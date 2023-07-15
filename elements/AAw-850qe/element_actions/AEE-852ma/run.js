@@ -59,7 +59,7 @@ fetch(url, requestOptions)
 })
 .then(resultObj => {
  
-  instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
+  instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
   instance.publishState('grupos', resultObj);
 
 })
