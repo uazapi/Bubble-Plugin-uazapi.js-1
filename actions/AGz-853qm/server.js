@@ -63,10 +63,15 @@ function(properties, context) {
         error_log = e.toString();
     }
 
-//    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
-//        error = true;
-//        error_log = JSON.stringify(sentRequest.body);
-//    }  
+    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+        error = true;
+       
+        return {
+            error: error,
+            status: sentRequest.statusCode.toString(),
+            error_log: JSON.stringify(sentRequest.body),
+        }
+    } 
 
     let resultObj;
     try {
