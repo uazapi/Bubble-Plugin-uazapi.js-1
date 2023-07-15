@@ -75,7 +75,7 @@
             "caption": "error",
             "name": "error",
             "rank": 4,
-            "value": "text"
+            "value": "boolean"
         },
         "AKG": {
             "caption": "error_log",
