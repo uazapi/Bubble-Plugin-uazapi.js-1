@@ -81,7 +81,7 @@ fetch(url, requestOptions)
                 instance.publishState('error', true);
                 instance.publishState('error_log', JSON.stringify(resultObj, null, 2));
             }
-            // Publicando a mensagem convertida
+            
             instance.publishState('lastmsg', resultObj);
         }
     })

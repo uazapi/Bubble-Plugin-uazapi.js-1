@@ -69,8 +69,6 @@ fetch(url, requestOptions)
           instance.publishState('resultado', JSON.stringify(resultObj, null, 2));
             
 
-            // Publicando a mensagem convertida
-            //instance.publishState('lastmsg', resultObj);
             
         }
     })

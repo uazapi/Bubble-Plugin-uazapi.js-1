@@ -12,7 +12,7 @@ function(instance, properties, context) {
       baseUrl = baseUrl.slice(0, -1);
   }
 
-  var url = baseUrl + "/instance/create?convert=true";
+  var url = baseUrl + "/instance/create";
   
   
   
@@ -20,6 +20,7 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 

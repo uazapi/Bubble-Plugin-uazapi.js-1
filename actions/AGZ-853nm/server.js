@@ -22,12 +22,13 @@ function(properties, context) {
     }
 
     
-    var url = baseUrl + "/instance/fetchInstances?convert=true";
+    var url = baseUrl + "/instance/fetchInstances";
     
     let headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
 
