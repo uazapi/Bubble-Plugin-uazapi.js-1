@@ -5,7 +5,7 @@ function(instance, properties, context) {
         baseUrl = context.keys["Server URL"];
     }
 
-        if (baseUrl) {
+    if (baseUrl) {
     baseUrl = baseUrl.trim();
     }
     if (baseUrl && baseUrl.endsWith("/")) {

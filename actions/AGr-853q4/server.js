@@ -4,9 +4,10 @@ function(properties, context) {
         baseUrl = context.keys["Server URL"];
     }
 
-        if (baseUrl) {
+    if (baseUrl) {
     baseUrl = baseUrl.trim();
     }
+
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
     }
@@ -16,7 +17,7 @@ function(properties, context) {
         apikey = context.keys["Global APIKEY"];
     }
     
-        if (apikey) {
+    if (apikey) {
     apikey = apikey.trim();
     }
     

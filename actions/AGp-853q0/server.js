@@ -20,7 +20,7 @@ function(properties, context) {
         apikey = context.keys["Global APIKEY"];
     }
     
-        if (apikey) {
+    if (apikey) {
     apikey = apikey.trim();
     }
     
