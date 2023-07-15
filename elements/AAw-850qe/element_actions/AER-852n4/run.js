@@ -20,7 +20,7 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("uazapi", "true");
+    myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 

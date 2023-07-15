@@ -21,12 +21,12 @@ function(instance, properties, context) {
   
   
   
-  var myHeaders = new Headers();
-  myHeaders.append("Accept", "*/*");
-  myHeaders.append("Connection", "keep-alive");
+    var myHeaders = new Headers();
+    myHeaders.append("Accept", "*/*");
+    myHeaders.append("Connection", "keep-alive");
     myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("uazapi", "true");
-  myHeaders.append("apikey", properties.apikey);
+    myHeaders.append("uazapi", "true");
+    myHeaders.append("apikey", properties.apikey);
   
 
   var raw = JSON.stringify(
