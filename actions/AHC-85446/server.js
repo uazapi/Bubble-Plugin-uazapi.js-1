@@ -55,8 +55,8 @@ function(properties, context) {
     };
 
     let sentRequest;
-            let error;
-        error = false;
+    let error;
+    error = false;
     let error_log;
     try {
         sentRequest = context.request(requestOptions);
@@ -70,7 +70,7 @@ function(properties, context) {
        
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body),
+            error_log: JSON.stringify(sentRequest.body, null, 2),
         }
     }  
 

@@ -1,5 +1,4 @@
 function(properties, context) {
-    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
@@ -47,8 +46,8 @@ function(properties, context) {
     };
 
     let sentRequest;
-            let error;
-        error = false;
+    let error;
+    error = false;
     let error_log;
     try {
         sentRequest = context.request(requestOptions);
@@ -57,18 +56,35 @@ function(properties, context) {
         error_log = e.toString();
     }
 
+    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+        error = true;
+       
+        return {
+            error: error,
+            error_log: JSON.stringify(sentRequest.body, null, 2),
+        }
+    } 
 
-    let resultObj = sentRequest.body;
+
+    let resultObj;
+    try {
+        resultObj = sentRequest.body;
+    } catch(e) {
+        error = true;
+        error_log = `Error getting response body: ${e.toString()}`;
+    }
+
+     
 
     return {
         log: JSON.stringify(resultObj, null, 2),
         instancia: resultObj.instance?.instanceName,
         status: (resultObj.instance?.status || resultObj.status) ? (resultObj.instance?.status || resultObj.status).toString() : undefined,
         apikey: resultObj.hash?.apikey,
-    	//error: error,
-        //error_log: error_log,         
-        error: resultObj.error ? JSON.stringify(resultObj.error).replace(/\"/g, "") : undefined,
-    	error_log: Array.isArray(resultObj.message) ? resultObj.message.join(' ').replace(/\"/g, "") : resultObj.message
+    	error: error,
+        error_log: error_log,         
+        //error: resultObj.error ? JSON.stringify(resultObj.error).replace(/\"/g, "") : undefined,
+    	//error_log: Array.isArray(resultObj.message) ? resultObj.message.join(' ').replace(/\"/g, "") : resultObj.message
 
     
     };

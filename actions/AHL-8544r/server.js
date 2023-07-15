@@ -58,7 +58,7 @@ function(properties, context) {
        
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body),
+            error_log: JSON.stringify(sentRequest.body, null, 2),
         }
     }  
 

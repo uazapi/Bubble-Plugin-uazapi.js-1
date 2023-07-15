@@ -40,8 +40,8 @@ function(properties, context) {
     };
 
     let sentRequest;
-            let error;
-        error = false;
+    let error;
+    error = false;
     let error_log;
 try {
     sentRequest = context.request(requestOptions);
@@ -60,7 +60,7 @@ if (sentRequest.statusCode.toString().charAt(0) !== "2") {
    
     return {
         error: error,
-        error_log: JSON.stringify(sentRequest.body),
+        error_log: JSON.stringify(sentRequest.body, null, 2),
     }
 } 
 
