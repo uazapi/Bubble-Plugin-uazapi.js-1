@@ -65,7 +65,7 @@ fetch(url, requestOptions)
         }
 
         if (resultObj && Object.keys(resultObj).length > 0) {
-            instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""));
+            instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
 
            
                 instance.publishState('grupo', resultObj);

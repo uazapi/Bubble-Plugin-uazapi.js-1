@@ -49,6 +49,7 @@ function(properties, context) {
     let error;
     error = false;
     let error_log;
+
     try {
         sentRequest = context.request(requestOptions);
     } catch(e) {
@@ -61,7 +62,7 @@ function(properties, context) {
        
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/_p_/g, ""),
+            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
         }
     } 
 
@@ -77,9 +78,9 @@ function(properties, context) {
      
 
     return {
-        log: JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""),
+        log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         instancia: resultObj.instance?.instanceName,
-        status: (resultObj.instance?.status || resultObj.status) ? (resultObj.instance?.status || resultObj.status).toString() : undefined,
+        status: resultObj.instance?.status,
         apikey: resultObj.hash?.apikey,
     	error: error,
         error_log: error_log,         

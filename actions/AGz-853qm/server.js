@@ -70,7 +70,7 @@ function(properties, context) {
         return {
             error: error,
             status: sentRequest.statusCode.toString(),
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/_p_/g, ""),
+            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
         }
     } 
 
@@ -90,7 +90,7 @@ function(properties, context) {
     id: String(resultObj?.key?.id),
     status: String(resultObj?.status),
     error: String(error),
-    log: JSON.stringify(resultObj, null, 2).replace(/_p_/g, ""),
+    log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
     error_log: String(error_log),
 };
 
