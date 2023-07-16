@@ -68,7 +68,8 @@ if (sentRequest.statusCode.toString().charAt(0) !== "2") {
     let resultObj;
     try {
         resultObj = sentRequest.body;
-    } catch(e) {
+   } 
+        catch(e) {
         error = true;
         error_log = `Error getting response body: ${e.toString()}`;
     }

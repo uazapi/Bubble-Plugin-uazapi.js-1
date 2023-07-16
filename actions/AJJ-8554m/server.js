@@ -63,7 +63,8 @@ function(properties, context) {
 
     try {
         sentRequest = context.request(requestOptions);
-    } catch(e) {
+   } 
+        catch(e) {
         error = true;
         error_log = e.toString();
     }
@@ -80,7 +81,8 @@ function(properties, context) {
     let resultObj;
     try {
         resultObj = sentRequest.body;
-    } catch(e) {
+   } 
+        catch(e) {
         error = true;
         error_log = `Error getting response body: ${e.toString()}`;
     }
