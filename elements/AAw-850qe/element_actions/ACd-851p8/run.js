@@ -80,11 +80,10 @@ fetch(url, requestOptions)
         let errorObject = JSON.parse(errorString);
         let formattedError = JSON.stringify(errorObject, null, 2);
         instance.publishState('error_log', formattedError);
-       } 
-        catch(e) {
-            // Se a conversão falhar, apenas use a mensagem de erro como uma string
-            let errorString = error.toString().replace(/"_p_/g, "\"");
-            instance.publishState('error_log', errorString);
+       } catch(e) {
+        // Se a conversão falhar, apenas use a mensagem de erro como uma string
+        let errorString = error.toString().replace(/"_p_/g, "\"");
+        instance.publishState('error_log', errorString);
         }
     });
 
