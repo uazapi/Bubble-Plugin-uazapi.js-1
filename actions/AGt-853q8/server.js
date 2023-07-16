@@ -49,8 +49,7 @@ function(properties, context) {
 
     try {
         sentRequest = context.request(requestOptions);
-   } 
-        catch(e) {
+   } catch(e) {
         error = true;
         error_log = e.toString();
     }
