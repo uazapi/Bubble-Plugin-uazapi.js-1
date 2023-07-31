@@ -59,8 +59,34 @@
             "default_val": 0,
             "editor": "DynamicValue",
             "name": "delay",
-            "rank": 7,
+            "optional": false,
+            "rank": 8,
             "value": "number"
+        },
+        "AKI": {
+            "caption": "Responder mensagem",
+            "doc": "Coloque o id da mensagem que queira responder.",
+            "editor": "DynamicValue",
+            "name": "quoted",
+            "optional": true,
+            "rank": 9,
+            "value": "text"
+        },
+        "AKJ": {
+            "caption": "Mencionar todos",
+            "default_val": false,
+            "doc": "apenas para grupos",
+            "editor": "DynamicValue",
+            "name": "mentionall",
+            "optional": true,
+            "rank": 10,
+            "value": "boolean"
+        },
+        "AKK": {
+            "caption": "Opcional",
+            "editor": "Label",
+            "name": "Opções",
+            "rank": 7
         }
     },
     "return_value": {
