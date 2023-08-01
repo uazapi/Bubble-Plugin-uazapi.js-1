@@ -1,0 +1,78 @@
+{
+    "category": "plugins",
+    "display": "▶️ Configuração de privacidade",
+    "fields": {
+        "ALy": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ALz": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMA": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMB": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AMC": {
+            "caption": "recado",
+            "doc": "",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "status",
+            "rank": 4,
+            "value": "text"
+        },
+        "AMM": {
+            "caption": "privacidade",
+            "editor": "custom_type",
+            "name": "privacidade",
+            "rank": 5
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        },
+        "AMN": {
+            "caption": "privacidade",
+            "name": "privacidade",
+            "rank": 3,
+            "value": "custom_data_AMM"
+        }
+    },
+    "type": "server_side"
+}

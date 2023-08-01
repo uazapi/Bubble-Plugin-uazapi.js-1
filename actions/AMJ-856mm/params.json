@@ -1,0 +1,109 @@
+{
+    "category": "plugins",
+    "display": "▶️ Alterar privacidade",
+    "fields": {
+        "AME": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMH": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AMI": {
+            "caption": "Confirmação de Leitura",
+            "doc": "",
+            "editor": "Dropdown",
+            "long_text": false,
+            "name": "readreceipts",
+            "options": "all,none",
+            "rank": 4,
+            "value": "text"
+        },
+        "AMO": {
+            "caption": "Foto de perfil",
+            "editor": "Dropdown",
+            "name": "profile",
+            "options": "all,none",
+            "rank": 5
+        },
+        "AMP": {
+            "caption": "Stories / Status - recado ou stories?",
+            "editor": "Dropdown",
+            "name": "status",
+            "options": "all,none",
+            "rank": 6
+        },
+        "AMQ": {
+            "caption": "Ver se estou Online",
+            "editor": "Dropdown",
+            "name": "online",
+            "options": "all,none",
+            "rank": 7
+        },
+        "AMR": {
+            "caption": "Visto por último",
+            "editor": "Dropdown",
+            "name": "last",
+            "options": "all,none",
+            "rank": 8
+        },
+        "AMS": {
+            "caption": "Me adicionar no grupo",
+            "editor": "Dropdown",
+            "name": "groupadd",
+            "options": "all,none",
+            "rank": 9
+        },
+        "AMT": {
+            "caption": "Me ligar ou me adicionar a chamadas",
+            "editor": "Dropdown",
+            "name": "calladd",
+            "options": "all,none",
+            "rank": 10
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
