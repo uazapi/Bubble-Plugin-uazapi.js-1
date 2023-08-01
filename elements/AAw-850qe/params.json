@@ -96,6 +96,18 @@
             "editor": "Label",
             "name": "doc",
             "rank": 0
+        },
+        "ALO": {
+            "caption": "Minha privacidade",
+            "editor": "custom_type",
+            "name": "minha_privacidade",
+            "rank": 13
+        },
+        "ALP": {
+            "caption": "Ver dados de perfil",
+            "editor": "custom_type",
+            "name": "dados_perfil",
+            "rank": 14
         }
     },
     "icon": "ion-android-checkbox-blank",

@@ -254,6 +254,53 @@
             },
             "wrap_error": false
         },
+        "ALN": {
+            "0": "A",
+            "1": "L",
+            "2": "M",
+            "body": "{\n  \"number\": \"<remotejid>\"\n}",
+            "body_params": {
+                "ALL": {
+                    "key": "remotejid",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "headers": {
+                "AWj": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYb": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "📄 Minha Privacidade",
+            "publish_as": "data",
+            "rank": 13,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.ALN",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ALM\":{\"caption\":\"📄 Minha Privacidade\",\"fields\":{\"_p_readreceipts\":{\"ret_value\":\"text\",\"caption\":\"readreceipts\",\"sample_value\":\"all\",\"path\":[\"readreceipts\"]},\"_p_profile\":{\"ret_value\":\"text\",\"caption\":\"profile\",\"sample_value\":\"all\",\"path\":[\"profile\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"contacts\",\"path\":[\"status\"]},\"_p_online\":{\"ret_value\":\"text\",\"caption\":\"online\",\"sample_value\":\"match_last_seen\",\"path\":[\"online\"]},\"_p_last\":{\"ret_value\":\"text\",\"caption\":\"last\",\"sample_value\":\"none\",\"path\":[\"last\"]},\"_p_groupadd\":{\"ret_value\":\"text\",\"caption\":\"groupadd\",\"sample_value\":\"all\",\"path\":[\"groupadd\"]},\"_p_calladd\":{\"ret_value\":\"text\",\"caption\":\"calladd\",\"sample_value\":\"all\",\"path\":[\"calladd\"]}}}}",
+            "url": "[url]/chat/fetchPrivacySettings/[instance]",
+            "url_params": {
+                "AWk": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": "https://server01.uazapi.dev"
+                },
+                "AWl": {
+                    "key": "instance",
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
         "ATo": {
             "body": "{\n\n}\n",
             "headers": {
@@ -650,7 +697,7 @@
                 }
             },
             "publish_as": "action",
-            "rank": 13,
+            "rank": 14,
             "ret_value": "api.1674157317439x684864161158529000.plugin_api.AhE",
             "should_reinitialize": true,
             "types": "{\"plugin_api.AhE\":{\"caption\":\"✅ Upload to Bubble - Base64\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"//s3.amazonaws.com/appforest_uf/f1677647589133x644077376946096400/test.json\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"text\",\"caption\":\"headers date\",\"sample_value\":\"Wed, 01 Mar 2023 05:13:09 GMT\",\"path\":[\"headers\",\"date\"]},\"_p_headers.content-type\":{\"ret_value\":\"_ignore\"},\"_p_headers.transfer-encoding\":{\"ret_value\":\"_ignore\"},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-powered-by\":{\"ret_value\":\"_ignore\"},\"_p_headers.cache-control\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-appname\":{\"ret_value\":\"text\",\"caption\":\"headers x-bubble-appname\",\"sample_value\":\"uazapi-exemplo\",\"path\":[\"headers\",\"x-bubble-appname\"]},\"_p_headers.x-bubble-request-took\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-perf\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-used\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-limit\":{\"ret_value\":\"_ignore\"},\"_p_headers.vary\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.content-encoding\":{\"ret_value\":\"_ignore\"}}}}",
