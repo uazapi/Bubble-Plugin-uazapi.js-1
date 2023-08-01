@@ -48,7 +48,7 @@
             "doc": "delay em milisegundos, 1000 = 1 segundo",
             "editor": "DynamicValue",
             "name": "delay",
-            "rank": 7,
+            "rank": 8,
             "value": "number"
         },
         "ABO": {
@@ -63,6 +63,31 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 4
+        },
+        "AKP": {
+            "caption": "Opções",
+            "editor": "Label",
+            "name": "opções",
+            "rank": 7
+        },
+        "AKQ": {
+            "caption": "Responder",
+            "doc": "Coloque o id da mensagem que queira responder. Se colocar o ID errado, a mensagem não será enviada. Deixe vazio caso não queia responder.",
+            "editor": "DynamicValue",
+            "name": "quoted",
+            "optional": true,
+            "rank": 9,
+            "value": "text"
+        },
+        "AKR": {
+            "caption": "Mencionar todos",
+            "default_val": false,
+            "doc": "apenas para grupos",
+            "editor": "DynamicValue",
+            "name": "mentions",
+            "optional": true,
+            "rank": 10,
+            "value": "boolean"
         }
     }
 }

@@ -50,7 +50,7 @@
             "doc": "delay em milisegundos, 1000 = 1 segundo",
             "editor": "DynamicValue",
             "name": "delay",
-            "rank": 10,
+            "rank": 11,
             "value": "number"
         },
         "ABO": {
@@ -90,6 +90,31 @@
             "name": "media",
             "rank": 9,
             "value": "text"
+        },
+        "AKS": {
+            "caption": "Opções",
+            "editor": "Label",
+            "name": "opções",
+            "rank": 10
+        },
+        "AKT": {
+            "caption": "Responder",
+            "doc": "Coloque o id da mensagem que queira responder. Se colocar o ID errado, a mensagem não será enviada. Deixe vazio caso não queia responder.",
+            "editor": "DynamicValue",
+            "name": "quoted",
+            "optional": true,
+            "rank": 12,
+            "value": "text"
+        },
+        "AKU": {
+            "caption": "Mencionar todos",
+            "default_val": false,
+            "doc": "apenas para grupos",
+            "editor": "DynamicValue",
+            "name": "mentions",
+            "optional": true,
+            "rank": 13,
+            "value": "boolean"
         }
     }
 }
