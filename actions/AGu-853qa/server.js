@@ -98,9 +98,9 @@ function(properties, context) {
         return {
             remoteJid: resultObj?.key?.remoteJid,
             fromMe: resultObj?.key?.fromMe,
-            id: JSON.stringify(raw, null, 2),
+            id: resultObj?.key?.id,
             status: resultObj?.status ? resultObj?.status.toString() : undefined,
-            error: JSON.stringify(raw, null, 2),
+            error: error,
             log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
             error_log: error_log,
         };
