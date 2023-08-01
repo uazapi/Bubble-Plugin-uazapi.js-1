@@ -20,7 +20,7 @@
         },
         "ABG": {
             "caption": "Mensagem",
-            "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "content",
             "rank": 4,

@@ -33,33 +33,33 @@
             "rank": 3
         },
         "ALB": {
-            "caption": "Mensagem",
-            "doc": "obrigatório apenas quando não for tipo texto.",
+            "caption": "Url do arquivo",
+            "doc": "",
             "editor": "DynamicValue",
-            "long_text": true,
+            "long_text": false,
             "name": "content",
             "optional": false,
-            "rank": 4,
-            "value": "text"
-        },
-        "ALC": {
-            "caption": "Tipo de fonte",
-            "default_val": "1",
-            "doc": "1 = SERIF   |   2 = NORICAN_REGULAR  |  3 = BRYNDAN_WRITE   |   4 = BEBASNEUE_REGULAR   |   5 = OSWALD_HEAVY",
-            "editor": "Dropdown",
-            "name": "font",
-            "options": "1,2,3,4,5",
             "rank": 5,
             "value": "text"
         },
-        "ALD": {
-            "caption": "Cor de fundo",
-            "default_val": "#0000FF",
-            "doc": "#FFFFFF = Branco, #0000FF = Azul, #008000 = Verde, #FFFF00 = Amarelo, #FF0000 = Vermelho, #800080 = Roxo, #808080 = Cinza, #FFC0CB = Rosa",
+        "ALC": {
+            "caption": "Mensagem",
+            "doc": "Esse campo é opcional e não funciona quando for tipo audio. Funciona para imagem e vídeo.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "caption",
+            "optional": true,
+            "options": "1,2,3,4,5",
+            "rank": 6,
+            "value": "text"
+        },
+        "ALG": {
+            "caption": "Tipo",
+            "default_val": "image",
             "editor": "Dropdown",
-            "name": "backgroundcolor",
-            "options": "#FFFFFF,#0000FF,#008000,#FFFF00,#FF0000,#800080,#808080,#FFC0CB",
-            "rank": 6
+            "name": "type",
+            "options": "image,video,audio",
+            "rank": 4
         }
     },
     "return_value": {

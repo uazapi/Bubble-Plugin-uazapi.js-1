@@ -34,16 +34,17 @@ function(properties, context) {
             "apikey": apikey
         };
         
-        var raw =  {
-   "statusMessage" : {
-              "type": "text",
- 			  "content": properties.content,
-              "backgroundColor": properties.backgroundColor,
-              "font": properties.font,
-              "allContacts": true
-  			 }
-        };
-       
+var raw = {
+    "statusMessage": {
+        "type": properties.type,
+        "content": properties.content,
+        "allContacts": true
+    }
+};
+
+if (properties.type !== "audio" && properties.caption && properties.caption.trim() !== "") {
+    raw.statusMessage.caption = properties.caption;
+}
         
             let requestOptions = {
                 method: 'POST',
