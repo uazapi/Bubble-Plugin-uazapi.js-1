@@ -1,0 +1,66 @@
+{
+    "category": "plugins",
+    "display": "▶️ Modificar Recado (status) Perfil",
+    "fields": {
+        "ALZ": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ALa": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ALb": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ALc": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "ALe": {
+            "caption": "recado",
+            "doc": "",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "status",
+            "rank": 4,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
