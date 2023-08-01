@@ -43,7 +43,7 @@
             "value": "text"
         },
         "AKs": {
-            "caption": "Fonte da mensagem",
+            "caption": "Tipo de fonte",
             "default_val": "1",
             "doc": "1 = SERIF   |   2 = NORICAN_REGULAR  |  3 = BRYNDAN_WRITE   |   4 = BEBASNEUE_REGULAR   |   5 = OSWALD_HEAVY",
             "editor": "Dropdown",
@@ -53,10 +53,12 @@
             "value": "text"
         },
         "AKu": {
-            "caption": "backgroundColor",
-            "default_val": "rgba(255, 255, 255, 1)",
-            "editor": "Color",
+            "caption": "Cor de fundo",
+            "default_val": "#0000FF",
+            "doc": "#FFFFFF = Branco, #0000FF = Azul, #008000 = Verde, #FFFF00 = Amarelo, #FF0000 = Vermelho, #800080 = Roxo, #808080 = Cinza, #FFC0CB = Rosa",
+            "editor": "Dropdown",
             "name": "backgroundcolor",
+            "options": "#FFFFFF,#0000FF,#008000,#FFFF00,#FF0000,#800080,#808080,#FFC0CB",
             "rank": 6
         }
     },

@@ -10,14 +10,6 @@
             "rank": 2,
             "value": "text"
         },
-        "ABE": {
-            "caption": "url da imagem",
-            "doc": "a imagem tem que estar no formato webp, preferencialmente 512x512",
-            "editor": "DynamicValue",
-            "name": "image",
-            "rank": 5,
-            "value": "text"
-        },
         "ABF": {
             "caption": "Servidor URL",
             "editor": "DynamicValue",
@@ -27,10 +19,10 @@
             "value": "text"
         },
         "ABG": {
-            "caption": "Destinatário",
+            "caption": "Mensagem",
             "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
             "editor": "DynamicValue",
-            "name": "number",
+            "name": "content",
             "rank": 4,
             "value": "text"
         },
@@ -43,12 +35,12 @@
             "value": "text"
         },
         "ABI": {
-            "caption": "delay",
-            "default_val": 0,
-            "doc": "delay em milisegundos, 1000 = 1 segundo",
-            "editor": "DynamicValue",
-            "name": "delay",
-            "rank": 6,
+            "caption": "Tipo de fonte",
+            "doc": "1 = SERIF   |   2 = NORICAN_REGULAR  |  3 = BRYNDAN_WRITE   |   4 = BEBASNEUE_REGULAR   |   5 = OSWALD_HEAVY",
+            "editor": "Dropdown",
+            "name": "font",
+            "options": "1,2,3,4,5",
+            "rank": 5,
             "value": "number"
         },
         "ABP": {
@@ -57,6 +49,15 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AKw": {
+            "caption": "Cor de fundo",
+            "default_val": "#0000FF",
+            "doc": "#FFFFFF = Branco, #0000FF = Azul, #008000 = Verde, #FFFF00 = Amarelo, #FF0000 = Vermelho, #800080 = Roxo, #808080 = Cinza, #FFC0CB = Rosa",
+            "editor": "Dropdown",
+            "name": "backgroundcolor",
+            "options": "#FFFFFF,#0000FF,#008000,#FFFF00,#FF0000,#800080,#808080,#FFC0CB",
+            "rank": 6
         }
     }
 }
