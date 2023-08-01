@@ -1,0 +1,84 @@
+{
+    "category": "plugins",
+    "display": "▶️ Enviar Stories / Status - texto",
+    "fields": {
+        "AKl": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AKm": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AKn": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AKp": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AKr": {
+            "caption": "Mensagem",
+            "doc": "obrigatório apenas quando não for tipo texto.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "content",
+            "optional": false,
+            "rank": 4,
+            "value": "text"
+        },
+        "AKs": {
+            "caption": "Fonte da mensagem",
+            "default_val": "1",
+            "doc": "1 = SERIF   |   2 = NORICAN_REGULAR  |  3 = BRYNDAN_WRITE   |   4 = BEBASNEUE_REGULAR   |   5 = OSWALD_HEAVY",
+            "editor": "Dropdown",
+            "name": "font",
+            "options": "1,2,3,4,5",
+            "rank": 5,
+            "value": "text"
+        },
+        "AKu": {
+            "caption": "backgroundColor",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "editor": "Color",
+            "name": "backgroundcolor",
+            "rank": 6
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
