@@ -55,13 +55,11 @@ fetch(url, requestOptions)
 })
 .then(resultObj => {
   
- 
-  
   
   if (Object.keys(resultObj).length > 0) {
-  
-    instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
     
+    instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+    instance.publishState('qr_code', resultObj.qrcode?.base64);  
   }
 })
 .catch(error => {

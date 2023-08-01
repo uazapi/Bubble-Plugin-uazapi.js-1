@@ -50,6 +50,7 @@ fetch(url, requestOptions)
       
       instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
       instance.publishState('webhook', resultObj); 
+    
     })
     .catch(error => {
       instance.publishState('error', true);

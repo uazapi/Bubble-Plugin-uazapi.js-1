@@ -82,7 +82,7 @@ function(properties, context) {
         instancia: resultObj.instance?.instanceName,
         status: resultObj.instance?.status,
         apikey: resultObj.hash?.apikey,
-        qrcode: resultObj.qrcode?.code,
+        qrcode: resultObj.qrcode?.base64,
     	error: error,
         error_log: error_log,         
         
