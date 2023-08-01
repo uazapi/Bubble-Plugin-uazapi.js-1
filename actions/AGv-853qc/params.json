@@ -50,7 +50,7 @@
             "default_val": 0,
             "editor": "DynamicValue",
             "name": "delay",
-            "rank": 10,
+            "rank": 11,
             "value": "number"
         },
         "AIC": {
@@ -84,6 +84,31 @@
             "name": "mediatype",
             "rank": 7,
             "value": "text"
+        },
+        "AKM": {
+            "caption": "Mencionar todos",
+            "default_val": false,
+            "doc": "apenas para grupos",
+            "editor": "DynamicValue",
+            "name": "mentions",
+            "optional": true,
+            "rank": 13,
+            "value": "boolean"
+        },
+        "AKN": {
+            "caption": "Responder",
+            "doc": "Coloque o id da mensagem que queira responder. Se colocar o ID errado, a mensagem não será enviada. Deixe vazio caso não queia responder.",
+            "editor": "DynamicValue",
+            "name": "quoted",
+            "optional": true,
+            "rank": 12,
+            "value": "text"
+        },
+        "AKO": {
+            "caption": "Opções",
+            "editor": "Label",
+            "name": "opções",
+            "rank": 10
         }
     },
     "return_value": {
