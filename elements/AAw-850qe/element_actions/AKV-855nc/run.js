@@ -25,7 +25,7 @@ function(properties, context) {
       instancia = context.keys["Instancia"];
   }
 
-      var url = baseUrl + "/message/sendWhatsAppAudio/" + instancia;
+      var url = baseUrl + "/message/sendSticker/" + instancia;
       
       let headers = {
           "Accept": "*/*",

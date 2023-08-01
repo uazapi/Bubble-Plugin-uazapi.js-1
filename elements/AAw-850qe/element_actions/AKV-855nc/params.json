@@ -7,14 +7,15 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "apikey",
-            "rank": 3,
+            "rank": 2,
             "value": "text"
         },
         "ABE": {
             "caption": "url da imagem",
+            "doc": "a imagem tem que estar no formato webp, preferencialmente 512x512",
             "editor": "DynamicValue",
             "name": "image",
-            "rank": 6,
+            "rank": 5,
             "value": "text"
         },
         "ABF": {
@@ -30,7 +31,7 @@
             "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
             "editor": "DynamicValue",
             "name": "number",
-            "rank": 5,
+            "rank": 4,
             "value": "text"
         },
         "ABH": {
@@ -38,30 +39,24 @@
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
-            "rank": 2,
+            "rank": 1,
             "value": "text"
         },
         "ABI": {
             "caption": "delay",
-            "default_val": 1000,
+            "default_val": 0,
             "doc": "delay em milisegundos, 1000 = 1 segundo",
             "editor": "DynamicValue",
             "name": "delay",
-            "rank": 7,
+            "rank": 6,
             "value": "number"
-        },
-        "ABO": {
-            "caption": "-",
-            "editor": "Label",
-            "name": "URL OPICIONAL",
-            "rank": 1
         },
         "ABP": {
             "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
             "doc": "",
             "editor": "Label",
             "name": "apikey_doc",
-            "rank": 4
+            "rank": 3
         }
     }
 }
