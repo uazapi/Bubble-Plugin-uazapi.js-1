@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-  var url = baseUrl + "/group/toggleEphemeral/" + instancia + "?groupJid=" + properties.groupid;
+  var url = baseUrl + "/chat/updatePrivacySettings/" + instancia;
   
   
   

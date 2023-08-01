@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-  var url = baseUrl + "/group/toggleEphemeral/" + instancia + "?groupJid=" + properties.groupid;
+  var url = baseUrl + "/chat/fetchProfile/" + instancia;
   
   
   
@@ -25,6 +25,7 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
@@ -39,7 +40,6 @@ function(instance, properties, context) {
       method: 'POST',
       headers: myHeaders,
       body: raw,
-      uazapi: true
      
   };
   
