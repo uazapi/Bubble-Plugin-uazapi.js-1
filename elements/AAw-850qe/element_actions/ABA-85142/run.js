@@ -30,7 +30,7 @@ function(instance, properties, context) {
     myHeaders.append("apikey", properties.apikey);
     
 
-    var raw = JSON.stringify(
+    var raw = 
         {
           "number": properties.number,
           "textMessage": {
@@ -39,8 +39,7 @@ function(instance, properties, context) {
           "options": {
             "delay": properties.delay
           }
-        }
-    );
+        };
 
     
     // Adicionar "mentions" se properties.mentions for true
@@ -53,11 +52,13 @@ function(instance, properties, context) {
         raw.options.quoted = { key: { id: properties.quoted } };
     }
 
+        // Converta o objeto raw em uma string JSON
+    var rawString = JSON.stringify(raw);
 
     var requestOptions = {
         method: 'POST',
         headers: myHeaders,
-        body: raw,
+        body: rawString,
        
     };
     
@@ -88,6 +89,7 @@ fetch(url, requestOptions)
       
             
             instance.publishState('lastmsg', resultObj);
+            
         }
     })
     .catch(error => {
@@ -98,6 +100,7 @@ fetch(url, requestOptions)
         let errorObject = JSON.parse(errorString);
         let formattedError = JSON.stringify(errorObject, null, 2);
         instance.publishState('error_log', formattedError);
+           
        } catch(e) {
         // Se a conversão falhar, apenas use a mensagem de erro como uma string
         let errorString = error.toString().replace(/"_p_/g, "\"");

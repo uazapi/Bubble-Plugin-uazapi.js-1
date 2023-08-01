@@ -26,8 +26,8 @@ let fileName = properties.filename ? { "fileName": properties.filename } : {};
 var myHeaders = new Headers();
 myHeaders.append("Accept", "*/*");
 myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("uazapi", "true");
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("uazapi", "true");
 myHeaders.append("apikey", properties.apikey);
   
 
@@ -38,30 +38,33 @@ let mediaMessage = {
   ...fileName
 }
 
-var raw = JSON.stringify(
+var raw = 
   {
     "number": properties.number,
     "mediaMessage": mediaMessage,
     "options": {
       "delay": properties.delay
     }
-  }
-);
+  };
 
-// Adicionar "mentions" se properties.mentions for true
-if (properties.mentions === true) {
-    raw.options.mentions = { "everyOne": true };
-}
 
-// Adicionar "quoted" se properties.quoted não estiver vazio
-if (properties.quoted && properties.quoted.trim() !== "") {
-    raw.options.quoted = { key: { id: properties.quoted } };
-}
+    // Adicionar "mentions" se properties.mentions for true
+    if (properties.mentions === true) {
+        raw.options.mentions = { "everyOne": true };
+    }
+
+    // Adicionar "quoted" se properties.quoted não estiver vazio
+    if (properties.quoted && properties.quoted.trim() !== "") {
+        raw.options.quoted = { key: { id: properties.quoted } };
+    }
+
+        // Converta o objeto raw em uma string JSON
+    var rawString = JSON.stringify(raw);
 
   var requestOptions = {
       method: 'POST',
       headers: myHeaders,
-      body: raw,
+      body: rawString,
      
   };
   
