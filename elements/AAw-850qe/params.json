@@ -282,6 +282,14 @@
             },
             "name": "blobUrl",
             "value": "text"
+        },
+        "AMU": {
+            "caption": "Dados de perfil",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "dados_de_perfil",
+            "value": "custom_data_ALP"
         }
     }
 }

@@ -18,14 +18,6 @@
             "rank": 0,
             "value": "text"
         },
-        "ABG": {
-            "caption": "ID do Grupo",
-            "doc": "",
-            "editor": "DynamicValue",
-            "name": "groupid",
-            "rank": 4,
-            "value": "text"
-        },
         "ABH": {
             "caption": "Instancia",
             "editor": "DynamicValue",
@@ -34,22 +26,75 @@
             "rank": 1,
             "value": "text"
         },
-        "ABI": {
-            "caption": "Descrição",
-            "default_val": "",
-            "doc": "",
-            "editor": "DynamicValue",
-            "long_text": true,
-            "name": "description",
-            "rank": 5,
-            "value": "text"
-        },
         "ABP": {
             "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
             "doc": "",
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AMV": {
+            "caption": "readreceipts",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "readreceipts",
+            "options": "all,none",
+            "rank": 4,
+            "value": "text"
+        },
+        "AMW": {
+            "caption": "profile",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "profile",
+            "options": "all,none",
+            "rank": 5,
+            "value": "text"
+        },
+        "AMX": {
+            "caption": "status",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "status",
+            "options": "all,none",
+            "rank": 6,
+            "value": "text"
+        },
+        "AMY": {
+            "caption": "online",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "online",
+            "options": "all,none",
+            "rank": 7,
+            "value": "text"
+        },
+        "AMZ": {
+            "caption": "last",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "last",
+            "options": "all,none",
+            "rank": 8,
+            "value": "text"
+        },
+        "AMa": {
+            "caption": "groupadd",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "groupadd",
+            "options": "all,none",
+            "rank": 9,
+            "value": "text"
+        },
+        "AMb": {
+            "caption": "calladd",
+            "default_val": "all",
+            "editor": "Dropdown",
+            "name": "calladd",
+            "options": "all,none",
+            "rank": 10,
+            "value": "text"
         }
     }
 }

@@ -18,30 +18,12 @@
             "rank": 0,
             "value": "text"
         },
-        "ABG": {
-            "caption": "ID do Grupo",
-            "doc": "",
-            "editor": "DynamicValue",
-            "name": "groupid",
-            "rank": 4,
-            "value": "text"
-        },
         "ABH": {
             "caption": "Instancia",
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
             "rank": 1,
-            "value": "text"
-        },
-        "ABI": {
-            "caption": "Descrição",
-            "default_val": "",
-            "doc": "",
-            "editor": "DynamicValue",
-            "long_text": true,
-            "name": "description",
-            "rank": 5,
             "value": "text"
         },
         "ABP": {

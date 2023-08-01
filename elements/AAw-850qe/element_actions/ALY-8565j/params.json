@@ -19,12 +19,14 @@
             "value": "text"
         },
         "ABG": {
-            "caption": "ID do Grupo",
-            "doc": "",
+            "caption": "Tempo de Expiração",
+            "default_val": 0,
+            "doc": "0 = desativado, 86400 = 24 horas, 604800 = 7 dias, 7776000 = 90 dias",
             "editor": "DynamicValue",
-            "name": "groupid",
-            "rank": 4,
-            "value": "text"
+            "name": "expiration",
+            "options": "0,86400,604800,7776000",
+            "rank": 5,
+            "value": "number"
         },
         "ABH": {
             "caption": "Instancia",
@@ -35,13 +37,13 @@
             "value": "text"
         },
         "ABI": {
-            "caption": "Descrição",
+            "caption": "ID do grupo",
             "default_val": "",
             "doc": "",
             "editor": "DynamicValue",
-            "long_text": true,
-            "name": "description",
-            "rank": 5,
+            "long_text": false,
+            "name": "groupid",
+            "rank": 4,
             "value": "text"
         },
         "ABP": {

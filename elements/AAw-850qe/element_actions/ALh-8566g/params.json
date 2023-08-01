@@ -19,10 +19,10 @@
             "value": "text"
         },
         "ABG": {
-            "caption": "ID do Grupo",
+            "caption": "telefone",
             "doc": "",
             "editor": "DynamicValue",
-            "name": "groupid",
+            "name": "remotejid",
             "rank": 4,
             "value": "text"
         },
@@ -32,16 +32,6 @@
             "name": "instancia",
             "optional": true,
             "rank": 1,
-            "value": "text"
-        },
-        "ABI": {
-            "caption": "Descrição",
-            "default_val": "",
-            "doc": "",
-            "editor": "DynamicValue",
-            "long_text": true,
-            "name": "description",
-            "rank": 5,
             "value": "text"
         },
         "ABP": {
