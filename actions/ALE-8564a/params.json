@@ -1,0 +1,86 @@
+{
+    "category": "plugins",
+    "display": "▶️ Enviar Stories / Status - media",
+    "fields": {
+        "AKx": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AKy": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AKz": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ALA": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "ALB": {
+            "caption": "Mensagem",
+            "doc": "obrigatório apenas quando não for tipo texto.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "content",
+            "optional": false,
+            "rank": 4,
+            "value": "text"
+        },
+        "ALC": {
+            "caption": "Tipo de fonte",
+            "default_val": "1",
+            "doc": "1 = SERIF   |   2 = NORICAN_REGULAR  |  3 = BRYNDAN_WRITE   |   4 = BEBASNEUE_REGULAR   |   5 = OSWALD_HEAVY",
+            "editor": "Dropdown",
+            "name": "font",
+            "options": "1,2,3,4,5",
+            "rank": 5,
+            "value": "text"
+        },
+        "ALD": {
+            "caption": "Cor de fundo",
+            "default_val": "#0000FF",
+            "doc": "#FFFFFF = Branco, #0000FF = Azul, #008000 = Verde, #FFFF00 = Amarelo, #FF0000 = Vermelho, #800080 = Roxo, #808080 = Cinza, #FFC0CB = Rosa",
+            "editor": "Dropdown",
+            "name": "backgroundcolor",
+            "options": "#FFFFFF,#0000FF,#008000,#FFFF00,#FF0000,#800080,#808080,#FFC0CB",
+            "rank": 6
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
