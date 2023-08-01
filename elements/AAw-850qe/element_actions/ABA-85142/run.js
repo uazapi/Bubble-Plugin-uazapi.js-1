@@ -43,6 +43,16 @@ function(instance, properties, context) {
     );
 
     
+    // Adicionar "mentions" se properties.mentions for true
+    if (properties.mentions === true) {
+        raw.options.mentions = { "everyOne": true };
+    }
+
+    // Adicionar "quoted" se properties.quoted não estiver vazio
+    if (properties.quoted && properties.quoted.trim() !== "") {
+        raw.options.quoted = { key: { id: properties.quoted } };
+    }
+
 
     var requestOptions = {
         method: 'POST',
