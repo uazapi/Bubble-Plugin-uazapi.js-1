@@ -1,3 +1,62 @@
 {
-    "caption": "🔓 Enviar Stories/Status - texto"
+    "caption": "🔓 Enviar Stories/Status - texto",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABE": {
+            "caption": "url da imagem",
+            "doc": "a imagem tem que estar no formato webp, preferencialmente 512x512",
+            "editor": "DynamicValue",
+            "name": "image",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Destinatário",
+            "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 4,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABI": {
+            "caption": "delay",
+            "default_val": 0,
+            "doc": "delay em milisegundos, 1000 = 1 segundo",
+            "editor": "DynamicValue",
+            "name": "delay",
+            "rank": 6,
+            "value": "number"
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        }
+    }
 }
