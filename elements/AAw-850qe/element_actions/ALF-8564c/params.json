@@ -1,3 +1,63 @@
 {
-    "caption": "🔓 Enviar Stories/Status - media"
+    "caption": "🔓 Enviar Stories/Status - media",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Mensagem",
+            "doc": "telefone@s.whatsapp.net - para contatos                                 groupid@g.us - para grupos",
+            "editor": "DynamicValue",
+            "name": "content",
+            "rank": 4,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABI": {
+            "caption": "Tipo de fonte",
+            "doc": "1 = SERIF   |   2 = NORICAN_REGULAR  |  3 = BRYNDAN_WRITE   |   4 = BEBASNEUE_REGULAR   |   5 = OSWALD_HEAVY",
+            "editor": "Dropdown",
+            "name": "font",
+            "options": "1,2,3,4,5",
+            "rank": 5,
+            "value": "number"
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        },
+        "AKw": {
+            "caption": "Cor de fundo",
+            "default_val": "#0000FF",
+            "doc": "#FFFFFF = Branco, #0000FF = Azul, #008000 = Verde, #FFFF00 = Amarelo, #FF0000 = Vermelho, #800080 = Roxo, #808080 = Cinza, #FFC0CB = Rosa",
+            "editor": "Dropdown",
+            "name": "backgroundcolor",
+            "options": "#FFFFFF,#0000FF,#008000,#FFFF00,#FF0000,#800080,#808080,#FFC0CB",
+            "rank": 6
+        }
+    }
 }
