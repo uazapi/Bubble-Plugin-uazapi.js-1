@@ -64,8 +64,8 @@
             "value": "number"
         },
         "AKI": {
-            "caption": "Responder mensagem",
-            "doc": "Coloque o id da mensagem que queira responder.",
+            "caption": "Responder",
+            "doc": "Coloque o id da mensagem que queira responder. Se colocar o ID errado, a mensagem não será enviada. Deixe vazio caso não queia responder.",
             "editor": "DynamicValue",
             "name": "quoted",
             "optional": true,
@@ -77,7 +77,7 @@
             "default_val": false,
             "doc": "apenas para grupos",
             "editor": "DynamicValue",
-            "name": "mentionall",
+            "name": "mentions",
             "optional": true,
             "rank": 10,
             "value": "boolean"

@@ -43,6 +43,16 @@ function(properties, context) {
             "delay": properties.delay
           }
         };
+
+    // Adicionar "mentions" se properties.mentions for true
+    if (properties.mentions === true) {
+        raw.options.mentions = { "everyOne": true };
+    }
+
+    // Adicionar "quoted" se properties.quoted não estiver vazio
+    if (properties.quoted && properties.quoted.trim() !== "") {
+        raw.options.quoted = { key: { id: properties.quoted.trim() } };
+    }
    
     
         let requestOptions = {
@@ -53,7 +63,8 @@ function(properties, context) {
             json: true
         };
 
-
+	
+    
     let sentRequest;
     let error;
     error = false;
@@ -87,9 +98,9 @@ function(properties, context) {
         return {
             remoteJid: resultObj?.key?.remoteJid,
             fromMe: resultObj?.key?.fromMe,
-            id: resultObj?.key?.id,
+            id: JSON.stringify(raw, null, 2),
             status: resultObj?.status ? resultObj?.status.toString() : undefined,
-            error: error,
+            error: JSON.stringify(raw, null, 2),
             log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
             error_log: error_log,
         };
