@@ -34,55 +34,58 @@
         },
         "AMI": {
             "caption": "Confirmação de Leitura",
-            "doc": "",
-            "editor": "Dropdown",
+            "doc": "all,none",
+            "editor": "DynamicValue",
             "long_text": false,
             "name": "readreceipts",
-            "options": "all,none",
+            "options": "",
             "rank": 4,
             "value": "text"
         },
         "AMO": {
             "caption": "Foto de perfil",
-            "editor": "Dropdown",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
             "name": "profile",
-            "options": "all,none",
-            "rank": 5
+            "options": "",
+            "rank": 5,
+            "value": "text"
         },
         "AMP": {
-            "caption": "Stories / Status - recado ou stories?",
-            "editor": "Dropdown",
+            "caption": "Recado",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
             "name": "status",
-            "options": "all,none",
-            "rank": 6
+            "options": "",
+            "rank": 6,
+            "value": "text"
         },
         "AMQ": {
             "caption": "Ver se estou Online",
-            "editor": "Dropdown",
+            "doc": "Opções: all, match_last_seen",
+            "editor": "DynamicValue",
             "name": "online",
-            "options": "all,none",
-            "rank": 7
+            "options": "",
+            "rank": 8,
+            "value": "text"
         },
         "AMR": {
             "caption": "Visto por último",
-            "editor": "Dropdown",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
             "name": "last",
-            "options": "all,none",
-            "rank": 8
+            "options": "",
+            "rank": 7,
+            "value": "text"
         },
         "AMS": {
             "caption": "Me adicionar no grupo",
-            "editor": "Dropdown",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
             "name": "groupadd",
-            "options": "all,none",
-            "rank": 9
-        },
-        "AMT": {
-            "caption": "Me ligar ou me adicionar a chamadas",
-            "editor": "Dropdown",
-            "name": "calladd",
-            "options": "all,none",
-            "rank": 10
+            "options": "",
+            "rank": 9,
+            "value": "text"
         }
     },
     "return_value": {
