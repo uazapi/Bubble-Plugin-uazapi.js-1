@@ -34,66 +34,57 @@
             "rank": 3
         },
         "AMV": {
-            "caption": "readreceipts",
-            "default_val": "all",
-            "editor": "Dropdown",
+            "caption": "Confirmação de Leitura",
+            "doc": "opções: 'all', 'none'",
+            "editor": "DynamicValue",
             "name": "readreceipts",
             "options": "all,none",
             "rank": 4,
             "value": "text"
         },
         "AMW": {
-            "caption": "profile",
-            "default_val": "all",
-            "editor": "Dropdown",
+            "caption": "Foto de perfil",
+            "doc": "opções: 'all', 'contacts', 'contact_blacklist', 'none'",
+            "editor": "DynamicValue",
             "name": "profile",
             "options": "all,none",
             "rank": 5,
             "value": "text"
         },
         "AMX": {
-            "caption": "status",
-            "default_val": "all",
-            "editor": "Dropdown",
+            "caption": "Recado",
+            "doc": "opções: 'all', 'contacts', 'contact_blacklist', 'none'",
+            "editor": "DynamicValue",
             "name": "status",
             "options": "all,none",
             "rank": 6,
             "value": "text"
         },
         "AMY": {
-            "caption": "online",
-            "default_val": "all",
-            "editor": "Dropdown",
+            "caption": "Ver se estou Online",
+            "doc": "opções: 'all', 'match_last_seen' ",
+            "editor": "DynamicValue",
             "name": "online",
-            "options": "all,none",
-            "rank": 7,
-            "value": "text"
-        },
-        "AMZ": {
-            "caption": "last",
-            "default_val": "all",
-            "editor": "Dropdown",
-            "name": "last",
             "options": "all,none",
             "rank": 8,
             "value": "text"
         },
+        "AMZ": {
+            "caption": "Visto por último",
+            "doc": "opções: 'all', 'contacts', 'contact_blacklist', 'none'",
+            "editor": "DynamicValue",
+            "name": "last",
+            "options": "all,none",
+            "rank": 7,
+            "value": "text"
+        },
         "AMa": {
-            "caption": "groupadd",
-            "default_val": "all",
-            "editor": "Dropdown",
+            "caption": "Me adicionar em grupo",
+            "doc": "opções: 'all', 'contacts', 'contact_blacklist', 'none'",
+            "editor": "DynamicValue",
             "name": "groupadd",
             "options": "all,none",
             "rank": 9,
-            "value": "text"
-        },
-        "AMb": {
-            "caption": "calladd",
-            "default_val": "all",
-            "editor": "Dropdown",
-            "name": "calladd",
-            "options": "all,none",
-            "rank": 10,
             "value": "text"
         }
     }

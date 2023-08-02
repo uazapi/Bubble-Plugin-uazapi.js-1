@@ -43,11 +43,12 @@
         },
         "ALH": {
             "caption": "Tipo",
-            "default_val": "image",
-            "editor": "Dropdown",
+            "doc": "Opções: image, video, audio",
+            "editor": "DynamicValue",
             "name": "type",
-            "options": "image,video,audio",
-            "rank": 4
+            "options": "",
+            "rank": 4,
+            "value": "text"
         },
         "ALI": {
             "caption": "Mensagem",

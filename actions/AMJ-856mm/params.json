@@ -79,7 +79,7 @@
             "value": "text"
         },
         "AMS": {
-            "caption": "Me adicionar no grupo",
+            "caption": "Me adicionar em grupo",
             "doc": "Opções: all, contacts, contact_blacklist, none",
             "editor": "DynamicValue",
             "name": "groupadd",
