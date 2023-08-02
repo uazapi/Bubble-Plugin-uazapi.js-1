@@ -29,25 +29,25 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "get",
             "name": "📄 Instância - Detalhes",
             "publish_as": "data",
             "rank": 1,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AGC",
-            "should_reinitialize": false,
+            "should_reinitialize": true,
             "types": "{\"plugin_api.AGC\":{\"caption\":\"📄 Instância - Detalhe\",\"fields\":{\"_p_connectionStatus.state\":{\"ret_value\":\"text\",\"caption\":\"connectionStatus state\",\"sample_value\":\"open\",\"path\":[\"connectionStatus\",\"state\"]},\"_p_connectionStatus.statusReason\":{\"ret_value\":\"number\",\"caption\":\"connectionStatus statusReason\",\"sample_value\":200,\"path\":[\"connectionStatus\",\"statusReason\"]},\"_p_instanceInfo.instance.instanceName\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance instanceName\",\"sample_value\":\"status\",\"path\":[\"instanceInfo\",\"instance\",\"instanceName\"]},\"_p_instanceInfo.instance.apikey\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance apikey\",\"sample_value\":\"TYPPDT023YGCA3QM\",\"path\":[\"instanceInfo\",\"instance\",\"apikey\"]},\"_p_instanceInfo.instance.owner\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance owner\",\"sample_value\":\"55219965792\",\"path\":[\"instanceInfo\",\"instance\",\"owner\"]},\"_p_instanceInfo.instance.profileName\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance profileName\",\"sample_value\":\"Augusto\",\"path\":[\"instanceInfo\",\"instance\",\"profileName\"]},\"_p_instanceInfo.instance.profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"instanceInfo instance profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.4694-24/345739568_798240271756583_8212848557119103596_n.jpg?ccb=11-4&oh=01_AdQdi4WUNDDW0KtQvEZmY6x0t8KJrpGXMvLMbFIdraquMQ&oe=64D64597\",\"path\":[\"instanceInfo\",\"instance\",\"profilePictureUrl\"]}}}}",
             "url": "[url]/instance/connectionState/[instance]",
             "url_params": {
                 "AUi": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 },
                 "AZI": {
                     "key": "instance",
                     "private": true,
-                    "value": "uazapi_interno1"
+                    "value": ""
                 }
             },
             "wrap_error": false
@@ -77,7 +77,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "post",
             "name": "📄 Download mensagem",
             "publish_as": "data",
@@ -90,12 +90,12 @@
                 "AUi": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 },
                 "AZI": {
                     "key": "instance",
                     "private": true,
-                    "value": "uazapi_interno1"
+                    "value": ""
                 }
             },
             "wrap_error": false
@@ -125,7 +125,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "post",
             "name": "📄 Verificar números",
@@ -139,11 +139,11 @@
                 "AWk": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 },
                 "AWl": {
                     "key": "instance",
-                    "value": "uazapi_interno1"
+                    "value": ""
                 }
             },
             "wrap_error": false
@@ -157,17 +157,17 @@
                 "AGN": {
                     "key": "number",
                     "private": true,
-                    "value": "120363153742561022@g.us"
+                    "value": ""
                 },
                 "AGO": {
                     "key": "message",
                     "private": true,
-                    "value": "teste"
+                    "value": ""
                 },
                 "AGP": {
                     "key": "delay",
                     "private": true,
-                    "value": "0"
+                    "value": ""
                 }
             },
             "headers": {
@@ -184,7 +184,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "post",
             "name": "📄 Mensagem enviada",
             "publish_as": "data",
@@ -197,12 +197,12 @@
                 "AGM": {
                     "key": "instance",
                     "private": true,
-                    "value": "uazapi_interno1"
+                    "value": ""
                 },
                 "AUN": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 }
             },
             "wrap_error": false
@@ -232,20 +232,20 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "post",
             "name": "📄 Ver dados de perfil",
             "publish_as": "data",
             "rank": 12,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.ALK",
-            "should_reinitialize": false,
+            "should_reinitialize": true,
             "types": "{\"plugin_api.ALK\":{\"caption\":\"📄 Ver dados de perfil\",\"fields\":{\"_p_isBusiness\":{\"ret_value\":\"boolean\",\"caption\":\"isBusiness\",\"sample_value\":true,\"path\":[\"isBusiness\"]},\"_p_wid\":{\"ret_value\":\"text\",\"caption\":\"wid\",\"sample_value\":\"12608002510@s.whatsapp.net\",\"path\":[\"wid\"]},\"_p_exists\":{\"ret_value\":\"boolean\",\"caption\":\"exists\",\"sample_value\":true,\"path\":[\"exists\"]},\"_p_picture\":{\"ret_value\":\"text\",\"caption\":\"picture\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/342364103_777033030386886_7683115903900940711_n.jpg?ccb=11-4&oh=01_AdRXve0FTYg8GM1CWoNkFwhHfwNFUnUY0uFXBpDhwLeDnw&oe=64D641A1\",\"path\":[\"picture\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"não me liga\",\"path\":[\"status\"]},\"_p_address\":{\"ret_value\":\"text\",\"caption\":\"address\",\"sample_value\":\"Maracanã, Rio de Janeiro - RJ, Brasil\",\"path\":[\"address\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"Você precisa de ajuda? Fala comigo!\",\"path\":[\"description\"]},\"_p_website\":{\"ret_value\":\"list.text\",\"caption\":\"website\",\"sample_value\":\"https://uazapi.dev\",\"path\":[\"website\"]},\"_p_email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"sample_value\":\"contato@uazapi.dev\",\"path\":[\"email\"]},\"_p_category\":{\"ret_value\":\"text\",\"caption\":\"category\",\"sample_value\":\"Other Business\",\"path\":[\"category\"]},\"_p_business_hours.timezone\":{\"ret_value\":\"text\",\"caption\":\"business_hours timezone\",\"sample_value\":\"America/Sao_Paulo\",\"path\":[\"business_hours\",\"timezone\"]}}}}",
             "url": "[url]/chat/fetchProfile/[instance]",
             "url_params": {
                 "AWk": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 },
                 "AWl": {
                     "key": "instance",
@@ -279,7 +279,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "get",
             "name": "📄 Minha Privacidade",
             "publish_as": "data",
@@ -292,7 +292,7 @@
                 "AWk": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 },
                 "AWl": {
                     "key": "instance",
@@ -316,7 +316,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "post",
             "name": "📄 Mensagens ",
@@ -351,7 +351,7 @@
                 "AcX": {
                     "key": "limit",
                     "private": true,
-                    "value": "10"
+                    "value": ""
                 }
             },
             "headers": {
@@ -367,7 +367,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "post",
             "name": "📄 Status de recebimento ",
@@ -381,7 +381,7 @@
                 "ATw": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server02.uazapi.dev"
+                    "value": ""
                 },
                 "AcU": {
                     "key": "instance",
@@ -413,21 +413,21 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "get",
             "name": "📄 Instancias",
             "publish_as": "data",
             "rank": 0,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AUK",
-            "should_reinitialize": false,
+            "should_reinitialize": true,
             "types": "{\"plugin_api.AUK\":{\"caption\":\"📄 Instancia\",\"fields\":{\"_p_instance.instanceName\":{\"ret_value\":\"text\",\"caption\":\"instance instanceName\",\"sample_value\":\"n0ipnxh6\",\"path\":[\"instance\",\"instanceName\"]},\"_p_instance.apikey\":{\"ret_value\":\"text\",\"caption\":\"instance apikey\",\"sample_value\":\"19TA2XAEA\",\"path\":[\"instance\",\"apikey\"]},\"_p_instance.owner\":{\"ret_value\":\"text\",\"caption\":\"instance owner\",\"sample_value\":\"558203550\",\"path\":[\"instance\",\"owner\"]},\"_p_instance.profileName\":{\"ret_value\":\"text\",\"caption\":\"instance profileName\",\"sample_value\":\"55803550\",\"path\":[\"instance\",\"profileName\"]},\"_p_instance.profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"instance profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.246946_460831182604648_3873988549302852752_n.jpg?ccb=11-4&oh=01_AdRyMMN6lqOwRsawFDGIRxQiecoFUNaI23p01WAlhyP8Ng&oe=64D660F0\",\"path\":[\"instance\",\"profilePictureUrl\"]}}}}",
             "url": "[url]/instance/fetchInstances",
             "url_params": {
                 "AUN": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 }
             },
             "wrap_error": false
@@ -457,7 +457,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "get",
             "name": "📄 Webhook Status",
             "publish_as": "data",
@@ -470,12 +470,12 @@
                 "AUi": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://testes.uazapi.dev"
+                    "value": ""
                 },
                 "AZI": {
                     "key": "instance",
                     "private": true,
-                    "value": "back"
+                    "value": ""
                 }
             },
             "wrap_error": false
@@ -495,21 +495,21 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "post",
             "name": "📄 Contatos ",
             "publish_as": "data",
             "rank": 7,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AWI",
-            "should_reinitialize": false,
+            "should_reinitialize": true,
             "types": "{\"plugin_api.AWI\":{\"caption\":\"📄 Contatos \",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"63f36bd73a2c6f9fd872ab63\",\"path\":[\"_id\"]},\"_p_pushName\":{\"ret_value\":\"text\",\"caption\":\"pushName\",\"sample_value\":\"Caiado\",\"path\":[\"pushName\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5521985966284@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/312292755_1246014562926686_4855926860625131677_n.jpg?ccb=11-4&oh=01_AdQFF3pINnQCcjorj4xY9TdraGxloc1hc4J1r7eMDgKTUQ&oe=64006360\",\"path\":[\"profilePictureUrl\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"teste\",\"path\":[\"status\"]}}}}",
             "url": "[url]/chat/findContacts/[instance]",
             "url_params": {
                 "AWK": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server02.uazapi.dev"
+                    "value": ""
                 },
                 "AcN": {
                     "key": "instance",
@@ -552,7 +552,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "method": "get",
             "name": "📄 Grupo - Detalhes",
             "publish_as": "data",
@@ -565,7 +565,7 @@
                 "AWk": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server02.uazapi.dev"
+                    "value": ""
                 },
                 "AWl": {
                     "key": "instance",
@@ -592,7 +592,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "get",
             "name": "📄 Chats ",
@@ -606,7 +606,7 @@
                 "AXr": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server02.uazapi.dev"
+                    "value": ""
                 },
                 "AcT": {
                     "key": "instance",
@@ -652,7 +652,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "get",
             "name": "📄 Grupos",
@@ -666,11 +666,11 @@
                 "AWk": {
                     "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
                     "key": "url",
-                    "value": "https://server01.uazapi.dev"
+                    "value": ""
                 },
                 "AWl": {
                     "key": "instance",
-                    "value": "wvpwew1k"
+                    "value": ""
                 }
             },
             "wrap_error": false
