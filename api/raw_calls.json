@@ -301,6 +301,53 @@
             },
             "wrap_error": false
         },
+        "AMf": {
+            "0": "A",
+            "1": "M",
+            "2": "e",
+            "body": "{\n  \"number\": \"<remotejid>\"\n}",
+            "body_params": {
+                "ALL": {
+                    "key": "remotejid",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "headers": {
+                "AWj": {
+                    "key": "apikey",
+                    "value": ""
+                },
+                "AYb": {
+                    "doc": "Opcional\nAo colocar um dado diferente na chamada API, obriga o bubble a atualizar os dados. O campo data faz essa função.",
+                    "key": "date",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "📄 Ver Perfil",
+            "publish_as": "data",
+            "rank": 14,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.AMf",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AMe\":{\"caption\":\"📄 Ver Perfil\",\"fields\":{\"_p_isBusiness\":{\"ret_value\":\"boolean\",\"caption\":\"isBusiness\",\"sample_value\":true,\"path\":[\"isBusiness\"]},\"_p_wid\":{\"ret_value\":\"text\",\"caption\":\"wid\",\"sample_value\":\"12608002510@s.whatsapp.net\",\"path\":[\"wid\"]},\"_p_exists\":{\"ret_value\":\"boolean\",\"caption\":\"exists\",\"sample_value\":true,\"path\":[\"exists\"]},\"_p_picture\":{\"ret_value\":\"text\",\"caption\":\"picture\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/342364103_777033030386886_7683115903900940711_n.jpg?ccb=11-4&oh=01_AdQiJLT9wm63furTV51Nj6W9fpIiwAgE0pLvBRWbPay_EA&oe=64D7CB61\",\"path\":[\"picture\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"não me liga\",\"path\":[\"status\"]},\"_p_address\":{\"ret_value\":\"text\",\"caption\":\"address\",\"sample_value\":\"Maracanã, Rio de Janeiro - RJ, Brasil\",\"path\":[\"address\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"Você precisa de ajuda? Fala comigo!\",\"path\":[\"description\"]},\"_p_website\":{\"ret_value\":\"list.text\",\"caption\":\"website\",\"sample_value\":\"https://uazapi.dev\",\"path\":[\"website\"]},\"_p_email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"sample_value\":\"contato@uazapi.dev\",\"path\":[\"email\"]},\"_p_category\":{\"ret_value\":\"text\",\"caption\":\"category\",\"sample_value\":\"Other Business\",\"path\":[\"category\"]},\"_p_business_hours.timezone\":{\"ret_value\":\"text\",\"caption\":\"business_hours timezone\",\"sample_value\":\"America/Sao_Paulo\",\"path\":[\"business_hours\",\"timezone\"]},\"_p_business_hours.business_config\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.AMf.business_hours.business_config\",\"caption\":\"business_hours business_config\",\"path\":[\"business_hours\",\"business_config\"]}}},\"plugin_api.AMf.business_hours.business_config\":{\"caption\":\"📄 Ver Perfil business_hours business_config\",\"fields\":{\"_p_day_of_week\":{\"ret_value\":\"text\",\"caption\":\"day_of_week\",\"sample_value\":\"mon\",\"path\":[\"day_of_week\"]},\"_p_mode\":{\"ret_value\":\"text\",\"caption\":\"mode\",\"sample_value\":\"specific_hours\",\"path\":[\"mode\"]},\"_p_open_time\":{\"ret_value\":\"text\",\"caption\":\"open_time\",\"sample_value\":\"540\",\"path\":[\"open_time\"]},\"_p_close_time\":{\"ret_value\":\"text\",\"caption\":\"close_time\",\"sample_value\":\"1080\",\"path\":[\"close_time\"]}}}}",
+            "url": "[url]/chat/fetchProfile/[instance]",
+            "url_params": {
+                "AWk": {
+                    "doc": "Se você está não está no plano ilimitado, e está usando o servidor oficial da uazapi, coloque nesse campo:\n\nhttps://server02.uazapi.dev\n\n\n\nSe você está no plano ilimitado, hospedando a API em seu servidor, coloque:\n\nhttp://[ip_da_vps]:8080\n\nou se você ativou SSL e domínio na sua VPS/API\n\nhttps://[subdomínio].[seu_domínio]",
+                    "key": "url",
+                    "value": ""
+                },
+                "AWl": {
+                    "key": "instance",
+                    "value": ""
+                }
+            },
+            "wrap_error": false
+        },
         "ATo": {
             "body": "{\n\n}\n",
             "headers": {
@@ -697,7 +744,7 @@
                 }
             },
             "publish_as": "action",
-            "rank": 14,
+            "rank": 15,
             "ret_value": "api.1674157317439x684864161158529000.plugin_api.AhE",
             "should_reinitialize": true,
             "types": "{\"plugin_api.AhE\":{\"caption\":\"✅ Upload to Bubble - Base64\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"//s3.amazonaws.com/appforest_uf/f1677647589133x644077376946096400/test.json\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"text\",\"caption\":\"headers date\",\"sample_value\":\"Wed, 01 Mar 2023 05:13:09 GMT\",\"path\":[\"headers\",\"date\"]},\"_p_headers.content-type\":{\"ret_value\":\"_ignore\"},\"_p_headers.transfer-encoding\":{\"ret_value\":\"_ignore\"},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-powered-by\":{\"ret_value\":\"_ignore\"},\"_p_headers.cache-control\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-appname\":{\"ret_value\":\"text\",\"caption\":\"headers x-bubble-appname\",\"sample_value\":\"uazapi-exemplo\",\"path\":[\"headers\",\"x-bubble-appname\"]},\"_p_headers.x-bubble-request-took\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-perf\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-used\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-limit\":{\"ret_value\":\"_ignore\"},\"_p_headers.vary\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.content-encoding\":{\"ret_value\":\"_ignore\"}}}}",
