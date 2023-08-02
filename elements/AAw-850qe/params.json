@@ -276,6 +276,14 @@
             },
             "name": "blobUrl",
             "value": "text"
+        },
+        "AMg": {
+            "caption": "Minha Privacidade",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "minha_privacidade",
+            "value": "custom_data_ALO"
         }
     }
 }
