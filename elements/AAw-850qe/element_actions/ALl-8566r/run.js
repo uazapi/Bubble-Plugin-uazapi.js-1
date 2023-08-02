@@ -28,7 +28,7 @@ function(instance, properties, context) {
   myHeaders.append("apikey", properties.apikey);
   
 
-  let raw = 
+ var raw = JSON.stringify(
   {
       "privacySettings": {
           "readreceipts": properties.readreceipts,
@@ -37,11 +37,11 @@ function(instance, properties, context) {
           "online": properties.online,
           "last": properties.last,
           "groupadd": properties.groupadd,
-          "calladd": properties.calladd,
+          //"calladd": properties.calladd,
       }
   }
+ );
 
-  
 
   var requestOptions = {
       method: 'PUT',
