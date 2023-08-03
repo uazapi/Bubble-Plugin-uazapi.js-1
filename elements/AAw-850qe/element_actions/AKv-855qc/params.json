@@ -54,7 +54,7 @@
             "caption": "Cor de fundo",
             "doc": "Opções: #FFFFFF = Branco, #0000FF = Azul, #008000 = Verde, #FFFF00 = Amarelo, #FF0000 = Vermelho, #800080 = Roxo, #808080 = Cinza, #FFC0CB = Rosa",
             "editor": "DynamicValue",
-            "name": "backgroundcolor",
+            "name": "backgroundColor",
             "options": "#FFFFFF,#0000FF,#008000,#FFFF00,#FF0000,#800080,#808080,#FFC0CB",
             "rank": 6,
             "value": "text"
