@@ -316,7 +316,7 @@
                     "value": ""
                 }
             },
-            "initialized": true,
+            "initialized": false,
             "is_list": true,
             "method": "post",
             "name": "📄 Mensagens ",
