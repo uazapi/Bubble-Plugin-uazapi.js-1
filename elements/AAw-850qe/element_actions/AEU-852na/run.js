@@ -38,8 +38,6 @@ function(instance, properties, context) {
       headers: myHeaders,
 
   };
-  
-
 
 instance.publishState('resultado', '');
 instance.publishState('error', false);
