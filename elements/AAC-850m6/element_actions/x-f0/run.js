@@ -73,7 +73,7 @@ function(instance, properties, context) {
   
    
 
-console.log(raw);
+//console.log(raw);
 
 instance.publishState('resultado', '');
 instance.publishState('error', false);

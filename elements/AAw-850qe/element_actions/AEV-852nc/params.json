@@ -7,7 +7,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "apikey",
-            "rank": 3,
+            "rank": 2,
             "value": "text"
         },
         "ABF": {
@@ -23,29 +23,38 @@
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
-            "rank": 2,
+            "rank": 1,
             "value": "text"
         },
+        "ABN": {
+            "caption": "Ativar fluxos",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "flowActive",
+            "rank": 4,
+            "value": "boolean"
+        },
         "ABO": {
-            "caption": "-",
-            "editor": "Label",
-            "name": "URL OPCIONAL",
-            "rank": 1
+            "caption": "Ignorar grupos",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "flowIgnoreGroups",
+            "rank": 5,
+            "value": "boolean"
         },
         "ABP": {
-            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "caption": "Prefixo para comandos",
             "doc": "",
-            "editor": "Label",
-            "name": "apikey_doc",
-            "rank": 4
+            "editor": "DynamicValue",
+            "name": "flowPrefixCommand",
+            "rank": 6,
+            "value": "text"
         },
         "ABQ": {
             "caption": "Webhook Ativo",
-            "default_val": true,
-            "doc": "",
             "editor": "DynamicValue",
             "name": "enabled",
-            "rank": 5,
+            "rank": 9,
             "value": "boolean"
         },
         "ABR": {
@@ -54,7 +63,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "local_map",
-            "rank": 6,
+            "rank": 10,
             "value": "boolean"
         },
         "ABS": {
@@ -62,7 +71,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "webhookurl",
-            "rank": 7,
+            "rank": 11,
             "value": "text"
         },
         "ABT": {
@@ -71,7 +80,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "STATUS_INSTANCE",
-            "rank": 8,
+            "rank": 12,
             "value": "boolean"
         },
         "ABU": {
@@ -80,25 +89,25 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "QRCODE_UPDATED",
-            "rank": 9,
+            "rank": 13,
             "value": "boolean"
         },
         "ABV": {
-            "caption": "MESSAGES_SET",
-            "default_val": false,
-            "doc": "",
-            "editor": "DynamicValue",
-            "name": "MESSAGES_SET",
-            "rank": 10,
-            "value": "boolean"
-        },
-        "ABX": {
             "caption": "MESSAGES_UPDATE",
             "default_val": false,
             "doc": "",
             "editor": "DynamicValue",
+            "name": "MESSAGES_SET",
+            "rank": 14,
+            "value": "boolean"
+        },
+        "ABX": {
+            "caption": "MESSAGES_SET",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
             "name": "MESSAGES_UPDATE",
-            "rank": 11,
+            "rank": 15,
             "value": "boolean"
         },
         "ABY": {
@@ -107,7 +116,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "MESSAGES_UPSERT",
-            "rank": 12,
+            "rank": 16,
             "value": "boolean"
         },
         "ABZ": {
@@ -116,15 +125,41 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "SEND_MESSAGE",
-            "rank": 13,
+            "rank": 17,
             "value": "boolean"
+        },
+        "ABa": {
+            "caption": "Para fluxo com comando",
+            "default_val": "!stop",
+            "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem manualmente (via web ou celular) com o comando aqui definido.",
+            "editor": "DynamicValue",
+            "name": "flowStopConversation",
+            "rank": 7,
+            "value": "text"
+        },
+        "ABb": {
+            "caption": "flowStopMinutes",
+            "default_val": 30,
+            "doc": "Defina o tempo em que irá ficar pausada o fluxo.",
+            "editor": "DynamicValue",
+            "name": "flowStopMinutes",
+            "optional": true,
+            "rank": 8,
+            "value": "number"
+        },
+        "ACZ": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
         },
         "AFB": {
             "caption": "CONTACTS_SET",
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CONTACTS_SET",
-            "rank": 14,
+            "rank": 18,
             "value": "boolean"
         },
         "AFC": {
@@ -132,7 +167,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CONTACTS_UPSERT",
-            "rank": 15,
+            "rank": 19,
             "value": "boolean"
         },
         "AFD": {
@@ -140,7 +175,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CONTACTS_UPDATE",
-            "rank": 16,
+            "rank": 20,
             "value": "boolean"
         },
         "AFE": {
@@ -148,7 +183,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "PRESENCE_UPDATE",
-            "rank": 17,
+            "rank": 21,
             "value": "boolean"
         },
         "AFF": {
@@ -156,7 +191,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CHATS_SET",
-            "rank": 18,
+            "rank": 22,
             "value": "boolean"
         },
         "AFG": {
@@ -164,7 +199,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CHATS_UPSERT",
-            "rank": 19,
+            "rank": 23,
             "value": "boolean"
         },
         "AFH": {
@@ -172,7 +207,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CHATS_UPDATE",
-            "rank": 20,
+            "rank": 24,
             "value": "boolean"
         },
         "AFI": {
@@ -180,7 +215,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CHATS_DELETE",
-            "rank": 21,
+            "rank": 25,
             "value": "boolean"
         },
         "AFJ": {
@@ -188,7 +223,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "CONNECTION_UPDATE",
-            "rank": 22,
+            "rank": 26,
             "value": "boolean"
         },
         "AFK": {
@@ -196,7 +231,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "GROUPS_UPSERT",
-            "rank": 23,
+            "rank": 27,
             "value": "boolean"
         },
         "AFL": {
@@ -204,7 +239,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "GROUPS_UPDATE",
-            "rank": 24,
+            "rank": 28,
             "value": "boolean"
         },
         "AFM": {
@@ -212,7 +247,7 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "GROUP_PARTICIPANTS_UPDATE",
-            "rank": 25,
+            "rank": 29,
             "value": "boolean"
         }
     }

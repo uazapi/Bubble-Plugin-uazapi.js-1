@@ -20,7 +20,7 @@ function(instance, properties, context) {
 
   var url = baseUrl + "/automate/editflowcondition/" + instancia;
   
-  console.log (properties.condition);
+  //console.log (properties.condition);
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");

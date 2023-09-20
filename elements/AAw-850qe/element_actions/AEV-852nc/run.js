@@ -31,6 +31,13 @@ function(instance, properties, context) {
 
   var raw = JSON.stringify(
     {
+        
+  "flowActive": properties.flowActive,
+  "flowIgnoreGroups": properties.flowIgnoreGroups,
+  "flowPrefixCommand": properties.flowPrefixCommand,
+  "flowStopConversation": properties.flowStopConversation,
+  "flowStopMinutes": properties.flowStopMinutes,
+      
       "enabled": properties.enabled,
       "local_map": properties.local_map,
       "url": properties.webhookurl,
@@ -66,7 +73,7 @@ function(instance, properties, context) {
   
    
 
-
+//console.log(raw);
 
 instance.publishState('resultado', '');
 instance.publishState('error', false);

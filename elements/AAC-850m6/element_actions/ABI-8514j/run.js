@@ -20,7 +20,7 @@ function(instance, properties, context) {
 
   var url = baseUrl + "/automate/editflowvaredit/" + instancia;
   
-  console.log (properties.varedit);
+  //console.log (properties.varedit);
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");

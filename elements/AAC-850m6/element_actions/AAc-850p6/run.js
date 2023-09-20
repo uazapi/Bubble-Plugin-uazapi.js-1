@@ -79,7 +79,7 @@ fetch(url, requestOptions)
              
       if (Object.keys(resultObj).length > 0) {
           instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-    		console.log('resultado', JSON.stringify(resultObj, null, 2));
+    		//console.log('resultado', JSON.stringify(resultObj, null, 2));
           
           instance.publishState('bot', resultObj);
           

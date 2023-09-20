@@ -68,7 +68,7 @@ try {
     
  
 
-    console.log("rawString: ", rawString);
+    //console.log("rawString: ", rawString);
     
 
 instance.publishState('resultado', '');
