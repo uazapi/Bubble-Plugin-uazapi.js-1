@@ -1,6 +1,6 @@
 {
     "caption": "DESCONTINUADO 🔓 Instancia - QR Code",
-    "doc": "DESCONTINUADO - use 🔓 Instancia - Informações para pegar o QR Code",
+    "doc": "DESCONTINUADO - use 🔓 Instancia - Informações para pegar o QR Code base64",
     "fields": {
         "ABD": {
             "caption": "API Key",
