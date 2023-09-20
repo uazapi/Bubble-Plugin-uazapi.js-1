@@ -1,0 +1,48 @@
+{
+    "caption": "🔓 Editar Fluxo (Variável)",
+    "fields": {
+        "AAj": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AAk": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AAl": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAm": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        },
+        "AAn": {
+            "caption": "Nome do fluxo",
+            "editor": "DynamicValue",
+            "name": "name",
+            "rank": 4,
+            "value": "text"
+        },
+        "ABB": {
+            "caption": "Editar variável",
+            "editor": "DynamicValue",
+            "name": "variable",
+            "rank": 5,
+            "value": "text"
+        }
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 20,
+        "width": 20
+    },
+    "display": "🤖 uazabot 🔀",
+    "fields": {
+        "AAD": {
+            "caption": "uazabot",
+            "editor": "custom_type",
+            "name": "uazabot",
+            "rank": 0
+        },
+        "ABT": {
+            "caption": "webhook",
+            "editor": "custom_type",
+            "name": "webhook",
+            "rank": 1
+        },
+        "ABs": {
+            "caption": "log",
+            "editor": "custom_type",
+            "name": "log",
+            "rank": 2
+        }
+    },
+    "icon": "ion-android-checkbox-blank",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "AAE": {
+            "caption": "uazabot Dados",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "bot",
+            "value": "custom_data_AAD"
+        },
+        "AAO": {
+            "caption": "resultado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "resultado",
+            "value": "text"
+        },
+        "AAP": {
+            "caption": "error_log",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error_log",
+            "value": "text"
+        },
+        "AAQ": {
+            "caption": "error",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error",
+            "value": "boolean"
+        },
+        "ABM": {
+            "caption": "lista de uazabots",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "bots",
+            "value": "custom_data_AAD"
+        },
+        "ABS": {
+            "caption": "webhook",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "webhook",
+            "value": "custom_data_ABT"
+        },
+        "ABt": {
+            "caption": "log",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "log",
+            "value": "custom_data_ABs"
+        },
+        "ABu": {
+            "caption": "lista de logs",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "logs",
+            "value": "custom_data_ABs"
+        },
+        "ABv": {
+            "caption": "export",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "export",
+            "value": "text"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "caption": "🔓 uazabot - iniciar fluxo",
+    "fields": {
+        "AAj": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AAk": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AAl": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAm": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        },
+        "AAn": {
+            "caption": "Nome do fluxo",
+            "editor": "DynamicValue",
+            "name": "name",
+            "rank": 4,
+            "value": "text"
+        },
+        "ABC": {
+            "caption": "Telefone",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 5,
+            "value": "text"
+        },
+        "ACC": {
+            "caption": "Sobrescrever variáveis",
+            "doc": "Formato: { \"variável1\" : \"valor1\", \"variável2\" : \"valor2\" }",
+            "editor": "DynamicValue",
+            "name": "changeVariables",
+            "rank": 6,
+            "value": "text"
+        }
+    }
+}

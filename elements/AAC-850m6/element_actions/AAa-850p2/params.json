@@ -1,0 +1,87 @@
+{
+    "caption": "🔓 Editar Fluxo",
+    "fields": {
+        "AAj": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": false,
+            "rank": 0,
+            "value": "text"
+        },
+        "AAk": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": false,
+            "rank": 1,
+            "value": "text"
+        },
+        "AAl": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAm": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        },
+        "AAn": {
+            "caption": "Nome do fluxo",
+            "editor": "DynamicValue",
+            "name": "name",
+            "rank": 4,
+            "value": "text"
+        },
+        "AAo": {
+            "caption": "Fluxo padrão",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "default",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "AAp": {
+            "caption": "Minutos para reiniciar",
+            "editor": "DynamicValue",
+            "name": "minutesToClose",
+            "rank": 8,
+            "value": "number"
+        },
+        "AAq": {
+            "caption": "Ler mensagens",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "readMessages",
+            "rank": 9,
+            "value": "boolean"
+        },
+        "AAs": {
+            "caption": "Comando para iniciar",
+            "editor": "DynamicValue",
+            "name": "startCommandWord",
+            "rank": 10,
+            "value": "text"
+        },
+        "AAv": {
+            "caption": "Novo nome do fluxo",
+            "editor": "DynamicValue",
+            "name": "newName",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ABY": {
+            "caption": "Testando somente com",
+            "doc": "coloque o número de telefone formato internacional, o fluxo só vai funcionar com essa pessoa se não for um fluxo padrão.",
+            "editor": "DynamicValue",
+            "name": "testingWith",
+            "rank": 7,
+            "value": "text"
+        }
+    }
+}
