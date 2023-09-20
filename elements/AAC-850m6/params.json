@@ -5,7 +5,7 @@
         "height": 20,
         "width": 20
     },
-    "display": "🤖 uazabot 🔀",
+    "display": "🤖🔀bot",
     "fields": {
         "AAD": {
             "caption": "uazabot",
@@ -26,6 +26,7 @@
             "rank": 2
         }
     },
+    "has_reset_fn": false,
     "icon": "ion-android-checkbox-blank",
     "property_applications": {
         "MinWidth": true,
