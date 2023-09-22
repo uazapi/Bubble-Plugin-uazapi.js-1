@@ -49,7 +49,7 @@
         },
         "ACC": {
             "caption": "Sobrescrever variáveis",
-            "doc": "Formato: { \"variável1\" : \"valor1\", \"variável2\" : \"valor2\" }",
+            "doc": "Formato:  { \"variável1\" : \"valor1\", \"variável2\" : \"valor2\" }",
             "editor": "DynamicValue",
             "name": "changeVariables",
             "rank": 6,
