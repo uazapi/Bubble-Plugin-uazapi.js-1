@@ -2,37 +2,7 @@
     "category": "plugins",
     "display": "▶️ Iniciar fluxo",
     "fields": {
-        "AGc": {
-            "caption": "Servidor URL",
-            "editor": "DynamicValue",
-            "name": "url",
-            "optional": true,
-            "rank": 0,
-            "value": "text"
-        },
-        "AGd": {
-            "caption": "API Key Global",
-            "editor": "DynamicValue",
-            "name": "apikey",
-            "optional": true,
-            "rank": 1,
-            "value": "text"
-        },
-        "AGn": {
-            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
-            "editor": "Label",
-            "name": "apikey_opcional",
-            "rank": 2
-        },
-        "AHV": {
-            "caption": "Instancia",
-            "editor": "DynamicValue",
-            "name": "instanceName",
-            "optional": true,
-            "rank": 3,
-            "value": "text"
-        },
-            "AAn": {
+        "AAn": {
             "caption": "Nome do fluxo",
             "editor": "DynamicValue",
             "name": "name",
@@ -49,10 +19,40 @@
         },
         "ACC": {
             "caption": "Sobrescrever variáveis",
-            "doc": "Formato:  { \"variável1\" : \"valor1\", \"variável2\" : \"valor2\" }",
+            "doc": "Formato: { \"variável1\" : \"valor1\", \"variável2\" : \"valor2\" }",
             "editor": "DynamicValue",
             "name": "changeVariables",
             "rank": 6,
+            "value": "text"
+        },
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AGn": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AHV": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
             "value": "text"
         }
     },
@@ -75,5 +75,6 @@
             "rank": 2,
             "value": "text"
         }
-    }
+    },
+    "type": "server_side"
 }
