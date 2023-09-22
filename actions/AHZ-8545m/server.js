@@ -35,35 +35,39 @@ function(properties, context) {
         "apikey": apikey
     };
 
-     let raw =     {
-      "enabled": properties.enabled,
-      "local_map": properties.local_map,
-      "url": properties.webhookurl,
-      "STATUS_INSTANCE":properties.STATUS_INSTANCE,
-      "QRCODE_UPDATED":properties.QRCODE_UPDATED,
-      "MESSAGES_SET":properties.MESSAGES_SET,
-      "MESSAGES_UPDATE":properties.MESSAGES_UPDATE,
-      "MESSAGES_UPSERT":properties.MESSAGES_UPSERT,
-      "SEND_MESSAGE":properties.SEND_MESSAGE,
-      "CONTACTS_SET":properties.CONTACTS_SET,
-      "CONTACTS_UPSERT":properties.CONTACTS_UPSERT,
-      "CONTACTS_UPDATE":properties.CONTACTS_UPDATE,
-      "PRESENCE_UPDATE":properties.PRESENCE_UPDATE,
-      "CHATS_SET":properties.CHATS_SET,
-      "CHATS_UPSERT":properties.CHATS_UPSERT,
-      "CHATS_UPDATE":properties.CHATS_UPDATE,
-      "CHATS_DELETE":properties.CHATS_DELETE,
-      "CONNECTION_UPDATE":properties.CONNECTION_UPDATE,
-      "GROUPS_UPSERT":properties.GROUPS_UPSERT,
-      "GROUPS_UPDATE":properties.GROUPS_UPDATE,
-      "GROUP_PARTICIPANTS_UPDATE":properties.GROUP_PARTICIPANTS_UPDATE
-  }
+    let raw = JSON.stringify(
+        {
+            
+      "flowActive": properties.flowActive,
+      "flowIgnoreGroups": properties.flowIgnoreGroups,
+      "flowPrefixCommand": properties.flowPrefixCommand,
+      "flowStopConversation": properties.flowStopConversation,
+      "flowStopMinutes": properties.flowStopMinutes,
+          
+          "enabled": properties.enabled,
+          "local_map": properties.local_map,
+          "url": properties.webhookurl,
+          "STATUS_INSTANCE":properties.STATUS_INSTANCE,
+          "QRCODE_UPDATED":properties.QRCODE_UPDATED,
+          "MESSAGES_SET":properties.MESSAGES_SET,
+          "MESSAGES_UPDATE":properties.MESSAGES_UPDATE,
+          "MESSAGES_UPSERT":properties.MESSAGES_UPSERT,
+          "SEND_MESSAGE":properties.SEND_MESSAGE,
+          "CONTACTS_SET":properties.CONTACTS_SET,
+          "CONTACTS_UPSERT":properties.CONTACTS_UPSERT,
+          "CONTACTS_UPDATE":properties.CONTACTS_UPDATE,
+          "PRESENCE_UPDATE":properties.PRESENCE_UPDATE,
+          "CHATS_SET":properties.CHATS_SET,
+          "CHATS_UPSERT":properties.CHATS_UPSERT,
+          "CHATS_UPDATE":properties.CHATS_UPDATE,
+          "CHATS_DELETE":properties.CHATS_DELETE,
+          "CONNECTION_UPDATE":properties.CONNECTION_UPDATE,
+          "GROUPS_UPSERT":properties.GROUPS_UPSERT,
+          "GROUPS_UPDATE":properties.GROUPS_UPDATE,
+          "GROUP_PARTICIPANTS_UPDATE":properties.GROUP_PARTICIPANTS_UPDATE
+      }
+      );
   
-     for (let key in raw) {
-  		if (raw[key] === null) {
-    	raw[key] = false;
-  		}
-	  }
     
         let requestOptions = {
         method: 'POST',
