@@ -32,11 +32,27 @@
             "rank": 3,
             "value": "text"
         },
-        "AHW": {
-            "caption": "apikey da instância",
+            "AAn": {
+            "caption": "Nome do fluxo",
             "editor": "DynamicValue",
-            "name": "apikeysenha",
+            "name": "name",
             "rank": 4,
+            "value": "text"
+        },
+        "ABC": {
+            "caption": "Telefone",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 5,
+            "value": "text"
+        },
+        "ACC": {
+            "caption": "Sobrescrever variáveis",
+            "doc": "Formato: { \"variável1\" : \"valor1\", \"variável2\" : \"valor2\" }",
+            "editor": "DynamicValue",
+            "name": "changeVariables",
+            "rank": 6,
             "value": "text"
         }
     },
@@ -59,6 +75,5 @@
             "rank": 2,
             "value": "text"
         }
-    },
-    "type": "server_side"
+    }
 }
