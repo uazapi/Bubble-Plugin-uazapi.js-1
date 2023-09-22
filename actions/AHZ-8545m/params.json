@@ -8,7 +8,7 @@
             "doc": "Ativar fluxos, fluxos são chatbots que podem ser criado diretamente na API.",
             "editor": "DynamicValue",
             "name": "flowActive",
-            "rank": 5,
+            "rank": 7,
             "value": "boolean"
         },
         "ABO": {
@@ -17,7 +17,7 @@
             "doc": "Vai ignorar as mensagens dos grupos",
             "editor": "DynamicValue",
             "name": "flowIgnoreGroups",
-            "rank": 6,
+            "rank": 8,
             "value": "boolean"
         },
         "ABP": {
@@ -25,7 +25,7 @@
             "doc": "Use ! ou / ou algum caracter não comum.",
             "editor": "DynamicValue",
             "name": "flowPrefixCommand",
-            "rank": 7,
+            "rank": 9,
             "value": "text"
         },
         "ABQ": {
@@ -34,7 +34,7 @@
             "doc": "Ativa ou não o webhook",
             "editor": "DynamicValue",
             "name": "enabled",
-            "rank": 11,
+            "rank": 13,
             "value": "boolean"
         },
         "ABR": {
@@ -43,7 +43,7 @@
             "doc": "Recomendamos deixar desativado, se ativado, cada evento vai para uma url diferente, e você terá que configurar no bubble isso usando o webhook.site, já temos o modelo pronto para desativado, te poupando trabalho.",
             "editor": "DynamicValue",
             "name": "local_map",
-            "rank": 12,
+            "rank": 14,
             "value": "boolean"
         },
         "ABS": {
@@ -52,7 +52,7 @@
             "doc": "Para onde será enviado o webhook",
             "editor": "DynamicValue",
             "name": "webhookurl",
-            "rank": 13,
+            "rank": 15,
             "value": "text"
         },
         "ABT": {
@@ -61,7 +61,7 @@
             "doc": "Informa o status da instância",
             "editor": "DynamicValue",
             "name": "STATUS_INSTANCE",
-            "rank": 14,
+            "rank": 16,
             "value": "boolean"
         },
         "ABU": {
@@ -70,7 +70,7 @@
             "doc": "Envia o QR Code em base64 quando ele é atualizado, use informações da instância pelo frontend para pegar essa informação, economiza WU.",
             "editor": "DynamicValue",
             "name": "QRCODE_UPDATED",
-            "rank": 22,
+            "rank": 24,
             "value": "boolean"
         },
         "ABV": {
@@ -79,7 +79,7 @@
             "doc": "Recebe todas as mensagens do seu WhatsApp, após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "MESSAGES_SET",
-            "rank": 23,
+            "rank": 25,
             "value": "boolean"
         },
         "ABX": {
@@ -88,7 +88,7 @@
             "doc": "Te avisa quando uma mensagem é atualizada (recebida ou lida)",
             "editor": "DynamicValue",
             "name": "MESSAGES_UPDATE",
-            "rank": 24,
+            "rank": 26,
             "value": "boolean"
         },
         "ABY": {
@@ -97,7 +97,7 @@
             "doc": "Te avisa quando você recebe uma mensagem, ou quando você envia \"manualmente\", fora da API.",
             "editor": "DynamicValue",
             "name": "MESSAGES_UPSERT",
-            "rank": 15,
+            "rank": 17,
             "value": "boolean"
         },
         "ABZ": {
@@ -106,7 +106,7 @@
             "doc": "Notifica quando você envia uma mensagem pela API",
             "editor": "DynamicValue",
             "name": "SEND_MESSAGE",
-            "rank": 16,
+            "rank": 18,
             "value": "boolean"
         },
         "ABa": {
@@ -115,7 +115,7 @@
             "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem manualmente (via web ou celular) com o comando aqui definido.",
             "editor": "DynamicValue",
             "name": "flowStopConversation",
-            "rank": 8,
+            "rank": 10,
             "value": "text"
         },
         "ABb": {
@@ -125,15 +125,8 @@
             "editor": "DynamicValue",
             "name": "flowStopMinutes",
             "optional": true,
-            "rank": 9,
+            "rank": 11,
             "value": "number"
-        },
-        "ACZ": {
-            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⚠️⚠️ Todos os dados colocados aqui estão expostos no navegador do cliente, tenha cuidado com sua API Key e Global API Key.",
-            "doc": "",
-            "editor": "Label",
-            "name": "apikey_doc",
-            "rank": 3
         },
         "AFB": {
             "caption": "CONTACTS_SET",
@@ -141,7 +134,7 @@
             "doc": "Carrega todos seus contatos quando lê o QRCode, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "CONTACTS_SET",
-            "rank": 25,
+            "rank": 27,
             "value": "boolean"
         },
         "AFC": {
@@ -150,7 +143,7 @@
             "doc": "Quando você cria um novo contato",
             "editor": "DynamicValue",
             "name": "CONTACTS_UPSERT",
-            "rank": 26,
+            "rank": 28,
             "value": "boolean"
         },
         "AFD": {
@@ -159,7 +152,7 @@
             "doc": "Te notifica quando algum contato é atualizado",
             "editor": "DynamicValue",
             "name": "CONTACTS_UPDATE",
-            "rank": 27,
+            "rank": 29,
             "value": "boolean"
         },
         "AFE": {
@@ -168,7 +161,7 @@
             "doc": "Te notifica quando algum usuário muda a presença, tipo: digitando, gravando, online, etc",
             "editor": "DynamicValue",
             "name": "PRESENCE_UPDATE",
-            "rank": 32,
+            "rank": 34,
             "value": "boolean"
         },
         "AFF": {
@@ -177,7 +170,7 @@
             "doc": "Te envia todos os chats após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "CHATS_SET",
-            "rank": 28,
+            "rank": 30,
             "value": "boolean"
         },
         "AFG": {
@@ -186,7 +179,7 @@
             "doc": "Te informa quando um chat é criado (de grupo ou não)",
             "editor": "DynamicValue",
             "name": "CHATS_UPSERT",
-            "rank": 29,
+            "rank": 31,
             "value": "boolean"
         },
         "AFH": {
@@ -195,7 +188,7 @@
             "doc": "Te informa quando um chat é atualizado",
             "editor": "DynamicValue",
             "name": "CHATS_UPDATE",
-            "rank": 30,
+            "rank": 32,
             "value": "boolean"
         },
         "AFI": {
@@ -204,7 +197,7 @@
             "doc": "Te informa quando um chat é deletado",
             "editor": "DynamicValue",
             "name": "CHATS_DELETE",
-            "rank": 31,
+            "rank": 33,
             "value": "boolean"
         },
         "AFJ": {
@@ -213,7 +206,7 @@
             "doc": "Informa o status da conexão com a api do whatsapp - as vezes vem informações desnecessárias, o status_instance é suficiente, economiza WU.",
             "editor": "DynamicValue",
             "name": "CONNECTION_UPDATE",
-            "rank": 21,
+            "rank": 23,
             "value": "boolean"
         },
         "AFK": {
@@ -222,7 +215,7 @@
             "doc": "Te informa quando um grupo é criado",
             "editor": "DynamicValue",
             "name": "GROUPS_UPSERT",
-            "rank": 17,
+            "rank": 19,
             "value": "boolean"
         },
         "AFL": {
@@ -231,7 +224,7 @@
             "doc": "Te informa quando um grupo é atualizado",
             "editor": "DynamicValue",
             "name": "GROUPS_UPDATE",
-            "rank": 18,
+            "rank": 20,
             "value": "boolean"
         },
         "AFM": {
@@ -240,7 +233,7 @@
             "doc": "Te informa quando um participante muda de status, entrou, saiu, tornou-se admin, etc",
             "editor": "DynamicValue",
             "name": "GROUP_PARTICIPANTS_UPDATE",
-            "rank": 19,
+            "rank": 21,
             "value": "boolean"
         },
         "AGc": {
@@ -283,19 +276,26 @@
             "caption": "Webhooks poucos usados",
             "editor": "Label",
             "name": "webhook_pouco_usados_-_99%_deixam_desligados:",
-            "rank": 20
+            "rank": 22
         },
         "AMj": {
             "caption": "CONFIGURAÇÃO DE FLUXOS",
             "editor": "Label",
             "name": "fluxos",
-            "rank": 4
+            "rank": 6
         },
         "AMk": {
             "caption": "CONFIGURAÇÃO DE WEBHOOK",
             "editor": "Label",
             "name": "webhook",
-            "rank": 10
+            "rank": 12
+        },
+        "AMo": {
+            "caption": "Webhook + Fluxo Status",
+            "doc": "digite na pesquisa: \"Webhook + Fluxo Status\" e selecione",
+            "editor": "custom_type",
+            "name": "webhook_status",
+            "rank": 5
         }
     },
     "return_value": {
@@ -310,7 +310,7 @@
             "is_list": false,
             "name": "webhook_status",
             "rank": 0,
-            "value": "custom_data_AHv"
+            "value": "custom_data_AMo"
         },
         "AGk": {
             "caption": "error",

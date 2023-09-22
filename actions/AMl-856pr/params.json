@@ -15,34 +15,28 @@
             "editor": "DynamicValue",
             "name": "apikey",
             "optional": true,
-            "rank": 2,
+            "rank": 1,
             "value": "text"
-        },
-        "AGm": {
-            "caption": "-",
-            "editor": "Label",
-            "name": "url_opcional",
-            "rank": 1
         },
         "AGn": {
             "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
             "editor": "Label",
             "name": "apikey_opcional",
-            "rank": 3
+            "rank": 2
         },
         "AHV": {
             "caption": "Instancia",
             "editor": "DynamicValue",
             "name": "instanceName",
             "optional": true,
-            "rank": 4,
+            "rank": 3,
             "value": "text"
         },
         "AHW": {
             "caption": "apikey da instância",
             "editor": "DynamicValue",
             "name": "apikeysenha",
-            "rank": 5,
+            "rank": 4,
             "value": "text"
         }
     },
@@ -53,40 +47,16 @@
             "rank": 0,
             "value": "text"
         },
-        "AGk": {
-            "caption": "status",
-            "name": "status",
-            "rank": 1,
-            "value": "text"
-        },
-        "AGl": {
-            "caption": "Instancia",
-            "name": "instancia",
-            "rank": 2,
-            "value": "text"
-        },
-        "AHU": {
-            "caption": "apikey",
-            "name": "apikey",
-            "rank": 3,
-            "value": "text"
-        },
         "AKF": {
             "caption": "error",
             "name": "error",
-            "rank": 4,
+            "rank": 1,
             "value": "boolean"
         },
         "AKG": {
             "caption": "error_log",
             "name": "error_log",
-            "rank": 5,
-            "value": "text"
-        },
-        "AKH": {
-            "caption": "qrcode",
-            "name": "qrcode",
-            "rank": 6,
+            "rank": 2,
             "value": "text"
         }
     },
