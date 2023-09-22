@@ -91,6 +91,7 @@ fetch(url, requestOptions)
  
    
       instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+          instance.triggerEvent('sucessEvent');
       instance.publishState('webhook', resultObj); // Atualizar esta linha
     })
     .catch(error => {
@@ -106,5 +107,6 @@ fetch(url, requestOptions)
         let errorString = error.toString().replace(/"_p_/g, "\"");
         instance.publishState('error_log', errorString);
         }
+        instance.triggerEvent('errorEvent');
     });
 }

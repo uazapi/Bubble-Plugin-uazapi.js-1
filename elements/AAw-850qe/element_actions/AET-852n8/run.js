@@ -57,6 +57,7 @@ fetch(url, requestOptions)
    
     
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+          instance.triggerEvent('sucessEvent');
     instance.publishState('instanceinfo', resultObj);
     
     
@@ -77,6 +78,7 @@ fetch(url, requestOptions)
         instance.publishState('error_log', errorString);
         instance.publishState('instanceinfo', null);
         }
+        instance.triggerEvent('errorEvent');
     
   });
 }

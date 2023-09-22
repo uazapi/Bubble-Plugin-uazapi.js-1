@@ -48,6 +48,7 @@ fetch(url, requestOptions)
 .then(resultObj => {
 
 instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+          instance.triggerEvent('sucessEvent');
 instance.publishState('grupo', resultObj);
 
 })
@@ -62,8 +63,7 @@ try {
        } catch(e) {
         // Se a conversão falhar, apenas use a mensagem de erro como uma string
         let errorString = error.toString().replace(/"_p_/g, "\"");
-        instance.publishState('error_log', errorString);
-        }
+        instance.publishState('error_log', errorString);         }         instance.triggerEvent('errorEvent');
 });
 
 

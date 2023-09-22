@@ -84,6 +84,7 @@ fetch(url, requestOptions)
              
       if (Object.keys(resultObj).length > 0) {
           instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+          instance.triggerEvent('sucessEvent');
     
           
           instance.publishState('bot', resultObj);
@@ -104,6 +105,7 @@ fetch(url, requestOptions)
       let errorString = error.toString().replace(/"_p_/g, "\"");
       instance.publishState('error_log', errorString);
       }
+      instance.triggerEvent('errorEvent');
   });
 
 
