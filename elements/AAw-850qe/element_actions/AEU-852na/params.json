@@ -1,6 +1,6 @@
 {
     "caption": "DESCONTINUADO 🔓 Instancia - QR Code",
-    "doc": "DESCONTINUADO - use 🔓 Instancia - Informações para pegar o QR Code base64",
+    "doc": "",
     "fields": {
         "ABD": {
             "caption": "API Key",
@@ -32,6 +32,12 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AMp": {
+            "caption": "❗DESCONTINUADO❗ - use a função \"🔓 Instancia - Informações\", lá retorna todas as informações da instancia, inclusive o QR Code base64",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 4
         }
     }
 }

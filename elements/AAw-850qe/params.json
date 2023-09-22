@@ -6,12 +6,25 @@
         "width": 20
     },
     "display": "🤖 uazapi",
+    "events": {
+        "AMt": {
+            "caption": "Ocorreu um erro",
+            "doc": "ocorreu um erro na chamada API",
+            "name": "errorEvent"
+        },
+        "AMu": {
+            "caption": "Chamada API realizada",
+            "doc": "Chamada API realizada com sucesso",
+            "name": "sucessEvent"
+        }
+    },
     "fields": {
         "AFO": {
             "caption": "Chats",
             "doc": "",
             "editor": "custom_type",
             "name": "chats",
+            "optional": true,
             "rank": 4
         },
         "AFP": {
@@ -19,6 +32,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "instancias",
+            "optional": true,
             "rank": 1
         },
         "AFQ": {
@@ -26,6 +40,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "grupos",
+            "optional": true,
             "rank": 6
         },
         "AFR": {
@@ -33,6 +48,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "mensagens",
+            "optional": true,
             "rank": 8
         },
         "AFS": {
@@ -40,6 +56,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "contatos",
+            "optional": true,
             "rank": 5
         },
         "AFT": {
@@ -47,13 +64,15 @@
             "doc": "",
             "editor": "custom_type",
             "name": "mensagens_status",
+            "optional": true,
             "rank": 9
         },
         "AFc": {
-            "caption": "Webhook Status",
+            "caption": "Webhook + Fluxo Status",
             "doc": "",
             "editor": "custom_type",
             "name": "webhook",
+            "optional": true,
             "rank": 3
         },
         "AFl": {
@@ -61,6 +80,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "grupo",
+            "optional": true,
             "rank": 7
         },
         "AFp": {
@@ -68,6 +88,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "instanceinfo",
+            "optional": true,
             "rank": 2
         },
         "AFq": {
@@ -75,6 +96,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "mensagem64",
+            "optional": true,
             "rank": 10
         },
         "AFu": {
@@ -82,6 +104,7 @@
             "doc": "",
             "editor": "custom_type",
             "name": "verificar_numeros",
+            "optional": true,
             "rank": 12
         },
         "AGJ": {
@@ -89,10 +112,11 @@
             "doc": "",
             "editor": "custom_type",
             "name": "ultimamsg",
+            "optional": true,
             "rank": 11
         },
         "AGY": {
-            "caption": "❗ Atenção, sua api tem que em um domínio com certificado SSL, rodando em https, só assim irá funcionar. ❗",
+            "caption": "❗ Atenção: Para que sua API funcione corretamente, ela deve estar hospedada em um domínio com certificado SSL e rodar via HTTPS. ❗",
             "editor": "Label",
             "name": "doc",
             "rank": 0
@@ -101,7 +125,14 @@
             "caption": "Minha privacidade",
             "editor": "custom_type",
             "name": "minha_privacidade",
+            "optional": true,
             "rank": 13
+        },
+        "AMs": {
+            "caption": "⚠️ Campos Opcionais, Mas Cruciais ⚠️ Embora todos esses campos sejam marcados como \"opcionais\", eles são essenciais para o funcionamento adequado do plugin. Recomendamos preenchê-los a menos que você tenha certeza do que está fazendo. A opção de não preencher é útil quando você planeja usar apenas uma ação específica do elemento, eliminando a necessidade de configurar todos os campos.",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 14
         }
     },
     "icon": "ion-android-checkbox-blank",

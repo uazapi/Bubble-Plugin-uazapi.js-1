@@ -37,6 +37,12 @@
             "editor": "Label",
             "name": "apikey_opcional",
             "rank": 4
+        },
+        "AMq": {
+            "caption": "❗DESCONTINUADO❗ - use a função \"▶️Instancia - Informações\", lá retorna todas as informações da instancia, inclusive o QR Code base64",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 5
         }
     },
     "return_value": {
