@@ -20,7 +20,7 @@ function(instance, properties, context) {
 
   var url = baseUrl + "/automate/editflowblock/" + instancia;
   
-  console.log(properties.block);
+  //console.log(properties.block);
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");

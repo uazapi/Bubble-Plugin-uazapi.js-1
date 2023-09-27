@@ -37,7 +37,7 @@ function(properties, context) {
     let requestOptions = {
         method: 'PUT',
         headers: headers,
-        body: raw,
+       // body: raw,
         uri: url,
         json: true
     };

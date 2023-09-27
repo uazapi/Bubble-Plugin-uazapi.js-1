@@ -20,7 +20,7 @@ function(instance, properties, context) {
 
   var url = baseUrl + "/automate/editflowreply/" + instancia;
   
-  console.log(properties.replyOption);
+  //console.log(properties.replyOption);
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
