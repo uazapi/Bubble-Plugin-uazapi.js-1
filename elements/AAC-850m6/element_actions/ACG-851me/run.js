@@ -18,9 +18,9 @@ function(instance, properties, context) {
       instancia = context.keys["Instancia"];
   }
 
-  var url = baseUrl + "/automate/editflowblock/" + instancia;
+  var url = baseUrl + "/automate/editflowreply/" + instancia;
   
-  console.log(properties.block);
+  console.log(properties.replyOption);
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
@@ -33,7 +33,7 @@ function(instance, properties, context) {
   var raw = 
   {
     "name": properties.name,
-    "block": JSON.parse(properties.block)
+    "replyOption": JSON.parse(properties.replyOption)
 
    };
 
