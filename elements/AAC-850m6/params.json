@@ -6,6 +6,18 @@
         "width": 20
     },
     "display": "🤖🔀flow",
+    "events": {
+        "AMv": {
+            "caption": "Ocorreu um erro",
+            "doc": "Ocorreu um erro na chamada API",
+            "name": "errorevent"
+        },
+        "AMw": {
+            "caption": "Chamada API realizada",
+            "doc": "Chamada API realizada com sucesso",
+            "name": "sucessevent"
+        }
+    },
     "fields": {
         "AAD": {
             "caption": "uazabot",

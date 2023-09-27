@@ -9,7 +9,7 @@
     "events": {
         "AMt": {
             "caption": "Ocorreu um erro",
-            "doc": "ocorreu um erro na chamada API",
+            "doc": "Ocorreu um erro na chamada API",
             "name": "errorEvent"
         },
         "AMu": {
