@@ -10,12 +10,12 @@
         "AMv": {
             "caption": "Ocorreu um erro",
             "doc": "Ocorreu um erro na chamada API",
-            "name": "errorevent"
+            "name": "errorEvent"
         },
         "AMw": {
             "caption": "Chamada API realizada",
             "doc": "Chamada API realizada com sucesso",
-            "name": "sucessevent"
+            "name": "sucessEvent"
         }
     },
     "fields": {
