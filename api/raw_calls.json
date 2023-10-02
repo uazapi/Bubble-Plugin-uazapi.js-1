@@ -346,6 +346,7 @@
                 }
             },
             "initialized": true,
+            "is_list": true,
             "method": "post",
             "name": "📄 Mensagens ",
             "publish_as": "data",
@@ -396,13 +397,14 @@
                 }
             },
             "initialized": true,
+            "is_list": true,
             "method": "post",
             "name": "📄 Status de recebimento ",
             "publish_as": "data",
             "rank": 10,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.ATu",
             "should_reinitialize": false,
-            "types": "{\"plugin_api.ATu\":{\"caption\":\"📄 Status de recebimento \",\"fields\":{\"_p__id\":{\"ret_value\":\"_ignore\"},\"_p_remoteJid\":{\"ret_value\":\"text\",\"caption\":\"remoteJid\",\"sample_value\":\"5511976165769@s.whatsapp.net\",\"path\":[\"remoteJid\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"67276FAA09420DC76D\",\"path\":[\"id\"]},\"_p_fromMe\":{\"ret_value\":\"boolean\",\"caption\":\"fromMe\",\"sample_value\":false,\"path\":[\"fromMe\"]},\"_p_datetime\":{\"ret_value\":\"date_unix\",\"caption\":\"datetime\",\"sample_value\":1677066453644,\"path\":[\"datetime\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"READ\",\"path\":[\"status\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]},\"_p___v\":{\"ret_value\":\"_ignore\"}}}}",
+            "types": "{\"plugin_api.ATu\":{\"caption\":\"📄 Status de recebimento \",\"fields\":{\"_p_remoteJid\":{\"ret_value\":\"text\",\"caption\":\"remoteJid\",\"sample_value\":\"5511976165769@s.whatsapp.net\",\"path\":[\"remoteJid\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"67276FAA09420DC76D\",\"path\":[\"id\"]},\"_p_fromMe\":{\"ret_value\":\"boolean\",\"caption\":\"fromMe\",\"sample_value\":false,\"path\":[\"fromMe\"]},\"_p_datetime\":{\"ret_value\":\"date_unix\",\"caption\":\"datetime\",\"sample_value\":1677066453644,\"path\":[\"datetime\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"READ\",\"path\":[\"status\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]}}}}",
             "url": "[url]/chat/findStatusMessage/[instance]",
             "url_params": {
                 "ATw": {
