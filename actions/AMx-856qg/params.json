@@ -35,12 +35,12 @@
         "AMI": {
             "caption": "Desabilitar Fluxos",
             "default_val": 1,
-            "doc": "0 = desabilitado, 1= habilitado, DataUnix = desabilitado até essa data.",
+            "doc": "0 = desabilitado, 1= habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
             "editor": "DynamicValue",
             "long_text": false,
             "name": "disableFlowsUntil",
             "options": "",
-            "rank": 4,
+            "rank": 5,
             "value": "number"
         },
         "AMO": {
@@ -49,7 +49,7 @@
             "editor": "Label",
             "name": "info",
             "options": "",
-            "rank": 5,
+            "rank": 6,
             "value": "text"
         },
         "AMP": {
@@ -59,7 +59,7 @@
             "name": "displayName",
             "optional": true,
             "options": "",
-            "rank": 6,
+            "rank": 7,
             "value": "text"
         },
         "AMQ": {
@@ -69,7 +69,7 @@
             "name": "email",
             "optional": true,
             "options": "",
-            "rank": 8,
+            "rank": 9,
             "value": "text"
         },
         "AMR": {
@@ -79,7 +79,7 @@
             "name": "fullName",
             "optional": true,
             "options": "",
-            "rank": 7,
+            "rank": 8,
             "value": "text"
         },
         "AMS": {
@@ -89,7 +89,7 @@
             "name": "cpf",
             "optional": true,
             "options": "",
-            "rank": 9,
+            "rank": 10,
             "value": "text"
         },
         "AMz": {
@@ -98,7 +98,7 @@
             "editor": "DynamicValue",
             "name": "sourceLead",
             "optional": true,
-            "rank": 10,
+            "rank": 11,
             "value": "text"
         },
         "ANB": {
@@ -107,17 +107,17 @@
             "editor": "DynamicValue",
             "name": "statusLead",
             "optional": true,
-            "rank": 11,
+            "rank": 12,
             "value": "text"
         },
         "ANC": {
-            "caption": "note",
+            "caption": "Notas",
             "doc": "Um texto longo sobre o Lead... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
             "long_text": true,
             "name": "note",
             "optional": true,
-            "rank": 12,
+            "rank": 13,
             "value": "text"
         },
         "AND": {
@@ -126,23 +126,26 @@
             "editor": "DynamicValue",
             "name": "tags",
             "optional": true,
-            "rank": 13,
+            "rank": 14,
             "value": "text"
         },
         "ANE": {
-            "caption": "Atendimento Aberto",
+            "caption": "Atendimento em aberto",
+            "default_val": false,
+            "doc": "Atendimento em aberto ou fechado = concluído.",
             "editor": "DynamicValue",
-            "name": "serviceopen",
-            "optional": true,
-            "rank": 15,
-            "value": "text"
-        },
-        "ANF": {
-            "caption": "Atendimento atribuído para",
-            "editor": "DynamicValue",
-            "name": "assignedto",
+            "name": "serviceOpen",
             "optional": true,
             "rank": 16,
+            "value": "boolean"
+        },
+        "ANF": {
+            "caption": "Atribuído à",
+            "doc": "Coloque o nome ou id ao atendente que esse Lead está atribuído",
+            "editor": "DynamicValue",
+            "name": "assignedTo",
+            "optional": true,
+            "rank": 17,
             "value": "text"
         },
         "ANG": {
@@ -152,14 +155,32 @@
             "editor": "DynamicValue",
             "name": "deleteTags",
             "optional": false,
-            "rank": 14,
+            "rank": 15,
             "value": "boolean"
         },
         "ANH": {
             "caption": "Chat",
+            "doc": "Selecione: 📄Chats",
             "editor": "custom_type",
             "name": "chat",
-            "rank": 17
+            "rank": 19
+        },
+        "ANK": {
+            "caption": "Chat id - telefone",
+            "doc": "Id do Chat, número de telefone",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 4,
+            "value": "text"
+        },
+        "ANL": {
+            "caption": "Mensagens não lidas",
+            "doc": "Coloque o número de mensagens não lidas, use para marca uma conversa como lida / não lida.",
+            "editor": "DynamicValue",
+            "name": "unreadcount",
+            "optional": true,
+            "rank": 18,
+            "value": "number"
         }
     },
     "return_value": {
