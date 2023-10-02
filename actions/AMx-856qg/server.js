@@ -110,7 +110,7 @@ function(properties, context) {
      
 
     return {
-        //webhook_status: resultObj.webhook,
+        chat: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
