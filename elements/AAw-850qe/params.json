@@ -133,13 +133,6 @@
             "editor": "Label",
             "name": "doc",
             "rank": 14
-        },
-        "ANI": {
-            "caption": "Chat / Lead",
-            "editor": "custom_type",
-            "name": "chat/lead",
-            "optional": true,
-            "rank": 15
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -322,6 +315,14 @@
             },
             "name": "minha_privacidade",
             "value": "custom_data_ALO"
+        },
+        "ANJ": {
+            "caption": "Chat / Lead",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "chat/lead",
+            "value": "custom_data_AFO"
         }
     }
 }
