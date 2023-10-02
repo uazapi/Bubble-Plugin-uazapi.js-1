@@ -52,6 +52,135 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AMI": {
+            "caption": "Desabilitar Fluxos",
+            "default_val": 1,
+            "doc": "0 = desabilitado, 1= habilitado, DataUnix = desabilitado até essa data.",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "disableFlowsUntil",
+            "options": "",
+            "rank": 4,
+            "value": "number"
+        },
+        "AMO": {
+            "caption": "Campos Informativos que você pode editar e filtrar depois:",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "Label",
+            "name": "info",
+            "options": "",
+            "rank": 5,
+            "value": "text"
+        },
+        "AMP": {
+            "caption": "Nome de exibição",
+            "doc": "Primeiro nome, apelido, como preferir... Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "name": "displayName",
+            "optional": true,
+            "options": "",
+            "rank": 6,
+            "value": "text"
+        },
+        "AMQ": {
+            "caption": "E-mail",
+            "doc": "Email... Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "name": "email",
+            "optional": true,
+            "options": "",
+            "rank": 8,
+            "value": "text"
+        },
+        "AMR": {
+            "caption": "Nome Completo",
+            "doc": "Nome completo... Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "name": "fullName",
+            "optional": true,
+            "options": "",
+            "rank": 7,
+            "value": "text"
+        },
+        "AMS": {
+            "caption": "Me adicionar em grupo",
+            "doc": "CPF... Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "name": "cpf",
+            "optional": true,
+            "options": "",
+            "rank": 9,
+            "value": "text"
+        },
+        "AMz": {
+            "caption": "Fonte do Lead",
+            "doc": "Fonte do Lead, exemplo: \"Campanha de marketing XYZ - Google\"...  Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "name": "sourceLead",
+            "optional": true,
+            "rank": 10,
+            "value": "text"
+        },
+        "ANB": {
+            "caption": "Status do Lead",
+            "doc": "Status do Lead, exemplos: \"Assinante\"... Ou \"Prospect\", \"Lead\", \"frio\", \"quente\", faça as suas categorias e defina aqui... Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "name": "statusLead",
+            "optional": true,
+            "rank": 11,
+            "value": "text"
+        },
+        "ANC": {
+            "caption": "note",
+            "doc": "Um texto longo sobre o Lead... Coloque um espaço em branco para apagar",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "note",
+            "optional": true,
+            "rank": 12,
+            "value": "text"
+        },
+        "AND": {
+            "caption": "Etiquetas",
+            "doc": "Exemplo: testando aplicativo | Cliente com pouco conhecimento em informática - Separadas por |, conforme exemplo, se já tiver etiquetas, para editar, você terá que passar todas as etiquetas, pois esse campo reescreve, caso queria apagar tudo, use o campo abaixo.",
+            "editor": "DynamicValue",
+            "name": "tags",
+            "optional": true,
+            "rank": 13,
+            "value": "text"
+        },
+        "ANE": {
+            "caption": "Atendimento Aberto",
+            "editor": "DynamicValue",
+            "name": "serviceopen",
+            "optional": true,
+            "rank": 15,
+            "value": "text"
+        },
+        "ANF": {
+            "caption": "Atendimento atribuído para",
+            "editor": "DynamicValue",
+            "name": "assignedto",
+            "optional": true,
+            "rank": 16,
+            "value": "text"
+        },
+        "ANG": {
+            "caption": "Apagar Etiquetas",
+            "default_val": false,
+            "doc": "Apagar todas as etiquetas",
+            "editor": "DynamicValue",
+            "name": "deleteTags",
+            "optional": false,
+            "rank": 14,
+            "value": "boolean"
+        },
+        "ANH": {
+            "caption": "Chat",
+            "editor": "custom_type",
+            "name": "chat",
+            "rank": 17
         }
     }
 }
