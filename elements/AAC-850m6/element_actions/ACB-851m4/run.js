@@ -40,12 +40,6 @@ function(instance, properties, context) {
     raw["status"] = properties.status.trim();
   }
   
-  if (properties.stoppedUntil && properties.stoppedUntil.trim() !== "") {
-    if (!raw["chatLog"]) {
-      raw["chatLog"] = {};
-    }
-    raw["chatLog"]["stoppedUntil"] = properties.stoppedUntil.trim();
-  }
   
   
 

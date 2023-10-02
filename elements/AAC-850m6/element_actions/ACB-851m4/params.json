@@ -44,14 +44,6 @@
             "name": "status",
             "rank": 5,
             "value": "text"
-        },
-        "ACC": {
-            "caption": "Pausar conversa até",
-            "doc": "Coloque o valor em unix (ms)",
-            "editor": "DynamicValue",
-            "name": "stoppeduntil",
-            "rank": 6,
-            "value": "number"
         }
     }
 }
