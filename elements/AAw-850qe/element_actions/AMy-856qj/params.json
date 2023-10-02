@@ -18,32 +18,12 @@
             "rank": 0,
             "value": "text"
         },
-        "ABG": {
-            "caption": "Tempo de Expiração",
-            "default_val": 0,
-            "doc": "0 = desativado, 86400 = 24 horas, 604800 = 7 dias, 7776000 = 90 dias",
-            "editor": "DynamicValue",
-            "name": "expiration",
-            "options": "0,86400,604800,7776000",
-            "rank": 5,
-            "value": "number"
-        },
         "ABH": {
             "caption": "Instancia",
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
             "rank": 1,
-            "value": "text"
-        },
-        "ABI": {
-            "caption": "ID do grupo",
-            "default_val": "",
-            "doc": "",
-            "editor": "DynamicValue",
-            "long_text": false,
-            "name": "groupid",
-            "rank": 4,
             "value": "text"
         },
         "ABP": {
@@ -104,7 +84,7 @@
             "value": "text"
         },
         "AMS": {
-            "caption": "Me adicionar em grupo",
+            "caption": "CPF",
             "doc": "CPF... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
             "name": "cpf",

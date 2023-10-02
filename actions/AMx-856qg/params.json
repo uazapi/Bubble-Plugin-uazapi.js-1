@@ -83,7 +83,7 @@
             "value": "text"
         },
         "AMS": {
-            "caption": "Me adicionar em grupo",
+            "caption": "CPF",
             "doc": "CPF... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
             "name": "cpf",
