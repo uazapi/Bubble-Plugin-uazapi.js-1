@@ -1,5 +1,112 @@
 {
     "category": "plugins",
     "display": "▶️ Editar Lead - Chat",
+    "fields": {
+        "AME": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMH": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AMI": {
+            "caption": "Confirmação de Leitura",
+            "doc": "all,none",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "readreceipts",
+            "options": "",
+            "rank": 4,
+            "value": "text"
+        },
+        "AMO": {
+            "caption": "Foto de perfil",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
+            "name": "profile",
+            "options": "",
+            "rank": 5,
+            "value": "text"
+        },
+        "AMP": {
+            "caption": "Recado",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
+            "name": "status",
+            "options": "",
+            "rank": 6,
+            "value": "text"
+        },
+        "AMQ": {
+            "caption": "Ver se estou Online",
+            "doc": "Opções: all, match_last_seen",
+            "editor": "DynamicValue",
+            "name": "online",
+            "options": "",
+            "rank": 8,
+            "value": "text"
+        },
+        "AMR": {
+            "caption": "Visto por último",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
+            "name": "last",
+            "options": "",
+            "rank": 7,
+            "value": "text"
+        },
+        "AMS": {
+            "caption": "Me adicionar em grupo",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "DynamicValue",
+            "name": "groupadd",
+            "options": "",
+            "rank": 9,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
     "type": "server_side"
 }

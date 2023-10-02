@@ -1,4 +1,4 @@
-function(properties, context) {
+function(properties, context) { // adicionar async para v4
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
@@ -59,8 +59,8 @@ function(properties, context) {
             method: 'POST',
             headers: headers,
             body: raw,  
-            uri: url,
-            json: true
+            uri: url, // remover para v4
+            json: true // remover para v4
         };
 
 	
@@ -71,39 +71,44 @@ function(properties, context) {
     let error_log;
 
     try {
-        sentRequest = context.request(requestOptions);
+        sentRequest = context.request(requestOptions); //remover para v4
+
+        //v4:
+        //sentRequest = await fetch(url, requestOptions);
+        //let resultObj = await sentRequest.json();
    } catch(e) {
         error = true;
         error_log = e.toString();
     }
 
-        if (sentRequest.statusCode.toString().charAt(0) !== "2") {
-            error = true;
-           
-            return {
-                error: error,
-                error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-            }
-        }   
+    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+        error = true;
+        
+        return {
+            error: error,
+            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
+        }
+    }   
 
+    //remover para v4:
     let resultObj;
     try {
         resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
-    }
-
+        } catch(e) {
+            error = true;
+            error_log = `Error getting response body: ${e.toString()}`;
+        }
+    // até aqui
   
-        return {
-            remoteJid: resultObj?.key?.remoteJid,
-            fromMe: resultObj?.key?.fromMe,
-            id: resultObj?.key?.id,
-            status: resultObj?.status ? resultObj?.status.toString() : undefined,
-            error: error,
-            log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-            error_log: error_log,
-        };
+    return {
+        remoteJid: resultObj?.key?.remoteJid,
+        fromMe: resultObj?.key?.fromMe,
+        id: resultObj?.key?.id,
+        status: resultObj?.status ? resultObj?.status.toString() : undefined,
+        error: error,
+        log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        error_log: error_log,
+    };
 
 
 
