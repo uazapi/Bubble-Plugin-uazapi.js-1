@@ -67,7 +67,7 @@ function(properties, context) {
     if(properties.unreadcount !== undefined) raw.unreadcount = properties.unreadcount;
     if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
     
-    raw = JSON.stringify(raw);
+
 
     let requestOptions = {
         method: 'POST',
@@ -82,6 +82,8 @@ function(properties, context) {
     error = false;
     let error_log;
 
+
+    
     try {
         sentRequest = context.request(requestOptions);
    } catch(e) {
@@ -108,7 +110,7 @@ function(properties, context) {
     }
 
      
-
+    
     return {
         chat: resultObj,
         error: error,
