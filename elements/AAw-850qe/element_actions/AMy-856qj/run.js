@@ -41,21 +41,30 @@ function(instance, properties, context) {
     }
   }
 
-  if(properties.disableFlowsUntil) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
+  if(properties.disableFlowsUntil != null ) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
   if(properties.nome) leadInfo.nome = properties.nome.trim();
   if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
   if(properties.email) leadInfo.email = properties.email.trim();
   if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
   if(properties.statusLead) leadInfo.statusLead = properties.statusLead.trim();
   if(properties.note) leadInfo.note = properties.note.trim();
-  if(properties.serviceOpen !== undefined) leadInfo.serviceOpen = properties.serviceOpen;
+  if(properties.serviceOpen != null) leadInfo.serviceOpen = properties.serviceOpen;
   if(properties.assignedTo) leadInfo.assignedTo = properties.assignedTo.trim();
+  if(properties.customFields) {
+    try {
+        leadInfo.customFields = JSON.parse(properties.customFields);
+    } catch (e) {
+      leadInfo.customFields = [];
+        console.log('Erro ao analisar customFields: ', e);
+    }
+  }
   
   var raw = {
       "id": properties.id
   };
   
-  if(properties.unreadcount !== undefined) raw.unreadcount = properties.unreadcount;
+  if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
+  
   if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
   
   raw = JSON.stringify(raw);
