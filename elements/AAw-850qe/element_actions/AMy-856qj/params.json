@@ -57,7 +57,7 @@
             "caption": "Nome de exibição",
             "doc": "Primeiro nome, apelido, como preferir... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
-            "name": "displayName",
+            "name": "nome",
             "optional": true,
             "options": "",
             "rank": 7,
@@ -77,7 +77,7 @@
             "caption": "Nome Completo",
             "doc": "Nome completo... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
-            "name": "fullName",
+            "name": "nomecompleto",
             "optional": true,
             "options": "",
             "rank": 8,
@@ -155,7 +155,7 @@
             "doc": "Selecione: 📄Chats",
             "editor": "custom_type",
             "name": "chat",
-            "rank": 18
+            "rank": 19
         },
         "ANK": {
             "caption": "Chat id - telefone",
@@ -173,6 +173,15 @@
             "optional": true,
             "rank": 17,
             "value": "number"
+        },
+        "ANX": {
+            "caption": "Campos Personalizados",
+            "doc": "Coloque uma lista de itens com o formato a seguir, não esqueça de colocar o \"_id\" = ao \"_id\" definido na ação de editar campos personalizado : { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" }",
+            "editor": "DynamicValue",
+            "name": "customFields",
+            "optional": true,
+            "rank": 18,
+            "value": "text"
         }
     }
 }

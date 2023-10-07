@@ -42,11 +42,10 @@ function(instance, properties, context) {
   }
 
   if(properties.disableFlowsUntil) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
-  if(properties.displayName) leadInfo.displayName = properties.displayName.trim();
-  if(properties.fullName) leadInfo.fullName = properties.fullName.trim();
+  if(properties.nome) leadInfo.nome = properties.nome.trim();
+  if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
   if(properties.email) leadInfo.email = properties.email.trim();
   if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
-  if(properties.sourceLead) leadInfo.sourceLead = properties.sourceLead.trim();
   if(properties.statusLead) leadInfo.statusLead = properties.statusLead.trim();
   if(properties.note) leadInfo.note = properties.note.trim();
   if(properties.serviceOpen !== undefined) leadInfo.serviceOpen = properties.serviceOpen;
