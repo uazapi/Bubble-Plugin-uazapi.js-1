@@ -645,6 +645,7 @@
                 }
             },
             "initialized": true,
+            "is_list": true,
             "method": "get",
             "name": "📄 Chats ",
             "publish_as": "data",
