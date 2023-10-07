@@ -43,7 +43,7 @@
         },
         "AMP": {
             "caption": "Id do Campo",
-            "doc": "Primeiro nome, apelido, como preferir... Coloque um espaço em branco para apagar",
+            "doc": "Se o id não existir irá criar um novo campo, se o id existir, irá editar o campo",
             "editor": "DynamicValue",
             "name": "_id",
             "optional": true,
@@ -53,7 +53,7 @@
         },
         "AMQ": {
             "caption": "Ordem do campo",
-            "doc": "Email... Coloque um espaço em branco para apagar",
+            "doc": "passe um valor decimal para reordenar, exemplo, vc quer que esse campo fique entre o 2 e o 3, passe o valor 2.5",
             "editor": "DynamicValue",
             "name": "order",
             "optional": true,
@@ -63,7 +63,7 @@
         },
         "AMR": {
             "caption": "Nome do Campo",
-            "doc": "Nome completo... Coloque um espaço em branco para apagar",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "name",
             "optional": true,
@@ -73,7 +73,7 @@
         },
         "AMS": {
             "caption": "Deletar campo?",
-            "doc": "CPF... Coloque um espaço em branco para apagar",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "delete",
             "optional": true,

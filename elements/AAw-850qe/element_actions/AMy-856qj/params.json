@@ -150,13 +150,6 @@
             "rank": 14,
             "value": "boolean"
         },
-        "ANH": {
-            "caption": "Chat",
-            "doc": "Selecione: 📄Chats",
-            "editor": "custom_type",
-            "name": "chat",
-            "rank": 19
-        },
         "ANK": {
             "caption": "Chat id - telefone",
             "doc": "Id do Chat, número de telefone",
