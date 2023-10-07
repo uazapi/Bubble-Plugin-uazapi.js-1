@@ -56,7 +56,7 @@
             "caption": "Nome de exibição",
             "doc": "Primeiro nome, apelido, como preferir... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
-            "name": "displayName",
+            "name": "nome",
             "optional": true,
             "options": "",
             "rank": 7,
@@ -76,7 +76,7 @@
             "caption": "Nome Completo",
             "doc": "Nome completo... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
-            "name": "fullName",
+            "name": "nomecompleto",
             "optional": true,
             "options": "",
             "rank": 8,
@@ -92,22 +92,13 @@
             "rank": 10,
             "value": "text"
         },
-        "AMz": {
-            "caption": "Fonte do Lead",
-            "doc": "Fonte do Lead, exemplo: \"Campanha de marketing XYZ - Google\"...  Coloque um espaço em branco para apagar",
-            "editor": "DynamicValue",
-            "name": "sourceLead",
-            "optional": true,
-            "rank": 11,
-            "value": "text"
-        },
         "ANB": {
             "caption": "Status do Lead",
             "doc": "Status do Lead, exemplos: \"Assinante\"... Ou \"Prospect\", \"Lead\", \"frio\", \"quente\", faça as suas categorias e defina aqui... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
             "name": "statusLead",
             "optional": true,
-            "rank": 12,
+            "rank": 11,
             "value": "text"
         },
         "ANC": {
@@ -117,7 +108,7 @@
             "long_text": true,
             "name": "note",
             "optional": true,
-            "rank": 13,
+            "rank": 12,
             "value": "text"
         },
         "AND": {
@@ -126,7 +117,7 @@
             "editor": "DynamicValue",
             "name": "tags",
             "optional": true,
-            "rank": 14,
+            "rank": 13,
             "value": "text"
         },
         "ANE": {
@@ -136,7 +127,7 @@
             "editor": "DynamicValue",
             "name": "serviceOpen",
             "optional": true,
-            "rank": 16,
+            "rank": 15,
             "value": "boolean"
         },
         "ANF": {
@@ -145,7 +136,7 @@
             "editor": "DynamicValue",
             "name": "assignedTo",
             "optional": true,
-            "rank": 17,
+            "rank": 16,
             "value": "text"
         },
         "ANG": {
@@ -155,7 +146,7 @@
             "editor": "DynamicValue",
             "name": "deleteTags",
             "optional": false,
-            "rank": 15,
+            "rank": 14,
             "value": "boolean"
         },
         "ANH": {
@@ -163,7 +154,7 @@
             "doc": "Selecione: 📄Chats",
             "editor": "custom_type",
             "name": "chat",
-            "rank": 19
+            "rank": 18
         },
         "ANK": {
             "caption": "Chat id - telefone",
@@ -179,7 +170,7 @@
             "editor": "DynamicValue",
             "name": "unreadcount",
             "optional": true,
-            "rank": 18,
+            "rank": 17,
             "value": "number"
         }
     },
