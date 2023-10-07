@@ -330,6 +330,29 @@
             },
             "wrap_error": false
         },
+        "ANM": {
+            "initialized": true,
+            "method": "get",
+            "name": "📄 Multiatendimento",
+            "publish_as": "data",
+            "rank": 16,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.ANM",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ANM\":{\"caption\":\"📄 Multiatendimento\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"id\",\"path\":[\"_id\"]},\"_p_agents\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.ANM.agents\",\"caption\":\"agents\",\"path\":[\"agents\"]},\"_p_customFields\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.ANM.customFields\",\"caption\":\"customFields\",\"path\":[\"customFields\"]},\"_p___v\":{\"ret_value\":\"_ignore\"}}},\"plugin_api.ANM.agents\":{\"caption\":\"📄 Multiatendimento agent\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"id\",\"path\":[\"_id\"]},\"_p_fone\":{\"ret_value\":\"text\",\"caption\":\"fone\",\"sample_value\":\"fone\",\"path\":[\"fone\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Name\",\"path\":[\"name\"]},\"_p_email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"sample_value\":\"agent@example.com\",\"path\":[\"email\"]},\"_p_role\":{\"ret_value\":\"text\",\"caption\":\"role\",\"sample_value\":\"agent_role\",\"path\":[\"role\"]}}},\"plugin_api.ANM.customFields\":{\"caption\":\"📄 Multiatendimento customField\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"65214516933b3cc706250029\",\"path\":[\"_id\"]},\"_p_order\":{\"ret_value\":\"number\",\"caption\":\"order\",\"sample_value\":2,\"path\":[\"order\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"12345\",\"path\":[\"name\"]}}}}",
+            "url": "[url]/automate/getTicketSystem/[instance]",
+            "url_params": {
+                "ANN": {
+                    "key": "url",
+                    "private": true,
+                    "value": ""
+                },
+                "ANO": {
+                    "key": "instance",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
         "ATo": {
             "body": "{\n\n}\n",
             "headers": {
@@ -622,14 +645,13 @@
                 }
             },
             "initialized": true,
-            "is_list": true,
             "method": "get",
             "name": "📄 Chats ",
             "publish_as": "data",
             "rank": 5,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AXp",
             "should_reinitialize": false,
-            "types": "{\"plugin_api.AXp\":{\"caption\":\"📄 Chats \",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"telefone@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_imagechat\":{\"ret_value\":\"text\",\"caption\":\"imagechat\",\"sample_value\":\"https://url\",\"path\":[\"imagechat\"]},\"_p_lastmsg\":{\"ret_value\":\"date_unix\",\"caption\":\"lastmsg\",\"sample_value\":1696181881000,\"path\":[\"lastmsg\"]},\"_p_leadInfo.tags\":{\"ret_value\":\"list.text\",\"caption\":\"leadInfo tags\",\"sample_value\":\"tag1\",\"path\":[\"leadInfo\",\"tags\"]},\"_p_leadInfo.assignedTo\":{\"ret_value\":\"text\",\"caption\":\"leadInfo assignedTo\",\"sample_value\":\"Atendente X\",\"path\":[\"leadInfo\",\"assignedTo\"]},\"_p_leadInfo.cpf\":{\"ret_value\":\"text\",\"caption\":\"leadInfo cpf\",\"sample_value\":\"123.456.789-09\",\"path\":[\"leadInfo\",\"cpf\"]},\"_p_leadInfo.disableFlowsUntil\":{\"ret_value\":\"date_unix\",\"caption\":\"leadInfo disableFlowsUntil\",\"sample_value\":1733027661000,\"path\":[\"leadInfo\",\"disableFlowsUntil\"]},\"_p_leadInfo.displayName\":{\"ret_value\":\"text\",\"caption\":\"leadInfo displayName\",\"sample_value\":\"Seu Primeiro Nome ou Apelido\",\"path\":[\"leadInfo\",\"displayName\"]},\"_p_leadInfo.email\":{\"ret_value\":\"text\",\"caption\":\"leadInfo email\",\"sample_value\":\"seuemail@email.com\",\"path\":[\"leadInfo\",\"email\"]},\"_p_leadInfo.fullName\":{\"ret_value\":\"text\",\"caption\":\"leadInfo fullName\",\"sample_value\":\"Nome Completo\",\"path\":[\"leadInfo\",\"fullName\"]},\"_p_leadInfo.note\":{\"ret_value\":\"text\",\"caption\":\"leadInfo note\",\"sample_value\":\"Algumas notas adicionais.\",\"path\":[\"leadInfo\",\"note\"]},\"_p_leadInfo.serviceOpen\":{\"ret_value\":\"boolean\",\"caption\":\"leadInfo serviceOpen\",\"sample_value\":true,\"path\":[\"leadInfo\",\"serviceOpen\"]},\"_p_leadInfo.sourceLead\":{\"ret_value\":\"text\",\"caption\":\"leadInfo sourceLead\",\"sample_value\":\"Campanha de marketing XYZ Google\",\"path\":[\"leadInfo\",\"sourceLead\"]},\"_p_leadInfo.statusLead\":{\"ret_value\":\"text\",\"caption\":\"leadInfo statusLead\",\"sample_value\":\"Assinante\",\"path\":[\"leadInfo\",\"statusLead\"]},\"_p_unreadcount\":{\"ret_value\":\"number\",\"caption\":\"unreadcount\",\"sample_value\":1,\"path\":[\"unreadcount\"]},\"_p_contactname\":{\"ret_value\":\"text\",\"caption\":\"contactname\",\"sample_value\":\"nome do contato\",\"path\":[\"contactname\"]},\"_p_group\":{\"ret_value\":\"boolean\",\"caption\":\"group\",\"sample_value\":false,\"path\":[\"group\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"outronome\",\"path\":[\"name\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
+            "types": "{\"plugin_api.AXp\":{\"caption\":\"📄 Chats \",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"telefone@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_imagechat\":{\"ret_value\":\"text\",\"caption\":\"imagechat\",\"sample_value\":\"https://url\",\"path\":[\"imagechat\"]},\"_p_lastmsg\":{\"ret_value\":\"date_unix\",\"caption\":\"lastmsg\",\"sample_value\":1696181881000,\"path\":[\"lastmsg\"]},\"_p_leadInfo.assignedTo\":{\"ret_value\":\"text\",\"caption\":\"leadInfo assignedTo\",\"sample_value\":\"Atendente X\",\"path\":[\"leadInfo\",\"assignedTo\"]},\"_p_leadInfo.cpf\":{\"ret_value\":\"text\",\"caption\":\"leadInfo cpf\",\"sample_value\":\"123.456.789-09\",\"path\":[\"leadInfo\",\"cpf\"]},\"_p_leadInfo.disableFlowsUntil\":{\"ret_value\":\"date_unix\",\"caption\":\"leadInfo disableFlowsUntil\",\"sample_value\":1733027661000,\"path\":[\"leadInfo\",\"disableFlowsUntil\"]},\"_p_leadInfo.nome\":{\"ret_value\":\"text\",\"caption\":\"leadInfo nome\",\"sample_value\":\"Seu Primeiro Nome ou Apelido\",\"path\":[\"leadInfo\",\"nome\"]},\"_p_leadInfo.email\":{\"ret_value\":\"text\",\"caption\":\"leadInfo email\",\"sample_value\":\"seuemail@email.com\",\"path\":[\"leadInfo\",\"email\"]},\"_p_leadInfo.nomecompleto\":{\"ret_value\":\"text\",\"caption\":\"leadInfo nomecompleto\",\"sample_value\":\"Nome Completo\",\"path\":[\"leadInfo\",\"nomecompleto\"]},\"_p_leadInfo.notas\":{\"ret_value\":\"text\",\"caption\":\"leadInfo notas\",\"sample_value\":\"Algumas notas adicionais.\",\"path\":[\"leadInfo\",\"notas\"]},\"_p_leadInfo.serviceOpen\":{\"ret_value\":\"boolean\",\"caption\":\"leadInfo serviceOpen\",\"sample_value\":true,\"path\":[\"leadInfo\",\"serviceOpen\"]},\"_p_leadInfo.statusLead\":{\"ret_value\":\"text\",\"caption\":\"leadInfo statusLead\",\"sample_value\":\"Assinante\",\"path\":[\"leadInfo\",\"statusLead\"]},\"_p_unreadcount\":{\"ret_value\":\"number\",\"caption\":\"unreadcount\",\"sample_value\":1,\"path\":[\"unreadcount\"]},\"_p_contactname\":{\"ret_value\":\"text\",\"caption\":\"contactname\",\"sample_value\":\"nome do contato\",\"path\":[\"contactname\"]},\"_p_group\":{\"ret_value\":\"boolean\",\"caption\":\"group\",\"sample_value\":false,\"path\":[\"group\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"outronome\",\"path\":[\"name\"]},\"_p_archived\":{\"ret_value\":\"boolean\",\"caption\":\"archived\",\"sample_value\":false,\"path\":[\"archived\"]}}}}",
             "url": "[url]/chat/findChats/[instance]",
             "url_params": {
                 "AXr": {
@@ -726,7 +748,7 @@
                 }
             },
             "publish_as": "action",
-            "rank": 16,
+            "rank": 17,
             "ret_value": "api.1674157317439x684864161158529000.plugin_api.AhE",
             "should_reinitialize": false,
             "types": "{\"plugin_api.AhE\":{\"caption\":\"✅ Upload to Bubble - Base64\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"//s3.amazonaws.com/appforest_uf/f1677647589133x644077376946096400/test.json\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"text\",\"caption\":\"headers date\",\"sample_value\":\"Wed, 01 Mar 2023 05:13:09 GMT\",\"path\":[\"headers\",\"date\"]},\"_p_headers.content-type\":{\"ret_value\":\"_ignore\"},\"_p_headers.transfer-encoding\":{\"ret_value\":\"_ignore\"},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-powered-by\":{\"ret_value\":\"_ignore\"},\"_p_headers.cache-control\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-appname\":{\"ret_value\":\"text\",\"caption\":\"headers x-bubble-appname\",\"sample_value\":\"uazapi-exemplo\",\"path\":[\"headers\",\"x-bubble-appname\"]},\"_p_headers.x-bubble-request-took\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-perf\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-used\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-limit\":{\"ret_value\":\"_ignore\"},\"_p_headers.vary\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.content-encoding\":{\"ret_value\":\"_ignore\"}}}}",

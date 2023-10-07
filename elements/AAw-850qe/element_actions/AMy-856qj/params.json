@@ -36,7 +36,7 @@
         "AMI": {
             "caption": "Desabilitar Fluxos",
             "default_val": 1,
-            "doc": "0 = desabilitado, 1= habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
+            "doc": "0 = desabilitado, 1 ou vazio = habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
             "editor": "DynamicValue",
             "long_text": false,
             "name": "disableFlowsUntil",
