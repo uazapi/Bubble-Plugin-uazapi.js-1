@@ -132,6 +132,13 @@
             "caption": "⚠️ Campos Opcionais, Mas Cruciais ⚠️ Embora todos esses campos sejam marcados como \"opcionais\", eles são essenciais para o funcionamento adequado do plugin. Recomendamos preenchê-los a menos que você tenha certeza do que está fazendo. A opção de não preencher é útil quando você planeja usar apenas uma ação específica do elemento, eliminando a necessidade de configurar todos os campos.",
             "editor": "Label",
             "name": "doc",
+            "rank": 15
+        },
+        "ANV": {
+            "caption": "Multiatendimento",
+            "editor": "custom_type",
+            "name": "multiatendimento",
+            "optional": true,
             "rank": 14
         }
     },
@@ -323,6 +330,14 @@
             },
             "name": "chat/lead",
             "value": "custom_data_AFO"
+        },
+        "ANW": {
+            "caption": "multiatendimento",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ticketSystem",
+            "value": "custom_data_ANV"
         }
     }
 }
