@@ -33,7 +33,7 @@
             "rank": 3
         },
         "AMI": {
-            "caption": "Desabilitar Fluxos",
+            "caption": "Desabilitar Fluxosx",
             "default_val": 1,
             "doc": "0 = desabilitado, 1= habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
             "editor": "DynamicValue",
