@@ -33,51 +33,42 @@
             "name": "apikey_doc",
             "rank": 3
         },
-        "AMO": {
-            "caption": "Campos Informativos que você pode editar e filtrar depois:",
-            "doc": "Opções: all, contacts, contact_blacklist, none",
-            "editor": "Label",
-            "name": "info",
-            "options": "",
-            "rank": 4,
-            "value": "text"
-        },
         "ANB": {
-            "caption": "Id do Campo",
-            "doc": "",
+            "caption": "id do Campo",
+            "doc": "Se o id não existir irá criar um novo campo, se o id existir, irá editar o campo personalizado",
             "editor": "DynamicValue",
             "name": "_id",
-            "optional": true,
-            "rank": 5,
+            "optional": false,
+            "rank": 4,
             "value": "text"
         },
         "ANC": {
             "caption": "Nome do Campo",
             "doc": "",
             "editor": "DynamicValue",
-            "long_text": true,
+            "long_text": false,
             "name": "name",
             "optional": true,
-            "rank": 6,
+            "rank": 5,
             "value": "text"
         },
         "AND": {
             "caption": "Ordem do campo",
-            "doc": "",
+            "doc": "Ordem do campo para você organizar no seu frontend, se passado decimal, exemplo 2.5, esse customfield será o novo 3, e os outros serão reordenados",
             "editor": "DynamicValue",
             "name": "order",
             "optional": true,
-            "rank": 7,
+            "rank": 6,
             "value": "text"
         },
         "ANE": {
             "caption": "Deletar campo?",
             "default_val": false,
-            "doc": "",
+            "doc": "para deletar, passe o id correto",
             "editor": "DynamicValue",
             "name": "delete",
-            "optional": true,
-            "rank": 8,
+            "optional": false,
+            "rank": 7,
             "value": "boolean"
         }
     }

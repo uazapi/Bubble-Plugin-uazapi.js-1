@@ -31,7 +31,7 @@ function(instance, properties, context) {
 
 
   var requestOptions = {
-      method: 'POST',
+      method: 'GET',
       headers: myHeaders,
       
      

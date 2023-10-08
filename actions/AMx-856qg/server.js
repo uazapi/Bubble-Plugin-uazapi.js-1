@@ -75,6 +75,7 @@ function(properties, context) {
     
     if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
     
+    console.log(raw);
     raw = JSON.stringify(raw);
     
 

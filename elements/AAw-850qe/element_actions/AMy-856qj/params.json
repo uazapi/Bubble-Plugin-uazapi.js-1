@@ -133,7 +133,7 @@
         },
         "ANF": {
             "caption": "Atribuído à",
-            "doc": "Coloque o nome ou id ao atendente que esse Lead está atribuído",
+            "doc": "Coloque o nome ou id ao atendente que esse Lead está atribuído. E filtre depois no bubble.",
             "editor": "DynamicValue",
             "name": "assignedTo",
             "optional": true,
@@ -169,7 +169,8 @@
         },
         "ANX": {
             "caption": "Campos Personalizados",
-            "doc": "Coloque uma lista de itens com o formato a seguir, não esqueça de colocar o \"_id\" = ao \"_id\" definido na ação de editar campos personalizado : { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" }",
+            "default_val": "[ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
+            "doc": "Coloque uma lista de itens com o formato a seguir, não esqueça de colocar o \"_id\" = ao \"_id\" definido na ação de editar campos personalizado : [ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
             "editor": "DynamicValue",
             "name": "customFields",
             "optional": true,

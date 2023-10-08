@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/editChat/" + instancia;
+    var url = baseUrl + "/automate/updateAgent/" + instancia;
   
   
   
@@ -71,7 +71,7 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-    instance.publishState('chat/lead', resultObj);
+    instance.publishState('ticketSystem', resultObj);
     instance.triggerEvent('sucessEvent');
     
   }

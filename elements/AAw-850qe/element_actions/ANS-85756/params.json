@@ -33,15 +33,6 @@
             "name": "apikey_doc",
             "rank": 3
         },
-        "AMO": {
-            "caption": "Campos Informativos que você pode editar e filtrar depois:",
-            "doc": "Opções: all, contacts, contact_blacklist, none",
-            "editor": "Label",
-            "name": "info",
-            "options": "",
-            "rank": 4,
-            "value": "text"
-        },
         "AMQ": {
             "caption": "Telefone do agente",
             "doc": "",
@@ -49,7 +40,7 @@
             "name": "fone",
             "optional": true,
             "options": "",
-            "rank": 7,
+            "rank": 6,
             "value": "text"
         },
         "AMR": {
@@ -59,7 +50,7 @@
             "name": "name",
             "optional": true,
             "options": "",
-            "rank": 6,
+            "rank": 5,
             "value": "text"
         },
         "ANB": {
@@ -68,7 +59,7 @@
             "editor": "DynamicValue",
             "name": "email",
             "optional": true,
-            "rank": 8,
+            "rank": 7,
             "value": "text"
         },
         "AND": {
@@ -77,17 +68,17 @@
             "editor": "DynamicValue",
             "name": "role",
             "optional": true,
-            "rank": 9,
+            "rank": 8,
             "value": "text"
         },
         "ANY": {
-            "caption": "Deletar agente",
+            "caption": "Deletar agente?",
             "default_val": false,
-            "doc": "para deletar, passe o id",
+            "doc": "para deletar, passe o id correto",
             "editor": "DynamicValue",
             "name": "delete",
             "optional": true,
-            "rank": 10,
+            "rank": 9,
             "value": "boolean"
         },
         "ANZ": {
@@ -96,7 +87,7 @@
             "editor": "DynamicValue",
             "name": "_id",
             "optional": true,
-            "rank": 5,
+            "rank": 4,
             "value": "text"
         }
     }
