@@ -135,7 +135,7 @@
             "rank": 15
         },
         "ANV": {
-            "caption": "Multiatendimento",
+            "caption": "Atendimento",
             "editor": "custom_type",
             "name": "multiatendimento",
             "optional": true,
@@ -332,7 +332,7 @@
             "value": "custom_data_AFO"
         },
         "ANW": {
-            "caption": "multiatendimento",
+            "caption": "Atendimento",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
