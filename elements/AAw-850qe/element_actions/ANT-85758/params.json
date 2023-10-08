@@ -59,7 +59,7 @@
             "name": "order",
             "optional": true,
             "rank": 6,
-            "value": "text"
+            "value": "number"
         },
         "ANE": {
             "caption": "Deletar campo?",

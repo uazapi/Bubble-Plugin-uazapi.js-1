@@ -59,7 +59,7 @@
             "optional": true,
             "options": "",
             "rank": 7,
-            "value": "text"
+            "value": "number"
         },
         "AMR": {
             "caption": "Nome do Campo",
@@ -82,8 +82,8 @@
             "value": "boolean"
         },
         "ANH": {
-            "caption": "Multiatendimento",
-            "doc": "Selecione: 📄Multiatendimento",
+            "caption": "ticketSystem",
+            "doc": "Selecione: 📄Atendimento",
             "editor": "custom_type",
             "name": "ticketSystem",
             "rank": 9
@@ -109,7 +109,7 @@
             "value": "text"
         },
         "ANA": {
-            "caption": "Multiatendimento",
+            "caption": "ticketSystem",
             "name": "ticketSystem",
             "rank": 0,
             "value": "custom_data_ANH"

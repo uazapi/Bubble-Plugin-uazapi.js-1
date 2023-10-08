@@ -82,8 +82,8 @@
             "value": "text"
         },
         "ANH": {
-            "caption": "Multiatendimento",
-            "doc": "Selecione: 📄Multiatendimento",
+            "caption": "Atendimento",
+            "doc": "Selecione: 📄Atendimento",
             "editor": "custom_type",
             "name": "ticketSystem",
             "rank": 10
@@ -118,7 +118,7 @@
             "value": "text"
         },
         "ANA": {
-            "caption": "Multiatendimento",
+            "caption": "Atendimento",
             "name": "ticketSystem",
             "rank": 0,
             "value": "custom_data_ANH"

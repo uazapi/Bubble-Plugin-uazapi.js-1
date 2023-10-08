@@ -38,7 +38,6 @@ function(properties, context) {
     
 
     var leadInfo = {};
-    leadInfo.customFields = [];
 
     // Separando as tags fornecidas pelo usuário em um array  
     if (properties.deleteTags) {
@@ -63,7 +62,7 @@ function(properties, context) {
       try {
           leadInfo.customFields = JSON.parse(properties.customFields);
       } catch (e) {
-        //leadInfo.customFields = [];
+          leadInfo.customFields = [];
           console.log('Erro ao analisar customFields: ', e);
       }
     }
@@ -76,10 +75,6 @@ function(properties, context) {
     
     if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
     
-    console.log(raw);
-    raw = JSON.stringify(raw);
-    
-
 
     let requestOptions = {
         method: 'POST',
@@ -95,6 +90,7 @@ function(properties, context) {
     let error_log;
 
 
+    
     
     try {
         sentRequest = context.request(requestOptions);

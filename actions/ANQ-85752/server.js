@@ -47,7 +47,7 @@ function(properties, context) {
     
     
             
-    raw = JSON.stringify(raw);
+   // raw = JSON.stringify(raw);
     
 
 
@@ -86,7 +86,7 @@ function(properties, context) {
     let resultObj;
     try {
         resultObj = sentRequest.body;
-   } catch(e) {
+  	 } catch(e) {
         error = true;
         error_log = `Error getting response body: ${e.toString()}`;
     }

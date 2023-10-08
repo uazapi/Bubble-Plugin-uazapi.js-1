@@ -49,7 +49,7 @@ function(properties, context) {
     
     
             
-    raw = JSON.stringify(raw);
+   // raw = JSON.stringify(raw);
     
 
 
