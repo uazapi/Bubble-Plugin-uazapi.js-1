@@ -121,7 +121,7 @@
             "value": "text"
         },
         "ANE": {
-            "caption": "Atendimento em aberto",
+            "caption": "Atendimento Aberto",
             "default_val": false,
             "doc": "Atendimento em aberto ou fechado = concluído.",
             "editor": "DynamicValue",
@@ -132,7 +132,7 @@
         },
         "ANF": {
             "caption": "Atribuído à",
-            "doc": "Coloque o nome ou id ao atendente que esse Lead está atribuído. E filtre depois no bubble.",
+            "doc": "Coloque o id do atendente que esse Lead está atribuído. E filtre depois no bubble.",
             "editor": "DynamicValue",
             "name": "assignedTo",
             "optional": true,
@@ -154,7 +154,7 @@
             "doc": "Selecione: 📄Chats",
             "editor": "custom_type",
             "name": "chat",
-            "rank": 19
+            "rank": 20
         },
         "ANK": {
             "caption": "Chat id - telefone",
@@ -176,11 +176,17 @@
         "ANb": {
             "caption": "Campos Personalizados",
             "default_val": "[ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
-            "doc": "Coloque uma lista de itens com o formato a seguir, não esqueça de colocar o \"_id\" = ao \"_id\" definido na ação de editar campos personalizado : [ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
+            "doc": "Coloque uma lista de itens com o formato a seguir : [ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
             "editor": "DynamicValue",
             "name": "customFields",
             "rank": 18,
             "value": "text"
+        },
+        "ANd": {
+            "caption": "Não esqueça de colocar no campo acima o \"_id\" = ao \"_id\" definido na ação de editar campos personalizados, em caso de dúvidas veja no editor exemplo ou fale com o suporte.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 19
         }
     },
     "return_value": {

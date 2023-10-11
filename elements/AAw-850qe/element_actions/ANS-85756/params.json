@@ -74,7 +74,7 @@
         "ANY": {
             "caption": "Deletar agente?",
             "default_val": false,
-            "doc": "para deletar, passe o id correto",
+            "doc": "Passe o id do agente e esse campo como \"yes\" para deletar o agente.",
             "editor": "DynamicValue",
             "name": "delete",
             "optional": true,

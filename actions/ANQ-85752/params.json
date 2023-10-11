@@ -73,16 +73,17 @@
         },
         "AMS": {
             "caption": "Deletar campo?",
-            "doc": "",
+            "default_val": false,
+            "doc": "Passe o id do campo personalizado e esse campo como \"yes\" para deletar o campo.",
             "editor": "DynamicValue",
             "name": "delete",
-            "optional": true,
+            "optional": false,
             "options": "",
             "rank": 8,
             "value": "boolean"
         },
-        "ANH": {
-            "caption": "ticketSystem",
+        "ANc": {
+            "caption": "Atendimento",
             "doc": "Selecione: 📄Atendimento",
             "editor": "custom_type",
             "name": "ticketSystem",
@@ -109,10 +110,10 @@
             "value": "text"
         },
         "ANA": {
-            "caption": "ticketSystem",
+            "caption": "Atendimento",
             "name": "ticketSystem",
             "rank": 0,
-            "value": "custom_data_ANH"
+            "value": "custom_data_ANc"
         }
     },
     "type": "server_side"

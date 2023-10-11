@@ -64,7 +64,7 @@
         "ANE": {
             "caption": "Deletar campo?",
             "default_val": false,
-            "doc": "para deletar, passe o id correto",
+            "doc": "Passe o id do campo personalizado e esse campo como \"yes\" para deletar o campo.",
             "editor": "DynamicValue",
             "name": "delete",
             "optional": false,

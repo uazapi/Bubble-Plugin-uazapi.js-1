@@ -35,7 +35,8 @@ function(properties, context) {
         "apikey": apikey
     };
 
-    let raw = JSON.stringify(
+    let raw = 
+        //JSON.stringify(
         {
             
       "flowActive": properties.flowActive,
@@ -66,7 +67,7 @@ function(properties, context) {
           "GROUPS_UPDATE":properties.GROUPS_UPDATE,
           "GROUP_PARTICIPANTS_UPDATE":properties.GROUP_PARTICIPANTS_UPDATE
       }
-      );
+    //  );
   
     
         let requestOptions = {

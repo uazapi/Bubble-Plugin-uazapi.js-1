@@ -86,7 +86,7 @@
             "doc": "Selecione: 📄Atendimento",
             "editor": "custom_type",
             "name": "ticketSystem",
-            "rank": 10
+            "rank": 11
         },
         "ANa": {
             "caption": "id do Agente",
@@ -96,6 +96,15 @@
             "optional": true,
             "rank": 5,
             "value": "text"
+        },
+        "ANf": {
+            "caption": "Deletar agente?",
+            "default_val": false,
+            "doc": "Passe o id do agente e esse campo como \"yes\" para deletar o agente.",
+            "editor": "DynamicValue",
+            "name": "delete",
+            "rank": 10,
+            "value": "boolean"
         }
     },
     "return_value": {
