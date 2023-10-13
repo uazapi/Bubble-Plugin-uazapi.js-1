@@ -1,5 +1,5 @@
 {
-    "caption": "🔓 Editar mensagem agendada",
+    "caption": "🔓 Editar envio agendado",
     "doc": "",
     "fields": {
         "ABD": {
@@ -33,155 +33,163 @@
             "name": "apikey_doc",
             "rank": 3
         },
-        "AMI": {
-            "caption": "Desabilitar Fluxos",
-            "default_val": 1,
-            "doc": "0 = desabilitado, 1 = habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
-            "editor": "DynamicValue",
-            "long_text": false,
-            "name": "disableFlowsUntil",
-            "options": "",
-            "rank": 5,
-            "value": "number"
-        },
-        "AMO": {
-            "caption": "Campos Informativos que você pode editar e filtrar depois:",
-            "doc": "Opções: all, contacts, contact_blacklist, none",
-            "editor": "Label",
-            "name": "info",
-            "options": "",
-            "rank": 6,
-            "value": "text"
-        },
         "AMP": {
-            "caption": "Nome de exibição",
-            "doc": "Primeiro nome, apelido, como preferir... Coloque um espaço em branco para apagar",
+            "caption": "Info do Envio",
+            "doc": "Escreva qualquer coisa, ou deixe vazio, para você saber sobre o q esse envio se trata, campo apenas informativo.",
             "editor": "DynamicValue",
-            "name": "nome",
+            "name": "info",
             "optional": true,
             "options": "",
             "rank": 7,
             "value": "text"
         },
         "AMQ": {
-            "caption": "E-mail",
-            "doc": "Email... Coloque um espaço em branco para apagar",
+            "caption": "Destinatários",
+            "doc": "Envia um lista de destinatários da mensagem separado por |",
             "editor": "DynamicValue",
-            "name": "email",
-            "optional": true,
+            "name": "remoteJids",
+            "optional": false,
             "options": "",
             "rank": 9,
             "value": "text"
         },
         "AMR": {
-            "caption": "Nome Completo",
-            "doc": "Nome completo... Coloque um espaço em branco para apagar",
-            "editor": "DynamicValue",
-            "name": "nomecompleto",
-            "optional": true,
-            "options": "",
+            "caption": "Status do Envio",
+            "default_val": "scheduled",
+            "doc": "Deixe como \"scheduled\" para agendado, caso você queria parar o envio, passe o status \"done\".",
+            "editor": "Dropdown",
+            "name": "status",
+            "optional": false,
+            "options": "scheduled,done",
             "rank": 8,
             "value": "text"
         },
         "AMS": {
-            "caption": "CPF",
-            "doc": "CPF... Coloque um espaço em branco para apagar",
+            "caption": "Quando será enviado",
+            "doc": "Coloque uma data tipo UNIX ou 0 para agora. Caso você desconecte seu número, ao reconectar, será enviado todas as mensagens que não foram enviadas nas últimas 12 horas.",
             "editor": "DynamicValue",
-            "name": "cpf",
-            "optional": true,
+            "name": "when",
+            "optional": false,
             "options": "",
             "rank": 10,
+            "value": "number"
+        },
+        "ANH": {
+            "caption": "Envio Agendado",
+            "doc": "Selecione: 📄Envio Agendado",
+            "editor": "custom_type",
+            "name": "envioagendado",
+            "rank": 4
+        },
+        "ANa": {
+            "caption": "id do Envio",
+            "doc": "Passe vazio para criar uma nova mensagem, ou passe o id para editar a mensagem agendada",
+            "editor": "DynamicValue",
+            "name": "_id",
+            "optional": true,
+            "rank": 5,
             "value": "text"
         },
-        "ANB": {
-            "caption": "Status do Lead",
-            "doc": "Status do Lead, exemplos: \"Assinante\"... Ou \"Prospect\", \"Lead\", \"frio\", \"quente\", faça as suas categorias e defina aqui... Coloque um espaço em branco para apagar",
+        "ANf": {
+            "caption": "Deletar envio?",
+            "default_val": false,
+            "doc": "Passe o id do envio e esse campo como \"yes\" para deletar o envio.",
             "editor": "DynamicValue",
-            "name": "statusLead",
-            "optional": true,
-            "rank": 11,
-            "value": "text"
+            "name": "delete",
+            "rank": 6,
+            "value": "boolean"
         },
-        "ANC": {
-            "caption": "Notas",
-            "doc": "Um texto longo sobre o Lead... Coloque um espaço em branco para apagar",
+        "ANt": {
+            "caption": "Tipo de envio",
+            "default_val": "message",
+            "doc": "\"message\" ou \"flow\" - sem aspas - Por enquanto apenas mensagens estão funcionando, fluxos em breve...",
             "editor": "DynamicValue",
-            "long_text": true,
-            "name": "note",
-            "optional": true,
-            "rank": 12,
-            "value": "text"
-        },
-        "AND": {
-            "caption": "Etiquetas",
-            "doc": "Exemplo: testando aplicativo | Cliente com pouco conhecimento em informática - Separadas por |, conforme exemplo, se já tiver etiquetas, para editar, você terá que passar todas as etiquetas, pois esse campo reescreve, caso queria apagar tudo, use o campo abaixo.",
-            "editor": "DynamicValue",
-            "name": "tags",
-            "optional": true,
+            "name": "type",
+            "options": "Mensagem,Fluxo",
             "rank": 13,
             "value": "text"
         },
-        "ANE": {
-            "caption": "Atendimento Aberto",
-            "default_val": false,
-            "doc": "Atendimento em aberto ou fechado = concluído.",
+        "ANu": {
+            "caption": "Tipo de mensagem",
+            "doc": "\"sendText\" ou \"sendMedia\" ou \"sendAudio\" - sem aspas, selecione que tipo de mensagem será enviada, sendMedia envia imagem, vídeo e documento.",
             "editor": "DynamicValue",
-            "name": "serviceOpen",
+            "name": "command",
             "optional": true,
-            "rank": 15,
-            "value": "boolean"
-        },
-        "ANF": {
-            "caption": "Atribuído à",
-            "doc": "Coloque o id do atendente que esse Lead está atribuído. E filtre depois no bubble.",
-            "editor": "DynamicValue",
-            "name": "assignedTo",
-            "optional": true,
+            "options": "",
             "rank": 16,
             "value": "text"
         },
-        "ANG": {
-            "caption": "Apagar Etiquetas",
-            "default_val": false,
-            "doc": "Apagar todas as etiquetas",
+        "ANv": {
+            "caption": "Texto da mensagem",
+            "doc": "Escreva aqui o texto, não funciona para aúdio, opcional para envio de arquivos, obrigatório para envio de texto.",
             "editor": "DynamicValue",
-            "name": "deleteTags",
-            "optional": false,
-            "rank": 14,
-            "value": "boolean"
-        },
-        "ANK": {
-            "caption": "Chat id - telefone",
-            "doc": "Id do Chat, número de telefone",
-            "editor": "DynamicValue",
-            "name": "id",
-            "rank": 4,
-            "value": "text"
-        },
-        "ANL": {
-            "caption": "Mensagens não lidas",
-            "doc": "Coloque o número de mensagens não lidas, use para marca uma conversa como lida / não lida.",
-            "editor": "DynamicValue",
-            "name": "unreadcount",
+            "long_text": true,
+            "name": "text",
             "optional": true,
             "rank": 17,
-            "value": "number"
+            "value": "text"
         },
-        "ANX": {
-            "caption": "Campos Personalizados",
-            "default_val": "[ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
-            "doc": "Coloque uma lista de itens com o formato a seguir, não esqueça de colocar o \"_id\" = ao \"_id\" definido na ação de editar campos personalizado : [ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
+        "ANw": {
+            "caption": "Arquivo URL",
+            "doc": "Coloque a URL do áudio, imagem, vídeo ou documento, dependendo do tipo de mensagem escolhida.",
             "editor": "DynamicValue",
-            "name": "customFields",
+            "name": "media",
             "optional": true,
             "rank": 18,
             "value": "text"
         },
-        "ANe": {
-            "caption": "Não esqueça de colocar no campo acima o \"_id\" = ao \"_id\" definido na ação de editar campos personalizados, em caso de dúvidas veja no editor exemplo ou fale com o suporte.",
+        "ANx": {
+            "caption": "delay",
+            "default_val": 500,
+            "doc": "Esse delay é o tempo que ficará \"digitando...\"  ou \"gravando...\" para o destinatário... O valor é em milisegundos, 1000 = 1 segundo.",
+            "editor": "DynamicValue",
+            "name": "delay",
+            "optional": true,
+            "rank": 20,
+            "value": "number"
+        },
+        "ANy": {
+            "caption": "Intervalo mínimo",
+            "default_val": 1,
+            "doc": "Intervalo mínimo entre um envio e outro, o valor aqui é em segundos",
+            "editor": "DynamicValue",
+            "name": "delaySecMin",
+            "rank": 11,
+            "value": "number"
+        },
+        "ANz": {
+            "caption": "Intervalo Máximo",
+            "default_val": 5,
+            "doc": "Intervalo máximo entre um envio e outro, o valor aqui é em segundos",
+            "editor": "DynamicValue",
+            "name": "delaySecMax",
+            "rank": 12,
+            "value": "number"
+        },
+        "AOA": {
+            "caption": "Tipo de arquivo",
+            "doc": "Se você definiu a mensagem como sendMedia, defina aqui o tipo de arquivo que está sendo enviado: \"image\", \"video\" ou \"document\", sem aspas.",
+            "editor": "DynamicValue",
+            "name": "mediatype",
+            "optional": true,
+            "rank": 19,
+            "value": "text"
+        },
+        "AOC": {
+            "caption": "Nome do fluxo",
+            "doc": "Se você determinou que será envio de fluxos, coloque o nome do fluxo aqui. Caso contrário, deixe vazio.",
+            "editor": "DynamicValue",
+            "name": "flow",
+            "optional": true,
+            "rank": 14,
+            "value": "text"
+        },
+        "AOD": {
+            "caption": "Se for fluxo, só preencher o campo acima com o nome do Fluxo, se for Mensagem, preencha os campos abaixo, clique em \"show documentation\" para ver quais são opcionais.",
             "editor": "Label",
-            "name": "info",
-            "rank": 19
+            "name": "info_msg",
+            "rank": 15
         }
+    
     }
 }
