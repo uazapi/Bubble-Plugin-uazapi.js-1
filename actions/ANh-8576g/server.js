@@ -26,63 +26,30 @@ function(properties, context) {
     }
 
 
-    var url = baseUrl + "/chat/editChat/" + instancia;
-    
-    let headers = {
-        "Accept": "*/*",
-        "Connection": "keep-alive",
-        "Content-Type": "application/json",
-        "uazapi": "true",
-        "apikey": apikey
-    };
-    
-
-    var leadInfo = {};
-
-    // Separando as tags fornecidas pelo usuário em um array  
-    if (properties.deleteTags) {
-      leadInfo.tags = [];
-    } else if (properties.tags) {
-      let tags = properties.tags.split('|').map(tag => tag.trim());
-      if (tags.length > 0) {
-        leadInfo.tags = tags;
-      }
-    }
+    var url = baseUrl + "/automate/deleteDoneMessages/" + instancia;
   
-    if(properties.disableFlowsUntil != null ) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
-    if(properties.nome) leadInfo.nome = properties.nome.trim();
-    if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
-    if(properties.email) leadInfo.email = properties.email.trim();
-    if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
-    if(properties.statusLead) leadInfo.statusLead = properties.statusLead.trim();
-    if(properties.note) leadInfo.note = properties.note.trim();
-    if(properties.serviceOpen != null) leadInfo.serviceOpen = properties.serviceOpen;
-    if(properties.assignedTo) leadInfo.assignedTo = properties.assignedTo.trim();
-    if(properties.customFields) {
-      try {
-          leadInfo.customFields = JSON.parse(properties.customFields);
-      } catch (e) {
-          leadInfo.customFields = [];
-          console.log('Erro ao analisar customFields: ', e);
-      }
-    }
-    
-    var raw = {
-        "id": properties.id
-    };
-    
-    if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
-    
-    if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
-    
+  
+  
+    var myHeaders = new Headers({
+      "Accept": "*/*",
+      "Connection": "keep-alive",
+      "Content-Type": "application/json",
+      "uazapi": "true",
+      "apikey": properties.apikey,
+    });
+      
+  
 
-    let requestOptions = {
-        method: 'POST',
-        headers: headers,
-        uri: url,
-        body: raw,
-        json: true
-    };
+  
+
+  var requestOptions = {
+      method: 'DELETE',
+      headers: myHeaders,
+      uri: url,
+      json: true
+      
+  };
+  
 
     let sentRequest;
     let error;

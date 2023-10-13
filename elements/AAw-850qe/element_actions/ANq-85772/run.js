@@ -17,68 +17,26 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/editChat/" + instancia;
+    var url = baseUrl + "/automate/scheduleMessage/" + instancia;
   
   
   
-  var myHeaders = new Headers();
-  myHeaders.append("Accept", "*/*");
-  myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("uazapi", "true");
-  myHeaders.append("apikey", properties.apikey);
+    var myHeaders = new Headers({
+      "Accept": "*/*",
+      "Connection": "keep-alive",
+      "Content-Type": "application/json",
+      "uazapi": "true",
+      "apikey": properties.apikey,
+    });
+      
   
-
-  var leadInfo = {};
-
-  // Separando as tags fornecidas pelo usuário em um array  
-  if (properties.deleteTags) {
-    leadInfo.tags = [];
-  } else if (properties.tags) {
-    let tags = properties.tags.split('|').map(tag => tag.trim());
-    if (tags.length > 0) {
-      leadInfo.tags = tags;
-    }
-  }
-
-  if(properties.disableFlowsUntil != null ) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
-  if(properties.nome) leadInfo.nome = properties.nome.trim();
-  if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
-  if(properties.email) leadInfo.email = properties.email.trim();
-  if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
-  if(properties.statusLead) leadInfo.statusLead = properties.statusLead.trim();
-  if(properties.note) leadInfo.note = properties.note.trim();
-  if(properties.serviceOpen != null) leadInfo.serviceOpen = properties.serviceOpen;
-  if(properties.assignedTo) leadInfo.assignedTo = properties.assignedTo.trim();
-  if(properties.customFields) {
-    try {
-        leadInfo.customFields = JSON.parse(properties.customFields);
-    } catch (e) {
-      leadInfo.customFields = [];
-        console.log('Erro ao analisar customFields: ', e);
-    }
-  }
-  
-  var raw = {
-      "id": properties.id
-  };
-  
-  if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
-  
-  if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
-  
-  raw = JSON.stringify(raw);
-
-  
-
-
 
   
 
   var requestOptions = {
-      method: 'POST',
+      method: 'GET',
       headers: myHeaders,
-      body: raw,
+      
      
   };
   
@@ -101,8 +59,8 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-    instance.publishState('chat/lead', resultObj);
     instance.triggerEvent('sucessEvent');
+    instance.publishState('minha_privacidade', resultObj);
     
   }
 })
@@ -117,10 +75,8 @@ try {
        } catch(e) {
         // Se a conversão falhar, apenas use a mensagem de erro como uma string
         let errorString = error.toString().replace(/"_p_/g, "\"");
-        instance.publishState('error_log', errorString);
-    }
+        instance.publishState('error_log', errorString);         }         instance.triggerEvent('errorEvent');
 
-        instance.triggerEvent('errorEvent');
 
 });
 

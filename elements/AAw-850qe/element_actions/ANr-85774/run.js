@@ -17,64 +17,54 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/editChat/" + instancia;
+    var url = baseUrl + "/automate/scheduleMessage/" + instancia;
   
   
   
-  var myHeaders = new Headers();
-  myHeaders.append("Accept", "*/*");
-  myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("uazapi", "true");
-  myHeaders.append("apikey", properties.apikey);
-  
+  var myHeaders = new Headers({
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "uazapi": "true",
+    "apikey": properties.apikey,
+  });
+    
+ // Separando as tags fornecidas pelo usuário em um array  
+ let remoteJids = [];  
+if (properties.remoteJids) {
+    remoteJids = properties.remoteJids.split('|').map(remoteJid => remoteJid.trim());
+}
 
-  var leadInfo = {};
-
-  // Separando as tags fornecidas pelo usuário em um array  
-  if (properties.deleteTags) {
-    leadInfo.tags = [];
-  } else if (properties.tags) {
-    let tags = properties.tags.split('|').map(tag => tag.trim());
-    if (tags.length > 0) {
-      leadInfo.tags = tags;
-    }
-  }
-
-  if(properties.disableFlowsUntil != null ) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
-  if(properties.nome) leadInfo.nome = properties.nome.trim();
-  if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
-  if(properties.email) leadInfo.email = properties.email.trim();
-  if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
-  if(properties.statusLead) leadInfo.statusLead = properties.statusLead.trim();
-  if(properties.note) leadInfo.note = properties.note.trim();
-  if(properties.serviceOpen != null) leadInfo.serviceOpen = properties.serviceOpen;
-  if(properties.assignedTo) leadInfo.assignedTo = properties.assignedTo.trim();
-  if(properties.customFields) {
-    try {
-        leadInfo.customFields = JSON.parse(properties.customFields);
-    } catch (e) {
-      leadInfo.customFields = [];
-        console.log('Erro ao analisar customFields: ', e);
-    }
-  }
-  
   var raw = {
-      "id": properties.id
-  };
-  
-  if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
-  
-  if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
+    "delete": properties.delete,
+    "status": properties.status,
+    "type": properties.type,
+    "remoteJids": remoteJids,
+    "when": properties.when,
+    "delaySecMin": properties.delaySecMin,
+    "delaySecMax": properties.delaySecMax,
+};
+
+  //opcionais macro
+  if(properties._id != null ) raw._id = properties._id.trim();
+  if(properties.info) raw.info = properties.info.trim();
+
+  //fluxo opcional
+  if(properties.flow) raw.flow = properties.flow.trim();
+
+  //mensagem opcional
+  raw.message = {};
+  if(properties.command) raw.message.command = properties.command.trim();
+  if(properties.text) raw.message.text = properties.text.trim();
+  if(properties.media) raw.message.media = properties.media.trim();
+  if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
+  if(properties.delay != null) raw.message.delay = properties.delay || 0;
+
+   
   
   raw = JSON.stringify(raw);
 
   
-
-
-
-  
-
   var requestOptions = {
       method: 'POST',
       headers: myHeaders,
@@ -101,7 +91,7 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-    instance.publishState('chat/lead', resultObj);
+    //instance.publishState('chat/lead', resultObj);
     instance.triggerEvent('sucessEvent');
     
   }
