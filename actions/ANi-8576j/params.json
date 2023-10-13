@@ -33,7 +33,7 @@
             "rank": 3
         },
         "AMO": {
-            "caption": "Vai apagar todas as mensagens com status \"done\"",
+            "caption": "Vai apagar todas os envios com status \"done\"",
             "doc": "Opções: all, contacts, contact_blacklist, none",
             "editor": "Label",
             "name": "info",
