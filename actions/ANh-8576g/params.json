@@ -1,5 +1,137 @@
 {
     "category": "plugins",
     "display": "▶️ Buscar Mensagens Agendadas",
-    "type": "client_side"
+    "fields": {
+        "AME": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMH": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AMO": {
+            "caption": "Campos Informativos que você pode editar e filtrar depois:",
+            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "editor": "Label",
+            "name": "info",
+            "options": "",
+            "rank": 4,
+            "value": "text"
+        },
+        "AMP": {
+            "caption": "Nome do agente",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "name",
+            "optional": true,
+            "options": "",
+            "rank": 6,
+            "value": "text"
+        },
+        "AMQ": {
+            "caption": "E-mail",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "email",
+            "optional": true,
+            "options": "",
+            "rank": 8,
+            "value": "text"
+        },
+        "AMR": {
+            "caption": "Telefone do agente",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "fone",
+            "optional": true,
+            "options": "",
+            "rank": 7,
+            "value": "text"
+        },
+        "AMS": {
+            "caption": "Permissões",
+            "doc": "Coloque uma string e use ela como condicional em seu frontend para saber o que esse agente pode fazer.",
+            "editor": "DynamicValue",
+            "name": "role",
+            "optional": true,
+            "options": "",
+            "rank": 9,
+            "value": "text"
+        },
+        "ANH": {
+            "caption": "Atendimento",
+            "doc": "Selecione: 📄Atendimento",
+            "editor": "custom_type",
+            "name": "ticketSystem",
+            "rank": 11
+        },
+        "ANa": {
+            "caption": "id do Agente",
+            "doc": "Se o id não existir irá criar um novo agente, se tiver vazio, criará um novo agente com um id aleatório, se o id existir, irá editar o agente",
+            "editor": "DynamicValue",
+            "name": "_id",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ANf": {
+            "caption": "Deletar agente?",
+            "default_val": false,
+            "doc": "Passe o id do agente e esse campo como \"yes\" para deletar o agente.",
+            "editor": "DynamicValue",
+            "name": "delete",
+            "rank": 10,
+            "value": "boolean"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 1,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 3,
+            "value": "text"
+        },
+        "ANA": {
+            "caption": "Atendimento",
+            "name": "ticketSystem",
+            "rank": 0,
+            "value": "custom_data_ANH"
+        }
+    },
+    "type": "server_side"
 }
