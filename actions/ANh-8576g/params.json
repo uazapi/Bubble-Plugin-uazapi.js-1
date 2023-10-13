@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Buscar Mensagens Agendadas",
+    "display": "▶️ Buscar Envio Agendados",
     "fields": {
         "AME": {
             "caption": "Servidor URL",
@@ -82,10 +82,10 @@
             "value": "text"
         },
         "ANH": {
-            "caption": "Atendimento",
-            "doc": "Selecione: 📄Atendimento",
+            "caption": "Envio Agendado",
+            "doc": "Selecione: 📄Envio Agendado",
             "editor": "custom_type",
-            "name": "ticketSystem",
+            "name": "envioagendado",
             "rank": 11
         },
         "ANa": {
@@ -127,8 +127,9 @@
             "value": "text"
         },
         "ANA": {
-            "caption": "Atendimento",
-            "name": "ticketSystem",
+            "caption": "Envio Agendado",
+            "is_list": true,
+            "name": "envioagendado",
             "rank": 0,
             "value": "custom_data_ANH"
         }
