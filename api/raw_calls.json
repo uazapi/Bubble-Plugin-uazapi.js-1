@@ -159,7 +159,7 @@
             "method": "post",
             "name": "📄 Verificar números",
             "publish_as": "data",
-            "rank": 13,
+            "rank": 14,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AGH",
             "should_reinitialize": false,
             "types": "{\"plugin_api.AGG\":{\"caption\":\"📄 Verificar números\",\"fields\":{\"_p_jid\":{\"ret_value\":\"text\",\"caption\":\"jid\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"jid\"]},\"_p_exists\":{\"ret_value\":\"boolean\",\"caption\":\"exists\",\"sample_value\":true,\"path\":[\"exists\"]}}}}",
@@ -265,7 +265,7 @@
             "method": "post",
             "name": "📄 Ver dados de perfil",
             "publish_as": "data",
-            "rank": 14,
+            "rank": 15,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.ALK",
             "should_reinitialize": true,
             "types": "{\"plugin_api.ALK\":{\"caption\":\"📄 Ver dados de perfil\",\"fields\":{\"_p_isBusiness\":{\"ret_value\":\"boolean\",\"caption\":\"isBusiness\",\"sample_value\":true,\"path\":[\"isBusiness\"]},\"_p_wid\":{\"ret_value\":\"text\",\"caption\":\"wid\",\"sample_value\":\"12608002510@s.whatsapp.net\",\"path\":[\"wid\"]},\"_p_exists\":{\"ret_value\":\"boolean\",\"caption\":\"exists\",\"sample_value\":true,\"path\":[\"exists\"]},\"_p_picture\":{\"ret_value\":\"text\",\"caption\":\"picture\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/342364103_777033030386886_7683115903900940711_n.jpg?ccb=11-4&oh=01_AdTA8nbmOTd8dKn1FcN2Kd6Nr1KUUITak6nT8_mCLR8ntQ&oe=64D803A1\",\"path\":[\"picture\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"não me liga\",\"path\":[\"status\"]},\"_p_address\":{\"ret_value\":\"text\",\"caption\":\"address\",\"sample_value\":\"Maracanã, Rio de Janeiro - RJ, Brasil\",\"path\":[\"address\"]},\"_p_description\":{\"ret_value\":\"text\",\"caption\":\"description\",\"sample_value\":\"Você precisa de ajuda? Fala comigo!\",\"path\":[\"description\"]},\"_p_website\":{\"ret_value\":\"list.text\",\"caption\":\"website\",\"sample_value\":\"https://uazapi.dev\",\"path\":[\"website\"]},\"_p_email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"sample_value\":\"contato@uazapi.dev\",\"path\":[\"email\"]},\"_p_category\":{\"ret_value\":\"text\",\"caption\":\"category\",\"sample_value\":\"Other Business\",\"path\":[\"category\"]},\"_p_business_hours.timezone\":{\"ret_value\":\"text\",\"caption\":\"business_hours timezone\",\"sample_value\":\"America/Sao_Paulo\",\"path\":[\"business_hours\",\"timezone\"]},\"_p_business_hours.business_config\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.ALK.business_hours.business_config\",\"caption\":\"business_hours business_config\",\"path\":[\"business_hours\",\"business_config\"]}}},\"plugin_api.ALK.business_hours.business_config\":{\"caption\":\"📄 Ver dados de perfil business_hours business_config\",\"fields\":{\"_p_day_of_week\":{\"ret_value\":\"text\",\"caption\":\"day_of_week\",\"sample_value\":\"mon\",\"path\":[\"day_of_week\"]},\"_p_mode\":{\"ret_value\":\"text\",\"caption\":\"mode\",\"sample_value\":\"specific_hours\",\"path\":[\"mode\"]},\"_p_open_time\":{\"ret_value\":\"text\",\"caption\":\"open_time\",\"sample_value\":\"540\",\"path\":[\"open_time\"]},\"_p_close_time\":{\"ret_value\":\"text\",\"caption\":\"close_time\",\"sample_value\":\"1080\",\"path\":[\"close_time\"]}}}}",
@@ -312,7 +312,7 @@
             "method": "get",
             "name": "📄 Minha Privacidade",
             "publish_as": "data",
-            "rank": 15,
+            "rank": 16,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.ALN",
             "should_reinitialize": false,
             "types": "{\"plugin_api.ALM\":{\"caption\":\"📄 Minha Privacidade\",\"fields\":{\"_p_readreceipts\":{\"ret_value\":\"text\",\"caption\":\"readreceipts\",\"sample_value\":\"all\",\"path\":[\"readreceipts\"]},\"_p_profile\":{\"ret_value\":\"text\",\"caption\":\"profile\",\"sample_value\":\"all\",\"path\":[\"profile\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"contacts\",\"path\":[\"status\"]},\"_p_online\":{\"ret_value\":\"text\",\"caption\":\"online\",\"sample_value\":\"match_last_seen\",\"path\":[\"online\"]},\"_p_last\":{\"ret_value\":\"text\",\"caption\":\"last\",\"sample_value\":\"none\",\"path\":[\"last\"]},\"_p_groupadd\":{\"ret_value\":\"text\",\"caption\":\"groupadd\",\"sample_value\":\"all\",\"path\":[\"groupadd\"]},\"_p_calladd\":{\"ret_value\":\"text\",\"caption\":\"calladd\",\"sample_value\":\"all\",\"path\":[\"calladd\"]}}}}",
@@ -335,7 +335,7 @@
             "method": "get",
             "name": "📄 Atendimento",
             "publish_as": "data",
-            "rank": 16,
+            "rank": 17,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.ANM",
             "should_reinitialize": false,
             "types": "{\"plugin_api.ANM\":{\"caption\":\"📄 Atendimento\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"id\",\"path\":[\"_id\"]},\"_p_agents\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.ANM.agents\",\"caption\":\"agents\",\"path\":[\"agents\"]},\"_p_customFields\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.ANM.customFields\",\"caption\":\"customFields\",\"path\":[\"customFields\"]}}},\"plugin_api.ANM.agents\":{\"caption\":\"📄 Atendimento agent\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"id\",\"path\":[\"_id\"]},\"_p_fone\":{\"ret_value\":\"text\",\"caption\":\"fone\",\"sample_value\":\"fone\",\"path\":[\"fone\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"Name\",\"path\":[\"name\"]},\"_p_email\":{\"ret_value\":\"text\",\"caption\":\"email\",\"sample_value\":\"agent@example.com\",\"path\":[\"email\"]},\"_p_role\":{\"ret_value\":\"text\",\"caption\":\"role\",\"sample_value\":\"agent_role\",\"path\":[\"role\"]}}},\"plugin_api.ANM.customFields\":{\"caption\":\"📄 Atendimento customField\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"65214516933b3cc706250029\",\"path\":[\"_id\"]},\"_p_order\":{\"ret_value\":\"number\",\"caption\":\"order\",\"sample_value\":2,\"path\":[\"order\"]},\"_p_name\":{\"ret_value\":\"text\",\"caption\":\"name\",\"sample_value\":\"12345\",\"path\":[\"name\"]}}}}",
@@ -347,6 +347,30 @@
                     "value": ""
                 },
                 "ANO": {
+                    "key": "instance",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ANm": {
+            "initialized": true,
+            "is_list": true,
+            "method": "get",
+            "name": "📄 Mensagens agendadas",
+            "publish_as": "data",
+            "rank": 9,
+            "ret_value": "api.1687876991772x211640242971607040.plugin_api.ANm",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ANm\":{\"caption\":\"📄 Mensagens agendada\",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"6529451118a558ee99f3be61\",\"path\":[\"_id\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"12608002510\",\"path\":[\"owner\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"done\",\"path\":[\"status\"]},\"_p_info\":{\"ret_value\":\"text\",\"caption\":\"info\",\"sample_value\":\"teste\",\"path\":[\"info\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"message\",\"path\":[\"type\"]},\"_p_message.command\":{\"ret_value\":\"text\",\"caption\":\"message command\",\"sample_value\":\"sendText\",\"path\":[\"message\",\"command\"]},\"_p_message.text\":{\"ret_value\":\"text\",\"caption\":\"message text\",\"sample_value\":\"nome: {{nome}}, nome completo: {{nomecompleto}}, note: {{note}}, tags: {{tags}}, status: {{statusLead}}, email: {{email}}, cpf: {{cpf}}, assignedTo: {{assignedTo}},  Endereço: {{Endereço}}, 12345: {{12345}}  \",\"path\":[\"message\",\"text\"]},\"_p_message.delay\":{\"ret_value\":\"number\",\"caption\":\"message delay\",\"sample_value\":0,\"path\":[\"message\",\"delay\"]},\"_p_remoteJids\":{\"ret_value\":\"list.text\",\"caption\":\"remoteJids\",\"sample_value\":\"5521996015792\",\"path\":[\"remoteJids\"]},\"_p_when\":{\"ret_value\":\"date_unix\",\"caption\":\"when\",\"sample_value\":0,\"path\":[\"when\"]},\"_p_delaySecMin\":{\"ret_value\":\"number\",\"caption\":\"delaySecMin\",\"sample_value\":1,\"path\":[\"delaySecMin\"]},\"_p_delaySecMax\":{\"ret_value\":\"number\",\"caption\":\"delaySecMax\",\"sample_value\":5,\"path\":[\"delaySecMax\"]},\"_p_messagesSend\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.ANm.messagesSend\",\"caption\":\"messagesSend\",\"path\":[\"messagesSend\"]},\"_p___v\":{\"ret_value\":\"_ignore\"}}},\"plugin_api.ANm.messagesSend\":{\"caption\":\"📄 Mensagens agendadas messagesSend\",\"fields\":{\"_p_remoteJid\":{\"ret_value\":\"text\",\"caption\":\"remoteJid\",\"sample_value\":\"5521996015792\",\"path\":[\"remoteJid\"]},\"_p_log_status\":{\"ret_value\":\"text\",\"caption\":\"log_status\",\"sample_value\":\"sent\",\"path\":[\"log_status\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"BAE5C531871B3B05\",\"path\":[\"id\"]},\"_p_error_log\":{\"ret_value\":\"text\",\"caption\":\"error_log\",\"sample_value\":\" \\\"jid\\\": \\\"123\\\", \\\"exists\\\": false \",\"path\":[\"error_log\"]},\"_p_log_timestamp\":{\"ret_value\":\"number\",\"caption\":\"log_timestamp\",\"sample_value\":1697203540952,\"path\":[\"log_timestamp\"]}}}}",
+            "url": "[url]/chat/getBase64FromMediaMessage/[instance]",
+            "url_params": {
+                "ANn": {
+                    "key": "url",
+                    "private": true,
+                    "value": ""
+                },
+                "ANo": {
                     "key": "instance",
                     "private": true,
                     "value": ""
@@ -424,7 +448,7 @@
             "method": "post",
             "name": "📄 Status de recebimento ",
             "publish_as": "data",
-            "rank": 10,
+            "rank": 11,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.ATu",
             "should_reinitialize": false,
             "types": "{\"plugin_api.ATu\":{\"caption\":\"📄 Status de recebimento \",\"fields\":{\"_p_remoteJid\":{\"ret_value\":\"text\",\"caption\":\"remoteJid\",\"sample_value\":\"5511976165769@s.whatsapp.net\",\"path\":[\"remoteJid\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"67276FAA09420DC76D\",\"path\":[\"id\"]},\"_p_fromMe\":{\"ret_value\":\"boolean\",\"caption\":\"fromMe\",\"sample_value\":false,\"path\":[\"fromMe\"]},\"_p_datetime\":{\"ret_value\":\"date_unix\",\"caption\":\"datetime\",\"sample_value\":1677066453644,\"path\":[\"datetime\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"READ\",\"path\":[\"status\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]}}}}",
@@ -552,7 +576,7 @@
             "method": "post",
             "name": "📄 Contatos ",
             "publish_as": "data",
-            "rank": 9,
+            "rank": 10,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AWI",
             "should_reinitialize": false,
             "types": "{\"plugin_api.AWI\":{\"caption\":\"📄 Contatos \",\"fields\":{\"_p__id\":{\"ret_value\":\"text\",\"caption\":\"_id\",\"sample_value\":\"63f36bd73a2c6f9fd872ab63\",\"path\":[\"_id\"]},\"_p_pushName\":{\"ret_value\":\"text\",\"caption\":\"pushName\",\"sample_value\":\"Caiado\",\"path\":[\"pushName\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5521985966284@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_profilePictureUrl\":{\"ret_value\":\"text\",\"caption\":\"profilePictureUrl\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/312292755_1246014562926686_4855926860625131677_n.jpg?ccb=11-4&oh=01_AdQFF3pINnQCcjorj4xY9TdraGxloc1hc4J1r7eMDgKTUQ&oe=64006360\",\"path\":[\"profilePictureUrl\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"5521996015792@s.whatsapp.net\",\"path\":[\"owner\"]},\"_p_status\":{\"ret_value\":\"text\",\"caption\":\"status\",\"sample_value\":\"teste\",\"path\":[\"status\"]}}}}",
@@ -608,7 +632,7 @@
             "method": "get",
             "name": "📄 Grupo - Detalhes",
             "publish_as": "data",
-            "rank": 12,
+            "rank": 13,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AWi",
             "should_reinitialize": false,
             "types": "{\"plugin_api.AWi\":{\"caption\":\"📄 Grupo - Detalhes\",\"fields\":{\"_p_metadata.id\":{\"ret_value\":\"text\",\"caption\":\"metadata id\",\"sample_value\":\"120363148122601519@g.us\",\"path\":[\"metadata\",\"id\"]},\"_p_metadata.subject\":{\"ret_value\":\"text\",\"caption\":\"metadata subject\",\"sample_value\":\"teste menção\",\"path\":[\"metadata\",\"subject\"]},\"_p_metadata.subjectOwner\":{\"ret_value\":\"text\",\"caption\":\"metadata subjectOwner\",\"sample_value\":\"5521959032485@s.whatsapp.net\",\"path\":[\"metadata\",\"subjectOwner\"]},\"_p_metadata.subjectTime\":{\"ret_value\":\"number\",\"caption\":\"metadata subjectTime\",\"sample_value\":1682509236,\"path\":[\"metadata\",\"subjectTime\"]},\"_p_metadata.size\":{\"ret_value\":\"number\",\"caption\":\"metadata size\",\"sample_value\":2,\"path\":[\"metadata\",\"size\"]},\"_p_metadata.creation\":{\"ret_value\":\"number\",\"caption\":\"metadata creation\",\"sample_value\":1682509236,\"path\":[\"metadata\",\"creation\"]},\"_p_metadata.owner\":{\"ret_value\":\"text\",\"caption\":\"metadata owner\",\"sample_value\":\"5521959032485@s.whatsapp.net\",\"path\":[\"metadata\",\"owner\"]},\"_p_metadata.desc\":{\"ret_value\":\"text\",\"caption\":\"metadata desc\",\"sample_value\":\"null\",\"path\":[\"metadata\",\"desc\"]},\"_p_metadata.descId\":{\"ret_value\":\"text\",\"caption\":\"metadata descId\",\"sample_value\":\"BAE582508DADB034\",\"path\":[\"metadata\",\"descId\"]},\"_p_metadata.restrict\":{\"ret_value\":\"boolean\",\"caption\":\"metadata restrict\",\"sample_value\":false,\"path\":[\"metadata\",\"restrict\"]},\"_p_metadata.announce\":{\"ret_value\":\"boolean\",\"caption\":\"metadata announce\",\"sample_value\":false,\"path\":[\"metadata\",\"announce\"]},\"_p_metadata.participants\":{\"ret_value\":\"list.api.1687876991772x211640242971607040.plugin_api.AWi.metadata.participants\",\"caption\":\"metadata participants\",\"path\":[\"metadata\",\"participants\"]},\"_p_imageLowRes\":{\"ret_value\":\"text\",\"caption\":\"imageLowRes\",\"sample_value\":null,\"path\":[\"imageLowRes\"]},\"_p_imageHiRes\":{\"ret_value\":\"text\",\"caption\":\"imageHiRes\",\"sample_value\":null,\"path\":[\"imageHiRes\"]}}},\"plugin_api.AWi.metadata.participants\":{\"caption\":\"📄 Grupo - Membros\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"5521959032485@s.whatsapp.net\",\"path\":[\"id\"]},\"_p_admin\":{\"ret_value\":\"text\",\"caption\":\"admin\",\"sample_value\":\"superadmin\",\"path\":[\"admin\"]}}}}",
@@ -709,7 +733,7 @@
             "method": "get",
             "name": "📄 Grupos",
             "publish_as": "data",
-            "rank": 11,
+            "rank": 12,
             "ret_value": "api.1687876991772x211640242971607040.plugin_api.AfM",
             "should_reinitialize": false,
             "types": "{\"plugin_api.AfM\":{\"caption\":\"📄 Grupos \",\"fields\":{\"_p_groupJid\":{\"ret_value\":\"text\",\"caption\":\"groupJid\",\"sample_value\":\"120363075797374359@g.us\",\"path\":[\"groupJid\"]},\"_p_subject\":{\"ret_value\":\"text\",\"caption\":\"subject\",\"sample_value\":\"TYPEBOT.io | BRASIL 🇧🇷\",\"path\":[\"subject\"]},\"_p_subjectOwner\":{\"ret_value\":\"text\",\"caption\":\"subjectOwner\",\"sample_value\":\"554591111217\",\"path\":[\"subjectOwner\"]},\"_p_subjectTime\":{\"ret_value\":\"number\",\"caption\":\"subjectTime\",\"sample_value\":1678280850,\"path\":[\"subjectTime\"]},\"_p_size\":{\"ret_value\":\"number\",\"caption\":\"size\",\"sample_value\":193,\"path\":[\"size\"]},\"_p_owner\":{\"ret_value\":\"text\",\"caption\":\"owner\",\"sample_value\":\"554591111217\",\"path\":[\"owner\"]},\"_p_creation\":{\"ret_value\":\"number\",\"caption\":\"creation\",\"sample_value\":1678280850,\"path\":[\"creation\"]},\"_p_desc\":{\"ret_value\":\"text\",\"caption\":\"desc\",\"sample_value\":\"SITE OFICIAL\\nhttps://typebot.io\\n\\nDOCUMENTAÇÃO\\nhttps://docs.typebot.io\\n\\nGITHUB\\nhttps://github.com/baptisteArno/typebot.io\",\"path\":[\"desc\"]},\"_p_restrict\":{\"ret_value\":\"boolean\",\"caption\":\"restrict\",\"sample_value\":true,\"path\":[\"restrict\"]},\"_p_announce\":{\"ret_value\":\"boolean\",\"caption\":\"announce\",\"sample_value\":false,\"path\":[\"announce\"]},\"_p_imageLowRes\":{\"ret_value\":\"text\",\"caption\":\"imageLowRes\",\"sample_value\":\"https://pps.whatsapp.net/v/t61.24694-24/328773692_562554978986916_518033681872893807_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdSYUk7Zl2KDROMGCW_rW-9edzsIFtLxCCj3M9XbPzC6wg&oe=649DD53C\",\"path\":[\"imageLowRes\"]}}}}",
@@ -749,7 +773,7 @@
                 }
             },
             "publish_as": "action",
-            "rank": 17,
+            "rank": 18,
             "ret_value": "api.1674157317439x684864161158529000.plugin_api.AhE",
             "should_reinitialize": false,
             "types": "{\"plugin_api.AhE\":{\"caption\":\"✅ Upload to Bubble - Base64\",\"fields\":{\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"//s3.amazonaws.com/appforest_uf/f1677647589133x644077376946096400/test.json\",\"path\":[\"body\"]},\"_p_headers.date\":{\"ret_value\":\"text\",\"caption\":\"headers date\",\"sample_value\":\"Wed, 01 Mar 2023 05:13:09 GMT\",\"path\":[\"headers\",\"date\"]},\"_p_headers.content-type\":{\"ret_value\":\"_ignore\"},\"_p_headers.transfer-encoding\":{\"ret_value\":\"_ignore\"},\"_p_headers.connection\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-powered-by\":{\"ret_value\":\"_ignore\"},\"_p_headers.cache-control\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-appname\":{\"ret_value\":\"text\",\"caption\":\"headers x-bubble-appname\",\"sample_value\":\"uazapi-exemplo\",\"path\":[\"headers\",\"x-bubble-appname\"]},\"_p_headers.x-bubble-request-took\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-perf\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-used\":{\"ret_value\":\"_ignore\"},\"_p_headers.x-bubble-capacity-limit\":{\"ret_value\":\"_ignore\"},\"_p_headers.vary\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-cache-status\":{\"ret_value\":\"_ignore\"},\"_p_headers.server\":{\"ret_value\":\"_ignore\"},\"_p_headers.cf-ray\":{\"ret_value\":\"_ignore\"},\"_p_headers.content-encoding\":{\"ret_value\":\"_ignore\"}}}}",
