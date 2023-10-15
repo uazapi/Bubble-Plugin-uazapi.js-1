@@ -50,7 +50,7 @@ if (properties.remoteJids) {
   if(properties.info) raw.info = properties.info.trim();
 
   //fluxo opcional
-  if(properties.flow) raw.flow = properties.flow.trim();
+  if(properties.flowName) raw.flow = properties.flowName.trim();
 
   //mensagem opcional
   raw.message = {};
@@ -58,11 +58,11 @@ if (properties.remoteJids) {
   if(properties.text) raw.message.text = properties.text.trim();
   if(properties.urlOrBase64) raw.message.urlOrBase64 = properties.urlOrBase64.trim();
   if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
-  if(properties.fileName) raw.message.fileName = properties.fileName.trim();
+  //if(properties.fileName) raw.message.fileName = properties.fileName.trim();
   if(properties.delay != null) raw.message.delay = properties.delay || 0;
 
    
-  
+   
   raw = JSON.stringify(raw);
 
   

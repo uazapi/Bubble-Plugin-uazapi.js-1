@@ -36,13 +36,13 @@ function(properties, context) {
 
     var url = baseUrl + "/automate/scheduleMessage/" + instancia;
         
-     // Separando as tags fornecidas pelo usuário em um array  
-     let remoteJids = [];  
+    // Separando as tags fornecidas pelo usuário em um array  
+    let remoteJids = [];  
     if (properties.remoteJids) {
         remoteJids = properties.remoteJids.split('|').map(remoteJid => remoteJid.trim());
     }
-    
-      var raw = {
+
+    var raw = {
         "delete": properties.delete,
         "status": properties.status,
         "type": properties.type,
@@ -51,24 +51,24 @@ function(properties, context) {
         "delaySecMin": properties.delaySecMin,
         "delaySecMax": properties.delaySecMax,
     };
-    
-      //opcionais macro
-      if(properties._id != null ) raw._id = properties._id.trim();
-      if(properties.info) raw.info = properties.info.trim();
-    
-      //fluxo opcional
-      if(properties.flow) raw.flow = properties.flow.trim();
-    
-      //mensagem opcional
-      raw.message = {};
-      if(properties.command) raw.message.command = properties.command.trim();
-      if(properties.text) raw.message.text = properties.text.trim();
-      if(properties.media) raw.message.media = properties.media.trim();
-      if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
-      if(properties.delay != null) raw.message.delay = properties.delay || 0;
-    
-       
-      
+
+    //opcionais macro
+    if(properties._id != null ) raw._id = properties._id.trim();
+    if(properties.info) raw.info = properties.info.trim();
+
+    //fluxo opcional
+    if(properties.flowName) raw.flow = properties.flowName.trim();
+
+    //mensagem opcional
+    raw.message = {};
+    //if(properties.command) raw.message.command = properties.command.trim();
+    if(properties.text) raw.message.text = properties.text.trim();
+    if(properties.urlOrBase64) raw.message.urlOrBase64 = properties.urlOrBase64.trim();
+    if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
+    //if(properties.fileName) raw.message.fileName = properties.fileName.trim();
+    if(properties.delay != null) raw.message.delay = properties.delay || 0;
+
+   
     //  raw = JSON.stringify(raw);
     
 
@@ -85,7 +85,7 @@ function(properties, context) {
     error = false;
     let error_log;
 
-
+ 
     
     
     try {

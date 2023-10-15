@@ -95,7 +95,7 @@
         "ANt": {
             "caption": "Tipo de envio",
             "default_val": "text",
-            "doc": "\"text\" | \"file\" | \"audio\" | \"flow\" - sem aspas - Por enquanto fluxos (flow) não estão funcionando...",
+            "doc": "\"text\" | \"media\" | \"audio\" | \"flow\" - sem aspas - Por enquanto fluxos (flow) não estão funcionando...",
             "editor": "DynamicValue",
             "name": "type",
             "options": "Mensagem,Fluxo",
@@ -114,7 +114,7 @@
         },
         "ANw": {
             "caption": "Arquivo URL",
-            "doc": "Apenas necessário se definiu o tipo de envio como \"file\" ou \"audio\", coloque a URL do áudio, imagem, vídeo ou documento aqui.",
+            "doc": "Apenas necessário se definiu o tipo de envio como \"media\" ou \"audio\", coloque a URL do áudio, imagem, vídeo ou documento aqui.",
             "editor": "DynamicValue",
             "name": "urlOrBase64",
             "optional": true,
@@ -151,7 +151,7 @@
         },
         "AOA": {
             "caption": "Tipo de arquivo",
-            "doc": "Apenas necessário se você definiu o tipo de envio como \"file\", defina aqui o tipo de arquivo que está sendo enviado: \"image\", \"video\" ou \"document\", sem aspas.",
+            "doc": "Apenas necessário se você definiu o tipo de envio como \"media\", defina aqui o tipo de arquivo que está sendo enviado: \"image\", \"video\" ou \"document\", sem aspas.",
             "editor": "DynamicValue",
             "name": "mediatype",
             "optional": true,
