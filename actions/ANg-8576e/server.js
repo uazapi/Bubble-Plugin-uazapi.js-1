@@ -26,13 +26,15 @@ function(properties, context) {
     }
 
 
-    var headers = new Headers({
-        "Accept": "*/*",
-        "Connection": "keep-alive",
-        "Content-Type": "application/json",
-        "uazapi": "true",
-        "apikey": properties.apikey,
-      });
+    var headers = {
+      "Accept": "*/*",
+      "Connection": "keep-alive",
+      "Content-Type": "application/json",
+      "uazapi": "true",
+      "apikey": apikey,
+    };
+
+    var url = baseUrl + "/automate/scheduleMessage/" + instancia;
         
      // Separando as tags fornecidas pelo usuário em um array  
      let remoteJids = [];  
@@ -67,7 +69,7 @@ function(properties, context) {
     
        
       
-      raw = JSON.stringify(raw);
+    //  raw = JSON.stringify(raw);
     
 
       let requestOptions = {
@@ -114,7 +116,7 @@ function(properties, context) {
      
     
     return {
-        chat: resultObj,
+        envioagendado: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,

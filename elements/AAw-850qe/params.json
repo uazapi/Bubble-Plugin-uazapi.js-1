@@ -132,7 +132,7 @@
             "caption": "⚠️ Campos Opcionais, Mas Cruciais ⚠️ Embora todos esses campos sejam marcados como \"opcionais\", eles são essenciais para o funcionamento adequado do plugin. Recomendamos preenchê-los a menos que você tenha certeza do que está fazendo. A opção de não preencher é útil quando você planeja usar apenas uma ação específica do elemento, eliminando a necessidade de configurar todos os campos.",
             "editor": "Label",
             "name": "doc",
-            "rank": 15
+            "rank": 16
         },
         "ANV": {
             "caption": "Atendimento",
@@ -140,6 +140,13 @@
             "name": "multiatendimento",
             "optional": true,
             "rank": 14
+        },
+        "AOE": {
+            "caption": "Envios Agendados",
+            "editor": "custom_type",
+            "name": "enviosagendados",
+            "optional": true,
+            "rank": 15
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -338,6 +345,15 @@
             },
             "name": "ticketSystem",
             "value": "custom_data_ANV"
+        },
+        "AOF": {
+            "caption": "Envios Agendados",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "enviosagendados",
+            "value": "custom_data_AOE"
         }
     }
 }

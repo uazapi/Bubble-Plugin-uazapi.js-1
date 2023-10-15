@@ -60,7 +60,7 @@ fetch(url, requestOptions)
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
     instance.triggerEvent('sucessEvent');
-    instance.publishState('minha_privacidade', resultObj);
+    instance.publishState('enviosagendados', resultObj);
     
   }
 })

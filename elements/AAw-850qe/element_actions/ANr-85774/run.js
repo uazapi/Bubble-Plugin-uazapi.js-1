@@ -54,10 +54,11 @@ if (properties.remoteJids) {
 
   //mensagem opcional
   raw.message = {};
-  if(properties.command) raw.message.command = properties.command.trim();
+  //if(properties.command) raw.message.command = properties.command.trim();
   if(properties.text) raw.message.text = properties.text.trim();
-  if(properties.media) raw.message.media = properties.media.trim();
+  if(properties.urlOrBase64) raw.message.urlOrBase64 = properties.urlOrBase64.trim();
   if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
+  if(properties.fileName) raw.message.fileName = properties.fileName.trim();
   if(properties.delay != null) raw.message.delay = properties.delay || 0;
 
    
@@ -91,7 +92,6 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-    //instance.publishState('chat/lead', resultObj);
     instance.triggerEvent('sucessEvent');
     
   }

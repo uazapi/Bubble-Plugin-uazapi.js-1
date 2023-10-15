@@ -26,20 +26,20 @@ function(properties, context) {
     }
 
 
-    var myHeaders = new Headers({
-        "Accept": "*/*",
-        "Connection": "keep-alive",
-        "Content-Type": "application/json",
-        "uazapi": "true",
-        "apikey": properties.apikey,
-      });
-        
+    var myHeaders = {
+      "Accept": "*/*",
+      "Connection": "keep-alive",
+      "Content-Type": "application/json",
+      "uazapi": "true",
+      "apikey": apikey,
+    };
+
     
-  
+  var url = baseUrl + "/automate/deleteDoneMessages/" + instancia;
     
   
     var requestOptions = {
-        method: 'GET',
+        method: 'DELETE',
         headers: myHeaders,
         uri: url,
         json: true
@@ -81,7 +81,7 @@ function(properties, context) {
      
     
     return {
-        chat: resultObj,
+        envioagendado: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,

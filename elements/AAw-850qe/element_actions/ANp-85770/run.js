@@ -5,9 +5,10 @@ function(instance, properties, context) {
       baseUrl = context.keys["Server URL"];
   }
 
-      if (baseUrl) {
+  if (baseUrl) {
     baseUrl = baseUrl.trim();
-    }
+  }
+    
   if (baseUrl && baseUrl.endsWith("/")) {
       baseUrl = baseUrl.slice(0, -1);
   }
@@ -21,7 +22,7 @@ function(instance, properties, context) {
   
   
   
-    var myHeaders = new Headers({
+    var headers = ({
       "Accept": "*/*",
       "Connection": "keep-alive",
       "Content-Type": "application/json",
@@ -35,12 +36,11 @@ function(instance, properties, context) {
 
   var requestOptions = {
       method: 'DELETE',
-      headers: myHeaders,
-      
-     
+      headers: headers,
   };
   
-
+console.log(requestOptions);
+console.log(url);
 
 instance.publishState('resultado', '');
 instance.publishState('error', false);
@@ -60,7 +60,7 @@ fetch(url, requestOptions)
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
     instance.triggerEvent('sucessEvent');
-    instance.publishState('minha_privacidade', resultObj);
+    instance.publishState('enviosagendados', resultObj);
     
   }
 })

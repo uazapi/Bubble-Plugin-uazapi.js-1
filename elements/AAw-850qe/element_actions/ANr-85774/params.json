@@ -50,7 +50,7 @@
             "name": "remoteJids",
             "optional": false,
             "options": "",
-            "rank": 8,
+            "rank": 9,
             "value": "text"
         },
         "AMR": {
@@ -61,7 +61,7 @@
             "name": "status",
             "optional": false,
             "options": "scheduled,done",
-            "rank": 7,
+            "rank": 8,
             "value": "text"
         },
         "AMS": {
@@ -71,7 +71,7 @@
             "name": "when",
             "optional": false,
             "options": "",
-            "rank": 9,
+            "rank": 7,
             "value": "number"
         },
         "ANa": {
@@ -94,39 +94,29 @@
         },
         "ANt": {
             "caption": "Tipo de envio",
-            "default_val": "message",
-            "doc": "\"message\" ou \"flow\" - sem aspas - Por enquanto apenas mensagens estão funcionando, fluxos em breve...",
+            "default_val": "text",
+            "doc": "\"text\" | \"file\" | \"audio\" | \"flow\" - sem aspas - Por enquanto fluxos (flow) não estão funcionando...",
             "editor": "DynamicValue",
             "name": "type",
             "options": "Mensagem,Fluxo",
             "rank": 12,
             "value": "text"
         },
-        "ANu": {
-            "caption": "Tipo de mensagem",
-            "doc": "\"sendText\" ou \"sendMedia\" ou \"sendAudio\" - sem aspas, selecione que tipo de mensagem será enviada, sendMedia envia imagem, vídeo e documento.",
-            "editor": "DynamicValue",
-            "name": "command",
-            "optional": true,
-            "options": "",
-            "rank": 15,
-            "value": "text"
-        },
         "ANv": {
             "caption": "Texto da mensagem",
-            "doc": "Escreva aqui o texto, não funciona para aúdio, opcional para envio de arquivos, obrigatório para envio de texto.",
+            "doc": "Escreva aqui o texto da mensagem, não funciona para aúdio, opcional para envio de arquivos, obrigatório para envio de texto.",
             "editor": "DynamicValue",
             "long_text": true,
             "name": "text",
             "optional": true,
-            "rank": 16,
+            "rank": 15,
             "value": "text"
         },
         "ANw": {
             "caption": "Arquivo URL",
-            "doc": "Coloque a URL do áudio, imagem, vídeo ou documento, dependendo do tipo de mensagem escolhida.",
+            "doc": "Apenas necessário se definiu o tipo de envio como \"file\" ou \"audio\", coloque a URL do áudio, imagem, vídeo ou documento aqui.",
             "editor": "DynamicValue",
-            "name": "media",
+            "name": "urlOrBase64",
             "optional": true,
             "rank": 17,
             "value": "text"
@@ -138,7 +128,7 @@
             "editor": "DynamicValue",
             "name": "delay",
             "optional": true,
-            "rank": 19,
+            "rank": 16,
             "value": "number"
         },
         "ANy": {
@@ -161,27 +151,27 @@
         },
         "AOA": {
             "caption": "Tipo de arquivo",
-            "doc": "Se você definiu a mensagem como sendMedia, defina aqui o tipo de arquivo que está sendo enviado: \"image\", \"video\" ou \"document\", sem aspas.",
+            "doc": "Apenas necessário se você definiu o tipo de envio como \"file\", defina aqui o tipo de arquivo que está sendo enviado: \"image\", \"video\" ou \"document\", sem aspas.",
             "editor": "DynamicValue",
             "name": "mediatype",
             "optional": true,
             "rank": 18,
             "value": "text"
         },
-        "AOC": {
-            "caption": "Nome do fluxo",
-            "doc": "Se você determinou que será envio de fluxos, coloque o nome do fluxo aqui. Caso contrário, deixe vazio.",
-            "editor": "DynamicValue",
-            "name": "flow",
-            "optional": true,
-            "rank": 13,
-            "value": "text"
-        },
         "AOD": {
-            "caption": "Se for fluxo, só preencher o campo acima com o nome do Fluxo, se for Mensagem, preencha os campos abaixo, clique em \"show documentation\" para ver quais são opcionais.",
+            "caption": "Não sendo tipo de envio \"flow\", preencha os dados abaixo, clique em \"show documentation\" para ver quais campos são opcionais. ",
             "editor": "Label",
             "name": "info_msg",
             "rank": 14
+        },
+        "AOG": {
+            "caption": "Nome do fluxo",
+            "doc": "Apenas necessário de tipo de envio for \"flow\" (fluxo), não precisando preencher os dados abaixo.",
+            "editor": "DynamicValue",
+            "name": "flowName",
+            "optional": true,
+            "rank": 13,
+            "value": "text"
         }
     }
 }

@@ -26,31 +26,34 @@ function(properties, context) {
     }
 
 
-    var url = baseUrl + "/automate/deleteDoneMessages/" + instancia;
+    var url = baseUrl + "/automate/scheduleMessage/" + instancia;
   
   
   
-    var myHeaders = new Headers({
+    var myHeaders = {
       "Accept": "*/*",
       "Connection": "keep-alive",
       "Content-Type": "application/json",
       "uazapi": "true",
-      "apikey": properties.apikey,
-    });
+      "apikey": apikey,
+    };
+
       
   
 
   
 
   var requestOptions = {
-      method: 'DELETE',
+      method: 'GET',
       headers: myHeaders,
       uri: url,
       json: true
       
   };
   
-
+console.log(requestOptions);
+    console.log(url);
+    
     let sentRequest;
     let error;
     error = false;
@@ -87,7 +90,7 @@ function(properties, context) {
      
     
     return {
-        chat: resultObj,
+        envioagendado: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
