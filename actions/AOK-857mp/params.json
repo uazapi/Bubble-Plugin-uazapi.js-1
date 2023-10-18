@@ -1,5 +1,70 @@
 {
     "category": "plugins",
     "display": "▶️ Configuração Geral dos Fluxo",
+    "fields": {
+        "AME": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMH": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "ANH": {
+            "caption": "Atendimento",
+            "doc": "Selecione: 📄Atendimento",
+            "editor": "custom_type",
+            "name": "ticketSystem",
+            "rank": 4
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 1,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 3,
+            "value": "text"
+        },
+        "ANA": {
+            "caption": "Atendimento",
+            "name": "ticketSystem",
+            "rank": 0,
+            "value": "custom_data_ANH"
+        }
+    },
     "type": "server_side"
 }
