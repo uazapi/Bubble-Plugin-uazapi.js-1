@@ -68,7 +68,7 @@
             "rank": 9
         },
         "AFc": {
-            "caption": "Webhook + Fluxo Status",
+            "caption": "Webhook Status",
             "doc": "",
             "editor": "custom_type",
             "name": "webhook",

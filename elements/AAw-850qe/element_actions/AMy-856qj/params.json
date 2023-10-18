@@ -39,7 +39,8 @@
             "doc": "0 = desabilitado, 1 = habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
             "editor": "DynamicValue",
             "long_text": false,
-            "name": "disableFlowsUntil",
+            "name": "desativadoFluxoAte",
+            "optional": true,
             "options": "",
             "rank": 5,
             "value": "number"
@@ -97,7 +98,7 @@
             "caption": "Status do Lead",
             "doc": "Status do Lead, exemplos: \"Assinante\"... Ou \"Prospect\", \"Lead\", \"frio\", \"quente\", faça as suas categorias e defina aqui... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
-            "name": "statusLead",
+            "name": "status",
             "optional": true,
             "rank": 11,
             "value": "text"
@@ -107,7 +108,7 @@
             "doc": "Um texto longo sobre o Lead... Coloque um espaço em branco para apagar",
             "editor": "DynamicValue",
             "long_text": true,
-            "name": "note",
+            "name": "notas",
             "optional": true,
             "rank": 12,
             "value": "text"
@@ -126,7 +127,7 @@
             "default_val": false,
             "doc": "Atendimento em aberto ou fechado = concluído.",
             "editor": "DynamicValue",
-            "name": "serviceOpen",
+            "name": "atendimentoAberto",
             "optional": true,
             "rank": 15,
             "value": "boolean"
@@ -135,7 +136,7 @@
             "caption": "Atribuído à",
             "doc": "Coloque o id do atendente que esse Lead está atribuído. E filtre depois no bubble.",
             "editor": "DynamicValue",
-            "name": "assignedTo",
+            "name": "responsavelid",
             "optional": true,
             "rank": 16,
             "value": "text"
@@ -155,6 +156,7 @@
             "doc": "Id do Chat, número de telefone",
             "editor": "DynamicValue",
             "name": "id",
+            "optional": true,
             "rank": 4,
             "value": "text"
         },

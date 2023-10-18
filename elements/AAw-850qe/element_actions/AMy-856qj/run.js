@@ -41,15 +41,15 @@ function(instance, properties, context) {
     }
   }
 
-  if(properties.disableFlowsUntil != null ) leadInfo.disableFlowsUntil = properties.disableFlowsUntil;
+  if(properties.desativadoFluxoAte != null ) leadInfo.desativadoFluxoAte = properties.desativadoFluxoAte;
   if(properties.nome) leadInfo.nome = properties.nome.trim();
   if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
   if(properties.email) leadInfo.email = properties.email.trim();
   if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
-  if(properties.statusLead) leadInfo.statusLead = properties.statusLead.trim();
-  if(properties.note) leadInfo.note = properties.note.trim();
-  if(properties.serviceOpen != null) leadInfo.serviceOpen = properties.serviceOpen;
-  if(properties.assignedTo) leadInfo.assignedTo = properties.assignedTo.trim();
+  if(properties.status) leadInfo.status = properties.status.trim();
+  if(properties.notas) leadInfo.notas = properties.notas.trim();
+  if(properties.atendimentoAberto != null) leadInfo.atendimentoAberto = properties.atendimentoAberto;
+  if(properties.responsavelid) leadInfo.responsavelid = properties.responsavelid.trim();
   if(properties.customFields) {
     try {
         leadInfo.customFields = JSON.parse(properties.customFields);

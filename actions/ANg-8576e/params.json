@@ -55,11 +55,11 @@
         "AMR": {
             "caption": "Status do Envio",
             "default_val": "scheduled",
-            "doc": "Deixe como \"scheduled\" para agendado, caso você queria parar o envio, passe o status \"done\".",
+            "doc": "Deixe como \"scheduled\" para agendado, caso você queria parar o envio, passe o status \"stopped\".",
             "editor": "Dropdown",
             "name": "status",
             "optional": false,
-            "options": "scheduled,done",
+            "options": "scheduled,stopped",
             "rank": 8,
             "value": "text"
         },
@@ -75,7 +75,7 @@
         },
         "ANa": {
             "caption": "id do Envio",
-            "doc": "Passe vazio para criar uma nova mensagem, ou passe o id para editar a mensagem agendada",
+            "doc": "Passe vazio para criar um nova envio, ou passe o id para editar o envio.",
             "editor": "DynamicValue",
             "name": "_id",
             "optional": true,
@@ -94,7 +94,7 @@
         "ANt": {
             "caption": "Tipo de envio",
             "default_val": "text",
-            "doc": "\"text\" | \"media\" | \"audio\" | \"flow\" - sem aspas - Por enquanto fluxos (flow) não estão funcionando...",
+            "doc": "\"text\" | \"media\" | \"audio\" | \"flow\" - sem aspas  -  \"text\" = envio de mensagem de texto, \"media\" = envio de mensagem com arquivo, podendo de imagem, vídeo ou documento, \"audio\" = envio de mensagem de áudio, \"flow\" = envio de fluxos - Por enquanto fluxos (flow) não estão funcionando...",
             "editor": "DynamicValue",
             "name": "type",
             "options": "Mensagem,Fluxo",
@@ -171,6 +171,13 @@
             "optional": true,
             "rank": 13,
             "value": "text"
+        },
+        "AOI": {
+            "caption": "Envio Agendado",
+            "doc": "Selecione: 📄Envio Agendado",
+            "editor": "custom_type",
+            "name": "envioagendado",
+            "rank": 19
         }
     },
     "return_value": {
@@ -196,7 +203,7 @@
             "caption": "Envio Agendado",
             "name": "envioagendado",
             "rank": 0,
-            "value": "custom_data_ANH"
+            "value": "custom_data_AOI"
         }
     },
     "type": "server_side"

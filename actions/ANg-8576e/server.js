@@ -57,7 +57,7 @@ function(properties, context) {
     if(properties.info) raw.info = properties.info.trim();
 
     //fluxo opcional
-    if(properties.flowName) raw.flow = properties.flowName.trim();
+    if(properties.flowName) raw.flowName = properties.flowName.trim();
 
     //mensagem opcional
     raw.message = {};
