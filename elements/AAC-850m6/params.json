@@ -21,21 +21,24 @@
     "fields": {
         "AAD": {
             "caption": "uazabot",
+            "doc": "Selecione: 🤖🔀bot",
             "editor": "custom_type",
             "name": "uazabot",
             "rank": 0
         },
         "ABT": {
-            "caption": "webhook",
+            "caption": "Automações Config",
+            "doc": "Selecione: 📄 Automações",
             "editor": "custom_type",
-            "name": "webhook",
-            "rank": 1
+            "name": "automateSystem",
+            "rank": 2
         },
         "ABs": {
             "caption": "log",
+            "doc": "Selecione: 🤖🔀log",
             "editor": "custom_type",
             "name": "log",
-            "rank": 2
+            "rank": 1
         }
     },
     "has_reset_fn": false,
@@ -87,11 +90,11 @@
             "value": "custom_data_AAD"
         },
         "ABS": {
-            "caption": "webhook",
+            "caption": "Automações Config",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "name": "webhook",
+            "name": "automateSystem",
             "value": "custom_data_ABT"
         },
         "ABt": {

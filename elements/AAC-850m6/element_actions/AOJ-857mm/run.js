@@ -35,7 +35,7 @@ function(instance, properties, context) {
     "ignoreGroups": properties.ignoreGroups,
     "prefixCommand": properties.prefixCommand,
     "stopConversation": properties.stopConversation,
-    "stopMinutes": properties.stopConversation,
+    "stopMinutes": properties.stopMinutes,
 };
 
   
@@ -77,7 +77,7 @@ fetch(url, requestOptions)
           instance.triggerEvent('sucessEvent');
     
           
-          instance.publishState('bot', resultObj);
+          instance.publishState('automateSystem', resultObj);
           
       }
   })

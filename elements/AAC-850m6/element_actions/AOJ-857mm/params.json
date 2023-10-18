@@ -1,5 +1,5 @@
 {
-    "caption": "🔓 Configuração Geral dos Fluxo",
+    "caption": "🔓 Configuração Geral dos Fluxos",
     "fields": {
         "AAj": {
             "caption": "Servidor URL",
@@ -35,7 +35,7 @@
             "doc": "Ativar fluxos, fluxos são chatbots que podem ser criado diretamente na API.",
             "editor": "DynamicValue",
             "name": "enabled",
-            "rank": 5,
+            "rank": 4,
             "value": "boolean"
         },
         "AOM": {
@@ -43,7 +43,7 @@
             "doc": "Vai ignorar as mensagens dos grupos nos fluxos apenas.",
             "editor": "DynamicValue",
             "name": "ignoreGroups",
-            "rank": 6,
+            "rank": 5,
             "value": "boolean"
         },
         "AON": {
@@ -51,7 +51,7 @@
             "doc": "Use ! ou / ou algum caracter não comum. O comando para parar fluxo tem que iniciar por esse prefixo.",
             "editor": "DynamicValue",
             "name": "prefixCommand",
-            "rank": 7,
+            "rank": 6,
             "value": "text"
         },
         "AOO": {
@@ -59,7 +59,7 @@
             "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem com o comando aqui definido.",
             "editor": "DynamicValue",
             "name": "stopConversation",
-            "rank": 8,
+            "rank": 7,
             "value": "text"
         },
         "AOP": {
@@ -67,8 +67,8 @@
             "default_val": 30,
             "doc": "Defina o tempo em que irá ficar pausada o fluxo com a função de pausa acima, em minutos.",
             "editor": "DynamicValue",
-            "name": "stopminutes",
-            "rank": 9,
+            "name": "stopMinutes",
+            "rank": 8,
             "value": "number"
         }
     }

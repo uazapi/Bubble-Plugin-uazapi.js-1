@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Configuração Geral dos Fluxo",
+    "display": "▶️ Configuração Geral dos Fluxos",
     "fields": {
         "AME": {
             "caption": "Servidor URL",
@@ -33,7 +33,7 @@
             "rank": 3
         },
         "ANH": {
-            "caption": "Atendimento",
+            "caption": "Automações",
             "doc": "Selecione: 📄Automações",
             "editor": "custom_type",
             "name": "ticketSystem",
@@ -76,7 +76,7 @@
             "default_val": 30,
             "doc": "Defina o tempo em que irá ficar pausada o fluxo com a função de pausa acima, em minutos.",
             "editor": "DynamicValue",
-            "name": "stopminutes",
+            "name": "stopMinutes",
             "rank": 9,
             "value": "number"
         }

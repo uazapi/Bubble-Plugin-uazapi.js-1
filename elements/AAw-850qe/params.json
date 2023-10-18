@@ -135,7 +135,7 @@
             "rank": 16
         },
         "ANV": {
-            "caption": "Atendimento",
+            "caption": "Automações",
             "editor": "custom_type",
             "name": "multiatendimento",
             "optional": true,
