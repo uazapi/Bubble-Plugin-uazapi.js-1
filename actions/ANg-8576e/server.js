@@ -1,12 +1,15 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Editar Envio Agendados
+    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
+
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
     }
@@ -15,111 +18,79 @@ function(properties, context) {
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
-    
+
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
-    
+
     let instancia = properties.instancia;
     if (!instancia || instancia.trim() === "") {
         instancia = context.keys["Instancia"];
     }
 
-
-    var headers = {
-      "Accept": "*/*",
-      "Connection": "keep-alive",
-      "Content-Type": "application/json",
-      "uazapi": "true",
-      "apikey": apikey,
+    const headers = {
+        "Accept": "*/*",
+        "Connection": "keep-alive",
+        "Content-Type": "application/json",
+        "uazapi": "true",
+        "apikey": apikey,
     };
 
-    var url = baseUrl + "/automate/scheduleMessage/" + instancia;
-        
-    // Separando as tags fornecidas pelo usuário em um array  
-    let remoteJids = [];  
+    const url = `${baseUrl}/automate/scheduleMessage/${instancia}`;
+
+    let remoteJids = [];
     if (properties.remoteJids) {
         remoteJids = properties.remoteJids.split('|').map(remoteJid => remoteJid.trim());
     }
 
-    var raw = {
-        "delete": properties.delete,
-        "status": properties.status,
-        "type": properties.type,
-        "remoteJids": remoteJids,
-        "when": properties.when,
-        "delaySecMin": properties.delaySecMin,
-        "delaySecMax": properties.delaySecMax,
+    const raw = {
+        delete: properties.delete,
+        status: properties.status,
+        type: properties.type,
+        remoteJids: remoteJids,
+        when: properties.when,
+        delaySecMin: properties.delaySecMin,
+        delaySecMax: properties.delaySecMax,
     };
 
-    //opcionais macro
-    if(properties._id != null ) raw._id = properties._id.trim();
+    if(properties._id) raw._id = properties._id.trim();
     if(properties.info) raw.info = properties.info.trim();
-
-    //fluxo opcional
     if(properties.flowName) raw.flowName = properties.flowName.trim();
 
-    //mensagem opcional
     raw.message = {};
-    //if(properties.command) raw.message.command = properties.command.trim();
     if(properties.text) raw.message.text = properties.text.trim();
     if(properties.urlOrBase64) raw.message.urlOrBase64 = properties.urlOrBase64.trim();
     if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
-    //if(properties.fileName) raw.message.fileName = properties.fileName.trim();
-    if(properties.delay != null) raw.message.delay = properties.delay || 0;
+    if(properties.delay != null) raw.message.delay = properties.delay;
 
-   
-    //  raw = JSON.stringify(raw);
-    
-
-      let requestOptions = {
-        method: 'POST',
-        headers: headers,
-        body: raw,
-        uri: url,
-        json: true
-    };
-
-    let sentRequest;
-    let error;
-    error = false;
+    let response, resultObj;
+    let error = false;
     let error_log;
 
- 
-    
-    
     try {
-        sentRequest = context.request(requestOptions);
-   } catch(e) {
+        response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(raw)
+        });
+        resultObj = await response.json();
+    } catch(e) {
         error = true;
         error_log = e.toString();
     }
 
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+    if (!response.ok) {
         error = true;
-       
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-        }
-    } 
-
-
-    let resultObj;
-    try {
-        resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
+            error_log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        };
     }
 
-     
-    
     return {
         envioagendado: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-        error_log: error_log,
+        error_log: error_log
     };
-
 }

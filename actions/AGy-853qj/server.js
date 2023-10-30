@@ -1,12 +1,15 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Enviar contato
+    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
+    
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
     }
@@ -17,89 +20,71 @@ function(properties, context) {
     }
     
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
 
     let instancia = properties.instancia;
     if (!instancia || instancia.trim() === "") {
         instancia = context.keys["Instancia"];
     }
-        
-   var url = baseUrl + "/message/sendContact/" + instancia;
-        
-        let headers = {
-            "Accept": "*/*",
-            "Connection": "keep-alive",
-            "Content-Type": "application/json",
-            "apikey": apikey
-        };
-        
-        var raw =     {
-      "number": properties.number,
-      "contactMessage": [
-        {
-          "fullName": properties.fullName,
-          "wuid": properties.wuid,
-          "phoneNumber": properties.wuid
-        }
-      ],
-      "options": {
-        "delay": properties.delay
-      }
-    };
-       
-        
-            let requestOptions = {
-                method: 'POST',
-                headers: headers,
-                body: raw,  
-                uri: url,
-                json: true
-            };
-    
-    
-        let sentRequest;
-        let error;
-        error = false;
-        let error_log;
 
-        try {
-            sentRequest = context.request(requestOptions);
-       } catch(e) {
-            error = true;
-            error_log = e.toString();
-        }
+    const url = `${baseUrl}/message/sendContact/${instancia}`;
+
+    const headers = {
+        "Accept": "*/*",
+        "Connection": "keep-alive",
+        "Content-Type": "application/json",
+        "apikey": apikey
+    };
     
-        if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+    const raw = {
+        "number": properties.number,
+        "contactMessage": [
+            {
+                "fullName": properties.fullName,
+                "wuid": properties.wuid,
+                "phoneNumber": properties.wuid
+            }
+        ],
+        "options": {
+            "delay": properties.delay
+        }
+    };
+
+    let response;
+    let error = false;
+    let error_log;
+
+    try {
+        response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(raw)
+        });
+
+        if (!response.ok) {
             error = true;
-           
+            const responseBody = await response.json();
             return {
                 error: error,
-                error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-            }
-        } 
-    
-        let resultObj;
-        try {
-            resultObj = sentRequest.body;
-       } catch(e) {
-            error = true;
-            error_log = `Error getting response body: ${e.toString()}`;
+                error_log: JSON.stringify(responseBody, null, 2).replace(/"_p_/g, "\"")
+            };
         }
-    
-      
-    return {
-    remoteJid: String(resultObj?.key?.remoteJid),
-    fromMe: String(resultObj?.key?.fromMe),
-    id: String(resultObj?.key?.id),
-    status: String(resultObj?.status),
-    error: String(error),
-    log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-    error_log: String(error_log),
-};
-    
-    
-    
-    
-    
+
+    } catch (e) {
+        error = true;
+        error_log = e.toString();
     }
+
+    const resultObj = await response.json();
+
+    return {
+        remoteJid: resultObj?.key?.remoteJid,
+        fromMe: resultObj?.key?.fromMe,
+        id: resultObj?.key?.id,
+        status: resultObj?.status,
+        error: error,
+        log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        error_log: error_log
+    };
+}

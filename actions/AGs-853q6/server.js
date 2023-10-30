@@ -1,12 +1,15 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Instancia - Sair
+
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
+
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
     }
@@ -15,73 +18,53 @@ function(properties, context) {
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
-    
+
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
 
     let instancia = properties.instancia;
     if (!instancia || instancia.trim() === "") {
         instancia = context.keys["Instancia"];
     }
-    
-    var url = baseUrl + "/instance/logout/" + instancia;
-    
-    let headers = {
+
+    const url = `${baseUrl}/instance/logout/${instancia}`;
+
+    const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
         "apikey": apikey
     };
 
-    let requestOptions = {
-        method: 'DELETE',
-        headers: headers,
-        uri: url,
-        json: true
-    };
-
-    let sentRequest;
-    let error;
-    error = false;
+    let response;
+    let error = false;
     let error_log;
 
     try {
-        sentRequest = context.request(requestOptions);
-   } catch(e) {
+        response = await fetch(url, {
+            method: 'DELETE',
+            headers: headers
+        });
+    } catch (e) {
         error = true;
         error_log = e.toString();
     }
 
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+    if (!response.ok) {
         error = true;
-       
+        const responseBody = await response.json();
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-        }
-    }   
-
-    let resultObj;
-    try {
-        resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
+            error_log: JSON.stringify(responseBody, null, 2).replace(/"_p_/g, "\"")
+        };
     }
 
-  
+    const resultObj = await response.json();
 
     return {
-
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
     };
-
-
-
-
-
-
 }

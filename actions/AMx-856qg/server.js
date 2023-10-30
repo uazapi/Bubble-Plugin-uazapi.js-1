@@ -1,12 +1,15 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Editar Lead - Chat
+
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
+
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
     }
@@ -15,29 +18,28 @@ function(properties, context) {
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
-    
+
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
-    
+
     let instancia = properties.instancia;
     if (!instancia || instancia.trim() === "") {
         instancia = context.keys["Instancia"];
     }
 
+    const url = `${baseUrl}/chat/editChat/${instancia}`;
 
-    var url = baseUrl + "/chat/editChat/" + instancia;
-    
-    let headers = {
+    const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
         "uazapi": "true",
         "apikey": apikey
     };
-    
 
-    var leadInfo = {};
+    const leadInfo = {};
+
 
     // Separando as tags fornecidas pelo usuário em um array  
     if (properties.deleteTags) {
@@ -49,81 +51,63 @@ function(properties, context) {
       }
     }
   
-  if(properties.desativadoFluxoAte != null ) leadInfo.desativadoFluxoAte = properties.desativadoFluxoAte;
-  if(properties.nome) leadInfo.nome = properties.nome.trim();
-  if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
-  if(properties.email) leadInfo.email = properties.email.trim();
-  if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
-  if(properties.status) leadInfo.status = properties.status.trim();
-  if(properties.notas) leadInfo.notas = properties.notas.trim();
-  if(properties.atendimentoAberto != null) leadInfo.atendimentoAberto = properties.atendimentoAberto;
-  if(properties.responsavelid) leadInfo.responsavelid = properties.responsavelid.trim();
-  if(properties.customFields) {
+    if(properties.desativadoFluxoAte != null ) leadInfo.desativadoFluxoAte = properties.desativadoFluxoAte;
+    if(properties.nome) leadInfo.nome = properties.nome.trim();
+    if(properties.nomecompleto) leadInfo.nomecompleto = properties.nomecompleto.trim();
+    if(properties.email) leadInfo.email = properties.email.trim();
+    if(properties.cpf) leadInfo.cpf = properties.cpf.trim();
+    if(properties.status) leadInfo.status = properties.status.trim();
+    if(properties.notas) leadInfo.notas = properties.notas.trim();
+    if(properties.atendimentoAberto != null) leadInfo.atendimentoAberto = properties.atendimentoAberto;
+    if(properties.responsavelid) leadInfo.responsavelid = properties.responsavelid.trim();
+    if(properties.customFields) {
     try {
         leadInfo.customFields = JSON.parse(properties.customFields);
     } catch (e) {
-      leadInfo.customFields = [];
+        leadInfo.customFields = [];
         console.log('Erro ao analisar customFields: ', e);
     }
-  }
-    
-    var raw = {
-        "id": properties.id
-    };
-    
-    if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
-    
-    if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
+    }
+
+  const raw = {
+    "id": properties.id
+};
+
+if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
+
+if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
+
     
 
-    let requestOptions = {
-        method: 'POST',
-        headers: headers,
-        uri: url,
-        body: raw,
-        json: true
-    };
-
-    let sentRequest;
-    let error;
-    error = false;
+    let response, resultObj;
+    let error = false;
     let error_log;
 
-
-    
-    
     try {
-        sentRequest = context.request(requestOptions);
-   } catch(e) {
+        response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(raw)
+        });
+        resultObj = await response.json();
+    } catch(e) {
         error = true;
         error_log = e.toString();
     }
 
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+    if (!response.ok) {
         error = true;
-       
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-        }
-    } 
-
-
-    let resultObj;
-    try {
-        resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
+            error_log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        };
     }
 
-     
-    
     return {
         chat: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-        error_log: error_log,
+        error_log: error_log
     };
-
 }
+

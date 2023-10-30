@@ -1,11 +1,13 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Buscar Contatos
+    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
@@ -17,7 +19,7 @@ function(properties, context) {
     }
     
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
     
     let instancia = properties.instancia;
@@ -25,9 +27,9 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/findContacts/" + instancia;
+    const url = `${baseUrl}/chat/findContacts/${instancia}`;
     
-    let headers = {
+    const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
@@ -35,63 +37,46 @@ function(properties, context) {
         "apikey": apikey
     };
 
-    let raw = 
-        {
-          "where": {
-              
-          }
-        }
-        
-
-    let requestOptions = {
-        method: 'POST',
-        headers: headers,
-        uri: url,
-        body: raw,
-        json: true
+    const raw = {
+        "where": {}
     };
 
-    let sentRequest;
-    let error;
-    error = false;
+    let response;
+    let error = false;
     let error_log;
+    let resultObj;
 
     try {
-        sentRequest = context.request(requestOptions);
-   } catch(e) {
+        response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(raw)
+        });
+
+        if (!response.ok) {
+            error = true;
+            const responseBody = await response.json();
+            return {
+                error: error,
+                error_log: JSON.stringify(responseBody, null, 2).replace(/"_p_/g, "\"")
+            };
+        }
+
+        resultObj = await response.json();
+    } catch (e) {
         error = true;
         error_log = e.toString();
-    }
-
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
-        error = true;
-       
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-        }
-    } 
-
-    let resultObj;
-    try {
-        resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
+            error_log: error_log
+        };
     }
-
-     
 
     return {
         contatos: resultObj,
-        error: error,
+        error: String(error),
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-        error_log: error_log,
+        error_log: String(error_log)
     };
-
-
-
-
-
-
 }
+

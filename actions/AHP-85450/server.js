@@ -1,11 +1,13 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Grupo - Entrar
+    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
@@ -17,7 +19,7 @@ function(properties, context) {
     }
     
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
     
     let instancia = properties.instancia;
@@ -25,60 +27,43 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/group/joinGroup/" + instancia;
+    const url = `${baseUrl}/group/joinGroup/${instancia}`;
     
-    let headers = {
+    const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
         "apikey": apikey
     };
 
-    var raw =  
-          {
-          "inviteCode": properties.inviteCode
-         };
-    
-
-    
-    let requestOptions = {
-        method: 'PUT',
-        headers: headers,
-        uri: url,
-        body: raw,
-        json: true
+    const raw = {
+        "inviteCode": properties.inviteCode
     };
-
-    let sentRequest;
-    let error;
-    error = false;
+    
+    let response, resultObj;
+    let error = false;
     let error_log;
 
     try {
-        sentRequest = context.request(requestOptions);
-   } catch(e) {
+        response = await fetch(url, {
+            method: 'PUT',
+            headers: headers,
+            body: JSON.stringify(raw)
+        });
+        resultObj = await response.json();
+    } catch(e) {
         error = true;
         error_log = e.toString();
     }
 
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+    if (!response.ok) {
         error = true;
        
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-        }
-    }   
-
-    let resultObj;
-    try {
-        resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
-    }
-
- 
+            error_log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        };
+    } 
 
     return {
         idgrupo: resultObj.groupJid,
@@ -86,10 +71,4 @@ function(properties, context) {
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
     };
-
-
-
-
-
-
 }

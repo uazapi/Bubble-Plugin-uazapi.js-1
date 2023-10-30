@@ -1,4 +1,5 @@
-function(properties, context) {
+async function(properties, context) {
+    //▶️ Buscar status de recebimento
 
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
@@ -6,7 +7,7 @@ function(properties, context) {
     }
 
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
     if (baseUrl && baseUrl.endsWith("/")) {
         baseUrl = baseUrl.slice(0, -1);
@@ -18,7 +19,7 @@ function(properties, context) {
     }
     
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
 
     let instancia = properties.instancia;
@@ -26,9 +27,9 @@ function(properties, context) {
         instancia = context.keys["Instancia"];
     }
     
-    var url = baseUrl + "/chat/findStatusMessage/" + instancia;
+    const url = `${baseUrl}/chat/findStatusMessage/${instancia}`;
     
-    let headers = {
+    const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
@@ -36,55 +37,35 @@ function(properties, context) {
         "apikey": apikey
     };
 
-  //  let limite = properties.limit ? { "limit": properties.limit } : {};
-
-    let raw = 
-    {
-    "where": {
-
-        "id": properties.id
-
-    },
- //   ...limite
+    const body = {
+        "where": {
+            "id": properties.id
+        }
     };
     
-    let requestOptions = {
-        method: 'POST',
-        headers: headers,
-        uri: url,
-        body: raw,
-        json: true
-    };
-
-    let sentRequest;
-    let error;
-    error = false;
+    let response, resultObj;
+    let error = false;
     let error_log;
 
     try {
-        sentRequest = context.request(requestOptions);
-   } catch(e) {
+        response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(body)
+        });
+        resultObj = await response.json();
+    } catch(e) {
         error = true;
         error_log = e.toString();
     }
 
-    if (sentRequest.statusCode.toString().charAt(0) !== "2") {
+    if (!response.ok) {
         error = true;
-       
         return {
             error: error,
-            error_log: JSON.stringify(sentRequest.body, null, 2).replace(/"_p_/g, "\""),
-        }
+            error_log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        };
     } 
-
-    let resultObj;
-    try {
-        resultObj = sentRequest.body;
-   } catch(e) {
-        error = true;
-        error_log = `Error getting response body: ${e.toString()}`;
-    }
-
 
     return {
         mensagens_status: resultObj,
@@ -92,10 +73,5 @@ function(properties, context) {
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
     };
-
-
-
-
-
-
 }
+
