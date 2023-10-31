@@ -10,5 +10,5 @@
     "link": "http://uazapi.dev/",
     "name": "uazapi.js - WhatsApp API",
     "plugin_instructions": "Veja nosso editor exemplo:\n\nhttps://bubble.io/page?id=uazapi-plugin",
-    "sa_node_version": 14
+    "sa_node_version": 18
 }

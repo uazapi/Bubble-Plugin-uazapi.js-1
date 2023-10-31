@@ -135,7 +135,7 @@
             "rank": 16
         },
         "ANV": {
-            "caption": "Automações",
+            "caption": "Configuração",
             "editor": "custom_type",
             "name": "multiatendimento",
             "optional": true,
@@ -339,7 +339,7 @@
             "value": "custom_data_AFO"
         },
         "ANW": {
-            "caption": "Atendimento",
+            "caption": "Configuração",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },

@@ -90,7 +90,7 @@
             "value": "custom_data_AAD"
         },
         "ABS": {
-            "caption": "Automações Config",
+            "caption": "Configuração",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
