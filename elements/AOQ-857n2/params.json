@@ -6,6 +6,12 @@
         "width": 20
     },
     "display": "🤖 realtime",
+    "events": {
+        "AOi": {
+            "caption": "Aconteceu um erro",
+            "name": "errorEvent"
+        }
+    },
     "fields": {
         "AOT": {
             "caption": "chats",
@@ -24,7 +30,7 @@
         "AOV": {
             "caption": "server url",
             "editor": "DynamicValue",
-            "name": "server_url",
+            "name": "url",
             "rank": 0,
             "value": "text"
         },
@@ -56,7 +62,7 @@
             "rank": 3
         },
         "AOc": {
-            "caption": "Carregar Chats?",
+            "caption": "Chats em tempo real",
             "default_val": true,
             "editor": "DynamicValue",
             "name": "loadchats",
@@ -64,7 +70,7 @@
             "value": "boolean"
         },
         "AOd": {
-            "caption": "Carregar Mensagens?",
+            "caption": "Mensagens em tempo real",
             "default_val": true,
             "editor": "DynamicValue",
             "name": "loadmensagens",
@@ -72,7 +78,7 @@
             "value": "boolean"
         },
         "AOe": {
-            "caption": "Carregar Contatos",
+            "caption": "Contatos em tempo real",
             "default_val": true,
             "editor": "DynamicValue",
             "name": "loadcontatos",
@@ -128,6 +134,30 @@
             },
             "name": "instanceinfo",
             "value": "custom_data_AOZ"
+        },
+        "AOg": {
+            "caption": "error",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error",
+            "value": "boolean"
+        },
+        "AOh": {
+            "caption": "error_log",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error_log",
+            "value": "text"
+        },
+        "AOj": {
+            "caption": "Conectado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "sseStarted",
+            "value": "boolean"
         }
     }
 }
