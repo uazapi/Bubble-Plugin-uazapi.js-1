@@ -18,21 +18,16 @@
     },
     "fields": {
         "AOT": {
-            "caption": "chats",
+            "caption": "Chats RT",
+            "doc": "Selecione 📄 Chats RT⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Dentro de cada chat tem \"msgs\", local onde fica as mensagens de cada chat.",
             "editor": "custom_type",
             "name": "chats",
-            "optional": true,
-            "rank": 3
-        },
-        "AOU": {
-            "caption": "mensagens",
-            "editor": "custom_type",
-            "name": "mensagens",
             "optional": true,
             "rank": 4
         },
         "AOV": {
-            "caption": "server url",
+            "caption": "Servidor URL",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "url",
             "rank": 0,
@@ -52,12 +47,11 @@
             "rank": 1,
             "value": "text"
         },
-        "AOY": {
-            "caption": "Chats Real Time",
-            "editor": "custom_type",
-            "name": "chatsrt",
-            "optional": true,
-            "rank": 5
+        "AOo": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 3
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -74,24 +68,6 @@
             "is_list": true,
             "name": "chats",
             "value": "custom_data_AOT"
-        },
-        "AOS": {
-            "caption": "mensagens",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "is_list": true,
-            "name": "mensagens",
-            "value": "custom_data_AOU"
-        },
-        "AOa": {
-            "caption": "contatos",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "is_list": true,
-            "name": "contatos",
-            "value": "custom_data_AOY"
         },
         "AOg": {
             "caption": "error",
@@ -116,15 +92,6 @@
             },
             "name": "sseConnected",
             "value": "text"
-        },
-        "AOm": {
-            "caption": "Chats Real Time",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "is_list": true,
-            "name": "chatsrt",
-            "value": "custom_data_AOY"
         }
     }
 }
