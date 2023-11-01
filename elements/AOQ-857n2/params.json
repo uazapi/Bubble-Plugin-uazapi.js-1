@@ -5,7 +5,7 @@
         "height": 20,
         "width": 20
     },
-    "display": "🤖 realtime",
+    "display": "🤖 Chats + Mensagens (realtime)",
     "events": {
         "AOi": {
             "caption": "Aconteceu um erro",
@@ -48,7 +48,7 @@
             "value": "text"
         },
         "AOo": {
-            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
             "editor": "Label",
             "name": "info",
             "rank": 3
@@ -86,7 +86,7 @@
             "value": "text"
         },
         "AOj": {
-            "caption": "Conectado",
+            "caption": "Status Real Time",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },

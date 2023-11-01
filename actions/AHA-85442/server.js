@@ -1,6 +1,6 @@
-const fetch = require('node-fetch');
-
 async function(properties, context) {
+    //▶️ Mensagem - Baixar arquivo
+    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
