@@ -28,12 +28,17 @@ function(instance, properties, context) {
     myHeaders.append("uazapi", "true");
     myHeaders.append("apikey", properties.apikey);
   
+let send = properties.audio
+// Verifica e corrige o campo "send" se necessário
+if (properties.audio && properties.audio.startsWith("//")) {
+send = "https:" + properties.audio;
+}
 
   var raw = JSON.stringify(
     {
       "number": properties.number,
       "audioMessage": {
-        "audio": properties.audio
+        "audio": send
       },
       "options": {
         "delay": properties.delay,

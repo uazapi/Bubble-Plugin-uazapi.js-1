@@ -36,10 +36,15 @@ async function(properties, context) {
         "apikey": apikey
     };
 
+let send = properties.content
+// Verifica e corrige o campo "send" se necessário
+if (properties.content && properties.content.startsWith("//")) {
+send = "https:" + properties.content;
+}
     const body = {
         "statusMessage": {
             "type": properties.type,
-            "content": properties.content,
+            "content": send,
             "allContacts": true
         }
     };

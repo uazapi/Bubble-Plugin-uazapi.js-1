@@ -30,10 +30,15 @@ myHeaders.append("Content-Type", "application/json");
 myHeaders.append("uazapi", "true");
 myHeaders.append("apikey", properties.apikey);
   
+let send = properties.media
+// Verifica e corrige o campo "send" se necessário
+if (properties.media && properties.media.startsWith("//")) {
+send = "https:" + properties.media;
+}
 
 let mediaMessage = {
   "mediatype": properties.mediatype,
-  "media": properties.media,
+  "media": send,
   ...caption,
   ...fileName
 }

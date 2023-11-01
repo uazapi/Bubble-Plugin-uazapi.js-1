@@ -36,10 +36,16 @@ async function(properties, context) {
         "apikey": apikey
     };
         
+let send = properties.audio
+// Verifica e corrige o campo "send" se necessário
+if (properties.audio && properties.audio.startsWith("//")) {
+send = "https:" + properties.audio;
+}
+
     const body = {
         "number": properties.number,
         "audioMessage": {
-            "audio": properties.audio
+            "audio": send
         },
         "options": {
             "delay": properties.delay,

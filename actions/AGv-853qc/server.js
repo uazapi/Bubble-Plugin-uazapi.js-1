@@ -30,9 +30,10 @@ async function(properties, context) {
 
     const url = `${baseUrl}/message/sendMedia/${instancia}`;
     
-    // Verifica e corrige o campo "media" se necessário
+    let send = properties.media
+    // Verifica e corrige o campo "send" se necessário
     if (properties.media && properties.media.startsWith("//")) {
-    properties.media = "https:" + properties.media;
+    send = "https:" + properties.media;
     }
 
     // campos opcionais
@@ -41,7 +42,7 @@ async function(properties, context) {
 
     const mediaMessage = {
         "mediatype": properties.mediatype,
-        "media": properties.media,
+        "media": send,
         ...caption,
         ...fileName
     };

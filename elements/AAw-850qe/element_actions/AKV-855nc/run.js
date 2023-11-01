@@ -29,11 +29,16 @@
     myHeaders.append("uazapi", "true");
     myHeaders.append("apikey", properties.apikey);
     
+let send = properties.image
+// Verifica e corrige o campo "send" se necessário
+if (properties.image && properties.image.startsWith("//")) {
+send = "https:" + properties.image;
+}
 
     var raw =  {
         "number": properties.number,
         "stickerMessage": {
-          "image": properties.image
+          "image": send
             },
         "options": {
           "delay": properties.delay,

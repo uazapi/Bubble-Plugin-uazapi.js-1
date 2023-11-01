@@ -27,10 +27,15 @@ function(instance, properties, context) {
   myHeaders.append("Content-Type", "application/json");
   myHeaders.append("apikey", properties.apikey);
   
+let send = properties.image
+// Verifica e corrige o campo "send" se necessário
+if (properties.image && properties.image.startsWith("//")) {
+send = "https:" + properties.image;
+}
 
   var raw = JSON.stringify(
     {
-      "image": properties.image
+      "image": send
     }
   );
 
