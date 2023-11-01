@@ -18,11 +18,18 @@
     },
     "fields": {
         "AOT": {
-            "caption": "Chats+",
+            "caption": "chats",
             "editor": "custom_type",
             "name": "chats",
             "optional": true,
             "rank": 3
+        },
+        "AOU": {
+            "caption": "mensagens",
+            "editor": "custom_type",
+            "name": "mensagens",
+            "optional": true,
+            "rank": 4
         },
         "AOV": {
             "caption": "server url",
@@ -44,6 +51,13 @@
             "name": "instancia",
             "rank": 1,
             "value": "text"
+        },
+        "AOY": {
+            "caption": "Chats Real Time",
+            "editor": "custom_type",
+            "name": "chatsrt",
+            "optional": true,
+            "rank": 5
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -53,13 +67,31 @@
     },
     "states": {
         "AOR": {
-            "caption": "Chats+",
+            "caption": "chats",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
             "is_list": true,
             "name": "chats",
             "value": "custom_data_AOT"
+        },
+        "AOS": {
+            "caption": "mensagens",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "mensagens",
+            "value": "custom_data_AOU"
+        },
+        "AOa": {
+            "caption": "contatos",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "contatos",
+            "value": "custom_data_AOY"
         },
         "AOg": {
             "caption": "error",
@@ -84,6 +116,15 @@
             },
             "name": "sseConnected",
             "value": "text"
+        },
+        "AOm": {
+            "caption": "Chats Real Time",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "chatsrt",
+            "value": "custom_data_AOY"
         }
     }
 }

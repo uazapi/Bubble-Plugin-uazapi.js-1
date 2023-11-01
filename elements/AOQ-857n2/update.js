@@ -103,7 +103,7 @@ function(instance, properties, context) {
                 }
 
                 if (!instance.data.chats || !Array.isArray(instance.data.chats)) {
-                    instance.data.chats = [];
+                    instance.data.chats = []; 
                 }
 
                 // Adicione a mensagem à lista de mensagens (sem verificar duplicatas aqui)
