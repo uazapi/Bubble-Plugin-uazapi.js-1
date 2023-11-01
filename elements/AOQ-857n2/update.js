@@ -44,19 +44,20 @@ function(instance, properties, context) {
 
       let source; // Mantenha esta variável no escopo mais amplo, fora da função startSSE
       // Inicialmente sete para false no início do código
-        instance.data.sseStarted = false;
-        console.log(instance.data.sseStarted);
+        instance.data.sseConnected = "desconectado";
+        console.log(instance.data.sseConnected);
+        
 
       function startSSE() {
-        if (instance.data.sseStarted) {
-            console.log("SSE já foi iniciado anteriormente.");
-            return; // Não executa o resto da função se o SSE já foi iniciado
+        if (instance.data.sseConnected === "iniciando" || instance.data.sseConnected === "conectado") {
+            console.log("Conexão SSE já está em processo ou já foi estabelecida.");
+            return; // Não executa o resto da função se o SSE já foi iniciado ou está conectado
         }
         
         console.log("startSSE iniciado", Date.now());
        
-        instance.data.sseStarted = true; 
-        console.log(instance.data.sseStarted);
+        instance.data.sseConnected = "iniciando";
+        console.log(instance.data.sseConnected);
 
 
           // Se uma conexão SSE já existir, feche-a
@@ -74,68 +75,126 @@ function(instance, properties, context) {
               }
           });
           
+           
           source.onmessage = function(event) {
               let data = JSON.parse(event.data);
+
+            // Checa se a mensagem é uma informação de conexão estabelecida
+            if (data.info && data.info === "Conexão estabelecida") {
+                console.log("Conexão SSE estabelecida com sucesso!");
+                instance.data.sseConnected = "conectado";
+                console.log(instance.data.sseConnected);
+                return;  // Retorna aqui para não processar o resto da função
+            }
               
-                // Processamento de mensagens
-                if (data.message && data.message.key && data.message.key.id) {
-                    console.log("msg recebida");
+            // Processamento de mensagens
+            if (data.message && data.message.key && data.message.key.id) {
+                console.log("msg recebida");
 
-                    let msgConverted = convert(data.message);
+                let msgConverted = convert(data.message);
 
-                    // Verifique se instance.data e instance.data.mensagens existem e estão definidos corretamente
-                    if (!instance.data) {
-                        instance.data = {};
-                    }
-                    
-                    if (!instance.data.mensagens || !Array.isArray(instance.data.mensagens)) {
-                        instance.data.mensagens = [];
-                    }
-
-                    let existingMessageIndex = instance.data.mensagens.findIndex(msg => msg && msg["_p_key.id"] === msgConverted["_p_key.id"]);
-
-                    // Se a mensagem existir, atualize-a
-                    if (existingMessageIndex !== -1) {
-                        console.log("msg existe");
-                        instance.data.mensagens[existingMessageIndex] = msgConverted;
-                    } else {
-                        // Caso contrário, adicione a nova mensagem à lista
-                        console.log("msg não existe");
-                        instance.data.mensagens.push(msgConverted);
-                    }
-
-                    console.log(JSON.stringify(msgConverted, null, 2));
-                    
-                    // Atualize o estado com a nova lista de mensagens
-                    instance.publishState('mensagens', instance.data.mensagens);
+                // Verifique se instance.data e instance.data.mensagens existem e estão definidos corretamente
+                if (!instance.data) {
+                    instance.data = {};
                 }
+
+                if (!instance.data.mensagens || !Array.isArray(instance.data.mensagens)) {
+                    instance.data.mensagens = [];
+                }
+
+                if (!instance.data.chats || !Array.isArray(instance.data.chats)) {
+                    instance.data.chats = [];
+                }
+
+                let existingMessageIndex = instance.data.mensagens.findIndex(msg => msg && msg["_p_key.id"] === msgConverted["_p_key.id"]);
+
+                // Se a mensagem existir, atualize-a
+                if (existingMessageIndex !== -1) {
+                    console.log("msg existe");
+                    instance.data.mensagens[existingMessageIndex] = msgConverted;
+                } else {
+                    // Caso contrário, adicione a nova mensagem à lista
+                    console.log("msg não existe");
+                    instance.data.mensagens.push(msgConverted);
+                }
+
+               // Logs para depuração
+                if (msgConverted["_p_key.remoteJid"]) {
+                    console.log("A mensagem possui _p_key.remoteJid:", msgConverted["_p_key.remoteJid"]);
+                } else {
+                    console.log("A mensagem não possui _p_key.remoteJid");
+                }
+
+                const chatIndex = instance.data.chats.findIndex(chat => chat["_p_id"] === msgConverted["_p_key.remoteJid"]);
+
+                if (chatIndex !== -1) {
+                    console.log("Chat encontrado para a mensagem");
+
+                    if (!instance.data.chats[chatIndex]._p_msgs) {
+                        instance.data.chats[chatIndex]._p_msgs = [];
+                    }
+
+                    instance.data.chats[chatIndex]._p_msgs.push(msgConverted);
+                    console.log("Mensagem adicionada ao chat");
+                } else {
+                    console.log("Chat NÃO encontrado para a mensagem");
+                }
+
+                console.log(JSON.stringify(msgConverted, null, 2));
+
+
+
+            // Atualize o estado com a nova lista de mensagens
+            instance.publishState('mensagens', instance.data.mensagens);
+
+            // Atualize o estado com a nova lista de chats
+            instance.publishState('chats', instance.data.chats);
+            instance.triggerEvent('updateEvent');
+            }
+
+
       
-              // Faça algo semelhante para os chats.
-              if (data.chat && data.chat.id) {
-                  console.log("chat recebido");
-      
-                  let chatConverted = convert(data.chat);
-      
-                  let existingChatIndex = instance.data.chats.findIndex(chat => chat && chat["_p_id"] === chatConverted["_p_id"]);
-      
-                  // Se o chat existir, atualize-o
-                  if (existingChatIndex !== -1) {
-                      console.log("chat existe");
-                      instance.data.chats[existingChatIndex] = chatConverted;
-                  } else {
-                      console.log("chat não existe");
-                      // Caso contrário, adicione o novo chat à lista
-                      instance.data.chats.push(chatConverted);
-                  }
-      
-                  // Atualize o estado com a nova lista de chats
-                  instance.publishState('chats', instance.data.chats);
-              }
+             // Faça algo semelhante para os chats.
+             if (data.chat && data.chat.id) {
+                console.log("chat recebido");
+            
+                let chatConverted = convert(data.chat);
+            
+                let existingChatIndex = instance.data.chats.findIndex(chat => chat && chat["_p_id"] === chatConverted["_p_id"]);
+            
+                // Se o chat existir, atualize-o
+                if (existingChatIndex !== -1) {
+                    console.log("chat existe");
+            
+                    // Guardar temporariamente o valor de _p_msgs do chat existente
+                    let existingMsgs = instance.data.chats[existingChatIndex]["_p_msgs"];
+            
+                    // Sobrescrever o chat
+                    instance.data.chats[existingChatIndex] = chatConverted;
+            
+                    // Restaurar o valor de _p_msgs do chat existente
+                    instance.data.chats[existingChatIndex]["_p_msgs"] = existingMsgs;
+                } else {
+                    console.log("chat não existe");
+                    
+                    // Caso contrário, adicione o novo chat à lista
+                    chatConverted["_p_msgs"] = {};  // Inicializar _p_msgs como um objeto vazio
+                    instance.data.chats.push(chatConverted);
+                }
+            
+                console.log(JSON.stringify(chatConverted, null, 2));
+                // Atualize o estado com a nova lista de chats
+                instance.publishState('chats', instance.data.chats);
+                instance.triggerEvent('updateEvent');
+            }
+            
           }
       
           source.onerror = function(error) {
-              console.error("Error occurred with SSE:", error);
-          };
+            console.error("Error occurred with SSE:", error);
+            instance.data.sseConnected = "desconectado";
+        };
+        
       }
       
       
@@ -218,10 +277,15 @@ function(instance, properties, context) {
         const url = `${baseUrl}/chat/findChats/${instancia}`;
         return sendRequest(url)
             .then(resultObj => {
-                instance.data.chats = resultObj;  
-                instance.publishState('chats', resultObj);
+                // Adicione um array vazio de 'msgs' a cada chat
+                instance.data.chats = resultObj.map(chat => {
+                    chat._p_msgs = [];
+                    return chat;
+                });
+                
+                instance.publishState('chats', instance.data.chats);
                 console.log(instance.data.chats);
-                return resultObj;
+                return instance.data.chats;
             })
             .catch(error => {
                 if (error.message === 'not ready') {
@@ -231,14 +295,44 @@ function(instance, properties, context) {
                 }
             });
     }
+    
 
     function fetchMessages() {
         const { baseUrl, instancia } = getBaseUrlAndInstance();
         const url = `${baseUrl}/chat/findMessages/${instancia}`;
+    
         return sendRequest(url, 'POST')
             .then(resultObj => {
-               // instance.data.mensagens = resultObj;  
-               // instance.publishState('mensagens', resultObj);
+                // Primeiro, limpe todos os campos _p_msgs
+                instance.data.chats.forEach(chat => {
+                    chat._p_msgs = [];
+                });
+    
+                // Crie um mapa para rastrear "_p_key.remoteJid" até os chats
+                const chatMap = {};
+                instance.data.chats.forEach(chat => {
+                    chatMap[chat["_p_id"]] = chat;
+                });
+    
+                resultObj.forEach(message => {
+                    // Verificando a propriedade '_p_key.remoteJid' da mensagem
+                    const remoteJid = message["_p_key.remoteJid"];
+                    if (remoteJid) {
+                        const chat = chatMap[remoteJid]; // Busca O(1) em vez de O(n)
+    
+                        if (chat) {
+                            chat._p_msgs.push(message);
+                        }
+                    } else {
+                        // Se não encontrarmos a propriedade desejada, vamos imprimir a mensagem completa
+                        console.log("Mensagem sem '_p_key.remoteJid': ", message);
+                    }
+                });
+    
+                instance.data.mensagens = resultObj;
+                instance.publishState('mensagens', resultObj);
+                instance.publishState('chats', instance.data.chats); 
+                console.log(instance.data.chats);
             })
             .catch(error => {
                 if (error.message === 'not ready') {
@@ -247,7 +341,13 @@ function(instance, properties, context) {
                     handleGlobalError(error);
                 }
             });
-    } 
+    }
+    
+    
+    
+    
+    
+    
 
     function handleGlobalError(error) {
         console.error(error);

@@ -10,6 +10,10 @@
         "AOi": {
             "caption": "Aconteceu um erro",
             "name": "errorEvent"
+        },
+        "AOn": {
+            "caption": "Teve atualização",
+            "name": "updateEvent"
         }
     },
     "fields": {
@@ -18,14 +22,14 @@
             "editor": "custom_type",
             "name": "chats",
             "optional": true,
-            "rank": 5
+            "rank": 3
         },
         "AOU": {
             "caption": "mensagens",
             "editor": "custom_type",
             "name": "mensagens",
             "optional": true,
-            "rank": 7
+            "rank": 4
         },
         "AOV": {
             "caption": "server url",
@@ -49,49 +53,11 @@
             "value": "text"
         },
         "AOY": {
-            "caption": "contatos",
+            "caption": "Chats Real Time",
             "editor": "custom_type",
-            "name": "contatos",
+            "name": "chatsrt",
             "optional": true,
-            "rank": 9
-        },
-        "AOZ": {
-            "caption": "Instância - Detalhes",
-            "editor": "custom_type",
-            "name": "instanceinfo",
-            "rank": 3
-        },
-        "AOc": {
-            "caption": "Chats em tempo real",
-            "default_val": true,
-            "editor": "DynamicValue",
-            "name": "loadchats",
-            "rank": 6,
-            "value": "boolean"
-        },
-        "AOd": {
-            "caption": "Mensagens em tempo real",
-            "default_val": true,
-            "editor": "DynamicValue",
-            "name": "loadmensagens",
-            "rank": 8,
-            "value": "boolean"
-        },
-        "AOe": {
-            "caption": "Contatos em tempo real",
-            "default_val": true,
-            "editor": "DynamicValue",
-            "name": "loadcontatos",
-            "rank": 10,
-            "value": "boolean"
-        },
-        "AOf": {
-            "caption": "Carregar Detalhes da Instância",
-            "default_val": true,
-            "editor": "DynamicValue",
-            "name": "loadinfo",
-            "rank": 4,
-            "value": "boolean"
+            "rank": 5
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -127,14 +93,6 @@
             "name": "contatos",
             "value": "custom_data_AOY"
         },
-        "AOb": {
-            "caption": "instanceinfo",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "instanceinfo",
-            "value": "custom_data_AOZ"
-        },
         "AOg": {
             "caption": "error",
             "initialization_code": {
@@ -156,8 +114,17 @@
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "name": "sseStarted",
-            "value": "boolean"
+            "name": "sseConnected",
+            "value": "text"
+        },
+        "AOm": {
+            "caption": "Chats Real Time",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "chatsrt",
+            "value": "custom_data_AOY"
         }
     }
 }
