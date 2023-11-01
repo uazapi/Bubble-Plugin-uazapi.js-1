@@ -139,7 +139,7 @@ function(instance, properties, context) {
                 console.log(JSON.stringify(msgConverted, null, 2));
 
                 // Atualize o estado com a nova lista de mensagens
-                instance.publishState('mensagens', instance.data.mensagens);
+                //instance.publishState('mensagens', instance.data.mensagens);
 
                 // Atualize o estado com a nova lista de chats
                 instance.publishState('chats', instance.data.chats);
@@ -328,7 +328,7 @@ function(instance, properties, context) {
                 });
     
                 instance.data.mensagens = resultObj;
-                instance.publishState('mensagens', resultObj);
+               // instance.publishState('mensagens', resultObj);
                 instance.publishState('chats', instance.data.chats); 
                 console.log(instance.data.chats);
             })
