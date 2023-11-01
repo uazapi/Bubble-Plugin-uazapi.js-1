@@ -106,24 +106,8 @@ function(instance, properties, context) {
                     instance.data.chats = [];
                 }
 
-                let existingMessageIndex = instance.data.mensagens.findIndex(msg => msg && msg["_p_key.id"] === msgConverted["_p_key.id"]);
-
-                // Se a mensagem existir, atualize-a
-                if (existingMessageIndex !== -1) {
-                    console.log("msg existe");
-                    instance.data.mensagens[existingMessageIndex] = msgConverted;
-                } else {
-                    // Caso contrário, adicione a nova mensagem à lista
-                    console.log("msg não existe");
-                    instance.data.mensagens.push(msgConverted);
-                }
-
-               // Logs para depuração
-                if (msgConverted["_p_key.remoteJid"]) {
-                    console.log("A mensagem possui _p_key.remoteJid:", msgConverted["_p_key.remoteJid"]);
-                } else {
-                    console.log("A mensagem não possui _p_key.remoteJid");
-                }
+                // Adicione a mensagem à lista de mensagens (sem verificar duplicatas aqui)
+                instance.data.mensagens.push(msgConverted);
 
                 const chatIndex = instance.data.chats.findIndex(chat => chat["_p_id"] === msgConverted["_p_key.remoteJid"]);
 
@@ -134,23 +118,37 @@ function(instance, properties, context) {
                         instance.data.chats[chatIndex]._p_msgs = [];
                     }
 
-                    instance.data.chats[chatIndex]._p_msgs.push(msgConverted);
-                    console.log("Mensagem adicionada ao chat");
+                    // Verifique se a mensagem já existe no chat
+                    let existingMessageIndexInChat = instance.data.chats[chatIndex]._p_msgs.findIndex(msg => msg && msg["_p_key.id"] === msgConverted["_p_key.id"]);
+
+                    // Se a mensagem existir no chat, atualize-a
+                    if (existingMessageIndexInChat !== -1) {
+                        console.log("msg existe no chat");
+                        instance.data.chats[chatIndex]._p_msgs[existingMessageIndexInChat] = msgConverted;
+                    } else {
+                        // Caso contrário, adicione a nova mensagem ao chat
+                        console.log("msg não existe no chat");
+                        instance.data.chats[chatIndex]._p_msgs.push(msgConverted);
+                        console.log("Mensagem adicionada ao chat");
+                    }
+
                 } else {
                     console.log("Chat NÃO encontrado para a mensagem");
                 }
 
                 console.log(JSON.stringify(msgConverted, null, 2));
 
+                // Atualize o estado com a nova lista de mensagens
+                instance.publishState('mensagens', instance.data.mensagens);
 
+                // Atualize o estado com a nova lista de chats
+                instance.publishState('chats', instance.data.chats);
 
-            // Atualize o estado com a nova lista de mensagens
-            instance.publishState('mensagens', instance.data.mensagens);
-
-            // Atualize o estado com a nova lista de chats
-            instance.publishState('chats', instance.data.chats);
-            instance.triggerEvent('updateEvent');
+                // Emitir um evento de atualização
+                instance.triggerEvent('updateEvent');
             }
+
+
 
 
       
