@@ -18,11 +18,11 @@
     },
     "fields": {
         "AOT": {
-            "caption": "Chats RT",
-            "doc": "Selecione 📄 Chats RT⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Dentro de cada chat tem \"msgs\", local onde fica as mensagens de cada chat.",
+            "caption": "Chats",
+            "doc": "Selecione 📄 Chats",
             "editor": "custom_type",
             "name": "chats",
-            "optional": true,
+            "optional": false,
             "rank": 4
         },
         "AOV": {
@@ -52,6 +52,21 @@
             "editor": "Label",
             "name": "info",
             "rank": 3
+        },
+        "AOp": {
+            "caption": "Mensagens",
+            "doc": "Selecione 📄 Mensagens",
+            "editor": "custom_type",
+            "name": "mensagens",
+            "rank": 5
+        },
+        "AOr": {
+            "caption": "Chat selecionado",
+            "doc": "1- Crie um custom state tipo texto, 2- Crie uma ação de definir o custom state com o id do chat sempre ao clicar no chat, 3- coloque o custom state criado aqui...",
+            "editor": "DynamicValue",
+            "name": "chat_selecionado",
+            "rank": 6,
+            "value": "text"
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -92,6 +107,23 @@
             },
             "name": "sseConnected",
             "value": "text"
+        },
+        "AOq": {
+            "caption": "Chat selecionado",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "chatSelect",
+            "value": "custom_data_AOT"
+        },
+        "AOs": {
+            "caption": "Mensagens do Chat",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "mensagens",
+            "value": "custom_data_AOp"
         }
     }
 }
