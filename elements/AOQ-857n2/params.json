@@ -12,8 +12,8 @@
             "name": "errorEvent"
         },
         "AOn": {
-            "caption": "Teve atualização",
-            "name": "updateEvent"
+            "caption": "Teve atualização no chat",
+            "name": "updateChat"
         }
     },
     "fields": {
@@ -67,6 +67,15 @@
             "name": "chat_selecionado",
             "rank": 6,
             "value": "text"
+        },
+        "AOt": {
+            "caption": "Quantidade Mensagens",
+            "doc": "Coloque a quantidade limite de mensagens, é opcional, se não colocar, vai vir todas. Se tiver lento, coloque um limite para ver se melhora.",
+            "editor": "DynamicValue",
+            "name": "limit",
+            "optional": true,
+            "rank": 7,
+            "value": "number"
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -107,14 +116,6 @@
             },
             "name": "sseConnected",
             "value": "text"
-        },
-        "AOq": {
-            "caption": "Chat selecionado",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "chatSelect",
-            "value": "custom_data_AOT"
         },
         "AOs": {
             "caption": "Mensagens do Chat",

@@ -1,5 +1,7 @@
 function(instance, properties, context) {
     
+    instance.data.chat_selecionado = properties.chat_selecionado
+    
 
     const convert = (data, param_prefix = '_p_') => {
         let addPrefix = (obj, key_parent = null, is_array = false) => {
@@ -44,7 +46,10 @@ function(instance, properties, context) {
 
       let source; // Mantenha esta variável no escopo mais amplo, fora da função startSSE
       // Inicialmente sete para false no início do código
+      if (typeof instance.data.sseConnected === 'undefined' || instance.data.sseConnected !== "conectado") {
         instance.data.sseConnected = "desconectado";
+        }
+    
         console.log(instance.data.sseConnected);
         
 
@@ -89,64 +94,54 @@ function(instance, properties, context) {
               
             // Processamento de mensagens
             if (data.message && data.message.key && data.message.key.id) {
-                console.log("msg recebida");
+                //console.log("Mensagem recebida:", data.message.key.id);
 
                 let msgConverted = convert(data.message);
 
-                // Verifique se instance.data e instance.data.mensagens existem e estão definidos corretamente
+                // Verifique se instance.data e instance.data.mensagens estão definidos corretamente
                 if (!instance.data) {
                     instance.data = {};
                 }
-
+                
                 if (!instance.data.mensagens || !Array.isArray(instance.data.mensagens)) {
                     instance.data.mensagens = [];
                 }
+                
+                // Adicione a mensagem à lista de mensagens apenas se for do chat selecionado
+                if (msgConverted["_p_key.remoteJid"] === instance.data.chat_selecionado) {
+                    console.log("A mensagem pertence ao chat selecionado:", instance.data.chat_selecionado);
 
-                if (!instance.data.chats || !Array.isArray(instance.data.chats)) {
-                    instance.data.chats = []; 
-                }
+                    // Verifique se a mensagem já existe na lista de mensagens
+                    let existingMessageIndex = instance.data.mensagens.findIndex(msg => msg["_p_key.id"] === msgConverted["_p_key.id"]);
 
-                // Adicione a mensagem à lista de mensagens (sem verificar duplicatas aqui)
-                instance.data.mensagens.push(msgConverted);
-
-                const chatIndex = instance.data.chats.findIndex(chat => chat["_p_id"] === msgConverted["_p_key.remoteJid"]);
-
-                if (chatIndex !== -1) {
-                    console.log("Chat encontrado para a mensagem");
-
-                    if (!instance.data.chats[chatIndex]._p_msgs) {
-                        instance.data.chats[chatIndex]._p_msgs = [];
-                    }
-
-                    // Verifique se a mensagem já existe no chat
-                    let existingMessageIndexInChat = instance.data.chats[chatIndex]._p_msgs.findIndex(msg => msg && msg["_p_key.id"] === msgConverted["_p_key.id"]);
-
-                    // Se a mensagem existir no chat, atualize-a
-                    if (existingMessageIndexInChat !== -1) {
-                        console.log("msg existe no chat");
-                        instance.data.chats[chatIndex]._p_msgs[existingMessageIndexInChat] = msgConverted;
+                    // Se a mensagem já existir na lista, atualize-a
+                    if (existingMessageIndex !== -1) {
+                        console.log("A mensagem já existe na lista e será atualizada. ID da mensagem:", msgConverted["_p_key.id"]);
+                        instance.data.mensagens[existingMessageIndex] = msgConverted;
                     } else {
-                        // Caso contrário, adicione a nova mensagem ao chat
-                        console.log("msg não existe no chat");
-                        instance.data.chats[chatIndex]._p_msgs.push(msgConverted);
-                        console.log("Mensagem adicionada ao chat");
+                        // Caso contrário, adicione a nova mensagem à lista
+                        console.log("A mensagem é nova e será adicionada à lista. ID da mensagem:", msgConverted["_p_key.id"]);
+                        instance.data.mensagens.push(msgConverted);
                     }
+
+                   
 
                 } else {
-                    console.log("Chat NÃO encontrado para a mensagem");
+                    console.log("A mensagem não pertence ao chat selecionado. ID do chat da mensagem:", msgConverted["_p_key.remoteJid"]);
                 }
 
-                console.log(JSON.stringify(msgConverted, null, 2));
+                // Log da mensagem convertida para fins de depuração
+               // console.log("Dados da mensagem convertida:", JSON.stringify(msgConverted, null, 2));
+
+               console.log("remotejid:", msgConverted["_p_key.remoteJid"]);
+               console.log("Chat selecionado:", properties.chat_selecionado);
+               console.log("Chat da instancia:", instance.data.chat_selecionado);
 
                 // Atualize o estado com a nova lista de mensagens
-                //instance.publishState('mensagens', instance.data.mensagens);
-
-                // Atualize o estado com a nova lista de chats
-                instance.publishState('chats', instance.data.chats);
-
-                // Emitir um evento de atualização
-                instance.triggerEvent('updateEvent');
+                instance.publishState('mensagens', instance.data.mensagens);
             }
+
+
 
 
 
@@ -180,10 +175,10 @@ function(instance, properties, context) {
                     instance.data.chats.push(chatConverted);
                 }
             
-                console.log(JSON.stringify(chatConverted, null, 2));
+                //console.log(JSON.stringify(chatConverted, null, 2));
                 // Atualize o estado com a nova lista de chats
                 instance.publishState('chats', instance.data.chats);
-                instance.triggerEvent('updateEvent');
+                instance.triggerEvent('updateChat');
             }
             
           }
@@ -296,41 +291,33 @@ function(instance, properties, context) {
     
 
     function fetchMessages() {
+        // Verifica se 'chat_selecionado' é null ou undefined
+        if (properties.chat_selecionado == null) {
+            console.log("Nenhum chat selecionado. Função não será executada.");
+            return; // Interrompe a execução da função aqui
+        }
+
+
         const { baseUrl, instancia } = getBaseUrlAndInstance();
         const url = `${baseUrl}/chat/findMessages/${instancia}`;
+        
+        let limite = properties.limit ? { "limit": properties.limit } : {};
     
-        return sendRequest(url, 'POST')
+        let requestBody = {
+            "where": {
+                "key": {
+                    "remoteJid": properties.chat_selecionado
+                }
+            },
+            ...limite
+        };
+        
+        return sendRequest(url, 'POST', requestBody)
             .then(resultObj => {
-                // Primeiro, limpe todos os campos _p_msgs
-                instance.data.chats.forEach(chat => {
-                    chat._p_msgs = [];
-                });
-    
-                // Crie um mapa para rastrear "_p_key.remoteJid" até os chats
-                const chatMap = {};
-                instance.data.chats.forEach(chat => {
-                    chatMap[chat["_p_id"]] = chat;
-                });
-    
-                resultObj.forEach(message => {
-                    // Verificando a propriedade '_p_key.remoteJid' da mensagem
-                    const remoteJid = message["_p_key.remoteJid"];
-                    if (remoteJid) {
-                        const chat = chatMap[remoteJid]; // Busca O(1) em vez de O(n)
-    
-                        if (chat) {
-                            chat._p_msgs.push(message);
-                        }
-                    } else {
-                        // Se não encontrarmos a propriedade desejada, vamos imprimir a mensagem completa
-                        console.log("Mensagem sem '_p_key.remoteJid': ", message);
-                    }
-                });
-    
+                // As mensagens são diretamente armazenadas sem serem adicionadas aos chats
                 instance.data.mensagens = resultObj;
-               // instance.publishState('mensagens', resultObj);
-                instance.publishState('chats', instance.data.chats); 
-                console.log(instance.data.chats);
+                instance.publishState('mensagens', resultObj);
+                //console.log(instance.data.mensagens);
             })
             .catch(error => {
                 if (error.message === 'not ready') {
@@ -340,6 +327,7 @@ function(instance, properties, context) {
                 }
             });
     }
+    
     
     
     
