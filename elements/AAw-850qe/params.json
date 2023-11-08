@@ -308,14 +308,6 @@
             "name": "idgrupo",
             "value": "text"
         },
-        "AKE": {
-            "caption": "arquivo blob",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "blobUrl",
-            "value": "text"
-        },
         "AMg": {
             "caption": "Minha Privacidade",
             "initialization_code": {
