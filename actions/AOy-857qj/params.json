@@ -1,5 +1,111 @@
 {
     "category": "plugins",
     "display": "▶️ Arquivar Conversa",
+    "fields": {
+        "AME": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMH": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "ANH": {
+            "caption": "Automações",
+            "doc": "Selecione: 📄Automações",
+            "editor": "custom_type",
+            "name": "ticketSystem",
+            "rank": 4
+        },
+        "AOL": {
+            "caption": "Ativar fluxos",
+            "doc": "Ativar fluxos, fluxos são chatbots que podem ser criado diretamente na API.",
+            "editor": "DynamicValue",
+            "name": "enabled",
+            "rank": 5,
+            "value": "boolean"
+        },
+        "AOM": {
+            "caption": "Ignorar grupos",
+            "doc": "Vai ignorar as mensagens dos grupos nos fluxos apenas.",
+            "editor": "DynamicValue",
+            "name": "ignoreGroups",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "AON": {
+            "caption": "Prefixo para comandos",
+            "doc": "Use ! ou / ou algum caracter não comum. O comando para parar fluxo tem que iniciar por esse prefixo.",
+            "editor": "DynamicValue",
+            "name": "prefixCommand",
+            "rank": 7,
+            "value": "text"
+        },
+        "AOO": {
+            "caption": "Pausar fluxo com msg",
+            "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem com o comando aqui definido.",
+            "editor": "DynamicValue",
+            "name": "stopConversation",
+            "rank": 8,
+            "value": "text"
+        },
+        "AOP": {
+            "caption": "Tempo de pausa",
+            "default_val": 30,
+            "doc": "Defina o tempo em que irá ficar pausada o fluxo com a função de pausa acima, em minutos.",
+            "editor": "DynamicValue",
+            "name": "stopMinutes",
+            "rank": 9,
+            "value": "number"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 1,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 3,
+            "value": "text"
+        },
+        "ANA": {
+            "caption": "Automações",
+            "name": "ticketSystem",
+            "rank": 0,
+            "value": "custom_data_ANH"
+        }
+    },
     "type": "server_side"
 }

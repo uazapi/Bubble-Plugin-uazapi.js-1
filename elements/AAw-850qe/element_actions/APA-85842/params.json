@@ -1,3 +1,37 @@
 {
-    "caption": "🔓Arquivar Conversa"
+    "caption": "🔓Arquivar Conversa",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        }
+    }
 }
