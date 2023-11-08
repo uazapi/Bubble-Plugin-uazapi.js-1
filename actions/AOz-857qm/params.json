@@ -32,35 +32,12 @@
             "name": "apikey_opcional",
             "rank": 3
         },
-        "ANH": {
-            "caption": "Automações",
-            "doc": "Selecione: 📄Automações",
-            "editor": "custom_type",
-            "name": "ticketSystem",
-            "rank": 4
-        },
-        "AOL": {
-            "caption": "Ativar fluxos",
-            "doc": "Ativar fluxos, fluxos são chatbots que podem ser criado diretamente na API.",
-            "editor": "DynamicValue",
-            "name": "enabled",
-            "rank": 5,
-            "value": "boolean"
-        },
-        "AOM": {
-            "caption": "Ignorar grupos",
-            "doc": "Vai ignorar as mensagens dos grupos nos fluxos apenas.",
-            "editor": "DynamicValue",
-            "name": "ignoreGroups",
-            "rank": 6,
-            "value": "boolean"
-        },
         "AON": {
-            "caption": "Prefixo para comandos",
-            "doc": "Use ! ou / ou algum caracter não comum. O comando para parar fluxo tem que iniciar por esse prefixo.",
+            "caption": "Destinatário",
+            "doc": "Número do telefone em formato internacional",
             "editor": "DynamicValue",
-            "name": "prefixCommand",
-            "rank": 7,
+            "name": "number",
+            "rank": 4,
             "value": "text"
         },
         "AOO": {
@@ -68,7 +45,7 @@
             "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem com o comando aqui definido.",
             "editor": "DynamicValue",
             "name": "stopConversation",
-            "rank": 8,
+            "rank": 5,
             "value": "text"
         },
         "AOP": {
@@ -77,7 +54,7 @@
             "doc": "Defina o tempo em que irá ficar pausada o fluxo com a função de pausa acima, em minutos.",
             "editor": "DynamicValue",
             "name": "stopMinutes",
-            "rank": 9,
+            "rank": 6,
             "value": "number"
         }
     },
@@ -85,26 +62,20 @@
         "AGf": {
             "caption": "log",
             "name": "log",
-            "rank": 1,
+            "rank": 0,
             "value": "text"
         },
         "AGk": {
             "caption": "error",
             "name": "error",
-            "rank": 2,
+            "rank": 1,
             "value": "boolean"
         },
         "AGl": {
             "caption": "error_log",
             "name": "error_log",
-            "rank": 3,
+            "rank": 2,
             "value": "text"
-        },
-        "ANA": {
-            "caption": "Automações",
-            "name": "ticketSystem",
-            "rank": 0,
-            "value": "custom_data_ANH"
         }
     },
     "type": "server_side"

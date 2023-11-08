@@ -32,79 +32,58 @@
             "name": "apikey_opcional",
             "rank": 3
         },
-        "ANH": {
-            "caption": "Automações",
-            "doc": "Selecione: 📄Automações",
-            "editor": "custom_type",
-            "name": "ticketSystem",
-            "rank": 4
-        },
         "AOL": {
-            "caption": "Ativar fluxos",
-            "doc": "Ativar fluxos, fluxos são chatbots que podem ser criado diretamente na API.",
+            "caption": "Destinatário",
+            "doc": "Coloque o número de telefone ou o o id do grupo para arquivar a conversa.",
             "editor": "DynamicValue",
-            "name": "enabled",
+            "name": "remoteJid",
             "rank": 5,
-            "value": "boolean"
+            "value": "text"
         },
         "AOM": {
-            "caption": "Ignorar grupos",
-            "doc": "Vai ignorar as mensagens dos grupos nos fluxos apenas.",
+            "caption": "Veio de mim",
+            "doc": "A última mensagem veio de mim?",
             "editor": "DynamicValue",
-            "name": "ignoreGroups",
-            "rank": 6,
+            "name": "fromMe",
+            "rank": 7,
             "value": "boolean"
         },
         "AON": {
-            "caption": "Prefixo para comandos",
-            "doc": "Use ! ou / ou algum caracter não comum. O comando para parar fluxo tem que iniciar por esse prefixo.",
+            "caption": "id da última mensagem",
+            "doc": "Passe o id da última mensagem enviada ou recebida",
             "editor": "DynamicValue",
-            "name": "prefixCommand",
-            "rank": 7,
-            "value": "text"
-        },
-        "AOO": {
-            "caption": "Pausar fluxo com msg",
-            "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem com o comando aqui definido.",
-            "editor": "DynamicValue",
-            "name": "stopConversation",
-            "rank": 8,
+            "name": "id",
+            "rank": 6,
             "value": "text"
         },
         "AOP": {
-            "caption": "Tempo de pausa",
+            "caption": "Arquivar?",
             "default_val": 30,
-            "doc": "Defina o tempo em que irá ficar pausada o fluxo com a função de pausa acima, em minutos.",
+            "doc": "Selecione se deseja arquivar ou desarquivar o chat.   \"Sim\" arquiva, \"Não\" desarquiva.",
             "editor": "DynamicValue",
-            "name": "stopMinutes",
-            "rank": 9,
-            "value": "number"
+            "name": "archive",
+            "rank": 4,
+            "value": "boolean"
         }
     },
     "return_value": {
         "AGf": {
             "caption": "log",
             "name": "log",
-            "rank": 1,
+            "rank": 0,
             "value": "text"
         },
         "AGk": {
             "caption": "error",
             "name": "error",
-            "rank": 2,
+            "rank": 1,
             "value": "boolean"
         },
         "AGl": {
             "caption": "error_log",
             "name": "error_log",
-            "rank": 3,
+            "rank": 2,
             "value": "text"
-        },
-        "ANA": {
-            "caption": "Automações",
-            "name": "ticketSystem",
-            "rank": 0,
-            "value": "custom_data_ANH"
         }
     },
     "type": "server_side"
