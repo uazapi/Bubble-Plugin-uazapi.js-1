@@ -32,6 +32,40 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AOL": {
+            "caption": "Destinatário",
+            "doc": "Coloque o número de telefone ou o o id do grupo para arquivar a conversa.",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 5,
+            "value": "text"
+        },
+        "AOM": {
+            "caption": "Veio de mim",
+            "doc": "A última mensagem veio de mim?",
+            "editor": "DynamicValue",
+            "name": "fromMe",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "AON": {
+            "caption": "id da última mensagem",
+            "doc": "Passe o id da última mensagem enviada ou recebida",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 6,
+            "value": "text"
+        },
+        "AOP": {
+            "caption": "Arquivar?",
+            "default_val": 30,
+            "doc": "Selecione se deseja arquivar ou desarquivar o chat.   \"Sim\" arquiva, \"Não\" desarquiva.",
+            "editor": "DynamicValue",
+            "name": "archive",
+            "rank": 4,
+            "value": "boolean"
         }
+    
     }
 }

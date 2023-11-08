@@ -32,6 +32,24 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AON": {
+            "caption": "Destinatário",
+            "doc": "Número do telefone em formato internacional",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 4,
+            "value": "text"
+        },
+        "AOO": {
+            "caption": "Presença",
+            "default_val": "composing",
+            "doc": "Composing = Digitando... e Recording = Gravando aúdio...",
+            "editor": "Dropdown",
+            "name": "presence",
+            "options": "composing,recording",
+            "rank": 5,
+            "value": "text"
         }
     }
 }
