@@ -41,21 +41,14 @@
             "value": "text"
         },
         "AOO": {
-            "caption": "Pausar fluxo com msg",
-            "doc": "Mínimo 5 caracteres, iniciando pelo prefixo, irá pausar o fluxo quando você enviar mensagem com o comando aqui definido.",
-            "editor": "DynamicValue",
-            "name": "stopConversation",
+            "caption": "Presença",
+            "default_val": "composing",
+            "doc": "Composing = Digitando... e Recording = Gravando aúdio...",
+            "editor": "Dropdown",
+            "name": "presence",
+            "options": "composing,recording",
             "rank": 5,
             "value": "text"
-        },
-        "AOP": {
-            "caption": "Tempo de pausa",
-            "default_val": 30,
-            "doc": "Defina o tempo em que irá ficar pausada o fluxo com a função de pausa acima, em minutos.",
-            "editor": "DynamicValue",
-            "name": "stopMinutes",
-            "rank": 6,
-            "value": "number"
         }
     },
     "return_value": {
