@@ -87,6 +87,26 @@
             "editor": "Label",
             "name": "Opções",
             "rank": 7
+        },
+        "APC": {
+            "caption": "Link Preview",
+            "default_val": true,
+            "doc": "Vai enviar o preview do link, só funciona para envio de texto.",
+            "editor": "DynamicValue",
+            "name": "linkPreview",
+            "optional": true,
+            "rank": 11,
+            "value": "boolean"
+        },
+        "APD": {
+            "caption": "Mudar Variáveis",
+            "default_val": false,
+            "doc": "No processo de multiatendimento e criação de fluxos, existem campos específicos para cada Lead, incluindo informações como nome, CPF, entre outros. Quando for enviar uma mensagem, você pode inserir o nome do campo entre chaves duplas, por exemplo, {{nomedocampo}}. Ao fazer isso, o sistema automaticamente substituirá essa referência pelo valor real que corresponde ao campo mencionado.",
+            "editor": "DynamicValue",
+            "name": "changeVariables",
+            "optional": true,
+            "rank": 12,
+            "value": "boolean"
         }
     },
     "return_value": {
