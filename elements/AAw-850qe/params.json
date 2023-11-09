@@ -126,7 +126,7 @@
             "caption": "⚠️ Campos Opcionais, Mas Cruciais ⚠️ Embora todos esses campos sejam marcados como \"opcionais\", eles são essenciais para o funcionamento adequado do plugin. Recomendamos preenchê-los a menos que você tenha certeza do que está fazendo. A opção de não preencher é útil quando você planeja usar apenas uma ação específica do elemento, eliminando a necessidade de configurar todos os campos.",
             "editor": "Label",
             "name": "doc",
-            "rank": 15
+            "rank": 16
         },
         "ANV": {
             "caption": "Configuração",
@@ -141,6 +141,13 @@
             "name": "enviosagendados",
             "optional": true,
             "rank": 14
+        },
+        "APG": {
+            "caption": "Ver dados de perfil",
+            "editor": "custom_type",
+            "name": "dadosperfil",
+            "optional": true,
+            "rank": 15
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -225,14 +232,6 @@
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
             "name": "qr_code",
-            "value": "text"
-        },
-        "AFo": {
-            "caption": "Ver Foto Perfil",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "fotoperfil",
             "value": "text"
         },
         "AFs": {
@@ -340,6 +339,14 @@
             "is_list": true,
             "name": "enviosagendados",
             "value": "custom_data_AOE"
+        },
+        "APH": {
+            "caption": "Ver dados de perfil",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "dadosperfil",
+            "value": "custom_data_APG"
         }
     }
 }

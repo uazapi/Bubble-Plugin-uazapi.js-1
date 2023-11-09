@@ -44,7 +44,7 @@
             "doc": "Envia o QR Code em base64 quando ele é atualizado, use informações da instância pelo frontend para pegar essa informação, economiza WU.",
             "editor": "DynamicValue",
             "name": "QRCODE_UPDATED",
-            "rank": 17,
+            "rank": 18,
             "value": "boolean"
         },
         "ABV": {
@@ -53,7 +53,7 @@
             "doc": "Recebe todas as mensagens do seu WhatsApp, após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "MESSAGES_SET",
-            "rank": 18,
+            "rank": 19,
             "value": "boolean"
         },
         "ABX": {
@@ -62,7 +62,7 @@
             "doc": "Te avisa quando uma mensagem é atualizada (recebida ou lida)",
             "editor": "DynamicValue",
             "name": "MESSAGES_UPDATE",
-            "rank": 19,
+            "rank": 20,
             "value": "boolean"
         },
         "ABY": {
@@ -89,7 +89,7 @@
             "doc": "Carrega todos seus contatos quando lê o QRCode, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "CONTACTS_SET",
-            "rank": 20,
+            "rank": 21,
             "value": "boolean"
         },
         "AFC": {
@@ -98,7 +98,7 @@
             "doc": "Quando você cria um novo contato",
             "editor": "DynamicValue",
             "name": "CONTACTS_UPSERT",
-            "rank": 21,
+            "rank": 22,
             "value": "boolean"
         },
         "AFD": {
@@ -107,7 +107,7 @@
             "doc": "Te notifica quando algum contato é atualizado",
             "editor": "DynamicValue",
             "name": "CONTACTS_UPDATE",
-            "rank": 22,
+            "rank": 23,
             "value": "boolean"
         },
         "AFE": {
@@ -116,7 +116,7 @@
             "doc": "Te notifica quando algum usuário muda a presença, tipo: digitando, gravando, online, etc",
             "editor": "DynamicValue",
             "name": "PRESENCE_UPDATE",
-            "rank": 27,
+            "rank": 28,
             "value": "boolean"
         },
         "AFF": {
@@ -125,7 +125,7 @@
             "doc": "Te envia todos os chats após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "CHATS_SET",
-            "rank": 23,
+            "rank": 24,
             "value": "boolean"
         },
         "AFG": {
@@ -134,7 +134,7 @@
             "doc": "Te informa quando um chat é criado (de grupo ou não)",
             "editor": "DynamicValue",
             "name": "CHATS_UPSERT",
-            "rank": 24,
+            "rank": 25,
             "value": "boolean"
         },
         "AFH": {
@@ -143,7 +143,7 @@
             "doc": "Te informa quando um chat é atualizado",
             "editor": "DynamicValue",
             "name": "CHATS_UPDATE",
-            "rank": 25,
+            "rank": 26,
             "value": "boolean"
         },
         "AFI": {
@@ -152,7 +152,7 @@
             "doc": "Te informa quando um chat é deletado",
             "editor": "DynamicValue",
             "name": "CHATS_DELETE",
-            "rank": 26,
+            "rank": 27,
             "value": "boolean"
         },
         "AFJ": {
@@ -161,7 +161,7 @@
             "doc": "Informa o status da conexão com a api do whatsapp - as vezes vem informações desnecessárias, o status_instance é suficiente, economiza WU.",
             "editor": "DynamicValue",
             "name": "CONNECTION_UPDATE",
-            "rank": 16,
+            "rank": 17,
             "value": "boolean"
         },
         "AFK": {
@@ -170,7 +170,7 @@
             "doc": "Te informa quando um grupo é criado",
             "editor": "DynamicValue",
             "name": "GROUPS_UPSERT",
-            "rank": 12,
+            "rank": 13,
             "value": "boolean"
         },
         "AFL": {
@@ -179,7 +179,7 @@
             "doc": "Te informa quando um grupo é atualizado",
             "editor": "DynamicValue",
             "name": "GROUPS_UPDATE",
-            "rank": 13,
+            "rank": 14,
             "value": "boolean"
         },
         "AFM": {
@@ -188,7 +188,7 @@
             "doc": "Te informa quando um participante muda de status, entrou, saiu, tornou-se admin, etc",
             "editor": "DynamicValue",
             "name": "GROUP_PARTICIPANTS_UPDATE",
-            "rank": 14,
+            "rank": 15,
             "value": "boolean"
         },
         "AGc": {
@@ -231,7 +231,7 @@
             "caption": "Webhooks poucos usados",
             "editor": "Label",
             "name": "webhook_pouco_usados_-_99%_deixam_desligados:",
-            "rank": 15
+            "rank": 16
         },
         "AMo": {
             "caption": "Webhook Status",
@@ -239,6 +239,15 @@
             "editor": "custom_type",
             "name": "webhook_status",
             "rank": 5
+        },
+        "APJ": {
+            "caption": "Ignorar grupos",
+            "default_val": false,
+            "doc": "Se verdadeiro, ignora totalmente os grupos: ignora messages_upsert de grupo, não salva a mensagem recebida de grupos, e os eventos GROUPS_UPSERT, GROUPS_UPDATE e GROUP_PARTICIPANTS_UPDATE serão ignorados.",
+            "editor": "DynamicValue",
+            "name": "groups_ignore",
+            "rank": 12,
+            "value": "boolean"
         }
     },
     "return_value": {

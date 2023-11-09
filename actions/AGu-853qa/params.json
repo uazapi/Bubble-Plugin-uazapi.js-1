@@ -91,7 +91,7 @@
         "APC": {
             "caption": "Link Preview",
             "default_val": true,
-            "doc": "Vai enviar o preview do link, só funciona para envio de texto.",
+            "doc": "Vai enviar o preview do link, se tiver algum na mensagem...",
             "editor": "DynamicValue",
             "name": "linkPreview",
             "optional": true,

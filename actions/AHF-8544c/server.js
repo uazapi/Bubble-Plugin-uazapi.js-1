@@ -27,7 +27,7 @@ async function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    const url = `${baseUrl}/chat/fetchProfilePictureUrl/${instancia}`;
+    const url = `${baseUrl}/chat/fetchProfile/${instancia}`;
     
     const headers = {
         "Accept": "*/*",
@@ -72,7 +72,7 @@ async function(properties, context) {
     }
 
     return {
-        url_imagem: resultObj.profilePictureUrl,
+        dadosperfil: resultObj,
         error: String(error),
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: String(error_log)

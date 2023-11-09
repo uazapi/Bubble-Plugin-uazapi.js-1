@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Ver imagem de perfil",
+    "display": "▶️ Ver imagem e dados de perfil",
     "fields": {
         "AGc": {
             "caption": "Servidor URL",
@@ -44,6 +44,13 @@
             "name": "number",
             "rank": 5,
             "value": "text"
+        },
+        "API": {
+            "caption": "Ver dados de perfil",
+            "doc": "selecione 📄 Ver dados de perfil",
+            "editor": "custom_type",
+            "name": "dadosperfil",
+            "rank": 6
         }
     },
     "return_value": {
@@ -66,10 +73,10 @@
             "value": "text"
         },
         "AJn": {
-            "caption": "url_imagem",
-            "name": "url_imagem",
+            "caption": "Ver dados de perfil",
+            "name": "dadosperfil",
             "rank": 0,
-            "value": "text"
+            "value": "custom_data_API"
         }
     },
     "type": "server_side"

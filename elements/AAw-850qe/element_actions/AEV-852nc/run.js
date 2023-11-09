@@ -51,6 +51,7 @@ function(instance, properties, context) {
       "CHATS_UPDATE":properties.CHATS_UPDATE,
       "CHATS_DELETE":properties.CHATS_DELETE,
       "CONNECTION_UPDATE":properties.CONNECTION_UPDATE,
+      "groups_ignore": properties.groups_ignore,
       "GROUPS_UPSERT":properties.GROUPS_UPSERT,
       "GROUPS_UPDATE":properties.GROUPS_UPDATE,
       "GROUP_PARTICIPANTS_UPDATE":properties.GROUP_PARTICIPANTS_UPDATE

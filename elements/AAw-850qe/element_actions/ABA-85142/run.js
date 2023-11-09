@@ -37,7 +37,9 @@ function(instance, properties, context) {
             "text": properties.text
           },
           "options": {
-            "delay": properties.delay
+            "delay": properties.delay,
+            "linkPreview": properties.linkPreview,
+            "changeVariables": properties.changeVariables,
           }
         };
 

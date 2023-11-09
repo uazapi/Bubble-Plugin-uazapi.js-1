@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    var url = baseUrl + "/chat/fetchProfilePictureUrl/" + instancia;
+    var url = baseUrl + "/chat/fetchProfile/" + instancia;
     
     
     
@@ -25,7 +25,7 @@ function(instance, properties, context) {
     myHeaders.append("Accept", "*/*");
     myHeaders.append("Connection", "keep-alive");
     myHeaders.append("Content-Type", "application/json");
-   // myHeaders.append("uazapi", "true");
+    myHeaders.append("uazapi", "true");
     myHeaders.append("apikey", properties.apikey);
     
 
@@ -65,13 +65,15 @@ fetch(url, requestOptions)
     if (Object.keys(resultObj).length > 0) {
      
       instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-          instance.triggerEvent('sucessEvent');
-            if ('wuid' in resultObj) {
+      instance.triggerEvent('sucessEvent');
+      instance.publishState('dadosperfil', resultObj);
+      
+        
+        if ('wuid' in resultObj) {
               instance.publishState('error', false);
-                instance.publishState('fotoperfil', resultObj.profilePictureUrl);
-            instance.publishState('error_log', '');
             } else {
                instance.publishState('error', true);
+                
             }
     
 
