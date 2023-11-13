@@ -1,7 +1,6 @@
 function(instance, properties, context) {
     
-    instance.data.chat_selecionado = properties.chat_selecionado
-    
+     
 
     const convert = (data, param_prefix = '_p_') => {
         let addPrefix = (obj, key_parent = null, is_array = false) => {
@@ -44,7 +43,7 @@ function(instance, properties, context) {
       };
       
 
-      let source; // Mantenha esta variável no escopo mais amplo, fora da função startSSE
+      let source;
       // Inicialmente sete para false no início do código
       if (typeof instance.data.sseConnected === 'undefined' || instance.data.sseConnected !== "conectado") {
         instance.data.sseConnected = "desconectado";
@@ -107,11 +106,7 @@ function(instance, properties, context) {
                     instance.data.mensagens = [];
                 }
                 
-                // Adicione a mensagem à lista de mensagens apenas se for do chat selecionado
-                if (msgConverted["_p_key.remoteJid"] === instance.data.chat_selecionado) {
-                    console.log("A mensagem pertence ao chat selecionado:", instance.data.chat_selecionado);
-
-                    // Verifique se a mensagem já existe na lista de mensagens
+                     // Verifique se a mensagem já existe na lista de mensagens
                     let existingMessageIndex = instance.data.mensagens.findIndex(msg => msg["_p_key.id"] === msgConverted["_p_key.id"]);
 
                     // Se a mensagem já existir na lista, atualize-a
@@ -125,17 +120,11 @@ function(instance, properties, context) {
                     }
 
                    
-
-                } else {
-                    console.log("A mensagem não pertence ao chat selecionado. ID do chat da mensagem:", msgConverted["_p_key.remoteJid"]);
-                }
-
                 // Log da mensagem convertida para fins de depuração
                // console.log("Dados da mensagem convertida:", JSON.stringify(msgConverted, null, 2));
 
                console.log("remotejid:", msgConverted["_p_key.remoteJid"]);
-               console.log("Chat selecionado:", properties.chat_selecionado);
-               console.log("Chat da instancia:", instance.data.chat_selecionado);
+           
 
                 // Atualize o estado com a nova lista de mensagens
                 instance.publishState('mensagens', instance.data.mensagens);
@@ -190,26 +179,21 @@ function(instance, properties, context) {
         
       }
       
-      
-      
-      
-      
-      
-      
 
-
-//(...)
 
     initialize();
 
     function initialize() {
+        // Inicia a conexão SSE imediatamente
+        startSSE();
+    
+        // As funções fetchChats e fetchMessages são chamadas
+        // mas sem garantir que o SSE esteja conectado antes delas
         fetchChats()
             .then(() => fetchMessages())
             .catch(error => handleGlobalError(error));
-    
-        // Chama startSSE após 5 segundos, independentemente das chamadas anteriores
-        setTimeout(startSSE, 5000);
     }
+    
     
     function getBaseUrlAndInstance() {
         let baseUrl = properties.url;
@@ -270,14 +254,10 @@ function(instance, properties, context) {
         const url = `${baseUrl}/chat/findChats/${instancia}`;
         return sendRequest(url)
             .then(resultObj => {
-                // Adicione um array vazio de 'msgs' a cada chat
-                instance.data.chats = resultObj.map(chat => {
-                    chat._p_msgs = [];
-                    return chat;
-                });
-                
+                      
+                instance.data.chats = resultObj;
                 instance.publishState('chats', instance.data.chats);
-                console.log(instance.data.chats);
+                //console.log(instance.data.chats);
                 return instance.data.chats;
             })
             .catch(error => {
@@ -290,34 +270,18 @@ function(instance, properties, context) {
     }
     
 
+
     function fetchMessages() {
-        // Verifica se 'chat_selecionado' é null ou undefined
-        if (properties.chat_selecionado == null) {
-            console.log("Nenhum chat selecionado. Função não será executada.");
-            return; // Interrompe a execução da função aqui
-        }
-
-
         const { baseUrl, instancia } = getBaseUrlAndInstance();
         const url = `${baseUrl}/chat/findMessages/${instancia}`;
         
-        let limite = properties.limit ? { "limit": properties.limit } : {};
-    
-        let requestBody = {
-            "where": {
-                "key": {
-                    "remoteJid": properties.chat_selecionado
-                }
-            },
-            ...limite
-        };
-        
-        return sendRequest(url, 'POST', requestBody)
+        return sendRequest(url, 'POST')
             .then(resultObj => {
-                // As mensagens são diretamente armazenadas sem serem adicionadas aos chats
+                
                 instance.data.mensagens = resultObj;
                 instance.publishState('mensagens', resultObj);
                 //console.log(instance.data.mensagens);
+                return instance.data.mensagens;
             })
             .catch(error => {
                 if (error.message === 'not ready') {
@@ -327,11 +291,6 @@ function(instance, properties, context) {
                 }
             });
     }
-    
-    
-    
-    
-    
     
     
 

@@ -23,59 +23,20 @@
             "editor": "custom_type",
             "name": "chats",
             "optional": false,
-            "rank": 4
-        },
-        "AOV": {
-            "caption": "Servidor URL",
-            "doc": "",
-            "editor": "DynamicValue",
-            "name": "url",
-            "rank": 0,
-            "value": "text"
-        },
-        "AOW": {
-            "caption": "apikey",
-            "editor": "DynamicValue",
-            "name": "apikey",
-            "rank": 2,
-            "value": "text"
-        },
-        "AOX": {
-            "caption": "instancia",
-            "editor": "DynamicValue",
-            "name": "instancia",
-            "rank": 1,
-            "value": "text"
+            "rank": 1
         },
         "AOo": {
             "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
             "editor": "Label",
             "name": "info",
-            "rank": 3
+            "rank": 0
         },
         "AOp": {
             "caption": "Mensagens",
             "doc": "Selecione 📄 Mensagens",
             "editor": "custom_type",
             "name": "mensagens",
-            "rank": 5
-        },
-        "AOr": {
-            "caption": "Chat selecionado",
-            "doc": "1- Crie um custom state tipo texto, 2- Crie uma ação de definir o custom state com o id do chat sempre ao clicar no chat, 3- coloque o custom state criado aqui...",
-            "editor": "DynamicValue",
-            "name": "chat_selecionado",
-            "rank": 6,
-            "value": "text"
-        },
-        "AOt": {
-            "caption": "Quantidade Mensagens",
-            "doc": "Coloque a quantidade limite de mensagens, é opcional, se não colocar, vai vir todas. Se tiver lento, coloque um limite para ver se melhora.",
-            "editor": "DynamicValue",
-            "name": "limit",
-            "optional": true,
-            "rank": 7,
-            "value": "number"
+            "rank": 2
         }
     },
     "icon": "ion-android-checkbox-blank",

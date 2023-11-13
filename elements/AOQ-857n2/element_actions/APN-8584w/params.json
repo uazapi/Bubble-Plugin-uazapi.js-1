@@ -1,0 +1,26 @@
+{
+    "caption": "🔓 Chats e Mensagens em Tempo Real",
+    "fields": {
+        "APO": {
+            "caption": "Server url",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "APP": {
+            "caption": "instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 1,
+            "value": "text"
+        },
+        "APQ": {
+            "caption": "apikey",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        }
+    }
+}
