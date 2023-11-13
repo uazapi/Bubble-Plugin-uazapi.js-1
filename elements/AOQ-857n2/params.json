@@ -23,20 +23,59 @@
             "editor": "custom_type",
             "name": "chats",
             "optional": false,
-            "rank": 1
+            "rank": 4
+        },
+        "AOV": {
+            "caption": "Servidor URL",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "AOW": {
+            "caption": "apikey",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "AOX": {
+            "caption": "instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 1,
+            "value": "text"
         },
         "AOo": {
-            "caption": "Chame a função \"🔓 Chats e Mensagens em Tempo Real\" apenas uma vez, todas as mensagens que receber, e as mudanças de chats irão aparecer na tela em tempo real. Dentro desse elemento tem os chats e as mensagens, é só mostrá-los via Repeting Groups.",
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
             "editor": "Label",
             "name": "info",
-            "rank": 0
+            "rank": 3
         },
         "AOp": {
             "caption": "Mensagens",
             "doc": "Selecione 📄 Mensagens",
             "editor": "custom_type",
             "name": "mensagens",
-            "rank": 2
+            "rank": 5
+        },
+        "AOr": {
+            "caption": "Chat selecionado",
+            "doc": "1- Crie um custom state tipo texto, 2- Crie uma ação de definir o custom state com o id do chat sempre ao clicar no chat, 3- coloque o custom state criado aqui...",
+            "editor": "DynamicValue",
+            "name": "chat_selecionado",
+            "rank": 6,
+            "value": "text"
+        },
+        "AOt": {
+            "caption": "Quantidade Mensagens",
+            "doc": "Coloque a quantidade limite de mensagens, é opcional, se não colocar, vai vir todas. Se tiver lento, coloque um limite para ver se melhora.",
+            "editor": "DynamicValue",
+            "name": "limit",
+            "optional": true,
+            "rank": 7,
+            "value": "number"
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -79,7 +118,7 @@
             "value": "text"
         },
         "AOs": {
-            "caption": "Mensagens",
+            "caption": "Mensagens do Chat",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
