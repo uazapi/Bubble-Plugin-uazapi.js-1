@@ -20,9 +20,10 @@
         },
         "ABG": {
             "caption": "De quem",
-            "doc": "Coloque o id (remoteJid)",
+            "doc": "Coloque o id (remoteJid), se vazio, irá buscar as mensagens de todos os contatos/grupos...",
             "editor": "DynamicValue",
             "name": "remoteJid",
+            "optional": true,
             "rank": 5,
             "value": "text"
         },
@@ -49,7 +50,6 @@
         },
         "AEA": {
             "caption": "quantidade",
-            "default_val": 10,
             "editor": "DynamicValue",
             "name": "limit",
             "optional": true,

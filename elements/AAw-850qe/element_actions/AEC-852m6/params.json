@@ -23,6 +23,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "id",
+            "optional": true,
             "rank": 7,
             "value": "text"
         },
@@ -40,6 +41,7 @@
             "doc": "remotejid é o id do chat",
             "editor": "DynamicValue",
             "name": "remoteJid",
+            "optional": true,
             "rank": 5,
             "value": "text"
         },
@@ -61,8 +63,19 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "fromMe",
+            "optional": true,
             "rank": 6,
             "value": "boolean"
+        },
+        "APL": {
+            "caption": "Multiplas Mensagens",
+            "default_val": "",
+            "doc": "Caso queria ler várias mensagens em uma única ação envie um array json (sem quebras de linhas) nesse formato: [ {\"remoteJid\": \"valor\", \"fromMe\": false, \"id\": \"iddamsg\" }, (...) ] ",
+            "editor": "DynamicValue",
+            "name": "multipleMessages",
+            "optional": true,
+            "rank": 8,
+            "value": "text"
         }
     }
 }

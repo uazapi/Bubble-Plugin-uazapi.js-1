@@ -42,6 +42,7 @@
         },
         "AOM": {
             "caption": "Veio de mim",
+            "default_val": false,
             "doc": "A última mensagem veio de mim?",
             "editor": "DynamicValue",
             "name": "fromMe",
@@ -58,7 +59,7 @@
         },
         "AOP": {
             "caption": "Arquivar?",
-            "default_val": 30,
+            "default_val": true,
             "doc": "Selecione se deseja arquivar ou desarquivar o chat.   \"Sim\" arquiva, \"Não\" desarquiva.",
             "editor": "DynamicValue",
             "name": "archive",

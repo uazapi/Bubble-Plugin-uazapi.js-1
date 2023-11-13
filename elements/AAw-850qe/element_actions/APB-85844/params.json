@@ -44,10 +44,10 @@
         "AOO": {
             "caption": "Presença",
             "default_val": "composing",
-            "doc": "Composing = Digitando... e Recording = Gravando aúdio...",
+            "doc": "Composing = Digitando... e Recording = Gravando aúdio...   Dura por volta de 12 segundos, se quiser interromper antes, só enviar \"paused\"",
             "editor": "Dropdown",
             "name": "presence",
-            "options": "composing,recording",
+            "options": "composing,recording,paused",
             "rank": 5,
             "value": "text"
         }

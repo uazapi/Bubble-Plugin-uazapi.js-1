@@ -47,7 +47,7 @@
         },
         "AKi": {
             "caption": "URL da imagem",
-            "doc": "O ideal é que  imagem esteja no formato png ou webp, com fundo transparente, preferencialmente 512x512, se mandar em outra resolução ou extensão também funciona.",
+            "doc": "O ideal é que a imagem esteja no formato png ou webp, com fundo transparente, preferencialmente 512x512, se mandar em outra resolução ou extensão também funciona.",
             "editor": "DynamicValue",
             "name": "image",
             "rank": 6,

@@ -24,22 +24,25 @@ function(instance, properties, context) {
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
-    myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("Content-Type", "application/json");
   //  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
-  var raw = JSON.stringify(
-    {
-      "readMessages": [
-        {
-          "remoteJid": properties.remoteJid,
-          "fromMe": properties.fromMe,
-          "id": properties.id
-        }
-      ]
+    let messageData;
+    if (properties.multipleMessages) {
+        // Processando múltiplas mensagens
+        messageData = JSON.parse(properties.multipleMessages);
+    } else {
+        // Processando uma única mensagem
+        messageData = [{
+            remoteJid: properties.remoteJid,
+            fromMe: properties.fromMe,
+            id: properties.id
+        }];
     }
-  );
+
+    var raw = JSON.stringify({ "readMessages": messageData });
 
   
 
@@ -86,7 +89,9 @@ try {
        } catch(e) {
         // Se a conversão falhar, apenas use a mensagem de erro como uma string
         let errorString = error.toString().replace(/"_p_/g, "\"");
-        instance.publishState('error_log', errorString);         }         instance.triggerEvent('errorEvent');
+        instance.publishState('error_log', errorString);
+       }
+    instance.triggerEvent('errorEvent');
 
 
 });
