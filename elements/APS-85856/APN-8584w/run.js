@@ -1,6 +1,7 @@
 function(instance, properties, context) {
     
-     
+    instance.data.chat_selecionado = properties.chat_selecionado
+    
 
     const convert = (data, param_prefix = '_p_') => {
         let addPrefix = (obj, key_parent = null, is_array = false) => {
@@ -106,7 +107,11 @@ function(instance, properties, context) {
                     instance.data.mensagens = [];
                 }
                 
-                     // Verifique se a mensagem já existe na lista de mensagens
+                // Adicione a mensagem à lista de mensagens apenas se for do chat selecionado
+                if (msgConverted["_p_key.remoteJid"] === instance.data.chat_selecionado) {
+                    console.log("A mensagem pertence ao chat selecionado:", instance.data.chat_selecionado);
+
+                    // Verifique se a mensagem já existe na lista de mensagens
                     let existingMessageIndex = instance.data.mensagens.findIndex(msg => msg["_p_key.id"] === msgConverted["_p_key.id"]);
 
                     // Se a mensagem já existir na lista, atualize-a
@@ -120,11 +125,17 @@ function(instance, properties, context) {
                     }
 
                    
+
+                } else {
+                    console.log("A mensagem não pertence ao chat selecionado. ID do chat da mensagem:", msgConverted["_p_key.remoteJid"]);
+                }
+
                 // Log da mensagem convertida para fins de depuração
                // console.log("Dados da mensagem convertida:", JSON.stringify(msgConverted, null, 2));
 
                console.log("remotejid:", msgConverted["_p_key.remoteJid"]);
-           
+               console.log("Chat selecionado:", properties.chat_selecionado);
+               console.log("Chat da instancia:", instance.data.chat_selecionado);
 
                 // Atualize o estado com a nova lista de mensagens
                 instance.publishState('mensagens', instance.data.mensagens);
