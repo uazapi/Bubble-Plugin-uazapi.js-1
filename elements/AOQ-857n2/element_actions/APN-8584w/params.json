@@ -6,7 +6,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "apikey",
-            "rank": 2,
+            "rank": 3,
             "value": "text"
         },
         "ABF": {
@@ -14,7 +14,7 @@
             "editor": "DynamicValue",
             "name": "url",
             "optional": true,
-            "rank": 0,
+            "rank": 1,
             "value": "text"
         },
         "ABH": {
@@ -22,7 +22,7 @@
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
-            "rank": 1,
+            "rank": 2,
             "value": "text"
         },
         "ABP": {
@@ -30,7 +30,13 @@
             "doc": "",
             "editor": "Label",
             "name": "apikey_doc",
-            "rank": 3
+            "rank": 4
+        },
+        "APR": {
+            "caption": "📄Chame essa função apenas uma vez, todas as mensagens que receber, e as mudanças de chats irão aparecer na tela em tempo real.",
+            "editor": "Label",
+            "name": "como_usar",
+            "rank": 0
         }
     }
 }

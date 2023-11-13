@@ -26,7 +26,7 @@
             "rank": 1
         },
         "AOo": {
-            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
+            "caption": "Chame a função \"🔓 Chats e Mensagens em Tempo Real\" apenas uma vez, todas as mensagens que receber, e as mudanças de chats irão aparecer na tela em tempo real. Dentro desse elemento tem os chats e as mensagens, é só mostrá-los via Repeting Groups.",
             "editor": "Label",
             "name": "info",
             "rank": 0
@@ -79,7 +79,7 @@
             "value": "text"
         },
         "AOs": {
-            "caption": "Mensagens do Chat",
+            "caption": "Mensagens",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
