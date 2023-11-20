@@ -203,12 +203,14 @@ function(instance, properties, context) {
     initialize();
 
     function initialize() {
+        //startSSE();
+    
         fetchChats()
             .then(() => fetchMessages())
             .catch(error => handleGlobalError(error));
     
         // Chama startSSE após 5 segundos, independentemente das chamadas anteriores
-        setTimeout(startSSE, 5000);
+        setTimeout(startSSE, 1000);
     }
     
     function getBaseUrlAndInstance() {
@@ -270,14 +272,11 @@ function(instance, properties, context) {
         const url = `${baseUrl}/chat/findChats/${instancia}`;
         return sendRequest(url)
             .then(resultObj => {
-                // Adicione um array vazio de 'msgs' a cada chat
-                instance.data.chats = resultObj.map(chat => {
-                    chat._p_msgs = [];
-                    return chat;
-                });
+                
+                instance.data.chats = resultObj
                 
                 instance.publishState('chats', instance.data.chats);
-                console.log(instance.data.chats);
+               // console.log(instance.data.chats);
                 return instance.data.chats;
             })
             .catch(error => {

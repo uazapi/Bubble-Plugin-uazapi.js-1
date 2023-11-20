@@ -76,6 +76,12 @@
             "optional": true,
             "rank": 7,
             "value": "number"
+        },
+        "APT": {
+            "caption": "Dica: Coloque para ficar visível depois de preenchidos a URL, Instância e apikey",
+            "editor": "Label",
+            "name": "dica",
+            "rank": 8
         }
     },
     "icon": "ion-android-checkbox-blank",
