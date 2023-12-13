@@ -70,6 +70,18 @@
             "name": "base64",
             "rank": 3,
             "value": "text"
+        },
+        "APn": {
+            "caption": "fileUrl",
+            "name": "fileUrl",
+            "rank": 4,
+            "value": "text"
+        },
+        "APo": {
+            "caption": "expires_fileUrl",
+            "name": "expires_fileUrl",
+            "rank": 5,
+            "value": "date"
         }
     },
     "type": "server_side"

@@ -42,7 +42,7 @@
         }
     },
     "has_reset_fn": false,
-    "icon": "ion-android-checkbox-blank",
+    "icon": "ion-arrow-shrink",
     "property_applications": {
         "MinWidth": true,
         "resizable": true

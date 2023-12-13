@@ -1,0 +1,126 @@
+{
+    "add_is_visible": true,
+    "can_fit_height": true,
+    "can_fit_width": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 20,
+        "width": 20
+    },
+    "display": "🤖 Instância - QRCode + Informações",
+    "events": {
+        "APc": {
+            "caption": "Aconteceu um erro",
+            "name": "errorEvent"
+        }
+    },
+    "fields": {
+        "APV": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 0,
+            "value": "text"
+        },
+        "APW": {
+            "caption": "instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "rank": 1,
+            "value": "text"
+        },
+        "APX": {
+            "caption": "apikey",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "APY": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 3
+        }
+    },
+    "icon": "ion-qr-scanner",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "APd": {
+            "caption": "instanceName",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "instanceName",
+            "value": "text"
+        },
+        "APe": {
+            "caption": "apikey",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "apikey",
+            "value": "text"
+        },
+        "APf": {
+            "caption": "connectionStatus",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "connectionStatus",
+            "value": "text"
+        },
+        "APg": {
+            "caption": "profileName",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "profileName",
+            "value": "text"
+        },
+        "APh": {
+            "caption": "profilePictureUrl",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "profilePictureUrl",
+            "value": "text"
+        },
+        "APi": {
+            "caption": "owner",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "owner",
+            "value": "text"
+        },
+        "APj": {
+            "caption": "qrcode",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "qrcode",
+            "value": "image"
+        },
+        "APk": {
+            "caption": "error",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error",
+            "value": "boolean"
+        },
+        "APl": {
+            "caption": "error_log",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error_log",
+            "value": "text"
+        }
+    },
+    "support_autobinding": false
+}

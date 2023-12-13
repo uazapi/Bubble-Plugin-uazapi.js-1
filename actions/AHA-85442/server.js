@@ -78,5 +78,7 @@ async function(properties, context) {
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
         base64: resultObj?.base64,
+        fileUrl: resultObj?.fileUrl,
+        expires_fileUrl: resultObj?.expires_fileUrl,
     };
 }

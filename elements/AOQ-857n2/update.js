@@ -148,12 +148,12 @@ function(instance, properties, context) {
 
       
              // Faça algo semelhante para os chats.
-             if (data.chat && data.chat.id) {
+             if (data.chat && data.chat._id) {
                 console.log("chat recebido");
             
                 let chatConverted = convert(data.chat);
             
-                let existingChatIndex = instance.data.chats.findIndex(chat => chat && chat["_p_id"] === chatConverted["_p_id"]);
+                let existingChatIndex = instance.data.chats.findIndex(chat => chat && chat["_p__id"] === chatConverted["_p__id"]);
             
                 // Se o chat existir, atualize-o
                 if (existingChatIndex !== -1) {

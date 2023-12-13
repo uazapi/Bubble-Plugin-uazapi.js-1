@@ -84,7 +84,7 @@
             "rank": 8
         }
     },
-    "icon": "ion-android-checkbox-blank",
+    "icon": "ion-chatbubbles",
     "property_applications": {
         "MinWidth": true,
         "resizable": true

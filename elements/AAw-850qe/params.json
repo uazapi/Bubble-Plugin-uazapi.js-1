@@ -150,7 +150,7 @@
             "rank": 15
         }
     },
-    "icon": "ion-android-checkbox-blank",
+    "icon": "ion-social-whatsapp-outline",
     "property_applications": {
         "MinWidth": true,
         "resizable": true

@@ -70,7 +70,7 @@ async function(properties, context) {
     }
 
   const raw = {
-    "id": properties.id
+    "_id": properties.id
 };
 
 if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
