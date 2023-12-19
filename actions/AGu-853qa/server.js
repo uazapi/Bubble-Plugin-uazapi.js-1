@@ -79,18 +79,28 @@ async function(properties, context) {
 
     } catch (e) {
         error = true;
-        error_log = e.toString();
+        error_log = `Error: ${e.message}`;
+        console.log(e); // Log detalhado do erro ajustado, se funcionar, replicar para outras funções
+        return {
+            error: error,
+            error_log: error_log
+        };
     }
 
-    const resultObj = await response.json();
+    // Verificar se a resposta não é nula antes de tentar ler o JSON
+    let resultObj;
+    if (response) {
+        resultObj = await response.json();
+    }
 
+    // Verificar se resultObj não é nulo antes de acessar suas propriedades
     return {
-        remoteJid: resultObj?.key?.remoteJid,
-        fromMe: resultObj?.key?.fromMe,
-        id: resultObj?.key?.id,
-        status: resultObj?.status ? resultObj?.status.toString() : undefined,
+        remoteJid: resultObj && resultObj.key ? resultObj.key.remoteJid : undefined,
+        fromMe: resultObj && resultObj.key ? resultObj.key.fromMe : undefined,
+        id: resultObj && resultObj.key ? resultObj.key.id : undefined,
+        status: resultObj && resultObj.status ? resultObj.status.toString() : undefined,
         error: error,
-        log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        log: resultObj ? JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\"") : undefined,
         error_log: error_log
     };
 }
