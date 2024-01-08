@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-  var url = baseUrl + "/message/sendPoll/" + instancia;
+  var url = baseUrl + "/message/sendMenu/" + instancia;
   
   
   
@@ -35,11 +35,19 @@ let values = properties.values.split('|').map(opcao => opcao.trim());
 var raw = JSON.stringify(
     {
       "number": properties.number,
-      "pollMessage": {
-        "name": properties.name,
+      "menuMessage": {
+        "type": properties.type,
+        "text": properties.text,
+          //enquete:
         "selectableCount": properties.selectableCount,
-        "values": values
-      }
+          //listas
+          "footerText": properties.footerText,
+          "buttonText": properties.buttonText,
+        "choices": values
+      },
+        "options": {
+        	"delay": properties.delay
+    	}
     }
 );
 

@@ -28,10 +28,10 @@ async function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    const url = `${baseUrl}/message/sendPoll/${instancia}`;
+    const url = `${baseUrl}/message/sendMenu/${instancia}`;
     
     // Separando as opções fornecidas pelo usuário em um array
-    const values = properties.values.split('|').map(opcao => opcao.trim());
+    const choices = properties.choices.split('|').map(opcao => opcao.trim());
 
     const headers = {
         "Accept": "*/*",
@@ -40,13 +40,23 @@ async function(properties, context) {
         "apikey": apikey
     };
     
-    const raw = {
-        "number": properties.number,
-        "pollMessage": {
-            "name": properties.name,
-            "selectableCount": properties.selectableCount,
-            "values": values
-        }
+    const raw =     {
+      "number": properties.number,
+      "menuMessage": {
+        "type": properties.type,
+        "text": properties.text,
+        //enquete:
+        "selectableCount": properties.selectableCount,
+        //listas
+        "footerText": properties.footerText,
+        "buttonText": properties.buttonText,
+        "choices": choices
+      	},
+        "options": {
+        	"delay": properties.delay
+    	}
+        
+    	
     };
 
     let response;

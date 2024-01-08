@@ -24,7 +24,8 @@ function(instance, properties, context) {
                                   
             // Agendar próxima execução se estiver conectando, gerando qr code
             
-            if (resultObj.connectionStatus?.state === 'connecting') {
+            
+            if (instance.data.apikey && instance.data.apikey.trim() !== "" && resultObj.connectionStatus?.state !== 'open') {
             let interval;
             interval = 5000; // 5 segundos
             

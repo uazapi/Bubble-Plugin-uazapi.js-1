@@ -30,6 +30,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "url",
+            "optional": true,
             "rank": 0,
             "value": "text"
         },
@@ -37,6 +38,7 @@
             "caption": "apikey",
             "editor": "DynamicValue",
             "name": "apikey",
+            "optional": false,
             "rank": 2,
             "value": "text"
         },
@@ -44,6 +46,7 @@
             "caption": "instancia",
             "editor": "DynamicValue",
             "name": "instancia",
+            "optional": true,
             "rank": 1,
             "value": "text"
         },

@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Enviar enquete",
+    "display": "▶️ Enviar menu (lista ou enquete)",
     "fields": {
         "AGc": {
             "caption": "Servidor URL",
@@ -40,34 +40,87 @@
         },
         "AHw": {
             "caption": "Destinatário",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "number",
-            "rank": 5,
+            "rank": 6,
             "value": "text"
         },
         "AHx": {
             "caption": "Mensagem",
             "editor": "DynamicValue",
-            "name": "name",
-            "rank": 6,
+            "long_text": true,
+            "name": "text",
+            "rank": 7,
             "value": "text"
         },
         "AHy": {
             "caption": "Opções",
             "default_val": "",
-            "doc": "separados por |",
+            "doc": "separados por |. Se for \"list\", e enviar assim: [subtítulo1], será um subtítulo, se for \"poll\", será ignorado.",
             "editor": "DynamicValue",
-            "name": "values",
-            "rank": 7,
+            "name": "choices",
+            "rank": 11,
             "value": "text"
         },
         "AIH": {
             "caption": "Quantidade de respostas possíveis",
             "default_val": 1,
+            "doc": "Apenas para enquete, define a quantidade máxima de votos por pessoa.",
             "editor": "DynamicValue",
             "name": "selectableCount",
+            "optional": true,
             "rank": 8,
             "value": "number"
+        },
+        "APu": {
+            "caption": "Tipo de menu",
+            "default_val": "list",
+            "doc": "Tipo de envio, \"list\" = Lista de opções, \"poll\" = Enquete",
+            "editor": "Dropdown",
+            "name": "type",
+            "options": "list,poll",
+            "rank": 5
+        },
+        "APv": {
+            "caption": "rodapé",
+            "doc": "Opcional, apenas para \"list\"",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "footerText",
+            "optional": true,
+            "rank": 9,
+            "value": "text"
+        },
+        "APw": {
+            "caption": "Botão para abrir lista",
+            "doc": "Botão para abrir lista - só serve para listas.",
+            "editor": "DynamicValue",
+            "long_text": false,
+            "name": "buttonText",
+            "optional": true,
+            "rank": 10,
+            "value": "text"
+        },
+        "APx": {
+            "caption": "delay",
+            "default_val": 0,
+            "editor": "DynamicValue",
+            "name": "delay",
+            "rank": 12,
+            "value": "number"
+        },
+        "APy": {
+            "caption": "⚠️ Atenção 1 ⚠️ :   Listas sempre foram problemáticas, e o WhatsApp pode bloquear mais uma vez a qualquer hora,  por isso fiz esse endpoint bem parecido com enquete, para o desenvolvedor trocar rápidamente entre um e outro.",
+            "editor": "Label",
+            "name": "atenção1",
+            "rank": 13
+        },
+        "APz": {
+            "caption": "⚠️ Atenção 2 ⚠️ :   Ao enviar a lista, não aparece no celular de quem enviou (o seu), mas aparece pelo whatsapp WEB (de forma estranha). No whatsapp do destinatário (celular e web) aparece a lista normalmente, sem problemas algum.",
+            "editor": "Label",
+            "name": "atenção2",
+            "rank": 14
         }
     },
     "return_value": {
