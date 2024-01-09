@@ -40,15 +40,7 @@ function(instance, properties, context) {
       "testingWith": properties.testingWith,
       };
 
- 	 // Adicionar "newName" apenas se estiver preenchido
-    if (properties.newName && properties.newName.trim() !== "") {
-        raw.newName = properties.newName;
-    }
     
-     	 // Adicionar "testingWith" apenas se estiver preenchido
-//    if (properties.testingWith && properties.testingWith.trim() !== "") {
-//        raw.testingWith = properties.testingWith;
-//    }
 
   // Converta o objeto raw em uma string JSON
   var rawString = JSON.stringify(raw);
