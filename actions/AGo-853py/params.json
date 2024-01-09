@@ -47,7 +47,7 @@
         },
         "AQI": {
             "caption": "Número Telefone",
-            "doc": "Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional",
+            "doc": "(Opcional) Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional (Exemplo: 5511987654321)",
             "editor": "DynamicValue",
             "name": "number",
             "optional": true,

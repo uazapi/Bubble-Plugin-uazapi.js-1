@@ -74,7 +74,7 @@
         "AQG": {
             "caption": "Pausar fluxo ao enviar",
             "default_val": 5,
-            "doc": "Coloque por quanto tempo pausar o fluxo quando você iniciar uma conversa fora da API, manualmente via WhatsApp Web ou Celular.",
+            "doc": "Coloque por quanto tempo (em minutos) pausar o fluxo quando você iniciar uma conversa fora da API, manualmente via WhatsApp Web ou Celular.",
             "editor": "DynamicValue",
             "name": "stopWhenYouSendMsg",
             "rank": 9,
