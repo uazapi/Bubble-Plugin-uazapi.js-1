@@ -32,43 +32,39 @@
             "name": "apikey_opcional",
             "rank": 3
         },
-        "AON": {
-            "caption": "Destinatário",
-            "doc": "Número do telefone em formato internacional",
-            "editor": "DynamicValue",
-            "name": "number",
-            "rank": 4,
-            "value": "text"
-        },
-        "AOO": {
-            "caption": "Presença",
-            "default_val": "composing",
-            "doc": "Composing = Digitando... e Recording = Gravando aúdio...   Dura por volta de 12 segundos, se quiser interromper antes, só enviar \"paused\"",
-            "editor": "Dropdown",
-            "name": "presence",
-            "options": "composing,recording,paused",
-            "rank": 5,
-            "value": "text"
+        "AQW": {
+            "caption": "Etiquetas",
+            "doc": "Selecione: 📄Etiquetas",
+            "editor": "custom_type",
+            "name": "etiquetas",
+            "rank": 4
         }
     },
     "return_value": {
         "AGf": {
             "caption": "log",
             "name": "log",
-            "rank": 0,
+            "rank": 1,
             "value": "text"
         },
         "AGk": {
             "caption": "error",
             "name": "error",
-            "rank": 1,
+            "rank": 2,
             "value": "boolean"
         },
         "AGl": {
             "caption": "error_log",
             "name": "error_log",
-            "rank": 2,
+            "rank": 3,
             "value": "text"
+        },
+        "AQX": {
+            "caption": "Etiquetas",
+            "is_list": true,
+            "name": "etiquetas",
+            "rank": 0,
+            "value": "custom_data_AQW"
         }
     },
     "type": "server_side"

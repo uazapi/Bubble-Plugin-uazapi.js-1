@@ -37,6 +37,7 @@ var requestOptions = {
   
 };
 
+instance.publishState('labels', '');
 instance.publishState('resultado', '');
 instance.publishState('error', false);
 instance.publishState('error_log', '');
@@ -53,9 +54,10 @@ return response.json();
 
 if (Object.keys(resultObj).length > 0) {
 
-  instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-  instance.triggerEvent('sucessEvent');
-  
+    instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+    instance.triggerEvent('sucessEvent');
+    instance.publishState('labels', resultObj);
+    
 }
 })
 .catch(error => {
