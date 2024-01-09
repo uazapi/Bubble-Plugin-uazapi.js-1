@@ -44,15 +44,6 @@
             "name": "apikeysenha",
             "rank": 5,
             "value": "text"
-        },
-        "AQI": {
-            "caption": "Número Telefone",
-            "doc": "(Opcional) Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional (Exemplo: 5511987654321)",
-            "editor": "DynamicValue",
-            "name": "number",
-            "optional": true,
-            "rank": 6,
-            "value": "text"
         }
     },
     "return_value": {
@@ -96,12 +87,6 @@
             "caption": "qrcode",
             "name": "qrcode",
             "rank": 6,
-            "value": "text"
-        },
-        "AQJ": {
-            "caption": "paircode",
-            "name": "paircode",
-            "rank": 7,
             "value": "text"
         }
     },

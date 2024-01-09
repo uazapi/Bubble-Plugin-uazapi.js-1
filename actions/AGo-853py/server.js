@@ -35,14 +35,9 @@ async function(properties, context) {
     
     const body = {
         "instanceName": properties.instanceName,
-        "apikey": properties.apikeysenha,
-        
+        "apikey": properties.apikeysenha
     };
-    
-    if (properties.number) {
-    body.number = properties.number
-    }
-    
+
     let response;
     let error = false;
     let error_log;
@@ -75,7 +70,6 @@ async function(properties, context) {
         status: resultObj.instance?.status,
         apikey: resultObj.hash?.apikey,
         qrcode: resultObj.qrcode?.base64,
-        paircode: resultObj.qrcode?.paircode,
         error: error,
         error_log: error_log        
     };

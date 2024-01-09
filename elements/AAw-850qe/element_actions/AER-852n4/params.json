@@ -47,15 +47,6 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
-        },
-        "AQL": {
-            "caption": "Numero de Telefone",
-            "doc": "(Opcional) Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional (Exemplo: 5511987654321)",
-            "editor": "DynamicValue",
-            "name": "number",
-            "optional": true,
-            "rank": 6,
-            "value": "text"
         }
     }
 }
