@@ -1,41 +1,40 @@
 async function(properties, context) {
-    //▶️ Instancia - Criar
+    // ▶️ Instancia - QR Code
     
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
     }
 
-  
     if (baseUrl) {
-    baseUrl = baseUrl.trim();
+        baseUrl = baseUrl.trim();
     }
 
     if (baseUrl && baseUrl.endsWith("/")) {
-    baseUrl = baseUrl.slice(0, -1);
+        baseUrl = baseUrl.slice(0, -1);
     }
-    
+
     let apikey = properties.apikey;
     if (!apikey || apikey.trim() === "") {
         apikey = context.keys["Global APIKEY"];
     }
-    
+
     if (apikey) {
-    apikey = apikey.trim();
+        apikey = apikey.trim();
     }
 
-    const url = `${baseUrl}/instance/create`;
-    
+    let instancia = properties.instancia;
+    if (!instancia || instancia.trim() === "") {
+        instancia = context.keys["Instancia"];
+    }
+
+    const url = `${baseUrl}/instance/connect/${instancia}`;
+
     const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
         "apikey": apikey
-    };
-    
-    const body = {
-        "instanceName": properties.instanceName,
-        "apikey": properties.apikeysenha
     };
 
     let response;
@@ -44,11 +43,10 @@ async function(properties, context) {
 
     try {
         response = await fetch(url, {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify(body)
+            method: 'GET',
+            headers: headers
         });
-    } catch(e) {
+    } catch (e) {
         error = true;
         error_log = e.toString();
     }
@@ -60,17 +58,14 @@ async function(properties, context) {
             error: error,
             error_log: JSON.stringify(responseBody, null, 2).replace(/"_p_/g, "\"")
         };
-    } 
+    }
 
     const resultObj = await response.json();
 
     return {
-        log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-        instancia: resultObj.instance?.instanceName,
-        status: resultObj.instance?.status,
-        apikey: resultObj.hash?.apikey,
-        qrcode: resultObj.qrcode?.base64,
+        qrcode: resultObj.base64,
         error: error,
-        error_log: error_log        
+        log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
+        error_log: error_log,
     };
 }

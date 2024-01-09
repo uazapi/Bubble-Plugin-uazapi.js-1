@@ -12,35 +12,32 @@ function(instance, properties, context) {
       baseUrl = baseUrl.slice(0, -1);
   }
 
-  var url = baseUrl + "/instance/create";
+    let instancia = properties.instancia;
+    if (!instancia || instancia.trim() === "") {
+        instancia = context.keys["Instancia"];
+    }
+
+  var url = baseUrl + "/instance/connect/" + instancia;
   
   
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
-  myHeaders.append("Content-Type", "application/json");
-  //  myHeaders.append("uazapi", "true");
+    myHeaders.append("Content-Type", "application/json");
+ //   myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
-  var raw = JSON.stringify(
-    {
-      "instanceName": properties.instanceName,
-      "apikey": properties.apikeysenha
-    }
-  );
+
 
   
 
   var requestOptions = {
-      method: 'POST',
+      method: 'GET',
       headers: myHeaders,
-      body: raw,
-     
-  };
-  
 
+  };
 
 instance.publishState('resultado', '');
 instance.publishState('error', false);
@@ -55,12 +52,15 @@ fetch(url, requestOptions)
 })
 .then(resultObj => {
   
+  //var resultObj = JSON.parse(result);
+  
   
   if (Object.keys(resultObj).length > 0) {
-    
+ 
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
           instance.triggerEvent('sucessEvent');
-    instance.publishState('qr_code', resultObj.qrcode?.base64);  
+    instance.publishState('qr_code', resultObj.base64);
+    
   }
 })
 .catch(error => {

@@ -184,21 +184,6 @@
             "editor": "Label",
             "name": "info",
             "rank": 19
-        },
-        "AQE": {
-            "caption": "Editar etiquetas",
-            "default_val": false,
-            "editor": "DynamicValue",
-            "name": "editLabels",
-            "rank": 20,
-            "value": "boolean"
-        },
-        "AQF": {
-            "caption": "Etiquetas",
-            "editor": "DynamicValue",
-            "name": "labels",
-            "rank": 21,
-            "value": "text"
         }
     }
 }

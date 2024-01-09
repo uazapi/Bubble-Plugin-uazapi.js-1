@@ -1,5 +1,5 @@
 {
-    "caption": "🔓Buscar Etiquetas",
+    "caption": "DESCONTINUADO 🔓 Instancia - QR Code",
     "doc": "",
     "fields": {
         "ABD": {
@@ -32,6 +32,12 @@
             "editor": "Label",
             "name": "apikey_doc",
             "rank": 3
+        },
+        "AMp": {
+            "caption": "❗DESCONTINUADO❗ - use a função \"🔓 Instancia - Informações\", lá retorna todas as informações da instancia, inclusive o QR Code base64",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 4
         }
     }
 }

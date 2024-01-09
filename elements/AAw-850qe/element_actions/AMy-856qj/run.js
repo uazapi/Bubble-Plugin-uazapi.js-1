@@ -40,11 +40,6 @@ function(instance, properties, context) {
       leadInfo.tags = tags;
     }
   }
-    
-        let editedLabels = null;
-    if (properties.labels && properties.editLabels) { //existe labels e tá configurado para editar labels
-        editedLabels = properties.labels.split('|').map(label => label.trim());
-    }
 
   if(properties.desativadoFluxoAte != null ) leadInfo.desativadoFluxoAte = properties.desativadoFluxoAte;
   if(properties.nome) leadInfo.nome = properties.nome.trim();
@@ -71,11 +66,6 @@ function(instance, properties, context) {
   if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
   
   if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
-    
-    // Adicionar 'editedLabels' a 'raw' se existir e não estiver vazio
-    if (editedLabels) {
-        raw.editedLabels = editedLabels;
-    }
   
   raw = JSON.stringify(raw);
 

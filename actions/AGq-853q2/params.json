@@ -1,8 +1,8 @@
 {
     "category": "plugins",
-    "display": "▶️ Buscar etiquetas",
+    "display": "▶️ Instancia - QR Code",
     "fields": {
-        "AME": {
+        "AGc": {
             "caption": "Servidor URL",
             "editor": "DynamicValue",
             "name": "url",
@@ -10,34 +10,39 @@
             "rank": 0,
             "value": "text"
         },
-        "AMF": {
+        "AGd": {
             "caption": "API Key",
             "editor": "DynamicValue",
             "name": "apikey",
             "optional": true,
-            "rank": 2,
+            "rank": 3,
             "value": "text"
         },
-        "AMG": {
+        "AGi": {
             "caption": "Instancia",
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
-            "rank": 1,
+            "rank": 2,
             "value": "text"
         },
-        "AMH": {
+        "AGm": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
             "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
             "editor": "Label",
             "name": "apikey_opcional",
-            "rank": 3
-        },
-        "AQW": {
-            "caption": "Etiquetas",
-            "doc": "Selecione: 📄Etiquetas",
-            "editor": "custom_type",
-            "name": "etiquetas",
             "rank": 4
+        },
+        "AMq": {
+            "caption": "❗DESCONTINUADO❗ - use a função \"▶️Instancia - Informações\", lá retorna todas as informações da instancia, inclusive o QR Code base64",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 5
         }
     },
     "return_value": {
@@ -45,6 +50,13 @@
             "caption": "log",
             "name": "log",
             "rank": 1,
+            "value": "text"
+        },
+        "AGj": {
+            "caption": "qrcode",
+            "is_list": false,
+            "name": "qrcode",
+            "rank": 0,
             "value": "text"
         },
         "AGk": {
@@ -58,13 +70,6 @@
             "name": "error_log",
             "rank": 3,
             "value": "text"
-        },
-        "AQX": {
-            "caption": "Etiquetas",
-            "is_list": true,
-            "name": "etiquetas",
-            "rank": 0,
-            "value": "custom_data_AQW"
         }
     },
     "type": "server_side"

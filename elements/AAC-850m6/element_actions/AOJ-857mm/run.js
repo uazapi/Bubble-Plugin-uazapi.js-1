@@ -36,7 +36,6 @@ function(instance, properties, context) {
     "prefixCommand": properties.prefixCommand,
     "stopConversation": properties.stopConversation,
     "stopMinutes": properties.stopMinutes,
-    "stopWhenYouSendMsg": properties.stopWhenYouSendMsg,
 };
 
   

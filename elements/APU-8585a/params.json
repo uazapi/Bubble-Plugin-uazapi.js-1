@@ -122,14 +122,6 @@
             },
             "name": "error_log",
             "value": "text"
-        },
-        "AQK": {
-            "caption": "Pair Code",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "paircode",
-            "value": "text"
         }
     },
     "support_autobinding": false
