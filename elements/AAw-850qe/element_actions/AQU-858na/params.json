@@ -1,3 +1,55 @@
 {
-    "caption": "🔓Buscar Etiquetas"
+    "caption": "🔓Buscar Etiquetas",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 3
+        },
+        "AON": {
+            "caption": "Destinatário",
+            "doc": "Número do telefone em formato internacional",
+            "editor": "DynamicValue",
+            "name": "number",
+            "rank": 4,
+            "value": "text"
+        },
+        "AOO": {
+            "caption": "Presença",
+            "default_val": "composing",
+            "doc": "Composing = Digitando... e Recording = Gravando aúdio...   Dura por volta de 12 segundos, se quiser interromper antes, só enviar \"paused\"",
+            "editor": "Dropdown",
+            "name": "presence",
+            "options": "composing,recording,paused",
+            "rank": 5,
+            "value": "text"
+        }
+    }
 }
