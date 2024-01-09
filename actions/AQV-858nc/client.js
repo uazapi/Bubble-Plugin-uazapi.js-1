@@ -1,4 +1,4 @@
-function(instance, properties, context) {
+function(properties, context) {
 
 
   //Load any data 
