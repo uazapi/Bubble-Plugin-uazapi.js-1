@@ -1,6 +1,6 @@
 async function(properties, context) {
-    //🔓Buscar etiquetas
-
+    //▶️ Buscar etiquetas
+    
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
         baseUrl = context.keys["Server URL"];
