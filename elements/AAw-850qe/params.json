@@ -59,14 +59,6 @@
             "optional": true,
             "rank": 5
         },
-        "AFT": {
-            "caption": "Status de recebimento",
-            "doc": "",
-            "editor": "custom_type",
-            "name": "mensagens_status",
-            "optional": true,
-            "rank": 9
-        },
         "AFc": {
             "caption": "Webhook Status",
             "doc": "",
@@ -149,10 +141,17 @@
             "optional": true,
             "rank": 16
         },
+        "AQE": {
+            "caption": "Etiquetas",
+            "editor": "custom_type",
+            "name": "labels",
+            "optional": true,
+            "rank": 9
+        },
         "AQS": {
             "caption": "Etiquetas",
             "editor": "custom_type",
-            "name": "etiquetas",
+            "name": "labels",
             "optional": true,
             "rank": 4
         }
@@ -215,15 +214,6 @@
             "is_list": true,
             "name": "mensagens",
             "value": "custom_data_AFR"
-        },
-        "AFj": {
-            "caption": "Status de recebimento",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "is_list": true,
-            "name": "mensagens_status",
-            "value": "custom_data_AFT"
         },
         "AFm": {
             "caption": "Grupo - Detalhes",
