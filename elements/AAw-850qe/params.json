@@ -41,7 +41,7 @@
             "editor": "custom_type",
             "name": "grupos",
             "optional": true,
-            "rank": 6
+            "rank": 5
         },
         "AFR": {
             "caption": "Mensagens",
@@ -49,7 +49,7 @@
             "editor": "custom_type",
             "name": "mensagens",
             "optional": true,
-            "rank": 8
+            "rank": 7
         },
         "AFS": {
             "caption": "Contatos",
@@ -57,7 +57,7 @@
             "editor": "custom_type",
             "name": "contatos",
             "optional": true,
-            "rank": 5
+            "rank": 4
         },
         "AFT": {
             "caption": "Status de recebimento",
@@ -65,7 +65,7 @@
             "editor": "custom_type",
             "name": "mensagens_status",
             "optional": true,
-            "rank": 9
+            "rank": 8
         },
         "AFc": {
             "caption": "Webhook Status",
@@ -81,7 +81,7 @@
             "editor": "custom_type",
             "name": "grupo",
             "optional": true,
-            "rank": 7
+            "rank": 6
         },
         "AFp": {
             "caption": "Instância - Detalhes",
@@ -97,7 +97,7 @@
             "editor": "custom_type",
             "name": "mensagem64",
             "optional": true,
-            "rank": 10
+            "rank": 9
         },
         "AFu": {
             "caption": "Verificar números",
@@ -105,7 +105,7 @@
             "editor": "custom_type",
             "name": "verificar_numeros",
             "optional": true,
-            "rank": 12
+            "rank": 11
         },
         "AGJ": {
             "caption": "Mensagem enviada",
@@ -113,48 +113,41 @@
             "editor": "custom_type",
             "name": "ultimamsg",
             "optional": true,
-            "rank": 11
+            "rank": 10
         },
         "ALO": {
             "caption": "Minha privacidade",
             "editor": "custom_type",
             "name": "minha_privacidade",
             "optional": true,
-            "rank": 13
+            "rank": 12
         },
         "AMs": {
             "caption": "⚠️ Campos Opcionais, Mas Cruciais ⚠️ Embora todos esses campos sejam marcados como \"opcionais\", eles são essenciais para o funcionamento adequado do plugin. Recomendamos preenchê-los a menos que você tenha certeza do que está fazendo. A opção de não preencher é útil quando você planeja usar apenas uma ação específica do elemento, eliminando a necessidade de configurar todos os campos.",
             "editor": "Label",
             "name": "doc",
-            "rank": 17
+            "rank": 16
         },
         "ANV": {
             "caption": "Configuração",
             "editor": "custom_type",
             "name": "multiatendimento",
             "optional": true,
-            "rank": 14
+            "rank": 13
         },
         "AOE": {
             "caption": "Envios Agendados",
             "editor": "custom_type",
             "name": "enviosagendados",
             "optional": true,
-            "rank": 15
+            "rank": 14
         },
         "APG": {
             "caption": "Ver dados de perfil",
             "editor": "custom_type",
             "name": "dadosperfil",
             "optional": true,
-            "rank": 16
-        },
-        "AQS": {
-            "caption": "Etiquetas",
-            "editor": "custom_type",
-            "name": "etiquetas",
-            "optional": true,
-            "rank": 4
+            "rank": 15
         }
     },
     "icon": "ion-social-whatsapp-outline",
@@ -354,23 +347,6 @@
             },
             "name": "dadosperfil",
             "value": "custom_data_APG"
-        },
-        "AQM": {
-            "caption": "Pair Code",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "paircode",
-            "value": "text"
-        },
-        "AQT": {
-            "caption": "Etiquetas",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "is_list": true,
-            "name": "labels",
-            "value": "custom_data_AQS"
         }
     }
 }
