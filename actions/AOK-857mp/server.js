@@ -41,7 +41,8 @@ async function(properties, context) {
         "ignoreGroups": properties.ignoreGroups,
         "prefixCommand": properties.prefixCommand,
         "stopConversation": properties.stopConversation,
-        "stopMinutes": properties.stopMinutes
+        "stopMinutes": properties.stopMinutes,
+        "stopWhenYouSendMsg": properties.stopWhenYouSendMsg,
     };
 
     let response, resultObj;

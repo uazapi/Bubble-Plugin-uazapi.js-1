@@ -26,7 +26,7 @@ function(instance, properties, context) {
             instance.publishState('profilePictureUrl', resultObj.instanceInfo?.instance.profilePictureUrl);
             instance.publishState('connectionStatus', resultObj.connectionStatus?.state); //ok
             instance.publishState('qrcode', resultObj.qrcode?.base64);
-            
+            instance.publishState('paircode', resultObj.qrcode?.paircode);
             
             return ;
             

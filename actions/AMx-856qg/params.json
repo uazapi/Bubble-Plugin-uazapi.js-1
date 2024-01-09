@@ -188,6 +188,23 @@
             "editor": "Label",
             "name": "info",
             "rank": 19
+        },
+        "AQC": {
+            "caption": "Etiquetas",
+            "doc": "Passe o id da etiqueta separado por |",
+            "editor": "DynamicValue",
+            "name": "labels",
+            "rank": 22,
+            "value": "text"
+        },
+        "AQD": {
+            "caption": "Editar etiquetas",
+            "default_val": false,
+            "doc": "Passe como verdadeiro para editar as etiquetas, passando o conjunto de etiquetas na campo abaixo",
+            "editor": "DynamicValue",
+            "name": "editLabels",
+            "rank": 21,
+            "value": "boolean"
         }
     },
     "return_value": {

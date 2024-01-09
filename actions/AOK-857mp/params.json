@@ -79,6 +79,14 @@
             "name": "stopMinutes",
             "rank": 9,
             "value": "number"
+        },
+        "AQH": {
+            "caption": "stopWhenYouSendMsg",
+            "default_val": 5,
+            "editor": "DynamicValue",
+            "name": "stopwhenyousendmsg",
+            "rank": 10,
+            "value": "number"
         }
     },
     "return_value": {
