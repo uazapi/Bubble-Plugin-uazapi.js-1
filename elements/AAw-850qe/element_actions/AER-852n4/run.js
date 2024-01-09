@@ -31,6 +31,9 @@ function(instance, properties, context) {
     }
   );
 
+    if (properties.number) {
+    raw.number = properties.number
+    }
   
 
   var requestOptions = {
@@ -59,8 +62,9 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
     
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-          instance.triggerEvent('sucessEvent');
+    instance.triggerEvent('sucessEvent');
     instance.publishState('qr_code', resultObj.qrcode?.base64);  
+    instance.publishState('paircode', resultObj.qrcode?.paircode);  
   }
 })
 .catch(error => {

@@ -42,14 +42,14 @@
             "default_val": false,
             "editor": "DynamicValue",
             "name": "default",
-            "rank": 6,
+            "rank": 5,
             "value": "boolean"
         },
         "AAp": {
             "caption": "Minutos para reiniciar",
             "editor": "DynamicValue",
             "name": "minutesToClose",
-            "rank": 8,
+            "rank": 7,
             "value": "number"
         },
         "AAq": {
@@ -57,22 +57,14 @@
             "default_val": true,
             "editor": "DynamicValue",
             "name": "readMessages",
-            "rank": 9,
+            "rank": 8,
             "value": "boolean"
         },
         "AAs": {
             "caption": "Comando para iniciar",
             "editor": "DynamicValue",
             "name": "startCommandWord",
-            "rank": 10,
-            "value": "text"
-        },
-        "AAv": {
-            "caption": "Novo nome do fluxo",
-            "editor": "DynamicValue",
-            "name": "newName",
-            "optional": true,
-            "rank": 5,
+            "rank": 9,
             "value": "text"
         },
         "ABY": {
@@ -80,7 +72,7 @@
             "doc": "coloque o número de telefone formato internacional, o fluxo só vai funcionar com essa pessoa se não for um fluxo padrão.",
             "editor": "DynamicValue",
             "name": "testingWith",
-            "rank": 7,
+            "rank": 6,
             "value": "text"
         }
     }
