@@ -20,6 +20,7 @@ function(instance, properties, context) {
             instance.publishState('profilePictureUrl', resultObj.instanceInfo?.instance.profilePictureUrl || "");
             instance.publishState('connectionStatus', resultObj.connectionStatus?.state || ""); 
             instance.publishState('qrcode', resultObj.qrcode?.base64 || "");
+            instance.publishState('paircode', resultObj.qrcode?.paircode || "");
 
                                   
             // Agendar próxima execução se estiver conectando, gerando qr code
