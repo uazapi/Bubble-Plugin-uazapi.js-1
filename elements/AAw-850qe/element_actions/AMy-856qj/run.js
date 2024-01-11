@@ -65,14 +65,14 @@ function(instance, properties, context) {
         }
     }
     
-    // Adicionando ou removendo 'labels' de 'raw' com base em 'editLabels'
-    if (properties.editLabels) {
-        if (properties.labels) {
-            let labels = properties.labels.split('|').map(label => label.trim());
-            raw.labels = labels.filter(label => label); // Remove strings vazias
-        } else {
-            raw.labels = []; // Remove todas as labels se o array for vazio
-        }
+    // Adicionando ou removendo 'etiquetas' de 'leadInfo' com base em 'editEtiquetas'
+    if (properties.editEtiquetas) {
+      if (properties.etiquetas) {
+          let etiquetas = properties.etiquetas.split('|').map(etiqueta => etiqueta.trim());
+          leadInfo.etiquetas = etiquetas.filter(etiqueta => etiqueta); // Remove strings vazias
+      } else {
+          leadInfo.etiquetas = []; // Remove todas as etiquetas se o array for vazio
+      }
     }
     
   if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;

@@ -150,13 +150,6 @@
             "rank": 15,
             "value": "boolean"
         },
-        "ANH": {
-            "caption": "Chat",
-            "doc": "Selecione: 📄Chats",
-            "editor": "custom_type",
-            "name": "chat",
-            "rank": 23
-        },
         "ANK": {
             "caption": "Chat id - telefone",
             "doc": "Id do Chat, número de telefone",
@@ -194,7 +187,7 @@
             "caption": "Etiquetas",
             "doc": "Passe o ids da etiquetas separadas por |",
             "editor": "DynamicValue",
-            "name": "labels",
+            "name": "etiquetas",
             "optional": true,
             "rank": 18,
             "value": "text"
@@ -204,7 +197,7 @@
             "default_val": false,
             "doc": "Passe como verdadeiro para editar as etiquetas, passando o conjunto de etiquetas na campo abaixo",
             "editor": "DynamicValue",
-            "name": "editLabels",
+            "name": "editEtiquetas",
             "rank": 17,
             "value": "boolean"
         },
