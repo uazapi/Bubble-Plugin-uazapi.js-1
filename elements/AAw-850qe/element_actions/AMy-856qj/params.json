@@ -35,23 +35,22 @@
         },
         "AMI": {
             "caption": "Desabilitar Fluxos",
-            "default_val": 1,
-            "doc": "0 = desabilitado, 1 = habilitado, DateUnix = desabilitado até essa data.  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
+            "doc": "Caso você tenha um fluxo padrão configurado: ⠀ ⠀ ⠀ ⠀ ⠀ 0 = desabilitado, 1= habilitado, DateUnix = desabilitado até essa data. ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ ⠀ Como usar DateUnix: (Current date/time + hours: 10) :extract UNIX",
             "editor": "DynamicValue",
             "long_text": false,
             "name": "desativadoFluxoAte",
             "optional": true,
             "options": "",
-            "rank": 5,
+            "rank": 6,
             "value": "number"
         },
         "AMO": {
-            "caption": "Campos Informativos que você pode editar e filtrar depois:",
-            "doc": "Opções: all, contacts, contact_blacklist, none",
+            "caption": "Os campos abaixo tem 2 objetivos, organizar e classificar suas conversas, e usar como regras no fluxo.",
+            "doc": "",
             "editor": "Label",
             "name": "info",
             "options": "",
-            "rank": 6,
+            "rank": 5,
             "value": "text"
         },
         "AMP": {
@@ -61,7 +60,7 @@
             "name": "nome",
             "optional": true,
             "options": "",
-            "rank": 7,
+            "rank": 9,
             "value": "text"
         },
         "AMQ": {
@@ -71,7 +70,7 @@
             "name": "email",
             "optional": true,
             "options": "",
-            "rank": 9,
+            "rank": 11,
             "value": "text"
         },
         "AMR": {
@@ -81,7 +80,7 @@
             "name": "nomecompleto",
             "optional": true,
             "options": "",
-            "rank": 8,
+            "rank": 10,
             "value": "text"
         },
         "AMS": {
@@ -91,7 +90,7 @@
             "name": "cpf",
             "optional": true,
             "options": "",
-            "rank": 10,
+            "rank": 12,
             "value": "text"
         },
         "ANB": {
@@ -100,7 +99,7 @@
             "editor": "DynamicValue",
             "name": "status",
             "optional": true,
-            "rank": 11,
+            "rank": 13,
             "value": "text"
         },
         "ANC": {
@@ -110,26 +109,26 @@
             "long_text": true,
             "name": "notas",
             "optional": true,
-            "rank": 12,
+            "rank": 14,
             "value": "text"
         },
         "AND": {
-            "caption": "Tags",
-            "doc": "Exemplo: testando aplicativo | Cliente com pouco conhecimento em informática - Separadas por |, conforme exemplo, se já tiver etiquetas, para editar, você terá que passar todas as etiquetas, pois esse campo reescreve, caso queria apagar tudo, use o campo abaixo.",
+            "caption": "tags",
+            "doc": "Exemplo: Assinante | Pagamento atrasado - Separadas por |, conforme exemplo",
             "editor": "DynamicValue",
             "name": "tags",
             "optional": true,
-            "rank": 13,
+            "rank": 16,
             "value": "text"
         },
         "ANE": {
             "caption": "Atendimento Aberto",
             "default_val": false,
-            "doc": "Atendimento em aberto ou fechado = concluído.",
+            "doc": "Se tiver aberto, os fluxos estarão desabilitados.",
             "editor": "DynamicValue",
             "name": "atendimentoAberto",
             "optional": true,
-            "rank": 15,
+            "rank": 7,
             "value": "boolean"
         },
         "ANF": {
@@ -138,25 +137,31 @@
             "editor": "DynamicValue",
             "name": "responsavelid",
             "optional": true,
-            "rank": 16,
+            "rank": 19,
             "value": "text"
         },
         "ANG": {
-            "caption": "Apagar Tags",
+            "caption": "Editar tags",
             "default_val": false,
-            "doc": "Apagar todas as tags",
+            "doc": "Passe como verdadeiro para editar as tags, passando o conjunto de tags na campo abaixo",
             "editor": "DynamicValue",
-            "name": "deleteTags",
+            "name": "editTags",
             "optional": false,
-            "rank": 14,
+            "rank": 15,
             "value": "boolean"
+        },
+        "ANH": {
+            "caption": "Chat",
+            "doc": "Selecione: 📄Chats",
+            "editor": "custom_type",
+            "name": "chat",
+            "rank": 23
         },
         "ANK": {
             "caption": "Chat id - telefone",
             "doc": "Id do Chat, número de telefone",
             "editor": "DynamicValue",
             "name": "id",
-            "optional": true,
             "rank": 4,
             "value": "text"
         },
@@ -166,40 +171,48 @@
             "editor": "DynamicValue",
             "name": "unreadcount",
             "optional": true,
-            "rank": 17,
+            "rank": 20,
             "value": "number"
         },
-        "ANX": {
+        "ANb": {
             "caption": "Campos Personalizados",
             "default_val": "[ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
-            "doc": "Coloque uma lista de itens com o formato a seguir, não esqueça de colocar o \"_id\" = ao \"_id\" definido na ação de editar campos personalizado : [ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
+            "doc": "Coloque uma lista de itens com o formato a seguir : [ { \"_id\": \"id do campo1\", \"value\": \"valor do campo1\" }, { \"_id\": \"id do campo2\", \"value\": \"valor do campo2\" } ]",
             "editor": "DynamicValue",
             "name": "customFields",
+            "optional": true,
+            "rank": 21,
+            "value": "text"
+        },
+        "ANd": {
+            "caption": "Não esqueça de colocar no campo acima o \"_id\" = ao \"_id\" definido na ação de editar campos personalizados, em caso de dúvidas veja no editor exemplo ou fale com o suporte.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 22
+        },
+        "AQC": {
+            "caption": "Etiquetas",
+            "doc": "Passe o ids da etiquetas separadas por |",
+            "editor": "DynamicValue",
+            "name": "labels",
             "optional": true,
             "rank": 18,
             "value": "text"
         },
-        "ANe": {
-            "caption": "Não esqueça de colocar no campo acima o \"_id\" = ao \"_id\" definido na ação de editar campos personalizados, em caso de dúvidas veja no editor exemplo ou fale com o suporte.",
-            "editor": "Label",
-            "name": "info",
-            "rank": 19
-        },
-        "AQE": {
+        "AQD": {
             "caption": "Editar etiquetas",
             "default_val": false,
+            "doc": "Passe como verdadeiro para editar as etiquetas, passando o conjunto de etiquetas na campo abaixo",
             "editor": "DynamicValue",
             "name": "editLabels",
-            "rank": 20,
+            "rank": 17,
             "value": "boolean"
         },
         "AQF": {
-            "caption": "Etiquetas",
-            "editor": "DynamicValue",
-            "name": "labels",
-            "optional": true,
-            "rank": 21,
-            "value": "text"
+            "caption": "São opcionais, para editar algum campo abaixo, você precisa passar algum valor, caso queira apagar um valor de um campo, passe o valor com um espaço. Os únicos que não tem essa regra são os campos de Tags, de Etiquetas, e Atendimento Aberto.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 8
         }
     }
 }

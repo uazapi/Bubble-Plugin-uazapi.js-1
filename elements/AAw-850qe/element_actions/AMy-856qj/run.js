@@ -19,7 +19,7 @@ function(instance, properties, context) {
 
     var url = baseUrl + "/chat/editChat/" + instancia;
   
-  
+   
   
   var myHeaders = new Headers();
   myHeaders.append("Accept", "*/*");
@@ -30,21 +30,6 @@ function(instance, properties, context) {
   
 
   var leadInfo = {};
-
-  // Separando as tags fornecidas pelo usuário em um array  
-  if (properties.deleteTags) {
-    leadInfo.tags = [];
-  } else if (properties.tags) {
-    let tags = properties.tags.split('|').map(tag => tag.trim());
-    if (tags.length > 0) {
-      leadInfo.tags = tags;
-    }
-  }
-    
-        let editedLabels = null;
-    if (properties.labels && properties.editLabels) { //existe labels e tá configurado para editar labels
-        editedLabels = properties.labels.split('|').map(label => label.trim());
-    }
 
   if(properties.desativadoFluxoAte != null ) leadInfo.desativadoFluxoAte = properties.desativadoFluxoAte;
   if(properties.nome) leadInfo.nome = properties.nome.trim();
@@ -70,12 +55,29 @@ function(instance, properties, context) {
   
   if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
   
+      // Adicionando ou removendo 'tags' em 'leadInfo' com base em 'editTags'
+      if (properties.editTags) {
+        if (properties.tags) {
+            let tags = properties.tags.split('|').map(tag => tag.trim());
+            leadInfo.tags = tags.filter(tag => tag); // Remove strings vazias
+        } else {
+            leadInfo.tags = []; // Remove todas as tags se o array for vazio
+        }
+    }
+    
+    // Adicionando ou removendo 'labels' de 'raw' com base em 'editLabels'
+    if (properties.editLabels) {
+        if (properties.labels) {
+            let labels = properties.labels.split('|').map(label => label.trim());
+            raw.labels = labels.filter(label => label); // Remove strings vazias
+        } else {
+            raw.labels = []; // Remove todas as labels se o array for vazio
+        }
+    }
+    
   if(Object.keys(leadInfo).length > 0) raw.leadInfo = leadInfo;
     
-    // Adicionar 'editedLabels' a 'raw' se existir e não estiver vazio
-    if (editedLabels) {
-        raw.labels = editedLabels;
-    }
+
   
   raw = JSON.stringify(raw);
 
