@@ -24,16 +24,17 @@ function(instance, properties, context) {
   myHeaders.append("apikey", properties.apikey);
   
 
-  var raw = JSON.stringify(
-    {
-      "instanceName": properties.instanceName,
-      "apikey": properties.apikeysenha
-    }
-  );
+var payload = {
+  "instanceName": properties.instanceName,
+  "apikey": properties.apikeysenha
+};
 
-    if (properties.number) {
-    raw.number = properties.number
-    }
+if (properties.number) {
+  payload.number = properties.number;
+}
+
+var raw = JSON.stringify(payload);
+
   
 
   var requestOptions = {
@@ -64,7 +65,7 @@ fetch(url, requestOptions)
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
     instance.triggerEvent('sucessEvent');
     instance.publishState('qr_code', resultObj.qrcode?.base64);  
-    instance.publishState('paircode', resultObj.qrcode?.paircode);  
+    instance.publishState('paircode', resultObj.qrcode?.pairingCode);  
   }
 })
 .catch(error => {

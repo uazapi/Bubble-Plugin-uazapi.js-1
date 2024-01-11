@@ -74,7 +74,7 @@ function(instance, properties, context) {
     
     // Adicionar 'editedLabels' a 'raw' se existir e não estiver vazio
     if (editedLabels) {
-        raw.editedLabels = editedLabels;
+        raw.labels = editedLabels;
     }
   
   raw = JSON.stringify(raw);

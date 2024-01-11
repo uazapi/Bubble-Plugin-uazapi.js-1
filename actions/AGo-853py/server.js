@@ -75,7 +75,7 @@ async function(properties, context) {
         status: resultObj.instance?.status,
         apikey: resultObj.hash?.apikey,
         qrcode: resultObj.qrcode?.base64,
-        paircode: resultObj.qrcode?.paircode,
+        paircode: resultObj.qrcode?.pairingCode,
         error: error,
         error_log: error_log        
     };

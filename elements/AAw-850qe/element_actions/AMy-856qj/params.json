@@ -114,7 +114,7 @@
             "value": "text"
         },
         "AND": {
-            "caption": "Etiquetas",
+            "caption": "Tags",
             "doc": "Exemplo: testando aplicativo | Cliente com pouco conhecimento em informática - Separadas por |, conforme exemplo, se já tiver etiquetas, para editar, você terá que passar todas as etiquetas, pois esse campo reescreve, caso queria apagar tudo, use o campo abaixo.",
             "editor": "DynamicValue",
             "name": "tags",
@@ -142,9 +142,9 @@
             "value": "text"
         },
         "ANG": {
-            "caption": "Apagar Etiquetas",
+            "caption": "Apagar Tags",
             "default_val": false,
-            "doc": "Apagar todas as etiquetas",
+            "doc": "Apagar todas as tags",
             "editor": "DynamicValue",
             "name": "deleteTags",
             "optional": false,
@@ -197,6 +197,7 @@
             "caption": "Etiquetas",
             "editor": "DynamicValue",
             "name": "labels",
+            "optional": true,
             "rank": 21,
             "value": "text"
         }

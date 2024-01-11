@@ -20,7 +20,7 @@ function(instance, properties, context) {
             instance.publishState('profilePictureUrl', resultObj.instanceInfo?.instance.profilePictureUrl || "");
             instance.publishState('connectionStatus', resultObj.connectionStatus?.state || ""); 
             instance.publishState('qrcode', resultObj.qrcode?.base64 || "");
-            instance.publishState('paircode', resultObj.qrcode?.paircode || "");
+            instance.publishState('paircode', resultObj.qrcode?.pairingCode || "");
 
                                   
             // Agendar próxima execução se estiver conectando, gerando qr code
@@ -132,6 +132,7 @@ function(instance, properties, context) {
             instance.publishState('profilePictureUrl', "");
             instance.publishState('connectionStatus', "");
             instance.publishState('qrcode', "");
+            instance.publishState('paircode', "");
     }
 
 
