@@ -11,7 +11,7 @@
             "value": "text"
         },
         "AGd": {
-            "caption": "API Key Global",
+            "caption": "API Key", 
             "editor": "DynamicValue",
             "name": "apikey",
             "optional": true,

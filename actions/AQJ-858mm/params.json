@@ -1,5 +1,109 @@
 {
     "category": "plugins",
-    "display": "▶️ Editar Config Geral",
+    "display": "▶️ Editar Config Geral XX",
+    "fields": {
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "API Key Global",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AGm": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "url_opcional",
+            "rank": 1
+        },
+        "AGn": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AHV": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instanceName",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "AHW": {
+            "caption": "apikey da instância",
+            "editor": "DynamicValue",
+            "name": "apikeysenha",
+            "rank": 5,
+            "value": "text"
+        },
+        "AQI": {
+            "caption": "Número Telefone",
+            "doc": "(Opcional) Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional (Exemplo: 5511987654321)",
+            "editor": "DynamicValue",
+            "name": "number",
+            "optional": true,
+            "rank": 6,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "status",
+            "name": "status",
+            "rank": 1,
+            "value": "text"
+        },
+        "AGl": {
+            "caption": "Instancia",
+            "name": "instancia",
+            "rank": 2,
+            "value": "text"
+        },
+        "AHU": {
+            "caption": "apikey",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "AKF": {
+            "caption": "error",
+            "name": "error",
+            "rank": 4,
+            "value": "boolean"
+        },
+        "AKG": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 5,
+            "value": "text"
+        },
+        "AKH": {
+            "caption": "qrcode",
+            "name": "qrcode",
+            "rank": 6,
+            "value": "text"
+        },
+        "AQJ": {
+            "caption": "paircode",
+            "name": "paircode",
+            "rank": 7,
+            "value": "text"
+        }
+    },
     "type": "server_side"
 }

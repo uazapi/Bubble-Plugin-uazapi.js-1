@@ -1,5 +1,92 @@
 {
     "category": "plugins",
-    "display": "▶️ Importar Chats (Leads)",
-    "type": "server_side"
+    "display": "▶️ Importar Chats (Leads) XX",
+    "fields": {
+        "AME": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AMF": {
+            "caption": "API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AMG": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AMH": {
+            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 3
+        },
+        "AOL": {
+            "caption": "Destinatário",
+            "doc": "Coloque o número de telefone ou o o id do grupo para arquivar a conversa.",
+            "editor": "DynamicValue",
+            "name": "remoteJid",
+            "rank": 5,
+            "value": "text"
+        },
+        "AOM": {
+            "caption": "Veio de mim",
+            "default_val": false,
+            "doc": "A última mensagem veio de mim?",
+            "editor": "DynamicValue",
+            "name": "fromMe",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "AON": {
+            "caption": "id da última mensagem",
+            "doc": "Passe o id da última mensagem enviada ou recebida",
+            "editor": "DynamicValue",
+            "name": "id",
+            "rank": 6,
+            "value": "text"
+        },
+        "AOP": {
+            "caption": "Arquivar?",
+            "default_val": true,
+            "doc": "Selecione se deseja arquivar ou desarquivar o chat.   \"Sim\" arquiva, \"Não\" desarquiva.",
+            "editor": "DynamicValue",
+            "name": "archive",
+            "rank": 4,
+            "value": "boolean"
+        }
+    },
+    "return_value": {
+        "AGf": {
+            "caption": "log",
+            "name": "log",
+            "rank": 0,
+            "value": "text"
+        },
+        "AGk": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGl": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": false
 }
