@@ -1,109 +1,281 @@
 {
     "category": "plugins",
     "display": "▶️ Editar Config Geral XX",
-    "fields": {
-        "AGc": {
-            "caption": "Servidor URL",
-            "editor": "DynamicValue",
-            "name": "url",
-            "optional": true,
-            "rank": 0,
-            "value": "text"
+        "fields": {
+            "ABQ": {
+                "caption": "Ativar Webhook",
+                "default_val": false,
+                "doc": "Ativa ou não o webhook",
+                "editor": "DynamicValue",
+                "name": "enabled",
+                "rank": 6,
+                "value": "boolean"
+            },
+            "ABR": {
+                "caption": "Subrotas para Webhook",
+                "default_val": false,
+                "doc": "Recomendamos deixar desativado, se ativado, cada evento vai para uma url diferente, e você terá que configurar no bubble isso usando o webhook.site, já temos o modelo pronto para desativado, te poupando trabalho.",
+                "editor": "DynamicValue",
+                "name": "local_map",
+                "rank": 7,
+                "value": "boolean"
+            },
+            "ABS": {
+                "caption": "Url do Webhook",
+                "default_val": "https://webhook.site",
+                "doc": "Para onde será enviado o webhook",
+                "editor": "DynamicValue",
+                "name": "webhookurl",
+                "rank": 8,
+                "value": "text"
+            },
+            "ABT": {
+                "caption": "STATUS_INSTANCE",
+                "default_val": true,
+                "doc": "Informa o status da instância",
+                "editor": "DynamicValue",
+                "name": "STATUS_INSTANCE",
+                "rank": 9,
+                "value": "boolean"
+            },
+            "ABU": {
+                "caption": "QRCODE_UPDATED",
+                "default_val": false,
+                "doc": "Envia o QR Code em base64 quando ele é atualizado, use informações da instância pelo frontend para pegar essa informação, economiza WU.",
+                "editor": "DynamicValue",
+                "name": "QRCODE_UPDATED",
+                "rank": 18,
+                "value": "boolean"
+            },
+            "ABV": {
+                "caption": "MESSAGES_SET",
+                "default_val": false,
+                "doc": "Recebe todas as mensagens do seu WhatsApp, após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
+                "editor": "DynamicValue",
+                "name": "MESSAGES_SET",
+                "rank": 19,
+                "value": "boolean"
+            },
+            "ABX": {
+                "caption": "MESSAGES_UPDATE",
+                "default_val": false,
+                "doc": "Te avisa quando uma mensagem é atualizada (recebida ou lida)",
+                "editor": "DynamicValue",
+                "name": "MESSAGES_UPDATE",
+                "rank": 20,
+                "value": "boolean"
+            },
+            "ABY": {
+                "caption": "MESSAGES_UPSERT",
+                "default_val": true,
+                "doc": "Te avisa quando você recebe uma mensagem, ou quando você envia \"manualmente\", fora da API.",
+                "editor": "DynamicValue",
+                "name": "MESSAGES_UPSERT",
+                "rank": 10,
+                "value": "boolean"
+            },
+            "ABZ": {
+                "caption": "SEND_MESSAGE",
+                "default_val": false,
+                "doc": "Notifica quando você envia uma mensagem pela API",
+                "editor": "DynamicValue",
+                "name": "SEND_MESSAGE",
+                "rank": 11,
+                "value": "boolean"
+            },
+            "AFB": {
+                "caption": "CONTACTS_SET",
+                "default_val": false,
+                "doc": "Carrega todos seus contatos quando lê o QRCode, desnecessário pois já fica salvo na API, e vc pode busca-las.",
+                "editor": "DynamicValue",
+                "name": "CONTACTS_SET",
+                "rank": 21,
+                "value": "boolean"
+            },
+            "AFC": {
+                "caption": "CONTACTS_UPSERT",
+                "default_val": false,
+                "doc": "Quando você cria um novo contato",
+                "editor": "DynamicValue",
+                "name": "CONTACTS_UPSERT",
+                "rank": 22,
+                "value": "boolean"
+            },
+            "AFD": {
+                "caption": "CONTACTS_UPDATE",
+                "default_val": false,
+                "doc": "Te notifica quando algum contato é atualizado",
+                "editor": "DynamicValue",
+                "name": "CONTACTS_UPDATE",
+                "rank": 23,
+                "value": "boolean"
+            },
+            "AFE": {
+                "caption": "PRESENCE_UPDATE",
+                "default_val": false,
+                "doc": "Te notifica quando algum usuário muda a presença, tipo: digitando, gravando, online, etc",
+                "editor": "DynamicValue",
+                "name": "PRESENCE_UPDATE",
+                "rank": 28,
+                "value": "boolean"
+            },
+            "AFF": {
+                "caption": "CHATS_SET",
+                "default_val": false,
+                "doc": "Te envia todos os chats após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
+                "editor": "DynamicValue",
+                "name": "CHATS_SET",
+                "rank": 24,
+                "value": "boolean"
+            },
+            "AFG": {
+                "caption": "CHATS_UPSERT",
+                "default_val": false,
+                "doc": "Te informa quando um chat é criado (de grupo ou não)",
+                "editor": "DynamicValue",
+                "name": "CHATS_UPSERT",
+                "rank": 25,
+                "value": "boolean"
+            },
+            "AFH": {
+                "caption": "CHATS_UPDATE",
+                "default_val": false,
+                "doc": "Te informa quando um chat é atualizado",
+                "editor": "DynamicValue",
+                "name": "CHATS_UPDATE",
+                "rank": 26,
+                "value": "boolean"
+            },
+            "AFI": {
+                "caption": "CHATS_DELETE",
+                "default_val": false,
+                "doc": "Te informa quando um chat é deletado",
+                "editor": "DynamicValue",
+                "name": "CHATS_DELETE",
+                "rank": 27,
+                "value": "boolean"
+            },
+            "AFJ": {
+                "caption": "CONNECTION_UPDATE",
+                "default_val": false,
+                "doc": "Informa o status da conexão com a api do whatsapp - as vezes vem informações desnecessárias, o status_instance é suficiente, economiza WU.",
+                "editor": "DynamicValue",
+                "name": "CONNECTION_UPDATE",
+                "rank": 17,
+                "value": "boolean"
+            },
+            "AFK": {
+                "caption": "GROUPS_UPSERT",
+                "default_val": false,
+                "doc": "Te informa quando um grupo é criado",
+                "editor": "DynamicValue",
+                "name": "GROUPS_UPSERT",
+                "rank": 13,
+                "value": "boolean"
+            },
+            "AFL": {
+                "caption": "GROUPS_UPDATE",
+                "default_val": false,
+                "doc": "Te informa quando um grupo é atualizado",
+                "editor": "DynamicValue",
+                "name": "GROUPS_UPDATE",
+                "rank": 14,
+                "value": "boolean"
+            },
+            "AFM": {
+                "caption": "GROUP_PARTICIPANTS_UPDATE",
+                "default_val": false,
+                "doc": "Te informa quando um participante muda de status, entrou, saiu, tornou-se admin, etc",
+                "editor": "DynamicValue",
+                "name": "GROUP_PARTICIPANTS_UPDATE",
+                "rank": 15,
+                "value": "boolean"
+            },
+            "AGc": {
+                "caption": "Servidor URL",
+                "editor": "DynamicValue",
+                "name": "url",
+                "optional": true,
+                "rank": 0,
+                "value": "text"
+            },
+            "AGd": {
+                "caption": "API Key",
+                "editor": "DynamicValue",
+                "name": "apikey",
+                "optional": true,
+                "rank": 3,
+                "value": "text"
+            },
+            "AGi": {
+                "caption": "Instancia",
+                "editor": "DynamicValue",
+                "name": "instancia",
+                "optional": true,
+                "rank": 2,
+                "value": "text"
+            },
+            "AGm": {
+                "caption": "-",
+                "editor": "Label",
+                "name": "url_opcional",
+                "rank": 1
+            },
+            "AGn": {
+                "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
+                "editor": "Label",
+                "name": "apikey_opcional",
+                "rank": 4
+            },
+            "AMi": {
+                "caption": "Webhooks poucos usados",
+                "editor": "Label",
+                "name": "webhook_pouco_usados_-_99%_deixam_desligados:",
+                "rank": 16
+            },
+            "AMo": {
+                "caption": "Webhook Status",
+                "doc": "digite na pesquisa: \"Webhook Status\" e selecione 📄 Webhook Status",
+                "editor": "custom_type",
+                "name": "webhook_status",
+                "rank": 5
+            },
+            "APJ": {
+                "caption": "Ignorar grupos",
+                "default_val": false,
+                "doc": "Se verdadeiro, ignora totalmente os grupos: ignora messages_upsert de grupo, não salva a mensagem recebida de grupos, e os eventos GROUPS_UPSERT, GROUPS_UPDATE e GROUP_PARTICIPANTS_UPDATE serão ignorados.",
+                "editor": "DynamicValue",
+                "name": "groups_ignore",
+                "rank": 12,
+                "value": "boolean"
+            }
         },
-        "AGd": {
-            "caption": "API Key Global",
-            "editor": "DynamicValue",
-            "name": "apikey",
-            "optional": true,
-            "rank": 2,
-            "value": "text"
+        "return_value": {
+            "AGf": {
+                "caption": "log",
+                "name": "log",
+                "rank": 1,
+                "value": "text"
+            },
+            "AGj": {
+                "caption": "Webhook Status",
+                "is_list": false,
+                "name": "webhook_status",
+                "rank": 0,
+                "value": "custom_data_AMo"
+            },
+            "AGk": {
+                "caption": "error",
+                "name": "error",
+                "rank": 2,
+                "value": "boolean"
+            },
+            "AGl": {
+                "caption": "error_log",
+                "name": "error_log",
+                "rank": 3,
+                "value": "text"
+            }
         },
-        "AGm": {
-            "caption": "-",
-            "editor": "Label",
-            "name": "url_opcional",
-            "rank": 1
-        },
-        "AGn": {
-            "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
-            "editor": "Label",
-            "name": "apikey_opcional",
-            "rank": 3
-        },
-        "AHV": {
-            "caption": "Instancia",
-            "editor": "DynamicValue",
-            "name": "instanceName",
-            "optional": true,
-            "rank": 4,
-            "value": "text"
-        },
-        "AHW": {
-            "caption": "apikey da instância",
-            "editor": "DynamicValue",
-            "name": "apikeysenha",
-            "rank": 5,
-            "value": "text"
-        },
-        "AQI": {
-            "caption": "Número Telefone",
-            "doc": "(Opcional) Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional (Exemplo: 5511987654321)",
-            "editor": "DynamicValue",
-            "name": "number",
-            "optional": true,
-            "rank": 6,
-            "value": "text"
-        }
-    },
-    "return_value": {
-        "AGf": {
-            "caption": "log",
-            "name": "log",
-            "rank": 0,
-            "value": "text"
-        },
-        "AGk": {
-            "caption": "status",
-            "name": "status",
-            "rank": 1,
-            "value": "text"
-        },
-        "AGl": {
-            "caption": "Instancia",
-            "name": "instancia",
-            "rank": 2,
-            "value": "text"
-        },
-        "AHU": {
-            "caption": "apikey",
-            "name": "apikey",
-            "rank": 3,
-            "value": "text"
-        },
-        "AKF": {
-            "caption": "error",
-            "name": "error",
-            "rank": 4,
-            "value": "boolean"
-        },
-        "AKG": {
-            "caption": "error_log",
-            "name": "error_log",
-            "rank": 5,
-            "value": "text"
-        },
-        "AKH": {
-            "caption": "qrcode",
-            "name": "qrcode",
-            "rank": 6,
-            "value": "text"
-        },
-        "AQJ": {
-            "caption": "paircode",
-            "name": "paircode",
-            "rank": 7,
-            "value": "text"
-        }
-    },
-    "type": "server_side"
-}
+        "type": "server_side"
+    }
