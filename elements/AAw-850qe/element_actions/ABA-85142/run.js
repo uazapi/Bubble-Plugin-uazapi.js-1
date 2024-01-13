@@ -88,6 +88,7 @@ fetch(url, requestOptions)
         return resultObj; // Retorna o objeto de resultado para a próxima etapa
     });
    })
+
     .then(resultObj => {
        
                
@@ -99,26 +100,28 @@ fetch(url, requestOptions)
             instance.publishState('lastmsg', resultObj);
         }
     })
-    .catch(errorObj => {
-        instance.publishState('error', true);
-        try {
-            // Verifica se as chaves têm o prefixo _p_ e acessa os valores adequadamente
-            let errorStatus = errorObj._p_errorStatus || errorObj.errorStatus || '';
-            let error = errorObj._p_error || errorObj.error || '';
-            let message = '';
-  
-            if (errorObj._p_message || errorObj.message) {
-                let messageArray = errorObj._p_message || errorObj.message;
-                message = Array.isArray(messageArray) ? messageArray.join('\n') : messageArray;
-            }
-  
-            let errorMessage = [errorStatus, error, message].filter(Boolean).join('\n');
-            instance.publishState('error_log', errorMessage);
-        } catch(e) {
-            instance.publishState('error_log', e.toString().replace(/"_p_/g, "\""));
-        }
-        instance.triggerEvent('errorEvent');
-    });
+
+  .catch(errorObj => {
+      instance.publishState('error', true);
+      try {
+          // Verifica se as chaves têm o prefixo _p_ e acessa os valores adequadamente
+          let errorStatus = errorObj._p_errorStatus || errorObj.errorStatus || '';
+          let error = errorObj._p_error || errorObj.error || '';
+          let message = '';
+
+          if (errorObj._p_message || errorObj.message) {
+              let messageArray = errorObj._p_message || errorObj.message;
+              message = Array.isArray(messageArray) ? messageArray.join('\n') : messageArray;
+          }
+
+          let errorMessage = [errorStatus, error, message].filter(Boolean).join('\n');
+          instance.publishState('error_log', errorMessage);
+      } catch(e) {
+          instance.publishState('error_log', e.toString().replace(/"_p_/g, "\""));
+      }
+      instance.triggerEvent('errorEvent');
+  });
+
     
 
 

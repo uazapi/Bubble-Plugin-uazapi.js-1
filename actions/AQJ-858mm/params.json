@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Editar Config Geral XX",
+    "display": "▶️ Editar Config Geral",
     "fields": {
         "ABQ": {
             "caption": "Ativar Webhook",
