@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Ver Config Geral XX",
+    "display": "▶️ Ver Config Geral",
     "fields": {
         "AGc": {
             "caption": "Servidor URL",
