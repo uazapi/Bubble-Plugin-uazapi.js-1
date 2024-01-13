@@ -1,5 +1,5 @@
 function(instance, properties, context) {
-    XX
+
   let baseUrl = properties.url;
   if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
       baseUrl = context.keys["Server URL"];
@@ -18,7 +18,7 @@ function(instance, properties, context) {
       instancia = context.keys["Instancia"];
   }
 
-  var url = baseUrl + "/automate/createflow/" + instancia;
+  var url = `${baseUrl}/chat/importChats/${instancia}`;
   
   
   
@@ -26,41 +26,19 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
-var raw = {};
-
-try {
-// Se properties.import existir e for uma string JSON válida, 
-// parse e adicione ao objeto raw.
-if (properties.import && properties.import.trim() !== "") {
-  var importObject = JSON.parse(properties.import);
-  raw = { ...importObject };
-}
-
-// Se properties.name existir, atualize o campo 'name' em raw.
-if (properties.name && properties.name.trim() !== "") {
-  raw.name = properties.name;
-}
-
-} catch (e) {
-console.error("O valor de 'import' não é um JSON válido:", e);
-
-}
+var raw = properties.chats;
 
 
 
-  
 
-  // Converta o objeto raw em uma string JSON
-  var rawString = JSON.stringify(raw);
 
   var requestOptions = {
-      method: 'POST',
+      method: 'PUT',
       headers: myHeaders,
-      body: rawString,
+      body: raw.replace(/\n/g, '')
      
   };
   
@@ -68,8 +46,6 @@ console.error("O valor de 'import' não é um JSON válido:", e);
   
 
 
-  //console.log("rawString: ", rawString);
-  
 
 instance.publishState('resultado', '');
 instance.publishState('error', false);
@@ -90,8 +66,6 @@ fetch(url, requestOptions)
           instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
         instance.triggerEvent('sucessEvent');
     
-          
-          instance.publishState('bot', resultObj);
           
       }
   })

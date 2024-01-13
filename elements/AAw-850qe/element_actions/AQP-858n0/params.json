@@ -31,18 +31,11 @@
             "rank": 3
         },
         "AAn": {
-            "caption": "Nome do fluxo",
+            "caption": "Chats JSON",
             "editor": "DynamicValue",
-            "name": "name",
+            "long_text": true,
+            "name": "chats",
             "rank": 4,
-            "value": "text"
-        },
-        "ABz": {
-            "caption": "Importar fluxo",
-            "editor": "DynamicValue",
-            "name": "import",
-            "optional": true,
-            "rank": 5,
             "value": "text"
         }
     }
