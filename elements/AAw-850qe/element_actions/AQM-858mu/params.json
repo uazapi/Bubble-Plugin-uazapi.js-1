@@ -2,37 +2,13 @@
     "caption": "🔓Editar Config Geral XX",
     "doc": "",
     "fields": {
-        "ABD": {
-            "caption": "API Key",
-            "doc": "",
-            "editor": "DynamicValue",
-            "name": "apikey",
-            "rank": 2,
-            "value": "text"
-        },
-        "ABF": {
-            "caption": "Servidor URL",
-            "editor": "DynamicValue",
-            "name": "url",
-            "optional": true,
-            "rank": 0,
-            "value": "text"
-        },
-        "ABH": {
-            "caption": "Instancia",
-            "editor": "DynamicValue",
-            "name": "instancia",
-            "optional": true,
-            "rank": 1,
-            "value": "text"
-        },
         "ABQ": {
             "caption": "Ativar Webhook",
             "default_val": false,
             "doc": "Ativa ou não o webhook",
             "editor": "DynamicValue",
             "name": "enabled",
-            "rank": 4,
+            "rank": 6,
             "value": "boolean"
         },
         "ABR": {
@@ -41,7 +17,7 @@
             "doc": "Recomendamos deixar desativado, se ativado, cada evento vai para uma url diferente, e você terá que configurar no bubble isso usando o webhook.site, já temos o modelo pronto para desativado, te poupando trabalho.",
             "editor": "DynamicValue",
             "name": "local_map",
-            "rank": 5,
+            "rank": 7,
             "value": "boolean"
         },
         "ABS": {
@@ -50,7 +26,7 @@
             "doc": "Para onde será enviado o webhook",
             "editor": "DynamicValue",
             "name": "webhookurl",
-            "rank": 6,
+            "rank": 8,
             "value": "text"
         },
         "ABT": {
@@ -59,7 +35,7 @@
             "doc": "Informa o status da instância",
             "editor": "DynamicValue",
             "name": "STATUS_INSTANCE",
-            "rank": 7,
+            "rank": 9,
             "value": "boolean"
         },
         "ABU": {
@@ -68,7 +44,7 @@
             "doc": "Envia o QR Code em base64 quando ele é atualizado, use informações da instância pelo frontend para pegar essa informação, economiza WU.",
             "editor": "DynamicValue",
             "name": "QRCODE_UPDATED",
-            "rank": 16,
+            "rank": 17,
             "value": "boolean"
         },
         "ABV": {
@@ -77,7 +53,7 @@
             "doc": "Recebe todas as mensagens do seu WhatsApp, após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "MESSAGES_SET",
-            "rank": 17,
+            "rank": 18,
             "value": "boolean"
         },
         "ABX": {
@@ -86,16 +62,16 @@
             "doc": "Te avisa quando uma mensagem é atualizada (recebida ou lida)",
             "editor": "DynamicValue",
             "name": "MESSAGES_UPDATE",
-            "rank": 18,
+            "rank": 19,
             "value": "boolean"
         },
         "ABY": {
             "caption": "MESSAGES_UPSERT",
-            "default_val": true,
+            "default_val": false,
             "doc": "Te avisa quando você recebe uma mensagem, ou quando você envia \"manualmente\", fora da API.",
             "editor": "DynamicValue",
             "name": "MESSAGES_UPSERT",
-            "rank": 8,
+            "rank": 10,
             "value": "boolean"
         },
         "ABZ": {
@@ -104,15 +80,8 @@
             "doc": "Notifica quando você envia uma mensagem pela API",
             "editor": "DynamicValue",
             "name": "SEND_MESSAGE",
-            "rank": 9,
+            "rank": 11,
             "value": "boolean"
-        },
-        "ACZ": {
-            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
-            "doc": "",
-            "editor": "Label",
-            "name": "apikey_doc",
-            "rank": 3
         },
         "AFB": {
             "caption": "CONTACTS_SET",
@@ -120,7 +89,7 @@
             "doc": "Carrega todos seus contatos quando lê o QRCode, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "CONTACTS_SET",
-            "rank": 19,
+            "rank": 20,
             "value": "boolean"
         },
         "AFC": {
@@ -129,7 +98,7 @@
             "doc": "Quando você cria um novo contato",
             "editor": "DynamicValue",
             "name": "CONTACTS_UPSERT",
-            "rank": 20,
+            "rank": 21,
             "value": "boolean"
         },
         "AFD": {
@@ -138,7 +107,7 @@
             "doc": "Te notifica quando algum contato é atualizado",
             "editor": "DynamicValue",
             "name": "CONTACTS_UPDATE",
-            "rank": 21,
+            "rank": 22,
             "value": "boolean"
         },
         "AFE": {
@@ -147,7 +116,7 @@
             "doc": "Te notifica quando algum usuário muda a presença, tipo: digitando, gravando, online, etc",
             "editor": "DynamicValue",
             "name": "PRESENCE_UPDATE",
-            "rank": 26,
+            "rank": 27,
             "value": "boolean"
         },
         "AFF": {
@@ -156,7 +125,7 @@
             "doc": "Te envia todos os chats após ler o QR Code, desnecessário pois já fica salvo na API, e vc pode busca-las.",
             "editor": "DynamicValue",
             "name": "CHATS_SET",
-            "rank": 22,
+            "rank": 23,
             "value": "boolean"
         },
         "AFG": {
@@ -165,7 +134,7 @@
             "doc": "Te informa quando um chat é criado (de grupo ou não)",
             "editor": "DynamicValue",
             "name": "CHATS_UPSERT",
-            "rank": 23,
+            "rank": 24,
             "value": "boolean"
         },
         "AFH": {
@@ -174,7 +143,7 @@
             "doc": "Te informa quando um chat é atualizado",
             "editor": "DynamicValue",
             "name": "CHATS_UPDATE",
-            "rank": 24,
+            "rank": 25,
             "value": "boolean"
         },
         "AFI": {
@@ -183,7 +152,7 @@
             "doc": "Te informa quando um chat é deletado",
             "editor": "DynamicValue",
             "name": "CHATS_DELETE",
-            "rank": 25,
+            "rank": 26,
             "value": "boolean"
         },
         "AFJ": {
@@ -192,7 +161,7 @@
             "doc": "Informa o status da conexão com a api do whatsapp - as vezes vem informações desnecessárias, o status_instance é suficiente, economiza WU.",
             "editor": "DynamicValue",
             "name": "CONNECTION_UPDATE",
-            "rank": 15,
+            "rank": 16,
             "value": "boolean"
         },
         "AFK": {
@@ -201,7 +170,7 @@
             "doc": "Te informa quando um grupo é criado",
             "editor": "DynamicValue",
             "name": "GROUPS_UPSERT",
-            "rank": 11,
+            "rank": 12,
             "value": "boolean"
         },
         "AFL": {
@@ -210,7 +179,7 @@
             "doc": "Te informa quando um grupo é atualizado",
             "editor": "DynamicValue",
             "name": "GROUPS_UPDATE",
-            "rank": 12,
+            "rank": 13,
             "value": "boolean"
         },
         "AFM": {
@@ -219,23 +188,58 @@
             "doc": "Te informa quando um participante muda de status, entrou, saiu, tornou-se admin, etc",
             "editor": "DynamicValue",
             "name": "GROUP_PARTICIPANTS_UPDATE",
-            "rank": 13,
+            "rank": 14,
             "value": "boolean"
+        },
+        "AGc": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AGd": {
+            "caption": "Global API Key",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AGn": {
+            "caption": "O Servidor URL é opcional, caso você deixe vazio, o valor será aquele definido na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
+            "editor": "Label",
+            "name": "apikey_opcional",
+            "rank": 2
         },
         "AMi": {
             "caption": "Webhooks poucos usados",
             "editor": "Label",
-            "name": "webhook_pouco_usados_-_99%_deixam_desligados:",
-            "rank": 14
+            "name": "webhook_pouco",
+            "rank": 15
         },
-        "APK": {
-            "caption": "Ignorar grupos",
-            "default_val": false,
-            "doc": "Se verdadeiro, ignora totalmente os grupos: ignora messages_upsert de grupo, não salva a mensagem recebida de grupos, e os eventos GROUPS_UPSERT, GROUPS_UPDATE e GROUP_PARTICIPANTS_UPDATE serão ignorados.",
+        "AMo": {
+            "caption": "Config Geral",
+            "doc": "digite na pesquisa: \"Config Geral\" e selecione 📄 Config Geral",
+            "editor": "custom_type",
+            "name": "config_geral",
+            "rank": 4
+        },
+        "AQT": {
+            "caption": "Nome Conectado",
+            "default_val": "uazapi",
+            "doc": "Nome que vai aparecer quando conectar ao WhatsApp",
             "editor": "DynamicValue",
-            "name": "groups_ignore",
-            "rank": 10,
-            "value": "boolean"
+            "name": "connectedName",
+            "rank": 3,
+            "value": "text"
+        },
+        "AQU": {
+            "caption": "Webhook Global - O webhook global configurado nos campos abaixo é um acréscimo independente, ativado por qualquer evento em todas as instâncias. Editá-lo não afeta os webhooks locais, que são específicos e operam separadamente.",
+            "editor": "Label",
+            "name": "webhook",
+            "rank": 5
         }
-    }
+    },
 }
