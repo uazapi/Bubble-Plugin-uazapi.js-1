@@ -32,39 +32,14 @@
             "name": "apikey_opcional",
             "rank": 3
         },
-        "AOL": {
-            "caption": "Destinatário",
-            "doc": "Coloque o número de telefone ou o o id do grupo para arquivar a conversa.",
-            "editor": "DynamicValue",
-            "name": "remoteJid",
-            "rank": 5,
-            "value": "text"
-        },
-        "AOM": {
-            "caption": "Veio de mim",
-            "default_val": false,
-            "doc": "A última mensagem veio de mim?",
-            "editor": "DynamicValue",
-            "name": "fromMe",
-            "rank": 7,
-            "value": "boolean"
-        },
-        "AON": {
-            "caption": "id da última mensagem",
-            "doc": "Passe o id da última mensagem enviada ou recebida",
-            "editor": "DynamicValue",
-            "name": "id",
-            "rank": 6,
-            "value": "text"
-        },
         "AOP": {
-            "caption": "Arquivar?",
-            "default_val": true,
-            "doc": "Selecione se deseja arquivar ou desarquivar o chat.   \"Sim\" arquiva, \"Não\" desarquiva.",
+            "caption": "Chats JSON",
+            "default_val": "",
+            "doc": "Passe um array de chats conforme exemplo no postman.",
             "editor": "DynamicValue",
-            "name": "archive",
+            "name": "chats",
             "rank": 4,
-            "value": "boolean"
+            "value": "text"
         }
     },
     "return_value": {

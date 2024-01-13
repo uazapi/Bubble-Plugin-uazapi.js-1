@@ -24,24 +24,16 @@ async function(properties, context) {
     apikey = apikey.trim();
     }
 
-    const url = `${baseUrl}/instance/create`;
+    const url = `${baseUrl}/config`;
     
     const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
     
-    const body = {
-        "instanceName": properties.instanceName,
-        "apikey": properties.apikeysenha,
-        
-    };
-    
-    if (properties.number) {
-    body.number = properties.number
-    }
     
     let response;
     let error = false;
@@ -49,9 +41,9 @@ async function(properties, context) {
 
     try {
         response = await fetch(url, {
-            method: 'POST',
+            method: 'GET',
             headers: headers,
-            body: JSON.stringify(body)
+            //body: JSON.stringify(body)
         });
     } catch(e) {
         error = true;
@@ -71,12 +63,8 @@ async function(properties, context) {
 
     return {
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-        instancia: resultObj.instance?.instanceName,
-        status: resultObj.instance?.status,
-        apikey: resultObj.hash?.apikey,
-        qrcode: resultObj.qrcode?.base64,
-        paircode: resultObj.qrcode?.pairingCode,
         error: error,
-        error_log: error_log        
+        error_log: error_log,
+        config: resultObj,
     };
 }

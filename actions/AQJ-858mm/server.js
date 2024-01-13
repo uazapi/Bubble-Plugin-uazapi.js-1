@@ -24,24 +24,45 @@ async function(properties, context) {
     apikey = apikey.trim();
     }
 
-    const url = `${baseUrl}/instance/create`;
+    const url = `${baseUrl}/config`;
     
     const headers = {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
     
     const body = {
-        "instanceName": properties.instanceName,
-        "apikey": properties.apikeysenha,
-        
+        "connectedName": properties.connectedName,
+        "WebhookGlobal": {
+            "enabled": properties.enabled,
+            "local_map": properties.local_map,
+            "url": properties.webhookurl,
+            "STATUS_INSTANCE":properties.STATUS_INSTANCE,
+            "QRCODE_UPDATED":properties.QRCODE_UPDATED,
+            "MESSAGES_SET":properties.MESSAGES_SET,
+            "MESSAGES_UPDATE":properties.MESSAGES_UPDATE,
+            "MESSAGES_UPSERT":properties.MESSAGES_UPSERT,
+            "SEND_MESSAGE":properties.SEND_MESSAGE,
+            "CONTACTS_SET":properties.CONTACTS_SET,
+            "CONTACTS_UPSERT":properties.CONTACTS_UPSERT,
+            "CONTACTS_UPDATE":properties.CONTACTS_UPDATE,
+            "PRESENCE_UPDATE":properties.PRESENCE_UPDATE,
+            "CHATS_SET":properties.CHATS_SET,
+            "CHATS_UPSERT":properties.CHATS_UPSERT,
+            "CHATS_UPDATE":properties.CHATS_UPDATE,
+            "CHATS_DELETE":properties.CHATS_DELETE,
+            "CONNECTION_UPDATE":properties.CONNECTION_UPDATE,
+            "groups_ignore": properties.groups_ignore,
+            "GROUPS_UPSERT":properties.GROUPS_UPSERT,
+            "GROUPS_UPDATE":properties.GROUPS_UPDATE,
+            "GROUP_PARTICIPANTS_UPDATE":properties.GROUP_PARTICIPANTS_UPDATE
+        }
     };
     
-    if (properties.number) {
-    body.number = properties.number
-    }
+    
     
     let response;
     let error = false;
@@ -49,7 +70,7 @@ async function(properties, context) {
 
     try {
         response = await fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: headers,
             body: JSON.stringify(body)
         });
@@ -70,12 +91,8 @@ async function(properties, context) {
     const resultObj = await response.json();
 
     return {
+        config: resultObj,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
-        instancia: resultObj.instance?.instanceName,
-        status: resultObj.instance?.status,
-        apikey: resultObj.hash?.apikey,
-        qrcode: resultObj.qrcode?.base64,
-        paircode: resultObj.qrcode?.pairingCode,
         error: error,
         error_log: error_log        
     };
