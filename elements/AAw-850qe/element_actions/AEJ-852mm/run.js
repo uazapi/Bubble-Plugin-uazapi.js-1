@@ -57,11 +57,16 @@ instance.publishState('error_log', '');
 
 fetch(url, requestOptions)
 .then(response => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.json();
-})
+  // Sempre obter o corpo da resposta, independentemente do status da resposta
+  return response.json().then(resultObj => {
+      // Se a resposta não for ok, adicione o status ao objeto de erro e lance-o
+      if (!response.ok) {
+          resultObj.errorStatus = response.status;
+          throw resultObj;
+      }
+      return resultObj; // Retorna o objeto de resultado para a próxima etapa
+  });
+ })
 .then(resultObj => {
   
  
@@ -74,20 +79,25 @@ fetch(url, requestOptions)
     
   }
 })
-.catch(error => {
+.catch(errorObj => {
   instance.publishState('error', true);
-try {
-        // Tentativa de converter a mensagem de erro para um objeto e formatá-lo como JSON
-        let errorString = error.toString().replace(/"_p_/g, "\"");
-        let errorObject = JSON.parse(errorString);
-        let formattedError = JSON.stringify(errorObject, null, 2);
-        instance.publishState('error_log', formattedError);
-       } catch(e) {
-        // Se a conversão falhar, apenas use a mensagem de erro como uma string
-        let errorString = error.toString().replace(/"_p_/g, "\"");
-        instance.publishState('error_log', errorString);         }         instance.triggerEvent('errorEvent');
+  try {
+      // Verifica se as chaves têm o prefixo _p_ e acessa os valores adequadamente
+      let errorStatus = errorObj._p_errorStatus || errorObj.errorStatus || '';
+      let error = errorObj._p_error || errorObj.error || '';
+      let message = '';
 
+      if (errorObj._p_message || errorObj.message) {
+          let messageArray = errorObj._p_message || errorObj.message;
+          message = Array.isArray(messageArray) ? messageArray.join('\n') : messageArray;
+      }
 
+      let errorMessage = [errorStatus, error, message].filter(Boolean).join('\n');
+      instance.publishState('error_log', errorMessage);
+  } catch(e) {
+      instance.publishState('error_log', e.toString().replace(/"_p_/g, "\""));
+  }
+  instance.triggerEvent('errorEvent');
 });
 
 
