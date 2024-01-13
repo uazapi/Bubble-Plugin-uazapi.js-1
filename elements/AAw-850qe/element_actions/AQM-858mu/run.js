@@ -12,7 +12,7 @@ function(instance, properties, context) {
       baseUrl = baseUrl.slice(0, -1);
   }
 
-  var url = baseUrl + "/instance/create";
+	const url = `${baseUrl}/config`;
   
   
   
@@ -20,32 +20,53 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
-  //  myHeaders.append("uazapi", "true");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
 var payload = {
-  "instanceName": properties.instanceName,
-  "apikey": properties.apikeysenha
+		"connectedName": properties.connectedName,
+        "WebhookGlobal": {
+            "enabled": properties.enabled,
+            "local_map": properties.local_map,
+            "url": properties.webhookurl,
+            "STATUS_INSTANCE":properties.STATUS_INSTANCE,
+            "QRCODE_UPDATED":properties.QRCODE_UPDATED,
+            "MESSAGES_SET":properties.MESSAGES_SET,
+            "MESSAGES_UPDATE":properties.MESSAGES_UPDATE,
+            "MESSAGES_UPSERT":properties.MESSAGES_UPSERT,
+            "SEND_MESSAGE":properties.SEND_MESSAGE,
+            "CONTACTS_SET":properties.CONTACTS_SET,
+            "CONTACTS_UPSERT":properties.CONTACTS_UPSERT,
+            "CONTACTS_UPDATE":properties.CONTACTS_UPDATE,
+            "PRESENCE_UPDATE":properties.PRESENCE_UPDATE,
+            "CHATS_SET":properties.CHATS_SET,
+            "CHATS_UPSERT":properties.CHATS_UPSERT,
+            "CHATS_UPDATE":properties.CHATS_UPDATE,
+            "CHATS_DELETE":properties.CHATS_DELETE,
+            "CONNECTION_UPDATE":properties.CONNECTION_UPDATE,
+            "groups_ignore": properties.groups_ignore,
+            "GROUPS_UPSERT":properties.GROUPS_UPSERT,
+            "GROUPS_UPDATE":properties.GROUPS_UPDATE,
+            "GROUP_PARTICIPANTS_UPDATE":properties.GROUP_PARTICIPANTS_UPDATE
+        }
 };
 
-if (properties.number) {
-  payload.number = properties.number;
-}
+
 
 var raw = JSON.stringify(payload);
 
   
 
   var requestOptions = {
-      method: 'POST',
+      method: 'PUT',
       headers: myHeaders,
       body: raw,
      
   };
   
 
-
+instance.publishState('config', '');
 instance.publishState('resultado', '');
 instance.publishState('error', false);
 instance.publishState('error_log', '');
@@ -64,8 +85,8 @@ fetch(url, requestOptions)
     
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
     instance.triggerEvent('sucessEvent');
-    instance.publishState('qr_code', resultObj.qrcode?.base64);  
-    instance.publishState('paircode', resultObj.qrcode?.pairingCode);  
+    
+    instance.publishState('config', resultObj);  
   }
 })
 .catch(error => {

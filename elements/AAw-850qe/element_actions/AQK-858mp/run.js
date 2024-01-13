@@ -12,7 +12,7 @@ function(instance, properties, context) {
       baseUrl = baseUrl.slice(0, -1);
   }
 
-  var url = baseUrl + "/instance/create";
+  const url = `${baseUrl}/config`;
   
   
   
@@ -20,32 +20,21 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
-  //  myHeaders.append("uazapi", "true");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
-
-var payload = {
-  "instanceName": properties.instanceName,
-  "apikey": properties.apikeysenha
-};
-
-if (properties.number) {
-  payload.number = properties.number;
-}
-
-var raw = JSON.stringify(payload);
 
   
 
   var requestOptions = {
-      method: 'POST',
+      method: 'GET',
       headers: myHeaders,
-      body: raw,
+     // body: raw,
      
   };
   
 
-
+instance.publishState('config', '');
 instance.publishState('resultado', '');
 instance.publishState('error', false);
 instance.publishState('error_log', '');
@@ -63,9 +52,9 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
     
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
+    instance.publishState('config', resultObj);
     instance.triggerEvent('sucessEvent');
-    instance.publishState('qr_code', resultObj.qrcode?.base64);  
-    instance.publishState('paircode', resultObj.qrcode?.pairingCode);  
+  
   }
 })
 .catch(error => {

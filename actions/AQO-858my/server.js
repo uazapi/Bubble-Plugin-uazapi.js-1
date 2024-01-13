@@ -1,5 +1,5 @@
 async function(properties, context) {
-    //▶️ Enviar localização XX
+    //▶️ Importar Chats
     
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
@@ -28,7 +28,7 @@ async function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    const url = `${baseUrl}/message/sendLocation/${instancia}`;
+    const url = `${baseUrl}/chat/importChats/${instancia}`;
     
     const headers = {
         "Accept": "*/*",
@@ -37,18 +37,8 @@ async function(properties, context) {
         "apikey": apikey
     };
     
-    const raw = {
-        "number": properties.number,
-        "locationMessage": {
-            "name": properties.name,
-            "address": properties.address,
-            "latitude": properties.latitude,
-            "longitude": properties.longitude
-        },
-        "options": {
-            "delay": properties.delay
-        }
-    };
+    let body = properties.chats
+    
 
     let response;
     let error = false;
@@ -56,9 +46,10 @@ async function(properties, context) {
 
     try {
         response = await fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: headers,
-            body: JSON.stringify(raw)
+            body: body.replace(/\n/g, '')
+
         });
 
         if (!response.ok) {
@@ -78,10 +69,7 @@ async function(properties, context) {
     const resultObj = await response.json();
 
     return {
-        remoteJid: resultObj?.key?.remoteJid,
-        fromMe: resultObj?.key?.fromMe,
-        id: resultObj?.key?.id,
-        status: resultObj?.status,
+ 
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log

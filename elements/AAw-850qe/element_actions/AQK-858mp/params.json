@@ -7,7 +7,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "apikey",
-            "rank": 2,
+            "rank": 1,
             "value": "text"
         },
         "ABF": {
@@ -18,44 +18,12 @@
             "rank": 0,
             "value": "text"
         },
-        "ABH": {
-            "caption": "Instancia",
-            "editor": "DynamicValue",
-            "name": "instanceName",
-            "optional": true,
-            "rank": 4,
-            "value": "text"
-        },
-        "ABI": {
-            "caption": "apikey da instância",
-            "default_val": 1,
-            "doc": "",
-            "editor": "DynamicValue",
-            "name": "apikeysenha",
-            "rank": 5,
-            "value": "text"
-        },
-        "ABO": {
-            "caption": "-",
-            "editor": "Label",
-            "name": "URL OPCIONAL",
-            "rank": 1
-        },
         "ABP": {
-            "caption": "❗ Cuidado, aqui é obrigatório você usar sua Global API Key, ela estará exposta para o cliente. ❗",
+            "caption": "O Servidor URL é opcional, caso você deixe vazio, o valor será aquele definido na configuração do plugin. Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
             "doc": "",
             "editor": "Label",
             "name": "apikey_doc",
-            "rank": 3
-        },
-        "AQL": {
-            "caption": "Numero de Telefone",
-            "doc": "(Opcional) Para conectar a API via código recebido, informe o número de celular aqui, em formato internacional (Exemplo: 5511987654321)",
-            "editor": "DynamicValue",
-            "name": "number",
-            "optional": true,
-            "rank": 6,
-            "value": "text"
+            "rank": 2
         }
     }
 }
