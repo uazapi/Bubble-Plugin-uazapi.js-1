@@ -36,7 +36,8 @@
             "long_text": true,
             "name": "chats",
             "rank": 4,
-            "value": "text"
+            "value": "text",
+            "default_val": "[\n  {\n    \"_id\": \"1234\",\n    \"leadInfo\": {\n      \"nome\": \"João da Silva\",\n      \"nomecompleto\": \"João Ferreira da Silva\",\n      \"email\": \"joao.silva@email.com\",\n      \"cpf\": \"123.456.789-00\",\n      \"status\": \"assinante\",\n      \"notas\": \"Cliente interessado em novos produtos da linha X.\",\n      \"tags\": [\n        \"cliente VIP\",\n        \"interessado em linha X\"\n      ],\n      \"etiquetas\": [\n        \"1\",\n        \"2\"\n      ],\n      \"desativadoFluxoAte\": 1672531200000,\n      \"atendimentoAberto\": false,\n      \"responsavelid\": \"resp123\",\n      \"customFields\": [\n        {\n          \"_id\": \"empresa\",\n          \"value\": \"XYZ Corp\"\n        },\n        {\n          \"_id\": \"cargo\",\n          \"value\": \"Gerente de Projetos\"\n        }\n      ]\n    }\n  },\n  {\n    \"_id\": \"5678\",\n    \"leadInfo\": {\n      \"nome\": \"Maria Fernandes\",\n      \"nomecompleto\": \"Maria Fernandes Pereira\",\n      \"email\": \"maria.fernandes@email.com\",\n      \"cpf\": \"987.654.321-00\",\n      \"status\": \"em análise\",\n      \"notas\": \"A cliente solicitou informações adicionais sobre o plano Premium.\",\n      \"tags\": [\n        \"potencial upgrade\",\n        \"interessada em plano Premium\"\n      ],\n      \"etiquetas\": [\n        \"3\",\n        \"4\"\n      ],\n      \"desativadoFluxoAte\": 1675036800000,\n      \"atendimentoAberto\": true,\n      \"responsavelid\": \"resp456\",\n      \"customFields\": [\n        {\n          \"_id\": \"empresa\",\n          \"value\": \"ABC Ltda\"\n        },\n        {\n          \"_id\": \"cargo\",\n          \"value\": \"Diretora de Marketing\"\n        }\n      ]\n    }\n  }\n]"
         }
     }
 }
