@@ -1,5 +1,5 @@
 async function(properties, context) {
-    //▶️ Ver imagem de perfil
+    //▶️ Criar fluxo
     
     let baseUrl = properties.url;
     if (!baseUrl || baseUrl.trim() === "" || !baseUrl.includes("http")) {
@@ -27,7 +27,7 @@ async function(properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-    const url = `${baseUrl}/chat/fetchProfile/${instancia}`;
+    const url = `${baseUrl}/automate/createflow/${instancia}`;
     
     const headers = {
         "Accept": "*/*",
@@ -37,9 +37,24 @@ async function(properties, context) {
         "apikey": apikey
     };
 
-    const raw = {
-        "number": properties.number
-    };
+// Preparando o corpo da requisição
+    var raw = {};
+
+    try {
+        if (properties.import && properties.import.trim() !== "") {
+            var importObject = JSON.parse(properties.import);
+            raw = { ...importObject };
+        }
+
+        if (properties.name && properties.name.trim() !== "") {
+            raw.name = properties.name;
+        }
+    } catch (e) {
+        return {
+            error: true,
+            error_log: "O valor de 'import' não é um JSON válido: " + e.toString()
+        };
+    }
 
     let response;
     let error = false;
@@ -73,7 +88,7 @@ async function(properties, context) {
     }
 
     return {
-        dadosperfil: resultObj,
+        flow: resultObj,
         error: String(error),
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: String(error_log)
