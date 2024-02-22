@@ -7,7 +7,7 @@
             "doc": "",
             "editor": "DynamicValue",
             "name": "apikey",
-            "rank": 2,
+            "rank": 3,
             "value": "text"
         },
         "ABF": {
@@ -25,7 +25,7 @@
             "editor": "DynamicValue",
             "name": "expiration",
             "options": "0,86400,604800,7776000",
-            "rank": 5,
+            "rank": 6,
             "value": "number"
         },
         "ABH": {
@@ -33,7 +33,7 @@
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
-            "rank": 1,
+            "rank": 2,
             "value": "text"
         },
         "ABI": {
@@ -43,7 +43,7 @@
             "editor": "DynamicValue",
             "long_text": false,
             "name": "groupid",
-            "rank": 4,
+            "rank": 5,
             "value": "text"
         },
         "ABP": {
@@ -51,7 +51,13 @@
             "doc": "",
             "editor": "Label",
             "name": "apikey_doc",
-            "rank": 3
+            "rank": 4
+        },
+        "ARD": {
+            "caption": "Essa função foi descontinuada - use a função Grupo - Editar Configurações",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 1
         }
     }
 }

@@ -15,7 +15,7 @@
             "editor": "DynamicValue",
             "name": "apikey",
             "optional": true,
-            "rank": 2,
+            "rank": 3,
             "value": "text"
         },
         "ALS": {
@@ -23,20 +23,20 @@
             "editor": "DynamicValue",
             "name": "instancia",
             "optional": true,
-            "rank": 1,
+            "rank": 2,
             "value": "text"
         },
         "ALU": {
             "caption": "O Servidor URL, a API Key e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin.",
             "editor": "Label",
             "name": "apikey_opcional",
-            "rank": 3
+            "rank": 4
         },
         "ALV": {
             "caption": "ID do Grupo",
             "editor": "DynamicValue",
             "name": "groupid",
-            "rank": 4,
+            "rank": 5,
             "value": "text"
         },
         "ALW": {
@@ -45,8 +45,14 @@
             "editor": "DynamicValue",
             "long_text": true,
             "name": "expiration",
-            "rank": 5,
+            "rank": 6,
             "value": "number"
+        },
+        "ARC": {
+            "caption": "Essa função foi descontinuada - use a função Grupo - Editar Configurações",
+            "editor": "Label",
+            "name": "doc",
+            "rank": 1
         }
     },
     "return_value": {
