@@ -1,3 +1,200 @@
 {
-    "caption": "🔓 Grupo - Editar configurações"
+    "caption": "🔓 Grupo - Editar configurações",
+    "doc": "",
+    "fields": {
+        "ABD": {
+            "caption": "API Key",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "apikey",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABF": {
+            "caption": "Servidor URL",
+            "editor": "DynamicValue",
+            "name": "url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "ID do Grupo",
+            "doc": "Coloque o id do grupo, ele é encotrado na pesquisa de grupos, ou na pesquisa de chats, termina com @g.us",
+            "editor": "DynamicValue",
+            "name": "groupid",
+            "rank": 5,
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Instancia",
+            "editor": "DynamicValue",
+            "name": "instancia",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "-",
+            "editor": "Label",
+            "name": "URL OPCIONAL",
+            "rank": 1
+        },
+        "ABP": {
+            "caption": "O Servidor URL e a Instancia são opcionais, caso você deixe vazio, os valores serão aqueles definidos na configuração do plugin. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  Lembre-se: as informações inseridas aqui são usadas para chamadas API direto pelo navegador e, portanto, estarão acessíveis.",
+            "doc": "",
+            "editor": "Label",
+            "name": "apikey_doc",
+            "rank": 4
+        },
+        "AQd": {
+            "caption": "Nome do grupo",
+            "doc": "Edite o nome do grupo",
+            "editor": "DynamicValue",
+            "name": "name",
+            "optional": true,
+            "rank": 7,
+            "value": "text"
+        },
+        "AQe": {
+            "caption": "Editar Nome",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "edit_name",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "AQf": {
+            "caption": "Editar Imagem",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_image",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "AQg": {
+            "caption": "Editar Descrição",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_description",
+            "rank": 20,
+            "value": "boolean"
+        },
+        "AQh": {
+            "caption": "Editar Restrição",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_restrict",
+            "rank": 10,
+            "value": "boolean"
+        },
+        "AQi": {
+            "caption": "Editar Admins Envios",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_announce",
+            "rank": 12,
+            "value": "boolean"
+        },
+        "AQj": {
+            "caption": "Editar Membros Add",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_memberAddMode",
+            "rank": 14,
+            "value": "boolean"
+        },
+        "AQk": {
+            "caption": "Editar Admin Aprovar",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_joinApprovalMode",
+            "rank": 16,
+            "value": "boolean"
+        },
+        "AQl": {
+            "caption": "Editar Expiração",
+            "default_val": false,
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "edit_expiration",
+            "rank": 18,
+            "value": "boolean"
+        },
+        "AQm": {
+            "caption": "Imagem",
+            "doc": "Editar a imagem do Grupo, coloque uma URL ou um arquivo em base64",
+            "editor": "DynamicValue",
+            "name": "image",
+            "optional": true,
+            "rank": 9,
+            "value": "text"
+        },
+        "AQn": {
+            "caption": "Descrição",
+            "doc": "Altere a descrição do grupo.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "description",
+            "optional": true,
+            "rank": 21,
+            "value": "text"
+        },
+        "AQo": {
+            "caption": "Restrição",
+            "default_val": true,
+            "doc": "Se sim, só admin podem editar info do grupo (nome, imagem, descrição, duração das mensagens).",
+            "editor": "DynamicValue",
+            "name": "restrict",
+            "optional": true,
+            "rank": 11,
+            "value": "boolean"
+        },
+        "AQp": {
+            "caption": "Admins Envios",
+            "default_val": false,
+            "doc": "Se sim, apenas adminstradores podem enviar mensagens",
+            "editor": "DynamicValue",
+            "name": "announce",
+            "optional": true,
+            "rank": 13,
+            "value": "boolean"
+        },
+        "AQq": {
+            "caption": "Membros Add",
+            "default_val": true,
+            "doc": "Se sim, membros também podem adicionar outros membros.",
+            "editor": "DynamicValue",
+            "name": "memberAddMode",
+            "optional": true,
+            "rank": 15,
+            "value": "boolean"
+        },
+        "AQr": {
+            "caption": "Admin Aprovar",
+            "default_val": true,
+            "doc": "Se sim, admins deverão aprovar entrada de membros.",
+            "editor": "DynamicValue",
+            "name": "joinApprovalMode",
+            "optional": true,
+            "rank": 17,
+            "value": "boolean"
+        },
+        "AQs": {
+            "caption": "Expiração",
+            "default_val": 0,
+            "doc": "valores possíveis: 0 = desativado |  86400 = 24 horas | 604800 = 7 dias  |  7776000 = 90 dias",
+            "editor": "DynamicValue",
+            "name": "expiration",
+            "optional": true,
+            "rank": 19,
+            "value": "number"
+        }
+    }
 }
