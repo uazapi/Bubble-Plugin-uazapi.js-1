@@ -33,6 +33,7 @@ async function(properties, context) {
         "Accept": "*/*",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
+        "uazapi": "true",
         "apikey": apikey
     };
 
@@ -69,6 +70,7 @@ async function(properties, context) {
     } 
 
     return {
+        grupo: resultObj,
         error: error,
         log: JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""),
         error_log: error_log,
