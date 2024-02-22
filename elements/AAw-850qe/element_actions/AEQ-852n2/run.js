@@ -17,7 +17,7 @@ function(instance, properties, context) {
         instancia = context.keys["Instancia"];
     }
 
-  var url = baseUrl + "/group/groupSetting/" + instancia + "?groupJid=" + properties.groupid;
+  var url = baseUrl + "/group/groupBetterSetting/" + instancia + "?groupJid=" + properties.groupid;
   
   
   
@@ -25,6 +25,7 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
@@ -67,7 +68,8 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
  
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-          instance.triggerEvent('sucessEvent');
+    instance.publishState('grupo', resultObj);
+    instance.triggerEvent('sucessEvent');
     
   }
 })

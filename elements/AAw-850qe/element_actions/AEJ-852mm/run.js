@@ -25,6 +25,7 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 // Separando as opções fornecidas pelo usuário em um array
@@ -75,7 +76,8 @@ fetch(url, requestOptions)
   if (Object.keys(resultObj).length > 0) {
   
     instance.publishState('resultado', JSON.stringify(resultObj, null, 2).replace(/"_p_/g, "\""));
-          instance.triggerEvent('sucessEvent');
+    instance.publishState('grupo', resultObj);
+    instance.triggerEvent('sucessEvent');
     
   }
 })

@@ -47,7 +47,7 @@
         },
         "AJW": {
             "caption": "Ação",
-            "doc": "add = adiciona participantes | remove = remove participantes | promote = Adiciona na lista de administradores | demote = Remove da lista de administradores",
+            "doc": "add = adiciona participantes | remove = remove participantes | promote = Adiciona na lista de administradores | demote = Remove da lista de administradores | approve = aprova entrada | reject = rejeita entrada",
             "editor": "DynamicValue",
             "name": "action",
             "rank": 6,

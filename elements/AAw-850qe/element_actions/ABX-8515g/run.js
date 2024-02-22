@@ -30,7 +30,7 @@ function(instance, properties, context) {
   
 
 // Separando as opções fornecidas pelo usuário em um array
-let values = properties.values.split('|').map(opcao => opcao.trim());
+let choices = properties.choices.split('|').map(opcao => opcao.trim());
 
 var raw = JSON.stringify(
     {
@@ -43,7 +43,7 @@ var raw = JSON.stringify(
           //listas
           "footerText": properties.footerText,
           "buttonText": properties.buttonText,
-        "choices": values
+        "choices": choices
       },
         "options": {
         	"delay": properties.delay

@@ -33,40 +33,56 @@
             "rank": 3
         },
         "AOP": {
-            "caption": "Chats JSON",
-            "default_val": "[\n  {\n    \"_id\": \"1234\",\n    \"leadInfo\": {\n      \"nome\": \"João da Silva\",\n      \"nomecompleto\": \"João Ferreira da Silva\",\n      \"email\": \"joao.silva@email.com\",\n      \"cpf\": \"123.456.789-00\",\n      \"status\": \"assinante\",\n      \"notas\": \"Cliente interessado em novos produtos da linha X.\",\n      \"tags\": [\n        \"cliente VIP\",\n        \"interessado em linha X\"\n      ],\n      \"etiquetas\": [\n        \"1\",\n        \"2\"\n      ],\n      \"desativadoFluxoAte\": 1672531200000,\n      \"atendimentoAberto\": false,\n      \"responsavelid\": \"resp123\",\n      \"customFields\": [\n        {\n          \"_id\": \"empresa\",\n          \"value\": \"XYZ Corp\"\n        },\n        {\n          \"_id\": \"cargo\",\n          \"value\": \"Gerente de Projetos\"\n        }\n      ]\n    }\n  },\n  {\n    \"_id\": \"5678\",\n    \"leadInfo\": {\n      \"nome\": \"Maria Fernandes\",\n      \"nomecompleto\": \"Maria Fernandes Pereira\",\n      \"email\": \"maria.fernandes@email.com\",\n      \"cpf\": \"987.654.321-00\",\n      \"status\": \"em análise\",\n      \"notas\": \"A cliente solicitou informações adicionais sobre o plano Premium.\",\n      \"tags\": [\n        \"potencial upgrade\",\n        \"interessada em plano Premium\"\n      ],\n      \"etiquetas\": [\n        \"3\",\n        \"4\"\n      ],\n      \"desativadoFluxoAte\": 1675036800000,\n      \"atendimentoAberto\": true,\n      \"responsavelid\": \"resp456\",\n      \"customFields\": [\n        {\n          \"_id\": \"empresa\",\n          \"value\": \"ABC Ltda\"\n        },\n        {\n          \"_id\": \"cargo\",\n          \"value\": \"Diretora de Marketing\"\n        }\n      ]\n    }\n  }\n]",
+            "caption": "Importar fluxo",
+            "default_val": "",
             "doc": "",
             "editor": "DynamicValue",
-            "long_text": true,
-            "name": "chats",
+            "long_text": false,
+            "name": "import",
+            "optional": true,
             "rank": 5,
             "value": "text"
         },
-        "AQX": {
-            "caption": "Para importar Chats passe um JSON em formato array conforme exemplo abaixo, trocando o _id pelo número de telefone.",
-            "editor": "Label",
-            "name": "info",
-            "rank": 4
+        "AQa": {
+            "caption": "Nome do fluxo",
+            "editor": "DynamicValue",
+            "name": "name",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "AQb": {
+            "caption": "Fluxo",
+            "doc": "Selecione 🤖🔀bot",
+            "editor": "custom_type",
+            "name": "flow",
+            "rank": 6
         }
     },
     "return_value": {
         "AGf": {
             "caption": "log",
             "name": "log",
-            "rank": 0,
+            "rank": 1,
             "value": "text"
         },
         "AGk": {
             "caption": "error",
             "name": "error",
-            "rank": 1,
+            "rank": 2,
             "value": "boolean"
         },
         "AGl": {
             "caption": "error_log",
             "name": "error_log",
-            "rank": 2,
+            "rank": 3,
             "value": "text"
+        },
+        "AQc": {
+            "caption": "Fluxo",
+            "name": "flow",
+            "rank": 0,
+            "value": "custom_data_AQb"
         }
     },
     "type": "server_side",

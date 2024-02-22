@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Grupo - tempo das mensagens",
+    "display": "▶️ Grupo - tempo das mensagens (use \"Editar Configurações\")",
     "fields": {
         "ALQ": {
             "caption": "Servidor URL",

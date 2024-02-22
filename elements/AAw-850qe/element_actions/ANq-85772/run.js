@@ -41,10 +41,12 @@ function(instance, properties, context) {
   };
   
 
-
+    
+instance.publishState('enviosagendados', null)
 instance.publishState('resultado', '');
 instance.publishState('error', false);
 instance.publishState('error_log', '');
+
 
 fetch(url, requestOptions)
 .then(response => {
