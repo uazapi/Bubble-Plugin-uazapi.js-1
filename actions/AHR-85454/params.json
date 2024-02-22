@@ -27,7 +27,7 @@
             "value": "text"
         },
         "AGm": {
-            "caption": "Essa função foi descontinuada - user a função Grupo - Editar Configurações",
+            "caption": "Essa função foi descontinuada - use a função Grupo - Editar Configurações",
             "editor": "Label",
             "name": "url_opcional",
             "rank": 1

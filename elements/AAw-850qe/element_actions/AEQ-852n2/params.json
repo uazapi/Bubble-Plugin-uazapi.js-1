@@ -44,7 +44,7 @@
             "value": "text"
         },
         "ABO": {
-            "caption": "Essa função foi descontinuada - user a função Grupo - Editar Configurações",
+            "caption": "Essa função foi descontinuada - use a função Grupo - Editar Configurações",
             "editor": "Label",
             "name": "URL OPCIONAL",
             "rank": 1
