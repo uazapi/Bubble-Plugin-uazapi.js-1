@@ -1,5 +1,5 @@
 {
-    "caption": "🔓 Grupo - Mudar configurações (use o \"Editar configurações\")",
+    "caption": "🔓 Grupo - Mudar configurações",
     "doc": "",
     "fields": {
         "ABD": {
@@ -44,7 +44,7 @@
             "value": "text"
         },
         "ABO": {
-            "caption": "-",
+            "caption": "Essa função foi descontinuada - user a função Grupo - Editar Configurações",
             "editor": "Label",
             "name": "URL OPCIONAL",
             "rank": 1

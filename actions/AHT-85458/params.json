@@ -1,6 +1,6 @@
 {
     "category": "plugins",
-    "display": "▶️ Grupo - Mudar configurações (use \"Editar Configurações\")",
+    "display": "▶️ Grupo - Mudar configurações",
     "fields": {
         "AGc": {
             "caption": "Servidor URL",
@@ -27,7 +27,7 @@
             "value": "text"
         },
         "AGm": {
-            "caption": "-",
+            "caption": "Essa função foi descontinuada - user a função Grupo - Editar Configurações",
             "editor": "Label",
             "name": "url_opcional",
             "rank": 1
