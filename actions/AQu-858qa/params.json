@@ -1,7 +1,6 @@
 {
     "category": "plugins",
     "display": "▶️ Grupo - Editar configurações",
-    "type": "server_side",
     "fields": {
         "ABD": {
             "caption": "API Key",
@@ -196,6 +195,40 @@
             "optional": true,
             "rank": 19,
             "value": "number"
+        },
+        "AQv": {
+            "caption": "grupo",
+            "doc": "Selecione 📄 Grupo - Detalhe",
+            "editor": "custom_type",
+            "name": "grupo",
+            "rank": 22
         }
-    }
+    },
+    "return_value": {
+        "AQw": {
+            "caption": "log",
+            "name": "log",
+            "rank": 1,
+            "value": "text"
+        },
+        "AQx": {
+            "caption": "error",
+            "name": "error",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AQy": {
+            "caption": "error_log",
+            "name": "error_log",
+            "rank": 3,
+            "value": "text"
+        },
+        "AQz": {
+            "caption": "grupo",
+            "name": "grupo",
+            "rank": 0,
+            "value": "custom_data_AQv"
+        }
+    },
+    "type": "server_side"
 }

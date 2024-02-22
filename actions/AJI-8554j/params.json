@@ -60,6 +60,13 @@
             "name": "participants",
             "rank": 7,
             "value": "text"
+        },
+        "ARB": {
+            "caption": "grupo",
+            "doc": "Selecione 📄 Grupo - Detalhe",
+            "editor": "custom_type",
+            "name": "grupo",
+            "rank": 8
         }
     },
     "return_value": {
@@ -80,6 +87,12 @@
             "name": "log",
             "rank": 2,
             "value": "text"
+        },
+        "ARA": {
+            "caption": "grupo",
+            "name": "grupo",
+            "rank": 3,
+            "value": "custom_data_ARB"
         }
     },
     "type": "server_side"
