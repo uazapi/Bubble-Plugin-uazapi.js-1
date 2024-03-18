@@ -59,7 +59,7 @@
             "name": "nome",
             "optional": true,
             "options": "",
-            "rank": 9,
+            "rank": 10,
             "value": "text"
         },
         "AMQ": {
@@ -69,7 +69,7 @@
             "name": "email",
             "optional": true,
             "options": "",
-            "rank": 11,
+            "rank": 12,
             "value": "text"
         },
         "AMR": {
@@ -79,7 +79,7 @@
             "name": "nomecompleto",
             "optional": true,
             "options": "",
-            "rank": 10,
+            "rank": 11,
             "value": "text"
         },
         "AMS": {
@@ -89,7 +89,7 @@
             "name": "cpf",
             "optional": true,
             "options": "",
-            "rank": 12,
+            "rank": 13,
             "value": "text"
         },
         "ANB": {
@@ -98,7 +98,7 @@
             "editor": "DynamicValue",
             "name": "status",
             "optional": true,
-            "rank": 13,
+            "rank": 14,
             "value": "text"
         },
         "ANC": {
@@ -108,7 +108,7 @@
             "long_text": true,
             "name": "notas",
             "optional": true,
-            "rank": 14,
+            "rank": 15,
             "value": "text"
         },
         "AND": {
@@ -117,7 +117,7 @@
             "editor": "DynamicValue",
             "name": "tags",
             "optional": true,
-            "rank": 16,
+            "rank": 17,
             "value": "text"
         },
         "ANE": {
@@ -136,7 +136,7 @@
             "editor": "DynamicValue",
             "name": "responsavelid",
             "optional": true,
-            "rank": 19,
+            "rank": 20,
             "value": "text"
         },
         "ANG": {
@@ -146,7 +146,7 @@
             "editor": "DynamicValue",
             "name": "editTags",
             "optional": false,
-            "rank": 15,
+            "rank": 16,
             "value": "boolean"
         },
         "ANH": {
@@ -154,7 +154,7 @@
             "doc": "Selecione: 📄Chats",
             "editor": "custom_type",
             "name": "chat",
-            "rank": 23
+            "rank": 24
         },
         "ANK": {
             "caption": "Chat id - telefone",
@@ -170,7 +170,7 @@
             "editor": "DynamicValue",
             "name": "unreadcount",
             "optional": true,
-            "rank": 20,
+            "rank": 21,
             "value": "number"
         },
         "ANb": {
@@ -180,14 +180,14 @@
             "editor": "DynamicValue",
             "name": "customFields",
             "optional": true,
-            "rank": 21,
+            "rank": 22,
             "value": "text"
         },
         "ANd": {
             "caption": "Não esqueça de colocar no campo acima o \"_id\" = ao \"_id\" definido na ação de editar campos personalizados, em caso de dúvidas veja no editor exemplo ou fale com o suporte.",
             "editor": "Label",
             "name": "info",
-            "rank": 22
+            "rank": 23
         },
         "AQC": {
             "caption": "Etiquetas",
@@ -195,7 +195,7 @@
             "editor": "DynamicValue",
             "name": "etiquetas",
             "optional": true,
-            "rank": 18,
+            "rank": 19,
             "value": "text"
         },
         "AQD": {
@@ -204,7 +204,7 @@
             "doc": "Passe como verdadeiro para editar as etiquetas, passando o conjunto de etiquetas na campo abaixo",
             "editor": "DynamicValue",
             "name": "editEtiquetas",
-            "rank": 17,
+            "rank": 18,
             "value": "boolean"
         },
         "AQF": {
@@ -212,6 +212,15 @@
             "editor": "Label",
             "name": "info",
             "rank": 8
+        },
+        "ARF": {
+            "caption": "delete",
+            "default_val": "none",
+            "doc": "none = deleta nada, all = deleta o chat e as mensagens, messages = deleta apenas as mensagens. ⚠️ delete \"all\" também apaga o chat do WhatsApp, delete \"messages\" não apaga nada do whatsapp, apenas as mensagens que a API guarda.",
+            "editor": "Dropdown",
+            "name": "delete",
+            "options": "none,all,messages",
+            "rank": 9
         }
     },
     "return_value": {

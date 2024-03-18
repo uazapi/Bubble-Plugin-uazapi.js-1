@@ -65,7 +65,7 @@ async function(properties, context) {
 };
 
 if(properties.unreadcount != null ) raw.unreadcount = properties.unreadcount;
-
+if(properties.delete !== "none" ) raw.delete = properties.delete;
    
  
 

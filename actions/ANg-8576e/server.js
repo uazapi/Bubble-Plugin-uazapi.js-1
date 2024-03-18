@@ -58,10 +58,17 @@ async function(properties, context) {
     if(properties.flowName) raw.flowName = properties.flowName.trim();
 
     raw.message = {};
-    if(properties.text) raw.message.text = properties.text.trim();
+      if(properties.text) {
+  raw.message.text = properties.text.trim();
+
+  // Adiciona linkPreview ao objeto message apenas se text estiver presente
+    raw.message.linkPreview = properties.linkPreview;
+	}
+    
     if(properties.urlOrBase64) raw.message.urlOrBase64 = properties.urlOrBase64.trim();
     if(properties.mediatype) raw.message.mediatype = properties.mediatype.trim();
     if(properties.delay != null) raw.message.delay = properties.delay;
+
 
     let response, resultObj;
     let error = false;

@@ -27,8 +27,8 @@
             "rank": 0
         },
         "ABT": {
-            "caption": "Automações",
-            "doc": "Selecione: 📄 Automações",
+            "caption": "Configuração",
+            "doc": "Selecione: 📄 Configuração",
             "editor": "custom_type",
             "name": "automateSystem",
             "rank": 2

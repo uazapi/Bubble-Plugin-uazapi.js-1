@@ -20,7 +20,7 @@ function(instance, properties, context) {
   myHeaders.append("Accept", "*/*");
   myHeaders.append("Connection", "keep-alive");
   myHeaders.append("Content-Type", "application/json");
-  //  myHeaders.append("uazapi", "true");
+  myHeaders.append("uazapi", "true");
   myHeaders.append("apikey", properties.apikey);
   
 
@@ -49,6 +49,8 @@ var raw = JSON.stringify(payload);
 instance.publishState('resultado', '');
 instance.publishState('error', false);
 instance.publishState('error_log', '');
+instance.publishState('qr_code', '');  
+instance.publishState('paircode', '');  
 
 fetch(url, requestOptions)
 .then(response => {

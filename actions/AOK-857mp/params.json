@@ -34,7 +34,7 @@
         },
         "ANH": {
             "caption": "Automações",
-            "doc": "Selecione: 📄Automações",
+            "doc": "Selecione: 📄 Configuração",
             "editor": "custom_type",
             "name": "ticketSystem",
             "rank": 4

@@ -177,7 +177,16 @@
             "doc": "Selecione: 📄Envio Agendado",
             "editor": "custom_type",
             "name": "envioagendado",
-            "rank": 19
+            "rank": 20
+        },
+        "ARG": {
+            "caption": "Link Preview",
+            "default_val": true,
+            "doc": "Enviar preview do link, se tiver link na mensagem.",
+            "editor": "DynamicValue",
+            "name": "linkPreview",
+            "rank": 19,
+            "value": "boolean"
         }
     },
     "return_value": {
